@@ -13,6 +13,8 @@ COPY . .
 
 RUN mkdir -p templates
 
-EXPOSE 8000
+EXPOSE 8080
+
+ENV PORT=8080
 
 CMD ["python", "app.py"]
