@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trợ lý pháp lý AI</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5f5f7; color: #1d1d1f; min-height: 100vh; }
+
+  .topbar { background: #fff; border-bottom: 1px solid #e5e5ea; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 56px; position: sticky; top: 0; z-index: 100; }
+  .topbar-brand { display: flex; align-items: center; gap: 10px; }
+  .brand-icon { width: 32px; height: 32px; background: #534AB7; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 16px; }
+  .brand-name { font-size: 15px; font-weight: 600; color: #1d1d1f; }
+  .brand-sub { font-size: 12px; color: #8e8e93; }
+  .status-pill { display: flex; align-items: center; gap: 6px; font-size: 13px; color: #3a3a3c; background: #f2f2f7; padding: 6px 12px; border-radius: 20px; }
+  .dot { width: 7px; height: 7px; border-radius: 50%; background: #34c759; }
+  .dot.running { background: #ff9500; animation: pulse 1s infinite; }
+  .dot.idle { background: #8e8e93; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
+
+  .main { max-width: 960px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+  .stat-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 1.5rem; }
+  .stat-card { background: #fff; border-radius: 12px; padding: 16px 18px; border: 1px solid #e5e5ea; }
+  .stat-label { font-size: 12px; color: #8e8e93; margin-bottom: 6px; display: flex; align-items: center; gap-5px; }
+  .stat-value { font-size: 26px; font-weight: 600; color: #1d1d1f; }
+  .stat-hint { font-size: 11px; color: #aeaeb2; margin-top: 3px; }
+
+  .run-section { background: #fff; border-radius: 14px; border: 1px solid #e5e5ea; padding: 1.25rem 1.5rem; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+  .run-info h2 { font-size: 15px; font-weight: 600; }
+  .run-info p { font-size: 13px; color: #6e6e73; margin-top: 3px; }
+  .run-btn { background: #534AB7; color: white; border: none; border-radius: 10px; padding: 10px 22px; font-size: 14px; font-weight: 500; cursor: pointer; display: flex; align-items: center; gap: 8px; white-space: nowrap; transition: background .15s; }
+  .run-btn:hover { background: #3C3489; }
+  .run-btn:disabled { background: #aeaeb2; cursor: default; }
+
+  .tabs { display: flex; gap: 2px; margin-bottom: 1rem; background: #f2f2f7; padding: 3px; border-radius: 10px; width: fit-content; }
+  .tab { padding: 7px 18px; font-size: 13px; font-weight: 500; cursor: pointer; border: none; background: none; color: #6e6e73; border-radius: 8px; transition: all .15s; }
+  .tab.active { background: #fff; color: #1d1d1f; box-shadow: 0 1px 3px rgba(0,0,0,.1); }
+
+  .panel { display: none; }
+  .panel.active { display: block; }
+
+  .doc-card { background: #fff; border-radius: 14px; border: 1px solid #e5e5ea; padding: 1.25rem 1.5rem; margin-bottom: 12px; transition: border-color .15s; }
+  .doc-card:hover { border-color: #c7c7cc; }
+  .doc-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
+  .doc-title { font-size: 14px; font-weight: 600; color: #1d1d1f; line-height: 1.45; flex: 1; }
+  .badge { font-size: 11px; font-weight: 500; padding: 3px 9px; border-radius: 6px; white-space: nowrap; flex-shrink: 0; }
+  .badge-nd { background: #EEEDFE; color: #3C3489; }
+  .badge-tt { background: #E1F5EE; color: #085041; }
+  .badge-qd { background: #FAEEDA; color: #633806; }
+  .badge-luat { background: #FCEBEB; color: #A32D2D; }
+  .badge-other { background: #f2f2f7; color: #3a3a3c; }
+
+  .doc-meta { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-bottom: 10px; }
+  .meta-item { font-size: 12px; color: #6e6e73; display: flex; align-items: center; gap: 4px; }
+
+  .summary { background: #f9f9fb; border-left: 3px solid #534AB7; border-radius: 0 8px 8px 0; padding: 10px 14px; }
+  .summary-title { font-size: 11px; font-weight: 600; color: #534AB7; margin-bottom: 6px; text-transform: uppercase; letter-spacing: .05em; }
+  .summary-text { font-size: 13px; color: #3a3a3c; line-height: 1.6; white-space: pre-wrap; }
+
+  .doc-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 12px; padding-top: 10px; border-top: 1px solid #f2f2f7; }
+  .link-out { font-size: 12px; color: #534AB7; text-decoration: none; display: flex; align-items: center; gap: 4px; font-weight: 500; }
+  .link-out:hover { text-decoration: underline; }
+  .time-tag { font-size: 11px; color: #aeaeb2; }
+
+  .empty-state { text-align: center; padding: 4rem 2rem; color: #8e8e93; }
+  .empty-icon { font-size: 40px; margin-bottom: 12px; }
+  .empty-state h3 { font-size: 16px; font-weight: 600; color: #3a3a3c; margin-bottom: 6px; }
+  .empty-state p { font-size: 14px; }
+
+  .history-list { background: #fff; border-radius: 14px; border: 1px solid #e5e5ea; overflow: hidden; }
+  .history-row { display: flex; align-items: center; justify-content: space-between; padding: 12px 1.5rem; border-bottom: 1px solid #f2f2f7; font-size: 13px; }
+  .history-row:last-child { border-bottom: none; }
+  .tag-ok { background: #E1F5EE; color: #085041; font-size: 11px; font-weight: 500; padding: 2px 9px; border-radius: 6px; }
+  .tag-empty { background: #f2f2f7; color: #6e6e73; font-size: 11px; font-weight: 500; padding: 2px 9px; border-radius: 6px; }
+
+  .toast { position: fixed; bottom: 24px; right: 24px; background: #1d1d1f; color: white; padding: 12px 18px; border-radius: 10px; font-size: 14px; z-index: 999; opacity: 0; transition: opacity .3s; pointer-events: none; }
+  .toast.show { opacity: 1; }
+
+  .spinner { display: inline-block; width: 14px; height: 14px; border: 2px solid rgba(255,255,255,.3); border-top-color: white; border-radius: 50%; animation: spin .7s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .api-warning { background: #fff9e6; border: 1px solid #ffc340; border-radius: 10px; padding: 10px 14px; font-size: 13px; color: #633806; margin-bottom: 1rem; display: none; align-items: center; gap: 8px; }
+  .api-warning.show { display: flex; }
+
+  @media (max-width: 600px) {
+    .stat-row { grid-template-columns: repeat(2, 1fr); }
+    .run-section { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-brand">
+    <div class="brand-icon">⚖</div>
+    <div>
+      <div class="brand-name">Trợ lý pháp lý AI</div>
+      <div class="brand-sub">thuvienphapluat.vn</div>
+    </div>
+  </div>
+  <div class="status-pill">
+    <div class="dot idle" id="statusDot"></div>
+    <span id="statusText">Sẵn sàng</span>
+  </div>
+</div>
+
+<div class="main">
+
+  <div class="api-warning" id="apiWarning">
+    ⚠️ Chưa cấu hình Anthropic API Key — tóm tắt AI sẽ không hoạt động. Mở file <code>.env</code> và điền API Key.
+  </div>
+
+  <div class="stat-row">
+    <div class="stat-card">
+      <div class="stat-label">📄 Lần chạy này</div>
+      <div class="stat-value" id="statNew">—</div>
+      <div class="stat-hint">văn bản mới</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">🔍 Tìm thấy</div>
+      <div class="stat-value" id="statFound">—</div>
+      <div class="stat-hint">tổng văn bản</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">📦 Đã xử lý</div>
+      <div class="stat-value" id="statTotal">—</div>
+      <div class="stat-hint">tất cả thời gian</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">🕐 Lần cuối</div>
+      <div class="stat-value" id="statLastTime" style="font-size:16px; margin-top:4px;">—</div>
+      <div class="stat-hint" id="statLastDate"></div>
+    </div>
+  </div>
+
+  <div class="run-section">
+    <div class="run-info">
+      <h2>Kiểm tra văn bản mới</h2>
+      <p>Truy cập thuvienphapluat.vn, tóm tắt bằng AI và hiển thị kết quả ngay trên trang này</p>
+    </div>
+    <button class="run-btn" id="runBtn" onclick="runAgent()">
+      ▶ Chạy agent
+    </button>
+  </div>
+
+  <div class="tabs">
+    <button class="tab active" onclick="switchTab('docs', this)">📋 Văn bản mới</button>
+    <button class="tab" onclick="switchTab('history', this)">📅 Lịch sử chạy</button>
+  </div>
+
+  <div id="panel-docs" class="panel active">
+    <div class="empty-state" id="emptyState">
+      <div class="empty-icon">⚖️</div>
+      <h3>Chưa có dữ liệu</h3>
+      <p>Nhấn "Chạy agent" để bắt đầu kiểm tra văn bản pháp luật mới</p>
+    </div>
+    <div id="docList"></div>
+  </div>
+
+  <div id="panel-history" class="panel">
+    <div class="history-list" id="historyList">
+      <div style="padding:2rem; text-align:center; color:#8e8e93; font-size:14px;">Chưa có lịch sử</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+let isRunning = false;
+let pollInterval = null;
+
+const BADGE_MAP = {
+  'Nghị định': 'badge-nd',
+  'Thông tư': 'badge-tt',
+  'Quyết định': 'badge-qd',
+  'Luật': 'badge-luat',
+};
+
+function badgeClass(loai) {
+  return BADGE_MAP[loai] || 'badge-other';
+}
+
+function showToast(msg, duration = 3000) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), duration);
+}
+
+function setRunning(running) {
+  isRunning = running;
+  const btn = document.getElementById('runBtn');
+  const dot = document.getElementById('statusDot');
+  const txt = document.getElementById('statusText');
+
+  if (running) {
+    btn.disabled = true;
+    btn.innerHTML = '<span class="spinner"></span> Đang chạy...';
+    dot.className = 'dot running';
+    txt.textContent = 'Đang chạy...';
+  } else {
+    btn.disabled = false;
+    btn.innerHTML = '▶ Chạy agent';
+    dot.className = 'dot';
+    txt.textContent = 'Sẵn sàng';
+  }
+}
+
+async function runAgent() {
+  if (isRunning) return;
+  setRunning(true);
+  showToast('🚀 Agent đang chạy...', 60000);
+
+  try {
+    await fetch('/api/run', { method: 'POST' });
+    pollInterval = setInterval(pollResult, 2000);
+  } catch(e) {
+    setRunning(false);
+    showToast('❌ Lỗi kết nối server');
+  }
+}
+
+async function pollResult() {
+  try {
+    const r = await fetch('/api/result');
+    const data = await r.json();
+
+    if (data.status === 'running') return;
+
+    clearInterval(pollInterval);
+    setRunning(false);
+
+    if (data.status === 'error') {
+      showToast('❌ Lỗi: ' + data.message);
+      return;
+    }
+
+    renderDocs(data);
+    loadStats();
+    showToast(`✅ Xong! Tìm thấy ${data.new_documents} văn bản mới`);
+  } catch(e) {
+    clearInterval(pollInterval);
+    setRunning(false);
+  }
+}
+
+function renderDocs(data) {
+  const list = document.getElementById('docList');
+  const empty = document.getElementById('emptyState');
+
+  if (!data.documents || data.documents.length === 0) {
+    empty.style.display = 'block';
+    empty.querySelector('h3').textContent = 'Không có văn bản mới';
+    empty.querySelector('p').textContent = 'Không ghi nhận văn bản pháp luật mới được cập nhật trong ngày.';
+    list.innerHTML = '';
+    return;
+  }
+
+  empty.style.display = 'none';
+  list.innerHTML = data.documents.map(doc => {
+    const bc = badgeClass(doc.loai);
+    const meta = [
+      doc.co_quan ? `🏛 ${doc.co_quan}` : '',
+      doc.ngay_ban_hanh ? `📅 ${doc.ngay_ban_hanh}` : '',
+      doc.ngay_hieu_luc ? `⏰ Hiệu lực: ${doc.ngay_hieu_luc}` : '',
+      doc.so_hieu ? `# ${doc.so_hieu}` : '',
+    ].filter(Boolean);
+
+    return `
+    <div class="doc-card">
+      <div class="doc-header">
+        <div class="doc-title">${escHtml(doc.title)}</div>
+        <span class="badge ${bc}">${escHtml(doc.loai)}</span>
+      </div>
+      ${meta.length ? `<div class="doc-meta">${meta.map(m => `<span class="meta-item">${m}</span>`).join('')}</div>` : ''}
+      ${doc.tom_tat ? `
+      <div class="summary">
+        <div class="summary-title">Tóm tắt AI</div>
+        <div class="summary-text">${escHtml(doc.tom_tat)}</div>
+      </div>` : ''}
+      <div class="doc-footer">
+        <a class="link-out" href="${escHtml(doc.url)}" target="_blank">🔗 Xem toàn văn ↗</a>
+        <span class="time-tag">${doc.processed_at ? new Date(doc.processed_at).toLocaleString('vi-VN') : ''}</span>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+async function loadStats() {
+  try {
+    const r = await fetch('/api/status');
+    const s = await r.json();
+    document.getElementById('statTotal').textContent = s.total_processed || 0;
+
+    if (s.last_run) {
+      const t = new Date(s.last_run.time);
+      document.getElementById('statLastTime').textContent = t.toLocaleTimeString('vi-VN', {hour:'2-digit',minute:'2-digit'});
+      document.getElementById('statLastDate').textContent = t.toLocaleDateString('vi-VN');
+      document.getElementById('statNew').textContent = s.last_run.new || 0;
+      document.getElementById('statFound').textContent = s.last_run.found || 0;
+    }
+  } catch(e) {}
+}
+
+async function loadHistory() {
+  try {
+    const r = await fetch('/api/history');
+    const data = await r.json();
+    const runs = data.runs || [];
+    const el = document.getElementById('historyList');
+
+    if (!runs.length) {
+      el.innerHTML = '<div style="padding:2rem; text-align:center; color:#8e8e93; font-size:14px;">Chưa có lịch sử</div>';
+      return;
+    }
+
+    el.innerHTML = runs.slice().reverse().map(run => {
+      const t = new Date(run.time);
+      const isNew = run.new > 0;
+      return `<div class="history-row">
+        <div>
+          <div style="font-weight:500;">${t.toLocaleDateString('vi-VN')} · ${t.toLocaleTimeString('vi-VN',{hour:'2-digit',minute:'2-digit'})}</div>
+          <div style="font-size:12px;color:#6e6e73;margin-top:2px;">Tìm thấy ${run.found} · Mới ${run.new} · Xử lý ${run.processed}</div>
+        </div>
+        <span class="${isNew ? 'tag-ok' : 'tag-empty'}">${isNew ? run.new + ' văn bản mới' : 'Không có gì mới'}</span>
+      </div>`;
+    }).join('');
+  } catch(e) {}
+}
+
+function switchTab(name, el) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById('panel-' + name).classList.add('active');
+  if (name === 'history') loadHistory();
+}
+
+function escHtml(s) {
+  return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function checkApiKey() {
+  fetch('/api/status').then(r => r.json()).catch(() => {});
+}
+
+loadStats();
+checkApiKey();
+</script>
+</body>
+</html>

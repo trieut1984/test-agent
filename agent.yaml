@@ -1,0 +1,18 @@
+name: tro-ly-phap-ly-ai
+display_name: "Trợ lý Pháp lý AI"
+description: "Agent tự động theo dõi và tóm tắt văn bản pháp luật mới từ thuvienphapluat.vn"
+version: "1.0.0"
+runtime:
+  type: web
+  port: 8000
+  health_check: /api/status
+resources:
+  cpu: 2
+  memory: 4Gi
+env:
+  - name: GREENNODE_API_KEY
+    required: true
+  - name: GREENNODE_BASE_URL
+    default: "https://inference-gateway.vngcloud.vn/openai/v1"
+  - name: GREENNODE_MODEL
+    default: "Qwen/Qwen2.5-72B-Instruct"

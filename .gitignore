@@ -1,0 +1,6 @@
+.env
+*.log
+history.json
+__pycache__/
+*.pyc
+.claude/
