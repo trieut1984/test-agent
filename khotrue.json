@@ -1,0 +1,501 @@
+{
+  "documents": [
+    {
+      "id": "s36",
+      "loai": "GTGT",
+      "tinhtrang": "hieuluc",
+      "soHieu": "70/2025/NĐ-CP",
+      "ten": "Sửa đổi, bổ sung một số điều của Nghị định 123/2020/NĐ-CP quy định về hóa đơn, chứng từ",
+      "coQuan": "Chính phủ",
+      "ngay": "2025-04-28",
+      "diemNB": [
+        "Bổ sung quy định hóa đơn điện tử đối với hoạt động thương mại điện tử và nền tảng số — yêu cầu xuất hóa đơn điện tử ngay tại thời điểm phát sinh giao dịch",
+        "Sửa đổi quy trình xử lý hóa đơn điện tử có sai sót sau khi gửi cho người mua: mở rộng trường hợp điều chỉnh/thay thế không cần lập biên bản thỏa thuận",
+        "Cập nhật quy định về hóa đơn giấy cho vùng sâu/vùng xa; điều chỉnh ký hiệu mẫu hóa đơn — thay thế một số quy định của NĐ 123/2020 và TT 78/2021"
+      ],
+      "url": "https://congbao.chinhphu.vn/noi-dung-van-ban-so-70-2025-nd-cp"
+    },
+    {
+      "id": "s30",
+      "loai": "GTGT",
+      "tinhtrang": "hieuluc",
+      "soHieu": "48/2024/QH15",
+      "ten": "Luật Thuế giá trị gia tăng 2024 — thay thế toàn bộ Luật Thuế GTGT 2008 và các lần sửa đổi",
+      "coQuan": "Quốc hội",
+      "ngay": "2024-11-26",
+      "diemNB": [
+        "Phân bón chuyển từ không chịu thuế sang chịu thuế suất 5% từ 01/07/2025 — tác động lớn đến ngành nông nghiệp và kế toán đầu vào",
+        "Doanh thu miễn thuế hộ kinh doanh, cá nhân kinh doanh tăng từ 100 triệu → 200 triệu đồng/năm",
+        "Mua hàng hóa/dịch vụ từ 5 triệu đồng (đã VAT) bắt buộc thanh toán không dùng tiền mặt mới được khấu trừ thuế; bổ sung nghĩa vụ thuế với TMĐT và nền tảng số"
+      ],
+      "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=212476&classid=1&orggroupid=1"
+    },
+    {
+      "id": "s31",
+      "loai": "GTGT",
+      "tinhtrang": "hieuluc",
+      "soHieu": "149/2025/QH15",
+      "ten": "Luật Sửa đổi, bổ sung một số điều của Luật Thuế giá trị gia tăng 2024 — hiệu lực từ 01/01/2026",
+      "coQuan": "Quốc hội",
+      "ngay": "2025-12-11",
+      "diemNB": [
+        "Nâng ngưỡng doanh thu miễn thuế hộ kinh doanh từ 200 triệu → 500 triệu đồng/năm (tăng gấp 5 lần so với luật cũ)",
+        "Bổ sung miễn thuế GTGT: nông sản ở khâu thương mại, thức ăn chăn nuôi, dược liệu; phế liệu/phế phẩm áp thuế suất theo từng loại hàng",
+        "Điều chỉnh điều kiện hoàn thuế GTGT — bỏ yêu cầu bên bán phải hoàn thành nghĩa vụ kê khai/nộp thuế; hiệu lực 01/01/2026"
+      ],
+      "url": "https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Luat-Thue-gia-tri-gia-tang-sua-doi-2025-so-149-2025-QH15-679698.aspx"
+    },
+    {
+      "id": "s32",
+      "loai": "TNDN",
+      "tinhtrang": "hieuluc",
+      "soHieu": "67/2025/QH15",
+      "ten": "Luật Thuế thu nhập doanh nghiệp 2025 — thay thế toàn bộ Luật TNDN 2008 và các lần sửa đổi",
+      "coQuan": "Quốc hội",
+      "ngay": "2025-06-14",
+      "diemNB": [
+        "Luật TNDN hoàn toàn mới, có hiệu lực 01/10/2025 và áp dụng từ kỳ tính thuế 2025 — thay thế Luật TNDN 2008 cùng toàn bộ các lần sửa đổi",
+        "Mở rộng ưu đãi thuế cho doanh nghiệp công nghệ cao, R&D, chuyển đổi số và doanh nghiệp nhỏ và siêu nhỏ",
+        "Giữ nguyên thuế suất phổ thông 20%; bổ sung quy định về xác định chi phí được trừ rõ ràng hơn theo nguyên tắc thực tế phát sinh"
+      ],
+      "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=214607&classid=1&typegroupid=3"
+    },
+    {
+      "id": "s33",
+      "loai": "TNDN",
+      "tinhtrang": "hieuluc",
+      "soHieu": "320/2025/NĐ-CP",
+      "ten": "Quy định chi tiết một số điều và biện pháp thi hành Luật Thuế thu nhập doanh nghiệp 2025",
+      "coQuan": "Chính phủ",
+      "ngay": "2025-12-15",
+      "diemNB": [
+        "Quy định chi tiết nguyên tắc xác định doanh thu, chi phí được trừ và không được trừ khi tính thuế TNDN theo Luật 67/2025",
+        "Hướng dẫn cụ thể điều kiện, mức hưởng và thời gian hưởng ưu đãi thuế TNDN (công nghệ cao, R&D, doanh nghiệp nhỏ/siêu nhỏ)",
+        "Văn bản thực thi chính cho kỳ tính thuế 2025 trở đi; áp dụng cùng với TT 20/2026/TT-BTC hướng dẫn hồ sơ chi phí"
+      ],
+      "url": "https://vanban.chinhphu.vn/?docid=216219&pageid=27160"
+    },
+    {
+      "id": "s34",
+      "loai": "TNDN",
+      "tinhtrang": "hieuluc",
+      "soHieu": "107/2023/QH15",
+      "ten": "Nghị quyết về áp dụng thuế thu nhập doanh nghiệp bổ sung theo quy định chống xói mòn cơ sở thuế toàn cầu (Thuế tối thiểu toàn cầu 15%)",
+      "coQuan": "Quốc hội",
+      "ngay": "2023-11-29",
+      "diemNB": [
+        "Áp dụng thuế TNDN bổ sung với doanh nghiệp thành viên của MNE có doanh thu hợp nhất ≥ 750 triệu EUR trong 2/4 năm liên tiếp trước kỳ tính thuế",
+        "Đảm bảo mức thuế thực tế tối thiểu 15%: nếu tỷ lệ thuế tại Việt Nam thấp hơn 15%, phần chênh lệch sẽ bị thu thêm dưới hình thức thuế bổ sung nội địa",
+        "Là cam kết của Việt Nam trong khung BEPS 2.0 của OECD; ảnh hưởng trực tiếp đến chính sách ưu đãi thuế đang hưởng của FDI lớn"
+      ],
+      "url": "https://vanban.chinhphu.vn/?docid=209231&pageid=27160"
+    },
+    {
+      "id": "s35",
+      "loai": "TNDN",
+      "tinhtrang": "hieuluc",
+      "soHieu": "236/2025/NĐ-CP",
+      "ten": "Quy định chi tiết một số điều của Nghị quyết 107/2023/QH15 về thuế tối thiểu toàn cầu",
+      "coQuan": "Chính phủ",
+      "ngay": "2025-08-29",
+      "diemNB": [
+        "Hướng dẫn chi tiết xác định đối tượng nộp thuế bổ sung, cách tính thuế suất thực tế và số thuế bổ sung phải nộp theo cơ chế IIR/UTPR",
+        "Quy định trình tự kê khai, nộp thuế TNDN bổ sung; hồ sơ chứng minh doanh thu tập đoàn và phân bổ lợi nhuận giữa các quốc gia",
+        "Thay thế NĐ 132/2020 về giao dịch liên kết đối với phần liên quan đến MNE thuộc diện thuế tối thiểu; hiệu lực 29/08/2025"
+      ],
+      "url": "https://vanban.chinhphu.vn/?docid=215112&pageid=27160"
+    },
+    {
+      "id": "s29",
+      "loai": "TNDN",
+      "tinhtrang": "hieuluc",
+      "soHieu": "20/2026/TT-BTC",
+      "ten": "Quy định chi tiết một số điều của Luật Thuế thu nhập doanh nghiệp và Nghị định 320/2025/NĐ-CP",
+      "coQuan": "Bộ Tài chính",
+      "ngay": "2026-03-12",
+      "diemNB": [
+        "Hướng dẫn hồ sơ chứng từ chi phí được trừ khi tính thuế TNDN (Điều 9 Luật TNDN 2025) — bao gồm chi phí lãi vay, chi phí liên quan đến giao dịch liên kết",
+        "Hướng dẫn hồ sơ hưởng ưu đãi thuế TNDN cho doanh nghiệp đầu tư mở rộng và quỹ khoa học & công nghệ (Điều 13–15 Luật TNDN 2025)",
+        "Quy định thời điểm xác định doanh thu tính thuế TNDN trong các trường hợp đặc thù (hợp đồng dài hạn, BĐS, dịch vụ trả chậm)"
+      ],
+      "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=217191"
+    },
+    {
+      "id": "s28",
+      "loai": "PhatHC",
+      "tinhtrang": "hieuluc",
+      "soHieu": "88/2025/QH15",
+      "ten": "Luật Sửa đổi, bổ sung một số điều của Luật Xử lý vi phạm hành chính — hiệu lực từ 01/07/2025",
+      "coQuan": "Quốc hội",
+      "ngay": "2025-06-25",
+      "diemNB": [
+        "Tăng thời hiệu xử phạt trong lĩnh vực kế toán, hóa đơn, phí/lệ phí — ảnh hưởng trực tiếp đến thời hạn xử phạt vi phạm về thuế",
+        "Cho phép lập biên bản, ra quyết định xử phạt trực tuyến — có giá trị pháp lý ngang bản giấy (số hóa quy trình xử phạt hành chính)",
+        "Là nền tảng pháp lý mới cho NĐ 125/2020 về xử phạt vi phạm hành chính về thuế và hóa đơn — cần theo dõi NĐ hướng dẫn cập nhật"
+      ],
+      "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=214591&classid=1&orggroupid=1"
+    },
+    {
+      "id": "s23",
+      "loai": "GTGT",
+      "tinhtrang": "hieuluc",
+      "soHieu": "204/2025/QH15",
+      "ten": "Giảm 2% thuế suất thuế GTGT từ 01/07/2025 đến 31/12/2026 — áp dụng đồng thời với Luật Thuế GTGT mới",
+      "coQuan": "Quốc hội",
+      "ngay": "2025-06-17",
+      "diemNB": [
+        "Giảm thuế suất GTGT từ 10% xuống 8% áp dụng từ 01/07/2025 đến hết 31/12/2026 — dài hạn hơn các lần giảm trước (chỉ 6 tháng)",
+        "Không áp dụng với: viễn thông, tài chính, ngân hàng, chứng khoán, bảo hiểm, BĐS, sản phẩm khai khoáng, hàng chịu thuế TTĐB (trừ xăng)",
+        "Mở rộng phạm vi so với NQ 110/2023: bổ sung vận tải, logistics, CNTT hỗ trợ kinh tế số được hưởng mức giảm"
+      ],
+      "url": "https://thuvienphapluat.vn/phap-luat/nghi-quyet-2042025qh15-chinh-thuc-giam-thue-gtgt-tu-10-xuong-8-tu-ngay-172025-den-het-31122026-223404.html"
+    },
+    {
+      "id": "s24",
+      "loai": "GTGT",
+      "tinhtrang": "hieuluc",
+      "soHieu": "174/2025/NĐ-CP",
+      "ten": "Quy định chính sách giảm thuế giá trị gia tăng theo Nghị quyết 204/2025/QH15",
+      "coQuan": "Chính phủ",
+      "ngay": "2025-06-30",
+      "diemNB": [
+        "Hướng dẫn chi tiết áp dụng mức giảm 2% GTGT (từ 10% → 8%) theo NQ 204/2025 — hiệu lực từ 01/07/2025 đến 31/12/2026",
+        "Quy định cụ thể danh mục hàng hóa, dịch vụ được giảm và không được giảm kèm Phụ lục đính kèm",
+        "Thay thế NĐ 72/2024 và 94/2023 — văn bản thực thi pháp lý chính cho doanh nghiệp kê khai GTGT 2025–2026"
+      ],
+      "url": "https://sme.misa.vn/345453/nghi-dinh-174-ve-giam-thue-gtgt/"
+    },
+    {
+      "id": "s25",
+      "loai": "TTDB",
+      "tinhtrang": "hieuluc",
+      "soHieu": "66/2025/QH15",
+      "ten": "Luật Thuế tiêu thụ đặc biệt năm 2025 — thay thế Luật TTĐB 2008 và các lần sửa đổi",
+      "coQuan": "Quốc hội",
+      "ngay": "2025-06-14",
+      "diemNB": [
+        "Bổ sung đối tượng chịu thuế mới: nước giải khát có đường (>5g/100ml) và điều hòa công suất 24.000–90.000 BTU",
+        "Lộ trình tăng thuế suất 2026–2031: bia và rượu mạnh tăng lên 90%, thuốc lá chịu thêm thuế tuyệt đối 2.000–10.000đ/bao",
+        "Bổ sung phương pháp tính thuế hỗn hợp (tỷ lệ % + tuyệt đối); hiệu lực từ 01/01/2026"
+      ],
+      "url": "https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Luat-thue-tieu-thu-dac-biet-2025-so-66-2025-QH15-621225.aspx"
+    },
+    {
+      "id": "s26",
+      "loai": "TTDB",
+      "tinhtrang": "hieuluc",
+      "soHieu": "360/2025/NĐ-CP",
+      "ten": "Quy định chi tiết thi hành Luật Thuế tiêu thụ đặc biệt 2025",
+      "coQuan": "Chính phủ",
+      "ngay": "2025-12-31",
+      "diemNB": [
+        "Hướng dẫn đầy đủ hồ sơ xác định đối tượng không chịu thuế TTĐB theo Luật 66/2025/QH15",
+        "Quy định chi tiết phương pháp tính thuế tuyệt đối và hỗn hợp áp dụng từ 01/01/2026",
+        "Ban hành biểu thuế suất lộ trình cho giai đoạn 2026–2031 đối với thuốc lá, bia, rượu, nước giải khát có đường"
+      ],
+      "url": "https://trian.dongnai.gov.vn/vi/news/thong-tin-tuyen-truyen/quy-dinh-moi-cua-luat-thue-tieu-thu-dac-biet-2025-915.html"
+    },
+    {
+      "id": "s27",
+      "loai": "GTGT",
+      "tinhtrang": "hieuluc",
+      "soHieu": "78/2021/TT-BTC",
+      "ten": "Hướng dẫn thực hiện một số điều của Luật Quản lý thuế và Nghị định 123/2020/NĐ-CP về hóa đơn, chứng từ",
+      "coQuan": "Bộ Tài chính",
+      "ngay": "2021-09-17",
+      "diemNB": [
+        "Quy định bắt buộc chuyển đổi sang hóa đơn điện tử từ 01/07/2022 — áp dụng toàn bộ doanh nghiệp, hộ kinh doanh",
+        "Hướng dẫn ký hiệu mẫu số hóa đơn, xử lý hóa đơn sai sót, hủy hóa đơn điện tử đã lập",
+        "Quy định phạm vi và thời hạn lưu trữ hóa đơn điện tử; thay thế TT 32/2011 về hóa đơn giấy"
+      ],
+      "url": "https://www.meinvoice.vn/tin-tuc/10056/quy-dinh-hoa-don-dien-tu-thong-tu-78/"
+    },
+    {
+      "id": "s21",
+      "loai": "TNDN",
+      "tinhtrang": "hieuluc",
+      "soHieu": "20/2026/TT-BTC",
+      "ten": "Hướng dẫn thi hành Luật Thuế thu nhập doanh nghiệp 2025 và Nghị định 320/2025/NĐ-CP",
+      "coQuan": "Bộ Tài chính",
+      "ngay": "2026-03-12",
+      "diemNB": [
+        "Hướng dẫn chi tiết chứng từ chi phí hợp lý được trừ và thời điểm ghi nhận doanh thu tính thuế TNDN",
+        "Áp dụng từ kỳ tính thuế 2025 — doanh nghiệp cần rà soát hồ sơ chi phí năm 2025 theo quy định mới",
+        "Cập nhật nghĩa vụ thuế nhà thầu nước ngoài; thay thế TT 78/2014/TT-BTC và các TT sửa đổi trước đó"
+      ],
+      "url": "https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Thong-tu-20-2026-TT-BTC-huong-dan-Luat-Thue-thu-nhap-doanh-nghiep-va-Nghi-dinh-320-2025-ND-CP-672539.aspx"
+    },
+    {
+      "id": "s22",
+      "loai": "TNCN",
+      "tinhtrang": "chuahieuluc",
+      "soHieu": "109/2025/QH15",
+      "ten": "Luật Thuế thu nhập cá nhân 2025 — thay thế Luật TNCN 2007 và các lần sửa đổi",
+      "coQuan": "Quốc hội",
+      "ngay": "2025-12-10",
+      "diemNB": [
+        "Tăng mức giảm trừ bản thân lên 15,5 triệu/tháng (từ 11 triệu) và người phụ thuộc lên 6,2 triệu/tháng (từ 4,4 triệu)",
+        "Bổ sung thuế TNCN 0,1% trên giá chuyển nhượng vàng miếng từng lần giao dịch",
+        "Chính phủ được điều chỉnh mức giảm trừ chủ động (không phụ thuộc CPI 20%); hiệu lực từ 01/07/2026"
+      ],
+      "url": "https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Luat-Thue-thu-nhap-ca-nhan-2025-so-109-2025-QH15-665870.aspx"
+    },
+    {
+      "id": "s20",
+      "loai": "TNDN",
+      "tinhtrang": "hieuluc",
+      "soHieu": "320/2025/NĐ-CP",
+      "ten": "Quy định chi tiết thi hành Luật Thuế thu nhập doanh nghiệp 2025",
+      "coQuan": "Chính phủ",
+      "ngay": "2025-12-15",
+      "diemNB": [
+        "Hướng dẫn đầy đủ Luật Thuế TNDN 2025 — thay thế NĐ 218/2013 và các nghị định sửa đổi trước đó",
+        "DN được lựa chọn áp dụng quy định về doanh thu, chi phí, ưu đãi từ đầu kỳ tính thuế năm 2025",
+        "Bổ sung yêu cầu thanh toán không dùng tiền mặt cho chi phí hợp lý được trừ (từ 5 triệu đồng)"
+      ],
+      "url": "https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Nghi-dinh-320-2025-ND-CP-665051.aspx"
+    },
+    {
+      "id": "s19",
+      "loai": "GTGT",
+      "tinhtrang": "hieuluc",
+      "soHieu": "69/2025/TT-BTC",
+      "ten": "Hướng dẫn thi hành Luật Thuế giá trị gia tăng và Nghị định 181/2025/NĐ-CP",
+      "coQuan": "Bộ Tài chính",
+      "ngay": "2025-07-01",
+      "diemNB": [
+        "Thay thế TT 219/2013/TT-BTC — văn bản gốc hướng dẫn GTGT đã áp dụng hơn 12 năm",
+        "Hướng dẫn đầy đủ kê khai, khấu trừ, hoàn thuế GTGT theo Luật 48/2024 và NĐ 181/2025",
+        "Quy định rõ thời điểm xác định thuế GTGT cho các ngành đặc thù: viễn thông, điện nước, BĐS, cho thuê"
+      ],
+      "url": "https://congbao.chinhphu.vn/noi-dung-van-ban-so-69-2025-tt-btc-45440"
+    },
+    {
+      "id": "s18",
+      "loai": "GTGT",
+      "tinhtrang": "hieuluc",
+      "soHieu": "181/2025/NĐ-CP",
+      "ten": "Quy định chi tiết thi hành một số điều của Luật Thuế giá trị gia tăng 2024",
+      "coQuan": "Chính phủ",
+      "ngay": "2025-07-01",
+      "diemNB": [
+        "Hướng dẫn chi tiết Luật GTGT 48/2024/QH15 — hiệu lực từ 01/07/2025 đồng thời với Luật",
+        "Giao dịch từ 5 triệu đồng (gồm VAT) bắt buộc thanh toán không dùng tiền mặt mới được khấu trừ thuế đầu vào",
+        "Hàng nhập khẩu tái xuất sang nước thứ ba không được hoàn thuế GTGT đầu vào — ngăn lợi dụng cơ chế hoàn thuế"
+      ],
+      "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=214336"
+    },
+    {
+      "id": "s10",
+      "loai": "GTGT",
+      "tinhtrang": "hieuluc",
+      "soHieu": "48/2024/QH15",
+      "ten": "Luật Thuế giá trị gia tăng (sửa đổi) năm 2024 — thay thế Luật Thuế GTGT 2008",
+      "coQuan": "Quốc hội",
+      "ngay": "2024-11-26",
+      "diemNB": [
+        "Phân bón, máy móc chuyên dùng cho nông nghiệp, tàu đánh cá chuyển sang chịu thuế 5% — doanh nghiệp được khấu trừ thuế GTGT đầu vào",
+        "Ngưỡng doanh thu không chịu GTGT cho hộ/cá nhân kinh doanh tăng lên 200 triệu đồng/năm (từ 100 triệu)",
+        "Hiệu lực từ 01/07/2025 — thay thế toàn bộ Luật Thuế GTGT 2008 và các sửa đổi trước đó"
+      ],
+      "url": "https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Luat-48-2024-QH15-Luat-Thue-gia-tri-gia-tang-sua-doi-623580.aspx"
+    },
+    {
+      "id": "s11",
+      "loai": "TNDN",
+      "tinhtrang": "hieuluc",
+      "soHieu": "107/2023/QH15",
+      "ten": "Áp dụng thuế thu nhập doanh nghiệp bổ sung theo quy định chống xói mòn cơ sở thuế toàn cầu (Thuế tối thiểu toàn cầu)",
+      "coQuan": "Quốc hội",
+      "ngay": "2023-11-29",
+      "diemNB": [
+        "Áp dụng mức thuế suất tối thiểu toàn cầu 15% (Pillar Two/GloBE) cho tập đoàn đa quốc gia lớn",
+        "Áp dụng với doanh nghiệp thuộc tập đoàn có doanh thu hợp nhất toàn cầu từ 750 triệu EUR/năm trở lên",
+        "Việt Nam thu phần thuế bổ sung nội địa (QDMTT) — tránh để quốc gia của công ty mẹ thu thay"
+      ],
+      "url": "https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Nghi-quyet-107-2023-QH15-ap-dung-thue-thu-nhap-doanh-nghiep-bo-sung-theo-chong-xoi-mon-co-so-thue-toan-cau-594006.aspx"
+    },
+    {
+      "id": "s2",
+      "loai": "GTGT",
+      "tinhtrang": "hethieuluc",
+      "soHieu": "94/2023/NĐ-CP",
+      "ten": "Giảm 2% thuế suất thuế GTGT từ 01/01/2024 đến 30/06/2024 theo Nghị quyết 110/2023/QH15",
+      "coQuan": "Chính phủ",
+      "ngay": "2023-12-28",
+      "diemNB": [
+        "Giảm thuế suất GTGT từ 10% xuống 8% áp dụng cho H1/2024 (01/01–30/06/2024)",
+        "Loại trừ: hàng chịu thuế tiêu thụ đặc biệt, khoáng sản, dịch vụ tài chính, BĐS",
+        "Cơ sở kinh doanh tự xác định nhóm hàng đủ điều kiện để áp dụng mức giảm"
+      ],
+      "url": "https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Nghi-dinh-94-2023-ND-CP-giam-thue-gia-tri-gia-tang-tu-01-01-2024-den-30-6-2024-591765.aspx"
+    },
+    {
+      "id": "s3",
+      "loai": "GTGT",
+      "tinhtrang": "hethieuluc",
+      "soHieu": "72/2024/NĐ-CP",
+      "ten": "Giảm 2% thuế suất thuế GTGT từ 01/07/2024 đến 31/12/2024",
+      "coQuan": "Chính phủ",
+      "ngay": "2024-06-30",
+      "diemNB": [
+        "Giảm thuế suất từ 10% xuống 8% áp dụng cho H2/2024 (01/07–31/12/2024)",
+        "Không áp dụng với: viễn thông, tài chính, ngân hàng, bảo hiểm, kinh doanh bất động sản",
+        "Hết hiệu lực từ 01/01/2025 — cần theo dõi gia hạn trong năm 2025"
+      ],
+      "url": "https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Nghi-dinh-72-2024-ND-CP-giam-thue-GTGT-607498.aspx"
+    },
+    {
+      "id": "s15",
+      "loai": "NTNN",
+      "tinhtrang": "hieuluc",
+      "soHieu": "Cổng ETax NCC NN",
+      "ten": "Cơ chế khai thuế trực tiếp cho nhà cung cấp nước ngoài — áp dụng từ 2022 (Google, Meta, Netflix, TikTok...)",
+      "coQuan": "Tổng cục Thuế",
+      "ngay": "2022-03-21",
+      "diemNB": [
+        "Từ 2022, nhà cung cấp nước ngoài (Google, Meta, Netflix, TikTok, Apple...) bắt buộc đăng ký, khai và nộp thuế trực tiếp qua cổng etax.gdt.gov.vn",
+        "Thuế suất theo TT 103/2014 vẫn áp dụng: GTGT 5% + TNDN 5% cho dịch vụ; thực hiện qua tài khoản mở tại ngân hàng Việt Nam",
+        "Trong 2 năm (2022–2023), hơn 100 tổ chức nước ngoài đã nộp thuế trực tiếp — giảm phụ thuộc vào cơ chế khấu trừ tại nguồn"
+      ],
+      "url": "https://www.gdt.gov.vn/wps/portal/home/nhccnn"
+    },
+    {
+      "id": "s17",
+      "loai": "GTGT",
+      "tinhtrang": "hethieuluc",
+      "soHieu": "15/2022/NĐ-CP",
+      "ten": "Giảm 2% thuế suất thuế GTGT từ 01/02/2022 đến 31/12/2022 theo Nghị quyết 43/2022/QH15",
+      "coQuan": "Chính phủ",
+      "ngay": "2022-01-28",
+      "diemNB": [
+        "Giảm thuế suất từ 10% xuống 8% áp dụng từ 01/02/2022 đến 31/12/2022",
+        "Loại trừ: viễn thông, công nghệ thông tin, tài chính, ngân hàng, chứng khoán, bảo hiểm, bất động sản",
+        "Hết hiệu lực từ 01/01/2023 — là lần giảm GTGT đầu tiên trong giai đoạn phục hồi sau COVID-19"
+      ],
+      "url": "https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Nghi-dinh-15-2022-ND-CP-giam-thue-gia-tri-gia-tang-500819.aspx"
+    },
+    {
+      "id": "s9",
+      "loai": "PhatHC",
+      "tinhtrang": "hieuluc",
+      "soHieu": "102/2021/NĐ-CP",
+      "ten": "Sửa đổi, bổ sung một số điều của Nghị định 125/2020/NĐ-CP về xử phạt vi phạm hành chính về thuế, hóa đơn",
+      "coQuan": "Chính phủ",
+      "ngay": "2021-11-16",
+      "diemNB": [
+        "Điều chỉnh mức phạt chậm nộp hồ sơ khai thuế: phạt tiền từ 2 triệu đến 5 triệu đồng tùy mức độ",
+        "Bổ sung xử phạt vi phạm về hóa đơn điện tử theo Nghị định 123/2020/NĐ-CP",
+        "Quy định rõ các tình tiết giảm nhẹ và tình tiết tăng nặng khi xử phạt thuế"
+      ],
+      "url": "https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Nghi-dinh-102-2021-ND-CP-sua-doi-Nghi-dinh-125-2020-xu-phat-vi-pham-ve-thue-490396.aspx"
+    },
+    {
+      "id": "s1",
+      "loai": "GTGT",
+      "tinhtrang": "hieuluc",
+      "soHieu": "80/2021/TT-BTC",
+      "ten": "Hướng dẫn khai thuế, nộp thuế GTGT theo Luật Quản lý thuế và Nghị định 126/2020/NĐ-CP",
+      "coQuan": "Bộ Tài chính",
+      "ngay": "2021-09-29",
+      "diemNB": [
+        "Hợp nhất quy định khai thuế GTGT theo phương pháp khấu trừ và phương pháp trực tiếp",
+        "Quy định cơ chế khai thuế tập trung cho doanh nghiệp có nhiều chi nhánh khác tỉnh",
+        "Hướng dẫn chi tiết thủ tục hoàn thuế GTGT đối với dự án đầu tư mới"
+      ],
+      "url": "https://luatvietnam.vn/thue/thong-tu-80-2021-tt-btc-216073-d1.html"
+    },
+    {
+      "id": "s5",
+      "loai": "TNDN",
+      "tinhtrang": "hieuluc",
+      "soHieu": "45/2021/TT-BTC",
+      "ten": "Hướng dẫn chế độ quản lý, tính khấu hao tài sản cố định",
+      "coQuan": "Bộ Tài chính",
+      "ngay": "2021-06-18",
+      "diemNB": [
+        "Cập nhật danh mục 45 nhóm TSCĐ với khung thời gian khấu hao mới thay thế TT 45/2013",
+        "Cho phép DN điều chỉnh thời gian khấu hao trong phạm vi min–max của khung quy định",
+        "Hướng dẫn khấu hao TSCĐ thuê tài chính, TSCĐ vô hình và phần mềm máy tính"
+      ],
+      "url": "https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Thong-tu-45-2021-TT-BTC-che-do-quan-ly-tinh-khau-hao-tai-san-co-dinh-484068.aspx"
+    },
+    {
+      "id": "s7",
+      "loai": "TNCN",
+      "tinhtrang": "hieuluc",
+      "soHieu": "40/2021/TT-BTC",
+      "ten": "Hướng dẫn thuế GTGT, thuế TNCN và quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh",
+      "coQuan": "Bộ Tài chính",
+      "ngay": "2021-06-01",
+      "diemNB": [
+        "Thay thế TT 92/2015 — áp dụng từ 01/08/2021 cho hộ kinh doanh và cá nhân kinh doanh",
+        "3 hình thức tính thuế: theo phương pháp khoán, kê khai, hoặc từng lần phát sinh",
+        "Tỷ lệ thuế khoán theo ngành: thương mại 0.5%, dịch vụ 2%, sản xuất & xây dựng 1.5%"
+      ],
+      "url": "https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Thong-tu-40-2021-TT-BTC-huong-dan-thue-GTGT-thue-TNCN-ho-kinh-doanh-ca-nhan-kinh-doanh-481801.aspx"
+    },
+    {
+      "id": "s4",
+      "loai": "TNDN",
+      "tinhtrang": "hieuluc",
+      "soHieu": "132/2020/NĐ-CP",
+      "ten": "Quy định về quản lý thuế đối với doanh nghiệp có giao dịch liên kết",
+      "coQuan": "Chính phủ",
+      "ngay": "2020-11-05",
+      "diemNB": [
+        "Chi phí lãi vay bên liên kết bị giới hạn: phần vượt 30% EBITDA không được trừ khi tính thuế TNDN",
+        "Bắt buộc lập hồ sơ xác định giá giao dịch liên kết theo nguyên tắc giá thị trường (arm's length)",
+        "Áp dụng với DN có giao dịch liên kết; thay thế Nghị định 20/2017/NĐ-CP"
+      ],
+      "url": "https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Nghi-dinh-132-2020-ND-CP-quan-ly-thue-doi-voi-doanh-nghiep-co-giao-dich-lien-ket-457428.aspx"
+    },
+    {
+      "id": "s16",
+      "loai": "PhatHC",
+      "tinhtrang": "hieuluc",
+      "soHieu": "125/2020/NĐ-CP",
+      "ten": "Quy định xử phạt vi phạm hành chính về thuế và hóa đơn (văn bản chính, được sửa đổi bởi NĐ 102/2021)",
+      "coQuan": "Chính phủ",
+      "ngay": "2020-10-27",
+      "diemNB": [
+        "Quy định đầy đủ 4 nhóm hành vi vi phạm: vi phạm về đăng ký thuế, khai thuế, nộp thuế, và hóa đơn",
+        "Mức phạt từ cảnh cáo đến 4 lần số thuế trốn — phạt tiền từ 400.000đ đến hàng tỷ đồng tùy mức độ nghiêm trọng",
+        "Căn cứ pháp lý chính — được NĐ 102/2021 sửa đổi một số điều liên quan đến hóa đơn điện tử"
+      ],
+      "url": "https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Nghi-dinh-125-2020-ND-CP-xu-phat-vi-pham-hanh-chinh-ve-thue-hoa-don-456275.aspx"
+    },
+    {
+      "id": "s6",
+      "loai": "TNCN",
+      "tinhtrang": "hieuluc",
+      "soHieu": "954/2020/UBTVQH14",
+      "ten": "Điều chỉnh mức giảm trừ gia cảnh của thuế thu nhập cá nhân",
+      "coQuan": "Ủy ban Thường vụ Quốc hội",
+      "ngay": "2020-06-02",
+      "diemNB": [
+        "Mức giảm trừ bản thân: 11 triệu đồng/tháng (132 triệu/năm), tăng từ mức 9 triệu trước đó",
+        "Mức giảm trừ người phụ thuộc: 4,4 triệu đồng/tháng, tăng từ mức 3,6 triệu trước đó",
+        "Áp dụng hồi tố từ kỳ tính thuế năm 2020 — người nộp thuế được hoàn/bù trừ số thuế chênh lệch"
+      ],
+      "url": "https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Nghi-quyet-954-2020-UBTVQH14-dieu-chinh-muc-giam-tru-gia-canh-thue-thu-nhap-ca-nhan-445157.aspx"
+    },
+    {
+      "id": "s8",
+      "loai": "NTNN",
+      "tinhtrang": "hieuluc",
+      "soHieu": "103/2014/TT-BTC",
+      "ten": "Hướng dẫn thực hiện nghĩa vụ thuế nhà thầu đối với tổ chức, cá nhân nước ngoài kinh doanh tại Việt Nam",
+      "coQuan": "Bộ Tài chính",
+      "ngay": "2014-07-06",
+      "diemNB": [
+        "Thuế nhà thầu = thuế GTGT + thuế TNDN tính trên doanh thu/giá trị hợp đồng (không cần quyết toán)",
+        "Tỷ lệ ấn định: dịch vụ chịu 5% GTGT + 5% TNDN; cung cấp hàng hóa chịu 1% GTGT + 1% TNDN",
+        "Bên Việt Nam (bên thuê) phải khấu trừ và nộp thay — áp dụng cả Google, Facebook, TikTok kinh doanh tại VN"
+      ],
+      "url": "https://luatvietnam.vn/thue/thong-tu-103-2014-tt-btc-85651-d1.html"
+    }
+  ],
+  "last_updated": "2026-06-16T00:00:00",
+  "version": 6
+}

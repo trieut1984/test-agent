@@ -3,6 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <title>Trợ lý pháp lý AI</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -19,28 +22,80 @@
   .dot.idle { background: #8e8e93; }
   @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
 
-  .main { max-width: 960px; margin: 0 auto; padding: 2rem 1.5rem; }
+  /* ── Page layout: sidebar + main ── */
+  .page-layout { max-width: 1280px; margin: 0 auto; padding: 2rem 1.5rem; display: grid; grid-template-columns: 268px 1fr; gap: 1.5rem; align-items: start; }
+  .main { min-width: 0; }
 
+  /* ── Global left sidebar ── */
+  .gs-sidebar { background: #fff; border-radius: 16px; border: 1px solid #e5e5ea; overflow: hidden; position: sticky; top: 70px; }
+  .gs-label { font-size: 10px; font-weight: 700; color: #8e8e93; letter-spacing: .1em; padding: 14px 16px 6px; text-transform: uppercase; }
+  .gs-cat { display: flex; align-items: center; justify-content: space-between; padding: 8px 14px; cursor: pointer; transition: background .1s; }
+  .gs-cat:hover { background: #f9f9fb; }
+  .gs-cat.active { background: #EEEDFE; }
+  .gs-cat-left { display: flex; align-items: center; gap: 10px; }
+  .gs-cat-icon { width: 30px; height: 30px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 15px; flex-shrink: 0; }
+  .gs-cat-name { font-size: 13px; color: #1d1d1f; font-weight: 500; }
+  .gs-cat.active .gs-cat-name { color: #534AB7; font-weight: 600; }
+  .gs-cat-count { font-size: 12px; font-weight: 600; color: #aeaeb2; }
+  .gs-cat.active .gs-cat-count { color: #534AB7; }
+  .gs-add-btn { display: flex; align-items: center; justify-content: center; gap: 6px; width: calc(100% - 28px); margin: 8px 14px 12px; padding: 9px; background: #f9f9fb; border: 1.5px dashed #d1d1d6; border-radius: 10px; font-size: 13px; color: #6e6e73; cursor: pointer; font-weight: 500; transition: all .15s; }
+  .gs-add-btn:hover { background: #EEEDFE; border-color: #534AB7; color: #534AB7; }
+  .gs-divider { height: 1px; background: #f2f2f7; margin: 2px 0; }
+  .gs-stat-row { display: flex; align-items: center; justify-content: space-between; padding: 7px 16px; font-size: 12px; }
+  .gs-stat-label { color: #6e6e73; }
+  .gs-stat-val { font-weight: 700; }
+
+  /* ── Stat cards ── */
   .stat-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 1.5rem; }
   .stat-card { background: #fff; border-radius: 12px; padding: 16px 18px; border: 1px solid #e5e5ea; }
-  .stat-label { font-size: 12px; color: #8e8e93; margin-bottom: 6px; display: flex; align-items: center; gap-5px; }
+  .stat-label { font-size: 12px; color: #8e8e93; margin-bottom: 6px; }
   .stat-value { font-size: 26px; font-weight: 600; color: #1d1d1f; }
   .stat-hint { font-size: 11px; color: #aeaeb2; margin-top: 3px; }
 
-  .run-section { background: #fff; border-radius: 14px; border: 1px solid #e5e5ea; padding: 1.25rem 1.5rem; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+  /* ── Run section ── */
+  .run-section { background: #fff; border-radius: 14px; border: 1px solid #e5e5ea; padding: 1.1rem 1.5rem; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
   .run-info h2 { font-size: 15px; font-weight: 600; }
-  .run-info p { font-size: 13px; color: #6e6e73; margin-top: 3px; }
+  .run-info p { font-size: 12px; color: #6e6e73; margin-top: 3px; }
   .run-btn { background: #534AB7; color: white; border: none; border-radius: 10px; padding: 10px 22px; font-size: 14px; font-weight: 500; cursor: pointer; display: flex; align-items: center; gap: 8px; white-space: nowrap; transition: background .15s; }
   .run-btn:hover { background: #3C3489; }
   .run-btn:disabled { background: #aeaeb2; cursor: default; }
 
+  /* ── Tabs ── */
   .tabs { display: flex; gap: 2px; margin-bottom: 1rem; background: #f2f2f7; padding: 3px; border-radius: 10px; width: fit-content; }
   .tab { padding: 7px 18px; font-size: 13px; font-weight: 500; cursor: pointer; border: none; background: none; color: #6e6e73; border-radius: 8px; transition: all .15s; }
   .tab.active { background: #fff; color: #1d1d1f; box-shadow: 0 1px 3px rgba(0,0,0,.1); }
+  .tab-count { font-size: 10px; font-weight: 700; background: #534AB7; color: white; padding: 1px 6px; border-radius: 8px; margin-left: 4px; vertical-align: middle; }
+  .tab.active .tab-count { background: #3C3489; }
 
   .panel { display: none; }
   .panel.active { display: block; }
 
+  /* ── Hot cards ── */
+  .hot-section { margin-bottom: 1.5rem; }
+  .hot-section-title { display: flex; align-items: center; gap: 8px; font-size: 16px; font-weight: 700; color: #1d1d1f; margin-bottom: 12px; }
+  .hot-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+  .hot-card { background: #fff; border-radius: 14px; border: 2px solid #FFB800; padding: 1.1rem 1.25rem; transition: box-shadow .15s; position: relative; overflow: hidden; }
+  .hot-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #FF6B00, #FFB800, #FF6B00); }
+  .hot-card:hover { box-shadow: 0 4px 16px rgba(255,184,0,.25); }
+  .hot-badge { position: absolute; top: 12px; right: 12px; background: #FF6B00; color: white; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 6px; text-transform: uppercase; letter-spacing: .05em; }
+  .hot-rank { width: 24px; height: 24px; border-radius: 50%; background: #FF6B00; color: white; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .hot-card-header { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; padding-right: 56px; }
+  .hot-title { font-size: 13px; font-weight: 600; color: #1d1d1f; line-height: 1.45; }
+  .hot-meta { display: flex; flex-wrap: wrap; gap: 4px 12px; margin-bottom: 8px; }
+  .hot-meta-item { font-size: 11px; color: #6e6e73; }
+  .hot-summary { background: #FFF9E6; border-left: 3px solid #FFB800; border-radius: 0 8px 8px 0; padding: 8px 12px; }
+  .hot-summary-title { font-size: 10px; font-weight: 700; color: #B85C00; margin-bottom: 4px; text-transform: uppercase; letter-spacing: .05em; }
+  .hot-summary-text { font-size: 12px; color: #3a3a3c; line-height: 1.55; white-space: pre-wrap; }
+  .hot-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 10px; padding-top: 8px; border-top: 1px solid #FFF0B0; }
+  .hot-link { font-size: 12px; color: #B85C00; text-decoration: none; font-weight: 500; }
+  .hot-link:hover { text-decoration: underline; }
+  .source-tag { font-size: 10px; color: #aeaeb2; background: #f2f2f7; padding: 2px 7px; border-radius: 5px; }
+
+  .section-divider { display: flex; align-items: center; gap: 10px; margin: 1.5rem 0 1rem; }
+  .section-divider-line { flex: 1; height: 1px; background: #e5e5ea; }
+  .section-divider-label { font-size: 12px; font-weight: 600; color: #8e8e93; white-space: nowrap; text-transform: uppercase; letter-spacing: .06em; }
+
+  /* ── Doc cards (regular) ── */
   .doc-card { background: #fff; border-radius: 14px; border: 1px solid #e5e5ea; padding: 1.25rem 1.5rem; margin-bottom: 12px; transition: border-color .15s; }
   .doc-card:hover { border-color: #c7c7cc; }
   .doc-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
@@ -51,14 +106,11 @@
   .badge-qd { background: #FAEEDA; color: #633806; }
   .badge-luat { background: #FCEBEB; color: #A32D2D; }
   .badge-other { background: #f2f2f7; color: #3a3a3c; }
-
   .doc-meta { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-bottom: 10px; }
   .meta-item { font-size: 12px; color: #6e6e73; display: flex; align-items: center; gap: 4px; }
-
   .summary { background: #f9f9fb; border-left: 3px solid #534AB7; border-radius: 0 8px 8px 0; padding: 10px 14px; }
   .summary-title { font-size: 11px; font-weight: 600; color: #534AB7; margin-bottom: 6px; text-transform: uppercase; letter-spacing: .05em; }
   .summary-text { font-size: 13px; color: #3a3a3c; line-height: 1.6; white-space: pre-wrap; }
-
   .doc-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 12px; padding-top: 10px; border-top: 1px solid #f2f2f7; }
   .link-out { font-size: 12px; color: #534AB7; text-decoration: none; display: flex; align-items: center; gap: 4px; font-weight: 500; }
   .link-out:hover { text-decoration: underline; }
@@ -77,16 +129,75 @@
 
   .toast { position: fixed; bottom: 24px; right: 24px; background: #1d1d1f; color: white; padding: 12px 18px; border-radius: 10px; font-size: 14px; z-index: 999; opacity: 0; transition: opacity .3s; pointer-events: none; }
   .toast.show { opacity: 1; }
-
   .spinner { display: inline-block; width: 14px; height: 14px; border: 2px solid rgba(255,255,255,.3); border-top-color: white; border-radius: 50%; animation: spin .7s linear infinite; }
   @keyframes spin { to { transform: rotate(360deg); } }
 
   .api-warning { background: #fff9e6; border: 1px solid #ffc340; border-radius: 10px; padding: 10px 14px; font-size: 13px; color: #633806; margin-bottom: 1rem; display: none; align-items: center; gap: 8px; }
   .api-warning.show { display: flex; }
 
-  @media (max-width: 600px) {
+  /* ── Kho thuế panel ── */
+  .kt-toolbar { display: flex; align-items: center; gap: 10px; margin-bottom: 1rem; }
+  .kt-search-wrap { flex: 1; position: relative; }
+  .kt-search-wrap input { width: 100%; padding: 9px 12px 9px 36px; border: 1px solid #e5e5ea; border-radius: 10px; font-size: 14px; color: #1d1d1f; background: #fff; }
+  .kt-search-icon { position: absolute; left: 11px; top: 50%; transform: translateY(-50%); color: #8e8e93; font-size: 14px; pointer-events: none; }
+  .kt-search-wrap input:focus { outline: none; border-color: #534AB7; }
+  .kt-inline-add-btn { background: #534AB7; color: white; border: none; border-radius: 10px; padding: 9px 18px; font-size: 14px; font-weight: 500; cursor: pointer; white-space: nowrap; }
+  .kt-inline-add-btn:hover { background: #3C3489; }
+  .kt-sync-btn { background: #f2f2f7; color: #534AB7; border: 1.5px solid #534AB7; border-radius: 10px; padding: 8px 14px; font-size: 13px; font-weight: 500; cursor: pointer; white-space: nowrap; transition: all .15s; }
+  .kt-sync-btn:hover { background: #EEEDFE; }
+  .kt-sync-btn:disabled { color: #aeaeb2; border-color: #c7c7cc; cursor: default; }
+
+  .kt-form { background: #fff; border: 1.5px solid #534AB7; border-radius: 14px; padding: 1.25rem 1.5rem; margin-bottom: 1rem; }
+  .kt-form h3 { font-size: 15px; font-weight: 600; margin-bottom: 1rem; color: #534AB7; }
+  .kt-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 12px; }
+  .kt-form-group { display: flex; flex-direction: column; gap: 4px; }
+  .kt-form-group.full { grid-column: 1 / -1; }
+  .kt-form-group label { font-size: 12px; font-weight: 500; color: #6e6e73; }
+  .kt-form-group input, .kt-form-group select, .kt-form-group textarea { padding: 8px 10px; border: 1px solid #e5e5ea; border-radius: 8px; font-size: 13px; font-family: inherit; color: #1d1d1f; }
+  .kt-form-group input:focus, .kt-form-group select:focus, .kt-form-group textarea:focus { outline: none; border-color: #534AB7; }
+  .kt-form-group textarea { resize: vertical; min-height: 70px; }
+  .kt-form-actions { display: flex; gap: 8px; justify-content: flex-end; }
+  .kt-btn-save { background: #534AB7; color: white; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-weight: 500; cursor: pointer; }
+  .kt-btn-save:hover { background: #3C3489; }
+  .kt-btn-cancel { background: #f2f2f7; color: #3a3a3c; border: none; border-radius: 8px; padding: 8px 20px; font-size: 13px; font-weight: 500; cursor: pointer; }
+  .kt-btn-cancel:hover { background: #e5e5ea; }
+
+  .kt-cat-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+  .kt-cat-title { font-size: 15px; font-weight: 700; color: #1d1d1f; }
+  .kt-doc-count { font-size: 13px; color: #8e8e93; }
+
+  .kt-doc-card { background: #fff; border-radius: 12px; border: 1px solid #e5e5ea; padding: 1rem 1.25rem; margin-bottom: 10px; transition: border-color .15s; }
+  .kt-doc-card:hover { border-color: #c7c7cc; }
+  .kt-doc-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; margin-bottom: 8px; }
+  .kt-doc-title { font-size: 13px; font-weight: 600; color: #1d1d1f; line-height: 1.45; flex: 1; }
+  .kt-doc-actions { display: flex; gap: 6px; flex-shrink: 0; }
+  .kt-btn-edit { background: #f2f2f7; border: none; border-radius: 6px; padding: 4px 10px; font-size: 12px; cursor: pointer; color: #3a3a3c; }
+  .kt-btn-edit:hover { background: #EEEDFE; color: #534AB7; }
+  .kt-btn-del { background: #f2f2f7; border: none; border-radius: 6px; padding: 4px 10px; font-size: 12px; cursor: pointer; color: #3a3a3c; }
+  .kt-btn-del:hover { background: #FCEBEB; color: #A32D2D; }
+  .kt-doc-meta { display: flex; flex-wrap: wrap; gap: 4px 14px; margin-bottom: 6px; align-items: center; }
+  .kt-doc-meta span { font-size: 11px; color: #6e6e73; }
+  .kt-status { font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 6px; }
+  .kt-status-hl  { background: #E1F5EE; color: #085041; }
+  .kt-status-chl { background: #FFF9E6; color: #633806; }
+  .kt-status-het { background: #FCEBEB; color: #A32D2D; }
+  .kt-doc-note { font-size: 12px; color: #3a3a3c; line-height: 1.55; background: #f9f9fb; border-left: 3px solid #534AB7; border-radius: 0 6px 6px 0; padding: 7px 10px; }
+  .kt-toggle-btn { display: flex; align-items: center; gap: 5px; font-size: 12px; color: #534AB7; cursor: pointer; padding: 7px 0 0; margin-top: 6px; border-top: 1px solid #f2f2f7; font-weight: 600; user-select: none; }
+  .kt-toggle-btn:hover { color: #3C3489; }
+  .kt-highlights { margin-top: 8px; padding: 9px 12px; background: #f5f4ff; border-left: 3px solid #534AB7; border-radius: 0 8px 8px 0; }
+  .kt-highlights ul { margin: 0; padding-left: 18px; }
+  .kt-highlights li { font-size: 12px; color: #2c2c2e; line-height: 1.7; }
+  .kt-cat-pill { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 6px; }
+  .kt-empty { text-align: center; padding: 3rem 2rem; color: #8e8e93; }
+  .kt-empty-icon { font-size: 36px; margin-bottom: 10px; }
+
+  @media (max-width: 900px) {
+    .page-layout { grid-template-columns: 1fr; padding: 1rem; }
+    .gs-sidebar { position: static; display: none; }
     .stat-row { grid-template-columns: repeat(2, 1fr); }
     .run-section { flex-direction: column; align-items: flex-start; }
+    .hot-grid { grid-template-columns: 1fr; }
+    .kt-form-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -97,7 +208,7 @@
     <div class="brand-icon">⚖</div>
     <div>
       <div class="brand-name">Trợ lý pháp lý AI</div>
-      <div class="brand-sub">thuvienphapluat.vn</div>
+      <div class="brand-sub">congbao · luatvietnam · baochinhphu</div>
     </div>
   </div>
   <div class="status-pill">
@@ -106,199 +217,288 @@
   </div>
 </div>
 
-<div class="main">
+<div class="page-layout">
 
-  <div class="api-warning" id="apiWarning">
-    ⚠️ Chưa cấu hình Anthropic API Key — tóm tắt AI sẽ không hoạt động. Mở file <code>.env</code> và điền API Key.
-  </div>
+  <!-- ── Global sidebar: Kho phân loại ── -->
+  <aside class="gs-sidebar">
+    <div class="gs-label">Kho phân loại</div>
+    <div id="gsSidebarCats"></div>
+    <button class="gs-add-btn" onclick="gsAddAndSwitch()">+ Thêm văn bản</button>
+    <div class="gs-divider"></div>
+    <div class="gs-label">Thống kê</div>
+    <div id="gsStats"></div>
+    <div style="height:10px"></div>
+  </aside>
 
-  <div class="stat-row">
-    <div class="stat-card">
-      <div class="stat-label">📄 Lần chạy này</div>
-      <div class="stat-value" id="statNew">—</div>
-      <div class="stat-hint">văn bản mới</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-label">🔍 Tìm thấy</div>
-      <div class="stat-value" id="statFound">—</div>
-      <div class="stat-hint">tổng văn bản</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-label">📦 Đã xử lý</div>
-      <div class="stat-value" id="statTotal">—</div>
-      <div class="stat-hint">tất cả thời gian</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-label">🕐 Lần cuối</div>
-      <div class="stat-value" id="statLastTime" style="font-size:16px; margin-top:4px;">—</div>
-      <div class="stat-hint" id="statLastDate"></div>
-    </div>
-  </div>
+  <!-- ── Main content ── -->
+  <div class="main">
 
-  <div class="run-section">
-    <div class="run-info">
-      <h2>Kiểm tra văn bản mới</h2>
-      <p>Truy cập thuvienphapluat.vn, tóm tắt bằng AI và hiển thị kết quả ngay trên trang này</p>
+    <div class="api-warning" id="apiWarning">
+      ⚠️ Chưa kết nối được GreenNode AI — tóm tắt AI sẽ không hoạt động. Kiểm tra <code>GREENNODE_API_KEY</code>.
     </div>
-    <button class="run-btn" id="runBtn" onclick="runAgent()">
-      ▶ Chạy agent
-    </button>
-  </div>
 
-  <div class="tabs">
-    <button class="tab active" onclick="switchTab('docs', this)">📋 Văn bản mới</button>
-    <button class="tab" onclick="switchTab('history', this)">📅 Lịch sử chạy</button>
-  </div>
-
-  <div id="panel-docs" class="panel active">
-    <div class="empty-state" id="emptyState">
-      <div class="empty-icon">⚖️</div>
-      <h3>Chưa có dữ liệu</h3>
-      <p>Nhấn "Chạy agent" để bắt đầu kiểm tra văn bản pháp luật mới</p>
+    <div class="stat-row">
+      <div class="stat-card">
+        <div class="stat-label">📄 Lần chạy này</div>
+        <div class="stat-value" id="statNew">—</div>
+        <div class="stat-hint">văn bản mới</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">🔍 Tìm thấy</div>
+        <div class="stat-value" id="statFound">—</div>
+        <div class="stat-hint">từ 3 nguồn</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">📦 Đã xử lý</div>
+        <div class="stat-value" id="statTotal">—</div>
+        <div class="stat-hint">tất cả thời gian</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">🕐 Lần cuối</div>
+        <div class="stat-value" id="statLastTime" style="font-size:16px;margin-top:4px">—</div>
+        <div class="stat-hint" id="statLastDate"></div>
+      </div>
     </div>
-    <div id="docList"></div>
-  </div>
 
-  <div id="panel-history" class="panel">
-    <div class="history-list" id="historyList">
-      <div style="padding:2rem; text-align:center; color:#8e8e93; font-size:14px;">Chưa có lịch sử</div>
+    <div class="run-section">
+      <div class="run-info">
+        <h2>Kiểm tra văn bản mới</h2>
+        <p>Công báo Chính phủ · LuatVietnam · Báo Chính phủ · Tóm tắt AI · Top 5 quan trọng nhất</p>
+      </div>
+      <button class="run-btn" id="runBtn" onclick="runAgent()">▶ Chạy agent</button>
     </div>
-  </div>
 
-</div>
+    <div class="tabs">
+      <button class="tab active" onclick="switchTab('docs', this)">📋 Văn bản mới</button>
+      <button class="tab" onclick="switchTab('history', this)">📅 Lịch sử</button>
+      <button class="tab" onclick="switchTab('khotrue', this)">📂 Kho thuế <span id="ktTotalBadge" class="tab-count">0</span></button>
+    </div>
+
+    <!-- Panel: Văn bản mới -->
+    <div id="panel-docs" class="panel active">
+      <div class="empty-state" id="emptyState">
+        <div class="empty-icon">⚖️</div>
+        <h3>Chưa có dữ liệu</h3>
+        <p>Nhấn "Chạy agent" để bắt đầu kiểm tra văn bản pháp luật mới</p>
+      </div>
+      <div id="hotSection" style="display:none">
+        <div class="hot-section">
+          <div class="hot-section-title"><span style="font-size:20px">🔥</span> Tin nổi bật hôm nay</div>
+          <div class="hot-grid" id="hotGrid"></div>
+        </div>
+        <div class="section-divider">
+          <div class="section-divider-line"></div>
+          <div class="section-divider-label">Văn bản khác</div>
+          <div class="section-divider-line"></div>
+        </div>
+      </div>
+      <div id="docList"></div>
+    </div>
+
+    <!-- Panel: Lịch sử -->
+    <div id="panel-history" class="panel">
+      <div class="history-list" id="historyList">
+        <div style="padding:2rem;text-align:center;color:#8e8e93;font-size:14px">Chưa có lịch sử</div>
+      </div>
+    </div>
+
+    <!-- Panel: Kho thuế -->
+    <div id="panel-khotrue" class="panel">
+      <div class="kt-toolbar">
+        <div class="kt-search-wrap">
+          <span class="kt-search-icon">🔍</span>
+          <input type="text" id="ktSearch" placeholder="Tìm theo số hiệu, tên, cơ quan..." oninput="ktFilter()">
+        </div>
+        <button class="kt-sync-btn" id="ktSyncBtn" onclick="ktManualSync()" title="Tải văn bản mới từ server">🔄 Đồng bộ</button>
+        <button class="kt-inline-add-btn" onclick="ktShowForm()">+ Thêm văn bản</button>
+      </div>
+      <div id="ktSyncInfo" style="font-size:11px;color:#8e8e93;padding:0 0 8px;display:none"></div>
+
+      <div id="ktForm" class="kt-form" style="display:none">
+        <h3 id="ktFormTitle">Thêm văn bản mới</h3>
+        <input type="hidden" id="ktEditId">
+        <div class="kt-form-grid">
+          <div class="kt-form-group">
+            <label>Số hiệu</label>
+            <input type="text" id="ktFSoHieu" placeholder="VD: 80/2021/TT-BTC">
+          </div>
+          <div class="kt-form-group">
+            <label>Loại thuế</label>
+            <select id="ktFLoai">
+              <option value="GTGT">Thuế GTGT</option>
+              <option value="TNDN">Thuế TNDN</option>
+              <option value="NTNN">Thuế NTNN</option>
+              <option value="TNCN">Thuế TNCN</option>
+              <option value="TTDB">Thuế TTĐB</option>
+              <option value="PhatHC">Phạt HC</option>
+              <option value="QuanLyThue">Quản lý thuế</option>
+            </select>
+          </div>
+          <div class="kt-form-group full">
+            <label>Tên văn bản</label>
+            <input type="text" id="ktFTen" placeholder="Tên đầy đủ của văn bản...">
+          </div>
+          <div class="kt-form-group">
+            <label>Cơ quan ban hành</label>
+            <input type="text" id="ktFCoQuan" placeholder="VD: Bộ Tài chính">
+          </div>
+          <div class="kt-form-group">
+            <label>Ngày ban hành</label>
+            <input type="date" id="ktFNgay">
+          </div>
+          <div class="kt-form-group">
+            <label>Tình trạng hiệu lực</label>
+            <select id="ktFTinhTrang">
+              <option value="hieuluc">Còn hiệu lực</option>
+              <option value="chuahieuluc">Chưa hiệu lực</option>
+              <option value="hethieuluc">Hết hiệu lực</option>
+            </select>
+          </div>
+          <div class="kt-form-group">
+            <label>Đường dẫn (URL)</label>
+            <input type="url" id="ktFUrl" placeholder="https://...">
+          </div>
+          <div class="kt-form-group full">
+            <label>Ghi chú / Tóm tắt nội dung</label>
+            <textarea id="ktFGhiChu" placeholder="Ghi chú nội dung hoặc điểm quan trọng..."></textarea>
+          </div>
+        </div>
+        <div class="kt-form-actions">
+          <button class="kt-btn-cancel" onclick="ktHideForm()">Hủy</button>
+          <button class="kt-btn-save" onclick="ktSave()">Lưu văn bản</button>
+        </div>
+      </div>
+
+      <div class="kt-cat-header">
+        <div class="kt-cat-title" id="ktCatTitle">Tất cả văn bản</div>
+        <div class="kt-doc-count" id="ktDocCount"></div>
+      </div>
+      <div id="ktContent"></div>
+    </div>
+
+  </div><!-- /.main -->
+</div><!-- /.page-layout -->
 
 <div class="toast" id="toast"></div>
 
 <script>
-let isRunning = false;
-let pollInterval = null;
+var isRunning = false;
+var pollInterval = null;
 
-const BADGE_MAP = {
-  'Nghị định': 'badge-nd',
-  'Thông tư': 'badge-tt',
-  'Quyết định': 'badge-qd',
-  'Luật': 'badge-luat',
-};
+var BADGE_MAP = { 'Nghị định': 'badge-nd', 'Thông tư': 'badge-tt', 'Quyết định': 'badge-qd', 'Luật': 'badge-luat' };
+function badgeClass(loai) { return BADGE_MAP[loai] || 'badge-other'; }
 
-function badgeClass(loai) {
-  return BADGE_MAP[loai] || 'badge-other';
-}
-
-function showToast(msg, duration = 3000) {
-  const t = document.getElementById('toast');
-  t.textContent = msg;
-  t.classList.add('show');
-  setTimeout(() => t.classList.remove('show'), duration);
+function showToast(msg, dur) {
+  var t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  setTimeout(function(){ t.classList.remove('show'); }, dur || 3000);
 }
 
 function setRunning(running) {
   isRunning = running;
-  const btn = document.getElementById('runBtn');
-  const dot = document.getElementById('statusDot');
-  const txt = document.getElementById('statusText');
-
+  var btn = document.getElementById('runBtn');
+  var dot = document.getElementById('statusDot');
+  var txt = document.getElementById('statusText');
   if (running) {
-    btn.disabled = true;
-    btn.innerHTML = '<span class="spinner"></span> Đang chạy...';
-    dot.className = 'dot running';
-    txt.textContent = 'Đang chạy...';
+    btn.disabled = true; btn.innerHTML = '<span class="spinner"></span> Đang chạy...';
+    dot.className = 'dot running'; txt.textContent = 'Đang chạy...';
   } else {
-    btn.disabled = false;
-    btn.innerHTML = '▶ Chạy agent';
-    dot.className = 'dot';
-    txt.textContent = 'Sẵn sàng';
+    btn.disabled = false; btn.innerHTML = '▶ Chạy agent';
+    dot.className = 'dot'; txt.textContent = 'Sẵn sàng';
   }
 }
 
 async function runAgent() {
   if (isRunning) return;
-  setRunning(true);
-  showToast('🚀 Agent đang chạy...', 60000);
-
+  setRunning(true); showToast('🚀 Agent đang chạy...', 60000);
   try {
     await fetch('/api/run', { method: 'POST' });
     pollInterval = setInterval(pollResult, 2000);
-  } catch(e) {
-    setRunning(false);
-    showToast('❌ Lỗi kết nối server');
-  }
+  } catch(e) { setRunning(false); showToast('❌ Lỗi kết nối server'); }
 }
 
 async function pollResult() {
   try {
-    const r = await fetch('/api/result');
-    const data = await r.json();
-
+    var r = await fetch('/api/result');
+    var data = await r.json();
     if (data.status === 'running') return;
-
-    clearInterval(pollInterval);
-    setRunning(false);
-
-    if (data.status === 'error') {
-      showToast('❌ Lỗi: ' + data.message);
-      return;
+    clearInterval(pollInterval); setRunning(false);
+    if (data.status === 'error') { showToast('❌ Lỗi: ' + data.message); return; }
+    renderDocs(data); loadStats();
+    if (data.status === 'no_new') {
+      var cnt = (data.hot_documents ? data.hot_documents.length : 0) + (data.documents ? data.documents.length : 0);
+      showToast('ℹ️ Không có văn bản mới. Hiển thị ' + cnt + ' văn bản gần nhất');
+    } else {
+      showToast('✅ Xong! Tìm thấy ' + data.new_documents + ' văn bản mới');
     }
+  } catch(e) { clearInterval(pollInterval); setRunning(false); }
+}
 
-    renderDocs(data);
-    loadStats();
-    showToast(`✅ Xong! Tìm thấy ${data.new_documents} văn bản mới`);
-  } catch(e) {
-    clearInterval(pollInterval);
-    setRunning(false);
-  }
+function escHtml(s) {
+  return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function sourceLabel(src) {
+  if (!src) return '';
+  if (src.indexOf('congbao') >= 0) return 'Công báo';
+  if (src.indexOf('luatvietnam') >= 0) return 'LuatVietnam';
+  if (src.indexOf('baochinhphu') >= 0) return 'Báo Chính phủ';
+  return src;
+}
+
+function renderHotCard(doc, rank) {
+  var meta = [doc.co_quan || '', doc.ngay_ban_hanh ? '📅 ' + doc.ngay_ban_hanh : '', doc.so_hieu ? '# ' + doc.so_hieu : ''].filter(Boolean);
+  return '<div class="hot-card">'
+    + '<span class="hot-badge">🔥 TOP ' + rank + '</span>'
+    + '<div class="hot-card-header"><div class="hot-rank">' + rank + '</div><div class="hot-title">' + escHtml(doc.title) + '</div></div>'
+    + (meta.length ? '<div class="hot-meta">' + meta.map(function(m){ return '<span class="hot-meta-item">' + escHtml(m) + '</span>'; }).join('') + '</div>' : '')
+    + (doc.tom_tat ? '<div class="hot-summary"><div class="hot-summary-title">Tóm tắt AI</div><div class="hot-summary-text">' + escHtml(doc.tom_tat) + '</div></div>' : '')
+    + '<div class="hot-footer"><a class="hot-link" href="' + escHtml(doc.url) + '" target="_blank">🔗 Xem toàn văn ↗</a><span class="source-tag">' + escHtml(sourceLabel(doc.source)) + '</span></div>'
+    + '</div>';
+}
+
+function renderDocCard(doc) {
+  var bc = badgeClass(doc.loai);
+  var meta = [doc.co_quan ? '🏛 ' + doc.co_quan : '', doc.ngay_ban_hanh ? '📅 ' + doc.ngay_ban_hanh : '', doc.ngay_hieu_luc ? '⏰ Hiệu lực: ' + doc.ngay_hieu_luc : '', doc.so_hieu ? '# ' + doc.so_hieu : ''].filter(Boolean);
+  return '<div class="doc-card">'
+    + '<div class="doc-header"><div class="doc-title">' + escHtml(doc.title) + '</div><span class="badge ' + bc + '">' + escHtml(doc.loai) + '</span></div>'
+    + (meta.length ? '<div class="doc-meta">' + meta.map(function(m){ return '<span class="meta-item">' + m + '</span>'; }).join('') + '</div>' : '')
+    + (doc.tom_tat ? '<div class="summary"><div class="summary-title">Tóm tắt AI</div><div class="summary-text">' + escHtml(doc.tom_tat) + '</div></div>' : '')
+    + '<div class="doc-footer"><a class="link-out" href="' + escHtml(doc.url) + '" target="_blank">🔗 Xem toàn văn ↗</a><span class="time-tag">' + escHtml(sourceLabel(doc.source)) + (doc.processed_at ? ' · ' + new Date(doc.processed_at).toLocaleString('vi-VN') : '') + '</span></div>'
+    + '</div>';
 }
 
 function renderDocs(data) {
-  const list = document.getElementById('docList');
-  const empty = document.getElementById('emptyState');
-
-  if (!data.documents || data.documents.length === 0) {
+  var hotDocs = data.hot_documents || [];
+  var otherDocs = data.documents || [];
+  var totalDocs = hotDocs.length + otherDocs.length;
+  var empty = document.getElementById('emptyState');
+  var hotSection = document.getElementById('hotSection');
+  var hotGrid = document.getElementById('hotGrid');
+  var list = document.getElementById('docList');
+  if (totalDocs === 0) {
     empty.style.display = 'block';
     empty.querySelector('h3').textContent = 'Không có văn bản mới';
-    empty.querySelector('p').textContent = 'Không ghi nhận văn bản pháp luật mới được cập nhật trong ngày.';
-    list.innerHTML = '';
-    return;
+    empty.querySelector('p').textContent = 'Chưa tìm thấy văn bản pháp luật mới. Hãy thử lại sau.';
+    hotSection.style.display = 'none'; list.innerHTML = ''; return;
   }
-
   empty.style.display = 'none';
-  list.innerHTML = data.documents.map(doc => {
-    const bc = badgeClass(doc.loai);
-    const meta = [
-      doc.co_quan ? `🏛 ${doc.co_quan}` : '',
-      doc.ngay_ban_hanh ? `📅 ${doc.ngay_ban_hanh}` : '',
-      doc.ngay_hieu_luc ? `⏰ Hiệu lực: ${doc.ngay_hieu_luc}` : '',
-      doc.so_hieu ? `# ${doc.so_hieu}` : '',
-    ].filter(Boolean);
-
-    return `
-    <div class="doc-card">
-      <div class="doc-header">
-        <div class="doc-title">${escHtml(doc.title)}</div>
-        <span class="badge ${bc}">${escHtml(doc.loai)}</span>
-      </div>
-      ${meta.length ? `<div class="doc-meta">${meta.map(m => `<span class="meta-item">${m}</span>`).join('')}</div>` : ''}
-      ${doc.tom_tat ? `
-      <div class="summary">
-        <div class="summary-title">Tóm tắt AI</div>
-        <div class="summary-text">${escHtml(doc.tom_tat)}</div>
-      </div>` : ''}
-      <div class="doc-footer">
-        <a class="link-out" href="${escHtml(doc.url)}" target="_blank">🔗 Xem toàn văn ↗</a>
-        <span class="time-tag">${doc.processed_at ? new Date(doc.processed_at).toLocaleString('vi-VN') : ''}</span>
-      </div>
-    </div>`;
-  }).join('');
+  var noNewBanner = data.status === 'no_new' ? '<div style="background:#fff9e6;border:1px solid #ffc340;border-radius:10px;padding:10px 14px;font-size:13px;color:#633806;margin-bottom:12px;display:flex;align-items:center;gap:8px;">ℹ️ Không có văn bản mới. Đang hiển thị kết quả từ lần chạy trước.</div>' : '';
+  if (hotDocs.length > 0) {
+    hotSection.style.display = 'block';
+    hotGrid.innerHTML = noNewBanner + hotDocs.map(function(doc, i){ return renderHotCard(doc, i + 1); }).join('');
+  } else { hotSection.style.display = 'none'; }
+  list.innerHTML = (hotDocs.length === 0 ? noNewBanner : '') + otherDocs.map(renderDocCard).join('');
 }
 
 async function loadStats() {
   try {
-    const r = await fetch('/api/status');
-    const s = await r.json();
+    var r = await fetch('/api/status');
+    var s = await r.json();
     document.getElementById('statTotal').textContent = s.total_processed || 0;
-
     if (s.last_run) {
-      const t = new Date(s.last_run.time);
-      document.getElementById('statLastTime').textContent = t.toLocaleTimeString('vi-VN', {hour:'2-digit',minute:'2-digit'});
+      var t = new Date(s.last_run.time);
+      document.getElementById('statLastTime').textContent = t.toLocaleTimeString('vi-VN', {hour:'2-digit', minute:'2-digit'});
       document.getElementById('statLastDate').textContent = t.toLocaleDateString('vi-VN');
       document.getElementById('statNew').textContent = s.last_run.new || 0;
       document.getElementById('statFound').textContent = s.last_run.found || 0;
@@ -308,48 +508,433 @@ async function loadStats() {
 
 async function loadHistory() {
   try {
-    const r = await fetch('/api/history');
-    const data = await r.json();
-    const runs = data.runs || [];
-    const el = document.getElementById('historyList');
-
-    if (!runs.length) {
-      el.innerHTML = '<div style="padding:2rem; text-align:center; color:#8e8e93; font-size:14px;">Chưa có lịch sử</div>';
-      return;
-    }
-
-    el.innerHTML = runs.slice().reverse().map(run => {
-      const t = new Date(run.time);
-      const isNew = run.new > 0;
-      return `<div class="history-row">
-        <div>
-          <div style="font-weight:500;">${t.toLocaleDateString('vi-VN')} · ${t.toLocaleTimeString('vi-VN',{hour:'2-digit',minute:'2-digit'})}</div>
-          <div style="font-size:12px;color:#6e6e73;margin-top:2px;">Tìm thấy ${run.found} · Mới ${run.new} · Xử lý ${run.processed}</div>
-        </div>
-        <span class="${isNew ? 'tag-ok' : 'tag-empty'}">${isNew ? run.new + ' văn bản mới' : 'Không có gì mới'}</span>
-      </div>`;
+    var r = await fetch('/api/history');
+    var data = await r.json();
+    var runs = data.runs || [];
+    var el = document.getElementById('historyList');
+    if (!runs.length) { el.innerHTML = '<div style="padding:2rem;text-align:center;color:#8e8e93;font-size:14px">Chưa có lịch sử</div>'; return; }
+    el.innerHTML = runs.slice().reverse().map(function(run) {
+      var t = new Date(run.time); var isNew = run.new > 0;
+      return '<div class="history-row"><div><div style="font-weight:500">' + t.toLocaleDateString('vi-VN') + ' · ' + t.toLocaleTimeString('vi-VN', {hour:'2-digit', minute:'2-digit'}) + '</div><div style="font-size:12px;color:#6e6e73;margin-top:2px">Tìm thấy ' + run.found + ' · Mới ' + run.new + ' · Xử lý ' + run.processed + '</div></div><span class="' + (isNew ? 'tag-ok' : 'tag-empty') + '">' + (isNew ? run.new + ' văn bản mới' : 'Không có gì mới') + '</span></div>';
     }).join('');
   } catch(e) {}
 }
 
 function switchTab(name, el) {
-  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(function(t){ t.classList.remove('active'); });
+  document.querySelectorAll('.panel').forEach(function(p){ p.classList.remove('active'); });
   el.classList.add('active');
   document.getElementById('panel-' + name).classList.add('active');
   if (name === 'history') loadHistory();
-}
-
-function escHtml(s) {
-  return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-}
-
-function checkApiKey() {
-  fetch('/api/status').then(r => r.json()).catch(() => {});
+  if (name === 'khotrue' && !_ktLoaded) { _ktLoaded = true; ktRender(); }
 }
 
 loadStats();
-checkApiKey();
+
+// ═══════════════════════════════════════════════════════════════
+// KHO THUẾ
+// ═══════════════════════════════════════════════════════════════
+var KT_KEY = 'khotrue_v7';
+
+var KT_ALL_CATS = [
+  { id: 'all',    label: 'Tất cả',    icon: '⊞', color: '#534AB7', bg: '#EEEDFE' },
+  { id: 'GTGT',   label: 'Thuế GTGT', icon: '🧾', color: '#085041', bg: '#E1F5EE' },
+  { id: 'TNDN',   label: 'Thuế TNDN', icon: '🏢', color: '#3C3489', bg: '#EEEDFE' },
+  { id: 'NTNN',   label: 'Thuế NTNN', icon: '🌐', color: '#085041', bg: '#E1F5EE' },
+  { id: 'TNCN',   label: 'Thuế TNCN', icon: '👤', color: '#633806', bg: '#FAEEDA' },
+  { id: 'TTDB',        label: 'Thuế TTĐB',   icon: '🍺', color: '#5C4A00', bg: '#FFF8E1' },
+  { id: 'PhatHC',      label: 'Phạt HC',     icon: '⚖️', color: '#A32D2D', bg: '#FCEBEB' },
+  { id: 'QuanLyThue',  label: 'Quản lý thuế', icon: '🏛️', color: '#0A3060', bg: '#E5F0FF' },
+];
+
+var KT_SEED = [
+  { id:'s36', loai:'GTGT', tinhtrang:'hieuluc', soHieu:'70/2025/NĐ-CP', ten:'Sửa đổi, bổ sung một số điều của Nghị định 123/2020/NĐ-CP quy định về hóa đơn, chứng từ', coQuan:'Chính phủ', ngay:'2025-04-28',
+    diemNB:['Bổ sung quy định hóa đơn điện tử đối với hoạt động thương mại điện tử và nền tảng số — yêu cầu xuất hóa đơn điện tử ngay tại thời điểm phát sinh giao dịch','Sửa đổi quy trình xử lý hóa đơn điện tử có sai sót sau khi gửi cho người mua: mở rộng trường hợp điều chỉnh/thay thế không cần lập biên bản thỏa thuận','Cập nhật quy định về hóa đơn giấy cho vùng sâu/vùng xa; điều chỉnh ký hiệu mẫu hóa đơn — thay thế một số quy định của NĐ 123/2020 và TT 78/2021'],
+    url:'https://congbao.chinhphu.vn/noi-dung-van-ban-so-70-2025-nd-cp' },
+  { id:'s21', loai:'TNDN',   tinhtrang:'hieuluc',     soHieu:'20/2026/TT-BTC',     ten:'Hướng dẫn thi hành Luật Thuế thu nhập doanh nghiệp 2025 và Nghị định 320/2025/NĐ-CP', coQuan:'Bộ Tài chính', ngay:'2026-03-12',
+    diemNB:['Hướng dẫn chi tiết chứng từ chi phí hợp lý được trừ và thời điểm ghi nhận doanh thu tính thuế TNDN','Áp dụng từ kỳ tính thuế 2025 — doanh nghiệp cần rà soát hồ sơ chi phí năm 2025 theo quy định mới','Cập nhật nghĩa vụ thuế nhà thầu nước ngoài; thay thế TT 78/2014/TT-BTC và các TT sửa đổi trước đó'],
+    url:'https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Thong-tu-20-2026-TT-BTC-huong-dan-Luat-Thue-thu-nhap-doanh-nghiep-va-Nghi-dinh-320-2025-ND-CP-672539.aspx' },
+  { id:'s22', loai:'TNCN',   tinhtrang:'chuahieuluc', soHieu:'109/2025/QH15',       ten:'Luật Thuế thu nhập cá nhân 2025 — thay thế Luật TNCN 2007 và các lần sửa đổi', coQuan:'Quốc hội', ngay:'2025-12-10',
+    diemNB:['Tăng mức giảm trừ bản thân lên 15,5 triệu/tháng (từ 11 triệu) và người phụ thuộc lên 6,2 triệu/tháng (từ 4,4 triệu)','Bổ sung thuế TNCN 0,1% trên giá chuyển nhượng vàng miếng từng lần giao dịch','Chính phủ được điều chỉnh mức giảm trừ chủ động (không phụ thuộc CPI 20%); hiệu lực từ 01/07/2026'],
+    url:'https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Luat-Thue-thu-nhap-ca-nhan-2025-so-109-2025-QH15-665870.aspx' },
+  { id:'s20', loai:'TNDN',   tinhtrang:'hieuluc',     soHieu:'320/2025/NĐ-CP',      ten:'Quy định chi tiết thi hành Luật Thuế thu nhập doanh nghiệp 2025', coQuan:'Chính phủ', ngay:'2025-12-15',
+    diemNB:['Hướng dẫn đầy đủ Luật Thuế TNDN 2025 — thay thế NĐ 218/2013 và các nghị định sửa đổi trước đó','DN được lựa chọn áp dụng quy định về doanh thu, chi phí, ưu đãi từ đầu kỳ tính thuế năm 2025','Bổ sung yêu cầu thanh toán không dùng tiền mặt cho chi phí hợp lý được trừ (từ 5 triệu đồng)'],
+    url:'https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Nghi-dinh-320-2025-ND-CP-665051.aspx' },
+  { id:'s19', loai:'GTGT',   tinhtrang:'hieuluc',     soHieu:'69/2025/TT-BTC',      ten:'Hướng dẫn thi hành Luật Thuế giá trị gia tăng và Nghị định 181/2025/NĐ-CP', coQuan:'Bộ Tài chính', ngay:'2025-07-01',
+    diemNB:['Thay thế TT 219/2013/TT-BTC — văn bản gốc hướng dẫn GTGT đã áp dụng hơn 12 năm','Hướng dẫn đầy đủ kê khai, khấu trừ, hoàn thuế GTGT theo Luật 48/2024 và NĐ 181/2025','Quy định rõ thời điểm xác định thuế GTGT cho các ngành đặc thù: viễn thông, điện nước, BĐS, cho thuê'],
+    url:'https://congbao.chinhphu.vn/noi-dung-van-ban-so-69-2025-tt-btc-45440' },
+  { id:'s18', loai:'GTGT',   tinhtrang:'hieuluc',     soHieu:'181/2025/NĐ-CP',      ten:'Quy định chi tiết thi hành một số điều của Luật Thuế giá trị gia tăng 2024', coQuan:'Chính phủ', ngay:'2025-07-01',
+    diemNB:['Hướng dẫn chi tiết Luật GTGT 48/2024/QH15 — hiệu lực từ 01/07/2025 đồng thời với Luật','Giao dịch từ 5 triệu đồng (gồm VAT) bắt buộc thanh toán không dùng tiền mặt mới được khấu trừ thuế đầu vào','Hàng nhập khẩu tái xuất sang nước thứ ba không được hoàn thuế GTGT đầu vào — ngăn lợi dụng cơ chế hoàn thuế'],
+    url:'https://vanban.chinhphu.vn/?pageid=27160&docid=214336' },
+  { id:'s15', loai:'NTNN',   tinhtrang:'hieuluc',     soHieu:'Cổng ETax NCC NN',  ten:'Cơ chế khai thuế trực tiếp cho nhà cung cấp nước ngoài — áp dụng từ 2022 (Google, Meta, Netflix, TikTok...)', coQuan:'Tổng cục Thuế', ngay:'2022-03-21',
+    diemNB:['Từ 2022, nhà cung cấp nước ngoài (Google, Meta, Netflix, TikTok, Apple...) bắt buộc đăng ký, khai và nộp thuế trực tiếp qua cổng etax.gdt.gov.vn','Thuế suất theo TT 103/2014 vẫn áp dụng: GTGT 5% + TNDN 5% cho dịch vụ; thực hiện qua tài khoản mở tại ngân hàng Việt Nam','Trong 2 năm (2022–2023), hơn 100 tổ chức nước ngoài đã nộp thuế trực tiếp — giảm phụ thuộc vào cơ chế khấu trừ tại nguồn'],
+    url:'https://www.gdt.gov.vn/wps/portal/home/nhccnn' },
+  { id:'s16', loai:'PhatHC', tinhtrang:'hieuluc',     soHieu:'125/2020/NĐ-CP',    ten:'Quy định xử phạt vi phạm hành chính về thuế và hóa đơn (văn bản chính, được sửa đổi bởi NĐ 102/2021)', coQuan:'Chính phủ', ngay:'2020-10-27',
+    diemNB:['Quy định đầy đủ 4 nhóm hành vi vi phạm: vi phạm về đăng ký thuế, khai thuế, nộp thuế, và hóa đơn','Mức phạt từ cảnh cáo đến 4 lần số thuế trốn — phạt tiền từ 400.000đ đến hàng tỷ đồng tùy mức độ nghiêm trọng','Căn cứ pháp lý chính — được NĐ 102/2021 sửa đổi một số điều liên quan đến hóa đơn điện tử'],
+    url:'https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Nghi-dinh-125-2020-ND-CP-xu-phat-vi-pham-hanh-chinh-ve-thue-hoa-don-456275.aspx' },
+  { id:'s17', loai:'GTGT',   tinhtrang:'hethieuluc',  soHieu:'15/2022/NĐ-CP',     ten:'Giảm 2% thuế suất thuế GTGT từ 01/02/2022 đến 31/12/2022 theo Nghị quyết 43/2022/QH15', coQuan:'Chính phủ', ngay:'2022-01-28',
+    diemNB:['Giảm thuế suất từ 10% xuống 8% áp dụng từ 01/02/2022 đến 31/12/2022','Loại trừ: viễn thông, công nghệ thông tin, tài chính, ngân hàng, chứng khoán, bảo hiểm, bất động sản','Hết hiệu lực từ 01/01/2023 — là lần giảm GTGT đầu tiên trong giai đoạn phục hồi sau COVID-19'],
+    url:'https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Nghi-dinh-15-2022-ND-CP-giam-thue-gia-tri-gia-tang-500819.aspx' },
+  { id:'s10', loai:'GTGT',   tinhtrang:'hieuluc',     soHieu:'48/2024/QH15',      ten:'Luật Thuế giá trị gia tăng (sửa đổi) năm 2024 — thay thế Luật Thuế GTGT 2008', coQuan:'Quốc hội', ngay:'2024-11-26',
+    diemNB:['Phân bón, máy móc chuyên dùng cho nông nghiệp, tàu đánh cá chuyển sang chịu thuế 5% — doanh nghiệp được khấu trừ thuế GTGT đầu vào','Ngưỡng doanh thu không chịu GTGT cho hộ/cá nhân kinh doanh tăng lên 200 triệu đồng/năm (từ 100 triệu)','Hiệu lực từ 01/07/2025 — thay thế toàn bộ Luật Thuế GTGT 2008 và các sửa đổi trước đó'],
+    url:'https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Luat-48-2024-QH15-Luat-Thue-gia-tri-gia-tang-sua-doi-623580.aspx' },
+  { id:'s11', loai:'TNDN',   tinhtrang:'hieuluc',     soHieu:'107/2023/QH15',     ten:'Áp dụng thuế thu nhập doanh nghiệp bổ sung theo quy định chống xói mòn cơ sở thuế toàn cầu (Thuế tối thiểu toàn cầu)', coQuan:'Quốc hội', ngay:'2023-11-29',
+    diemNB:['Áp dụng mức thuế suất tối thiểu toàn cầu 15% (Pillar Two/GloBE) cho tập đoàn đa quốc gia lớn','Áp dụng với doanh nghiệp thuộc tập đoàn có doanh thu hợp nhất toàn cầu từ 750 triệu EUR/năm trở lên','Việt Nam thu phần thuế bổ sung nội địa (QDMTT) — tránh để quốc gia của công ty mẹ thu thay'],
+    url:'https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Nghi-quyet-107-2023-QH15-ap-dung-thue-thu-nhap-doanh-nghiep-bo-sung-theo-chong-xoi-mon-co-so-thue-toan-cau-594006.aspx' },
+  { id:'s3',  loai:'GTGT',   tinhtrang:'hethieuluc',  soHieu:'72/2024/NĐ-CP',     ten:'Giảm 2% thuế suất thuế GTGT từ 01/07/2024 đến 31/12/2024', coQuan:'Chính phủ', ngay:'2024-06-30',
+    diemNB:['Giảm thuế suất từ 10% xuống 8% áp dụng cho H2/2024 (01/07–31/12/2024)','Không áp dụng với: viễn thông, tài chính, ngân hàng, bảo hiểm, kinh doanh bất động sản','Hết hiệu lực từ 01/01/2025 — cần theo dõi gia hạn trong năm 2025'],
+    url:'https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Nghi-dinh-72-2024-ND-CP-giam-thue-GTGT-607498.aspx' },
+  { id:'s2',  loai:'GTGT',   tinhtrang:'hethieuluc',  soHieu:'94/2023/NĐ-CP',     ten:'Giảm 2% thuế suất thuế GTGT từ 01/01/2024 đến 30/06/2024 theo Nghị quyết 110/2023/QH15', coQuan:'Chính phủ', ngay:'2023-12-28',
+    diemNB:['Giảm thuế suất GTGT từ 10% xuống 8% áp dụng cho H1/2024 (01/01–30/06/2024)','Loại trừ: hàng chịu thuế tiêu thụ đặc biệt, khoáng sản, dịch vụ tài chính, BĐS','Cơ sở kinh doanh tự xác định nhóm hàng đủ điều kiện để áp dụng mức giảm'],
+    url:'https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Nghi-dinh-94-2023-ND-CP-giam-thue-gia-tri-gia-tang-tu-01-01-2024-den-30-6-2024-591765.aspx' },
+  { id:'s9',  loai:'PhatHC', tinhtrang:'hieuluc',     soHieu:'102/2021/NĐ-CP',    ten:'Sửa đổi, bổ sung một số điều của Nghị định 125/2020/NĐ-CP về xử phạt vi phạm hành chính về thuế, hóa đơn', coQuan:'Chính phủ', ngay:'2021-11-16',
+    diemNB:['Điều chỉnh mức phạt chậm nộp hồ sơ khai thuế: phạt tiền từ 2 triệu đến 5 triệu đồng tùy mức độ','Bổ sung xử phạt vi phạm về hóa đơn điện tử theo Nghị định 123/2020/NĐ-CP','Quy định rõ các tình tiết giảm nhẹ và tình tiết tăng nặng khi xử phạt thuế'],
+    url:'https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Nghi-dinh-102-2021-ND-CP-sua-doi-Nghi-dinh-125-2020-xu-phat-vi-pham-ve-thue-490396.aspx' },
+  { id:'s1',  loai:'GTGT',   tinhtrang:'hieuluc',     soHieu:'80/2021/TT-BTC',    ten:'Hướng dẫn khai thuế, nộp thuế GTGT theo Luật Quản lý thuế và Nghị định 126/2020/NĐ-CP', coQuan:'Bộ Tài chính', ngay:'2021-09-29',
+    diemNB:['Hợp nhất quy định khai thuế GTGT theo phương pháp khấu trừ và phương pháp trực tiếp','Quy định cơ chế khai thuế tập trung cho doanh nghiệp có nhiều chi nhánh khác tỉnh','Hướng dẫn chi tiết thủ tục hoàn thuế GTGT đối với dự án đầu tư mới'],
+    url:'https://luatvietnam.vn/thue/thong-tu-80-2021-tt-btc-216073-d1.html' },
+  { id:'s5',  loai:'TNDN',   tinhtrang:'hieuluc',     soHieu:'45/2021/TT-BTC',    ten:'Hướng dẫn chế độ quản lý, tính khấu hao tài sản cố định', coQuan:'Bộ Tài chính', ngay:'2021-06-18',
+    diemNB:['Cập nhật danh mục 45 nhóm TSCĐ với khung thời gian khấu hao mới thay thế TT 45/2013','Cho phép DN điều chỉnh thời gian khấu hao trong phạm vi min–max của khung quy định','Hướng dẫn khấu hao TSCĐ thuê tài chính, TSCĐ vô hình và phần mềm máy tính'],
+    url:'https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Thong-tu-45-2021-TT-BTC-che-do-quan-ly-tinh-khau-hao-tai-san-co-dinh-484068.aspx' },
+  { id:'s7',  loai:'TNCN',   tinhtrang:'hieuluc',     soHieu:'40/2021/TT-BTC',    ten:'Hướng dẫn thuế GTGT, thuế TNCN và quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh', coQuan:'Bộ Tài chính', ngay:'2021-06-01',
+    diemNB:['Thay thế TT 92/2015 — áp dụng từ 01/08/2021 cho hộ kinh doanh và cá nhân kinh doanh','3 hình thức tính thuế: theo phương pháp khoán, kê khai, hoặc từng lần phát sinh','Tỷ lệ thuế khoán theo ngành: thương mại 0.5%, dịch vụ 2%, sản xuất & xây dựng 1.5%'],
+    url:'https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Thong-tu-40-2021-TT-BTC-huong-dan-thue-GTGT-thue-TNCN-ho-kinh-doanh-ca-nhan-kinh-doanh-481801.aspx' },
+  { id:'s4',  loai:'TNDN',   tinhtrang:'hieuluc',     soHieu:'132/2020/NĐ-CP',    ten:'Quy định về quản lý thuế đối với doanh nghiệp có giao dịch liên kết', coQuan:'Chính phủ', ngay:'2020-11-05',
+    diemNB:['Chi phí lãi vay bên liên kết bị giới hạn: phần vượt 30% EBITDA không được trừ khi tính thuế TNDN','Bắt buộc lập hồ sơ xác định giá giao dịch liên kết theo nguyên tắc giá thị trường (arm\'s length)','Áp dụng với DN có giao dịch liên kết; thay thế Nghị định 20/2017/NĐ-CP'],
+    url:'https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Nghi-dinh-132-2020-ND-CP-quan-ly-thue-doi-voi-doanh-nghiep-co-giao-dich-lien-ket-457428.aspx' },
+  { id:'s6',  loai:'TNCN',   tinhtrang:'hieuluc',     soHieu:'954/2020/UBTVQH14', ten:'Điều chỉnh mức giảm trừ gia cảnh của thuế thu nhập cá nhân', coQuan:'Ủy ban Thường vụ Quốc hội', ngay:'2020-06-02',
+    diemNB:['Mức giảm trừ bản thân: 11 triệu đồng/tháng (132 triệu/năm), tăng từ mức 9 triệu trước đó','Mức giảm trừ người phụ thuộc: 4,4 triệu đồng/tháng, tăng từ mức 3,6 triệu trước đó','Áp dụng hồi tố từ kỳ tính thuế năm 2020 — người nộp thuế được hoàn/bù trừ số thuế chênh lệch'],
+    url:'https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Nghi-quyet-954-2020-UBTVQH14-dieu-chinh-muc-giam-tru-gia-canh-thue-thu-nhap-ca-nhan-445157.aspx' },
+  { id:'s8',  loai:'NTNN',   tinhtrang:'hieuluc',     soHieu:'103/2014/TT-BTC',   ten:'Hướng dẫn thực hiện nghĩa vụ thuế nhà thầu đối với tổ chức, cá nhân nước ngoài kinh doanh tại Việt Nam', coQuan:'Bộ Tài chính', ngay:'2014-07-06',
+    diemNB:['Thuế nhà thầu = thuế GTGT + thuế TNDN tính trên doanh thu/giá trị hợp đồng (không cần quyết toán)','Tỷ lệ ấn định: dịch vụ chịu 5% GTGT + 5% TNDN; cung cấp hàng hóa chịu 1% GTGT + 1% TNDN','Bên Việt Nam (bên thuê) phải khấu trừ và nộp thay — áp dụng cả Google, Facebook, TikTok kinh doanh tại VN'],
+    url:'https://luatvietnam.vn/thue/thong-tu-103-2014-tt-btc-85651-d1.html' },
+];
+
+var ktDocs = [];
+var ktActiveCat = 'all';
+var ktEditingId = null;
+var _ktLoaded = false;
+var ktExpanded = {};
+
+function ktCatObj(id) {
+  for (var i = 0; i < KT_ALL_CATS.length; i++) { if (KT_ALL_CATS[i].id === id) return KT_ALL_CATS[i]; }
+  return null;
+}
+
+function ktGetQuery() {
+  var el = document.getElementById('ktSearch'); return el ? el.value.toLowerCase().trim() : '';
+}
+
+function ktMatch(d, q) {
+  if (!q) return true;
+  return (d.ten + ' ' + d.soHieu + ' ' + d.coQuan).toLowerCase().indexOf(q) >= 0;
+}
+
+function ktFiltered() {
+  var q = ktGetQuery();
+  return ktDocs.filter(function(d) {
+    return (ktActiveCat === 'all' || d.loai === ktActiveCat) && ktMatch(d, q);
+  });
+}
+
+// ── Render ──
+function ktRender() {
+  ktRenderHeader();
+  ktRenderList();
+  ktUpdateBadge();
+  gsRenderCats();
+  gsRenderStats();
+}
+
+function ktRenderHeader() {
+  var cat = ktCatObj(ktActiveCat);
+  var cnt = ktFiltered().length;
+  var titleEl = document.getElementById('ktCatTitle');
+  var cntEl = document.getElementById('ktDocCount');
+  if (titleEl) titleEl.textContent = cat ? cat.label : 'Tất cả văn bản';
+  if (cntEl) cntEl.textContent = cnt + ' văn bản';
+}
+
+function ktRenderList() {
+  var docs = ktFiltered().sort(function(a, b) { return (b.ngay || '').localeCompare(a.ngay || ''); });
+  var el = document.getElementById('ktContent'); if (!el) return;
+  if (!docs.length) {
+    var q = ktGetQuery();
+    el.innerHTML = '<div class="kt-empty"><div class="kt-empty-icon">📂</div><div style="font-size:14px;font-weight:600;color:#3a3a3c;margin-bottom:6px">' + (q ? 'Không tìm thấy kết quả' : 'Chưa có văn bản') + '</div><div style="font-size:13px">' + (q ? 'Thử từ khóa khác' : 'Nhấn "+ Thêm văn bản" để thêm') + '</div></div>';
+    return;
+  }
+  var SL = { hieuluc: 'Còn hiệu lực', chuahieuluc: 'Chưa hiệu lực', hethieuluc: 'Hết hiệu lực' };
+  var SC = { hieuluc: 'kt-status-hl', chuahieuluc: 'kt-status-chl', hethieuluc: 'kt-status-het' };
+  el.innerHTML = docs.map(function(d) {
+    var tt = d.tinhtrang || 'hieuluc';
+    var cat = ktCatObj(d.loai);
+    var isOpen = !!ktExpanded[d.id];
+    var hasHighlights = d.diemNB && d.diemNB.length;
+    var highlightsHtml = '';
+    if (isOpen) {
+      if (hasHighlights) {
+        highlightsHtml = '<div class="kt-highlights"><ul>' + d.diemNB.map(function(p) { return '<li>' + escHtml(p) + '</li>'; }).join('') + '</ul></div>';
+      } else if (d.ghiChu) {
+        highlightsHtml = '<div class="kt-doc-note">' + escHtml(d.ghiChu) + '</div>';
+      }
+      if (d.url) highlightsHtml += '<div style="margin-top:8px"><a href="' + escHtml(d.url) + '" target="_blank" class="link-out">🔗 Xem toàn văn ↗</a></div>';
+    }
+    var toggleHtml = (hasHighlights || d.ghiChu) ? '<div class="kt-toggle-btn" onclick="ktToggle(\'' + d.id + '\')">' + (isOpen ? '▲ Thu gọn' : '▼ Xem điểm nổi bật · ' + (hasHighlights ? d.diemNB.length + ' điểm' : '')) + '</div>' : '';
+    return '<div class="kt-doc-card">'
+      + '<div class="kt-doc-header"><div class="kt-doc-title">' + escHtml(d.ten) + '</div>'
+      + '<div class="kt-doc-actions"><button class="kt-btn-edit" onclick="event.stopPropagation();ktEdit(\'' + d.id + '\')">✏️ Sửa</button><button class="kt-btn-del" onclick="event.stopPropagation();ktDelete(\'' + d.id + '\')">🗑 Xóa</button></div></div>'
+      + '<div class="kt-doc-meta">'
+      + (d.soHieu ? '<span># ' + escHtml(d.soHieu) + '</span>' : '')
+      + (d.coQuan ? '<span>🏛 ' + escHtml(d.coQuan) + '</span>' : '')
+      + (d.ngay   ? '<span>📅 ' + d.ngay + '</span>' : '')
+      + (cat && ktActiveCat === 'all' ? '<span class="kt-cat-pill" style="background:' + cat.bg + ';color:' + cat.color + '">' + cat.icon + ' ' + cat.label + '</span>' : '')
+      + '<span class="kt-status ' + (SC[tt] || '') + '">' + (SL[tt] || '') + '</span>'
+      + '</div>'
+      + highlightsHtml
+      + toggleHtml
+      + '</div>';
+  }).join('');
+}
+
+function ktToggle(id) {
+  ktExpanded[id] = !ktExpanded[id];
+  ktRenderList();
+}
+
+function ktUpdateBadge() {
+  var b = document.getElementById('ktTotalBadge'); if (b) b.textContent = ktDocs.length;
+}
+
+// ── Global sidebar ──
+function gsRenderCats() {
+  var el = document.getElementById('gsSidebarCats'); if (!el) return;
+  var q = ktGetQuery();
+  el.innerHTML = KT_ALL_CATS.map(function(cat) {
+    var cnt = cat.id === 'all'
+      ? ktDocs.filter(function(d){ return ktMatch(d, q); }).length
+      : ktDocs.filter(function(d){ return d.loai === cat.id && ktMatch(d, q); }).length;
+    return '<div class="gs-cat' + (ktActiveCat === cat.id ? ' active' : '') + '" onclick="gsSetCat(\'' + cat.id + '\')">'
+      + '<div class="gs-cat-left"><div class="gs-cat-icon" style="background:' + cat.bg + ';color:' + cat.color + '">' + cat.icon + '</div>'
+      + '<span class="gs-cat-name">' + cat.label + '</span></div>'
+      + '<span class="gs-cat-count">' + cnt + '</span></div>';
+  }).join('');
+}
+
+function gsRenderStats() {
+  var el = document.getElementById('gsStats'); if (!el) return;
+  var hl = 0, chl = 0, het = 0;
+  ktDocs.forEach(function(d) {
+    if (d.tinhtrang === 'chuahieuluc') chl++;
+    else if (d.tinhtrang === 'hethieuluc') het++;
+    else hl++;
+  });
+  el.innerHTML = '<div class="gs-stat-row"><span class="gs-stat-label">Còn hiệu lực</span><span class="gs-stat-val" style="color:#085041">' + hl + '</span></div>'
+    + '<div class="gs-stat-row"><span class="gs-stat-label">Chưa hiệu lực</span><span class="gs-stat-val" style="color:#633806">' + chl + '</span></div>'
+    + '<div class="gs-stat-row"><span class="gs-stat-label">Hết hiệu lực</span><span class="gs-stat-val" style="color:#A32D2D">' + het + '</span></div>';
+}
+
+function gsSetCat(id) {
+  ktActiveCat = id;
+  var activePanel = document.querySelector('.panel.active');
+  if (!activePanel || activePanel.id !== 'panel-khotrue') {
+    document.querySelectorAll('.tab').forEach(function(t){ t.classList.remove('active'); });
+    document.querySelectorAll('.panel').forEach(function(p){ p.classList.remove('active'); });
+    document.querySelector('.tab:nth-child(3)').classList.add('active');
+    document.getElementById('panel-khotrue').classList.add('active');
+    if (!_ktLoaded) { _ktLoaded = true; }
+  }
+  ktRender();
+}
+
+function gsAddAndSwitch() {
+  gsSetCat(ktActiveCat);
+  setTimeout(ktShowForm, 50);
+}
+
+function ktFilter() {
+  ktRenderHeader(); ktRenderList(); gsRenderCats();
+}
+
+// ── CRUD ──
+function ktShowForm() {
+  document.getElementById('ktFormTitle').textContent = 'Thêm văn bản mới';
+  document.getElementById('ktEditId').value = '';
+  document.getElementById('ktFSoHieu').value = '';
+  document.getElementById('ktFLoai').value = (ktActiveCat !== 'all') ? ktActiveCat : 'GTGT';
+  document.getElementById('ktFTen').value = '';
+  document.getElementById('ktFCoQuan').value = '';
+  document.getElementById('ktFNgay').value = '';
+  document.getElementById('ktFTinhTrang').value = 'hieuluc';
+  document.getElementById('ktFGhiChu').value = '';
+  document.getElementById('ktFUrl').value = '';
+  document.getElementById('ktForm').style.display = 'block';
+  ktEditingId = null;
+  document.getElementById('ktFTen').focus();
+}
+
+function ktHideForm() {
+  document.getElementById('ktForm').style.display = 'none'; ktEditingId = null;
+}
+
+function ktEdit(id) {
+  var doc = null;
+  for (var i = 0; i < ktDocs.length; i++) { if (ktDocs[i].id === id) { doc = ktDocs[i]; break; } }
+  if (!doc) return;
+  ktEditingId = id;
+  document.getElementById('ktFormTitle').textContent = 'Sửa văn bản';
+  document.getElementById('ktEditId').value = id;
+  document.getElementById('ktFSoHieu').value = doc.soHieu || '';
+  document.getElementById('ktFLoai').value   = doc.loai   || 'GTGT';
+  document.getElementById('ktFTen').value    = doc.ten    || '';
+  document.getElementById('ktFCoQuan').value = doc.coQuan || '';
+  document.getElementById('ktFNgay').value   = doc.ngay   || '';
+  document.getElementById('ktFTinhTrang').value = doc.tinhtrang || 'hieuluc';
+  document.getElementById('ktFGhiChu').value = doc.ghiChu || '';
+  document.getElementById('ktFUrl').value    = doc.url    || '';
+  document.getElementById('ktForm').style.display = 'block';
+  document.getElementById('ktFTen').focus();
+}
+
+function ktSave() {
+  var ten = document.getElementById('ktFTen').value.trim();
+  if (!ten) { showToast('⚠️ Vui lòng nhập tên văn bản'); return; }
+  var loai = document.getElementById('ktFLoai').value;
+  var updated = {
+    loai:      loai,
+    soHieu:    document.getElementById('ktFSoHieu').value.trim(),
+    ten:       ten,
+    coQuan:    document.getElementById('ktFCoQuan').value.trim(),
+    ngay:      document.getElementById('ktFNgay').value,
+    tinhtrang: document.getElementById('ktFTinhTrang').value,
+    ghiChu:    document.getElementById('ktFGhiChu').value.trim(),
+    url:       document.getElementById('ktFUrl').value.trim(),
+  };
+  if (ktEditingId) {
+    for (var i = 0; i < ktDocs.length; i++) {
+      if (ktDocs[i].id === ktEditingId) { Object.assign(ktDocs[i], updated); break; }
+    }
+  } else {
+    updated.id = 'kt_' + Date.now();
+    ktDocs.push(updated);
+    ktActiveCat = loai;
+  }
+  localStorage.setItem(KT_KEY, JSON.stringify(ktDocs));
+  ktHideForm();
+  ktRender();
+  showToast(ktEditingId ? '✅ Đã cập nhật văn bản' : '✅ Đã thêm văn bản mới');
+}
+
+function ktDelete(id) {
+  if (!confirm('Xóa văn bản này khỏi kho thuế?')) return;
+  ktDocs = ktDocs.filter(function(d){ return d.id !== id; });
+  localStorage.setItem(KT_KEY, JSON.stringify(ktDocs));
+  ktRender();
+  showToast('🗑 Đã xóa văn bản');
+}
+
+// ── API sync ──
+var KT_TS_KEY = KT_KEY + '_ts';
+var KT_VER_KEY = KT_KEY + '_ver';
+
+function ktSyncServer(silent) {
+  if (!silent) {
+    var el = document.getElementById('ktContent');
+    if (el) el.innerHTML = '<div style="text-align:center;padding:40px;color:#8e8e93;font-size:13px">⏳ Đang tải dữ liệu...</div>';
+  }
+  fetch('/api/khotrue')
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      var srvDocs = data.documents || [];
+      localStorage.setItem(KT_TS_KEY, String(Date.now()));
+      localStorage.setItem(KT_VER_KEY, String(data.version || 1));
+      if (!silent) {
+        ktDocs = srvDocs;
+        localStorage.setItem(KT_KEY, JSON.stringify(ktDocs));
+        ktRender();
+        _showSyncInfo(data.last_updated, srvDocs.length);
+        return;
+      }
+      // Silent background merge: add new docs, don't overwrite local edits
+      var localKeys = {};
+      ktDocs.forEach(function(d) { localKeys[d.soHieu || d.id] = true; });
+      var added = 0;
+      srvDocs.forEach(function(sd) {
+        var k = sd.soHieu || sd.id;
+        if (k && !localKeys[k]) { ktDocs.push(sd); added++; }
+      });
+      if (added > 0) {
+        localStorage.setItem(KT_KEY, JSON.stringify(ktDocs));
+        ktRender();
+        showToast('🔄 Đồng bộ: +' + added + ' văn bản mới');
+      }
+      _showSyncInfo(data.last_updated, ktDocs.length);
+    })
+    .catch(function() {
+      if (!silent) {
+        // API unavailable — fall back to seed data
+        ktDocs = KT_SEED.map(function(s) { return Object.assign({}, s); });
+        localStorage.setItem(KT_KEY, JSON.stringify(ktDocs));
+        ktRender();
+      }
+    });
+}
+
+function ktManualSync() {
+  var btn = document.getElementById('ktSyncBtn');
+  if (btn) { btn.disabled = true; btn.textContent = '⏳ Đang đồng bộ...'; }
+  // Ask server to scrape new docs
+  fetch('/api/khotrue/refresh', { method: 'POST' })
+    .then(function(r) { return r.json(); })
+    .then(function() {
+      // Wait a few seconds for background job to start, then fetch updated data
+      setTimeout(function() {
+        ktSyncServer(true);
+        if (btn) { btn.disabled = false; btn.textContent = '🔄 Đồng bộ'; }
+        showToast('✅ Đã yêu cầu cập nhật — dữ liệu mới sẽ xuất hiện trong vài phút');
+      }, 4000);
+    })
+    .catch(function() {
+      if (btn) { btn.disabled = false; btn.textContent = '🔄 Đồng bộ'; }
+      showToast('⚠️ Không thể kết nối server');
+    });
+}
+
+function _showSyncInfo(lastUpdated, total) {
+  var el = document.getElementById('ktSyncInfo');
+  if (!el) return;
+  if (lastUpdated) {
+    var d = new Date(lastUpdated);
+    var fmt = d.toLocaleDateString('vi-VN') + ' ' + d.toLocaleTimeString('vi-VN', {hour:'2-digit',minute:'2-digit'});
+    el.textContent = 'Cập nhật lần cuối: ' + fmt + ' · ' + total + ' văn bản';
+    el.style.display = 'block';
+  }
+}
+
+// ── Init ──
+(function() {
+  var raw = localStorage.getItem(KT_KEY);
+  if (raw) {
+    try { ktDocs = JSON.parse(raw); } catch(e) { ktDocs = []; }
+    gsRenderCats(); gsRenderStats(); ktUpdateBadge();
+    // Check status: sync if server version is newer OR cache > 24h old
+    var ts = parseInt(localStorage.getItem(KT_TS_KEY) || '0');
+    var localVer = parseInt(localStorage.getItem(KT_VER_KEY) || '0');
+    if (Date.now() - ts > 86400000) {
+      ktSyncServer(true);
+    } else {
+      fetch('/api/khotrue/status')
+        .then(function(r){ return r.json(); })
+        .then(function(s){
+          _showSyncInfo(s.last_updated, s.total);
+          if ((s.version || 1) > localVer) { ktSyncServer(true); }
+        })
+        .catch(function(){});
+    }
+  } else {
+    // First load — fetch from server (falls back to KT_SEED on error)
+    ktSyncServer(false);
+  }
+})();
 </script>
 </body>
 </html>

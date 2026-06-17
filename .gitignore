@@ -4,3 +4,9 @@ history.json
 __pycache__/
 *.pyc
 .claude/
+.agentbase/
+.greennode.json
+debug_error.py
+deploy_runtime.py
+test-agent/
+greennode-agentbase-skills/
