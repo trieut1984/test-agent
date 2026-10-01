@@ -6,6 +6,8 @@ import threading
 from datetime import datetime, timezone
 from pathlib import Path
 
+from contextlib import asynccontextmanager
+
 from dotenv import load_dotenv
 from fastapi import FastAPI, BackgroundTasks
 from fastapi.responses import HTMLResponse, JSONResponse
@@ -297,11 +299,68 @@ async def api_khotrue_status():
     })
 
 
-@app.on_event("startup")
-async def startup_event():
+# ─────────────────────────────────────────────
+# Pháp luật (xác minh) — verified legal document reader
+# ─────────────────────────────────────────────
+
+LEGAL_DB_FILE = Path("legal_documents.json")
+
+
+def load_legal_db() -> list:
+    if not LEGAL_DB_FILE.exists():
+        return []
+    try:
+        data = json.loads(LEGAL_DB_FILE.read_text(encoding="utf-8"))
+    except Exception:
+        return []
+    return [d for d in data.get("documents", []) if d.get("xacMinh")]
+
+
+def _display_title(d: dict) -> str:
+    return d.get("tenVanBan") or f"{d.get('loaiVanBan', 'Văn bản')} {d['soHieu']}"
+
+
+@app.get("/api/legal/documents")
+async def api_legal_documents():
+    docs = load_legal_db()
+    summaries = []
+    for d in docs:
+        dieu_count = sum(len(c.get("dieu", [])) for c in d.get("noiDung", {}).get("chuong", [])) if d.get("noiDung") else 0
+        summaries.append({
+            "soHieu": d["soHieu"],
+            "tenVanBan": _display_title(d),
+            "loaiVanBan": d.get("loaiVanBan"),
+            "coQuanBanHanh": d.get("coQuanBanHanh"),
+            "ngayBanHanh": d.get("ngayBanHanh"),
+            "ngayHieuLuc": d.get("ngayHieuLuc"),
+            "tinhTrangHieuLuc": d.get("tinhTrangHieuLuc", "chua_xac_dinh"),
+            "tinhTrangGhiChu": d.get("tinhTrangGhiChu"),
+            "linhVuc": d.get("linhVuc") or [],
+            "soDieu": dieu_count,
+            "soQuanHe": len(d.get("quanHeHieuLuc", [])),
+        })
+    return JSONResponse({"documents": summaries, "total": len(summaries)})
+
+
+@app.get("/api/legal/document")
+async def api_legal_document_detail(so_hieu: str):
+    for d in load_legal_db():
+        if d.get("soHieu") == so_hieu:
+            out = dict(d)
+            out["tenVanBan"] = _display_title(d)
+            return JSONResponse(out)
+    return JSONResponse({"error": "not_found"}, status_code=404)
+
+
+@asynccontextmanager
+async def _lifespan(_app: FastAPI):
     """Trigger khotrue refresh in background on every container start."""
     t = threading.Thread(target=_refresh_khotrue_sync, daemon=True)
     t.start()
+    yield
+
+
+app.router.lifespan_context = _lifespan
 
 
 if __name__ == "__main__":

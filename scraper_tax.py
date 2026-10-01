@@ -7,7 +7,7 @@ import logging
 from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-from scraper import fetch_page, _extract_so_hieu_from_title, _guess_co_quan
+from scraper import fetch_page, _extract_so_hieu_from_title, _guess_co_quan, _guess_loai
 
 logger = logging.getLogger(__name__)
 
@@ -66,11 +66,13 @@ def make_doc_id(so_hieu: str) -> str:
 # luatvietnam.vn — Tax category pages
 # ─────────────────────────────────────────────
 LUATVIETNAM_TAX_URLS = [
-    f"{BASE_LUATVIETNAM}/thue-phi-le-phi/luat-thue.html",
-    f"{BASE_LUATVIETNAM}/thue-phi-le-phi/nghi-dinh-thue.html",
-    f"{BASE_LUATVIETNAM}/thue-phi-le-phi/thong-tu-thue.html",
-    f"{BASE_LUATVIETNAM}/thue-phi-le-phi.html",
+    f"{BASE_LUATVIETNAM}/thue-phi-le-phi-4-f1.html?PageSize=20&PageIndex={i}"
+    for i in range(1, 4)
 ]
+
+# Kho thuế chỉ lưu văn bản pháp luật chính thức, bỏ qua Công văn/Quyết định
+# hành chính hàng ngày (rác) làm trôi các Nghị định/Thông tư quan trọng.
+TAX_KEPT_LOAI = {"Luật", "Nghị định", "Nghị quyết", "Thông tư", "Pháp lệnh", "Văn bản hợp nhất"}
 
 
 def scrape_luatvietnam_tax() -> list:
@@ -102,6 +104,9 @@ def scrape_luatvietnam_tax() -> list:
                 continue
 
             so_hieu = _extract_so_hieu_from_title(title)
+            if _guess_loai(title, so_hieu) not in TAX_KEPT_LOAI:
+                continue
+
             co_quan = _guess_co_quan(title, so_hieu)
 
             date_el = (item.select_one("span.w-doc-dmy2")

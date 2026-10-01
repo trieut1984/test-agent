@@ -191,6 +191,67 @@
   .kt-empty { text-align: center; padding: 3rem 2rem; color: #8e8e93; }
   .kt-empty-icon { font-size: 36px; margin-bottom: 10px; }
 
+  /* ── Pháp luật (xác minh) — Document Reader ── */
+  .pl-toolbar { display: flex; align-items: center; gap: 10px; margin-bottom: 1rem; flex-wrap: wrap; }
+  .pl-search-wrap { flex: 1; min-width: 180px; position: relative; }
+  .pl-search-wrap input { width: 100%; padding: 9px 12px 9px 36px; border: 1px solid #e5e5ea; border-radius: 10px; font-size: 14px; }
+  .pl-search-icon { position: absolute; left: 11px; top: 50%; transform: translateY(-50%); color: #8e8e93; font-size: 14px; pointer-events: none; }
+  .pl-filter-select { padding: 8px 10px; border: 1px solid #e5e5ea; border-radius: 10px; font-size: 13px; color: #1d1d1f; background: #fff; }
+  .pl-empty-note { font-size: 12px; color: #8e8e93; padding: 0 0 10px; }
+
+  .pl-list { display: flex; flex-direction: column; gap: 8px; }
+  .pl-doc-item { background: #fff; border: 1px solid #e5e5ea; border-radius: 12px; padding: 0.9rem 1.1rem; cursor: pointer; transition: border-color .15s; }
+  .pl-doc-item:hover { border-color: #534AB7; }
+  .pl-doc-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
+  .pl-doc-title { font-size: 13.5px; font-weight: 600; color: #1d1d1f; line-height: 1.4; }
+  .pl-doc-meta { display: flex; flex-wrap: wrap; gap: 4px 14px; margin-top: 6px; font-size: 11.5px; color: #6e6e73; }
+  .pl-tags { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 6px; }
+  .pl-tag { font-size: 10.5px; font-weight: 600; background: #EEEDFE; color: #3C3489; padding: 2px 8px; border-radius: 6px; }
+
+  .pl-status { font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 6px; white-space: nowrap; flex-shrink: 0; }
+  .pl-status-con_hieu_luc { background: #E1F5EE; color: #085041; }
+  .pl-status-het_hieu_luc { background: #FCEBEB; color: #A32D2D; }
+  .pl-status-het_hieu_luc_mot_phan { background: #FFF9E6; color: #633806; }
+  .pl-status-chua_co_hieu_luc { background: #E5F0FF; color: #0A3060; }
+  .pl-status-chua_xac_dinh { background: #f2f2f7; color: #6e6e73; }
+
+  /* ── Reader ── */
+  .pl-reader-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.35); z-index: 200; display: none; align-items: flex-start; justify-content: center; padding: 2vh 2vw; }
+  .pl-reader-overlay.show { display: flex; }
+  .pl-reader-box { background: #fff; border-radius: 16px; width: 100%; max-width: 1100px; max-height: 96vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,.3); }
+  .pl-reader-head { padding: 1.1rem 1.4rem; border-bottom: 1px solid #e5e5ea; display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; flex-shrink: 0; }
+  .pl-reader-head h2 { font-size: 17px; font-weight: 700; color: #1d1d1f; line-height: 1.4; margin-bottom: 8px; }
+  .pl-reader-meta { display: flex; flex-wrap: wrap; gap: 5px 16px; font-size: 12.5px; color: #6e6e73; }
+  .pl-reader-close { background: #f2f2f7; border: none; border-radius: 8px; width: 32px; height: 32px; font-size: 16px; cursor: pointer; flex-shrink: 0; color: #3a3a3c; }
+  .pl-reader-close:hover { background: #e5e5ea; }
+  .pl-reader-body { display: grid; grid-template-columns: 240px 1fr; flex: 1; overflow: hidden; min-height: 0; }
+  .pl-toc { border-right: 1px solid #f2f2f7; overflow-y: auto; padding: 10px 0; }
+  .pl-toc-label { font-size: 10px; font-weight: 700; color: #8e8e93; letter-spacing: .08em; text-transform: uppercase; padding: 4px 16px 8px; }
+  .pl-toc-item { display: block; padding: 7px 16px; font-size: 12.5px; color: #3a3a3c; cursor: pointer; border-left: 2px solid transparent; }
+  .pl-toc-item:hover { background: #f9f9fb; color: #534AB7; }
+  .pl-toc-item.active { border-left-color: #534AB7; background: #f5f4ff; color: #534AB7; font-weight: 600; }
+  .pl-toc-chuong { font-size: 10.5px; font-weight: 700; color: #8e8e93; padding: 10px 16px 4px; text-transform: uppercase; }
+  .pl-content { overflow-y: auto; padding: 1.3rem 1.8rem 3rem; font-size: 14px; line-height: 1.75; color: #1d1d1f; }
+  .pl-chuong-block { margin: 1.6rem 0 1rem; text-align: center; }
+  .pl-chuong-block .pl-chuong-so { font-size: 12px; font-weight: 700; color: #534AB7; letter-spacing: .06em; }
+  .pl-chuong-block .pl-chuong-ten { font-size: 15px; font-weight: 700; color: #1d1d1f; margin-top: 2px; }
+  .pl-dieu-block { margin: 1.3rem 0; scroll-margin-top: 10px; }
+  .pl-dieu-title { font-weight: 700; color: #1d1d1f; margin-bottom: 6px; }
+  .pl-dieu-text { margin-bottom: 6px; }
+  .pl-khoan { margin: 6px 0 6px 1.1rem; }
+  .pl-diem { margin: 4px 0 4px 1.1rem; }
+  .pl-relations { margin-top: 2rem; padding-top: 1.2rem; border-top: 1px solid #f2f2f7; }
+  .pl-relations h3 { font-size: 13px; font-weight: 700; color: #534AB7; text-transform: uppercase; letter-spacing: .05em; margin-bottom: 10px; }
+  .pl-rel-item { background: #f9f9fb; border-left: 3px solid #534AB7; border-radius: 0 8px 8px 0; padding: 8px 12px; margin-bottom: 8px; font-size: 13px; }
+  .pl-rel-item a { color: #534AB7; font-size: 12px; font-weight: 500; }
+  .pl-source-line { font-size: 12px; color: #8e8e93; margin-top: 10px; }
+  .pl-source-line a { color: #534AB7; }
+
+  @media (max-width: 900px) {
+    .pl-reader-body { grid-template-columns: 1fr; }
+    .pl-toc { display: none; }
+  }
+
   @media (max-width: 900px) {
     .page-layout { grid-template-columns: 1fr; padding: 1rem; }
     .gs-sidebar { position: static; display: none; }
@@ -272,6 +333,7 @@
       <button class="tab active" onclick="switchTab('docs', this)">📋 Văn bản mới</button>
       <button class="tab" onclick="switchTab('history', this)">📅 Lịch sử</button>
       <button class="tab" onclick="switchTab('khotrue', this)">📂 Kho thuế <span id="ktTotalBadge" class="tab-count">0</span></button>
+      <button class="tab" onclick="switchTab('phapluat', this)">⚖️ Pháp luật (xác minh) <span id="plTotalBadge" class="tab-count">0</span></button>
     </div>
 
     <!-- Panel: Văn bản mới -->
@@ -376,8 +438,47 @@
       <div id="ktContent"></div>
     </div>
 
+    <!-- Panel: Pháp luật (xác minh) -->
+    <div id="panel-phapluat" class="panel">
+      <div class="pl-toolbar">
+        <div class="pl-search-wrap">
+          <span class="pl-search-icon">🔍</span>
+          <input type="text" id="plSearch" placeholder="Tìm theo số hiệu, tên văn bản..." oninput="plRenderList()">
+        </div>
+        <select class="pl-filter-select" id="plFilterLinhVuc" onchange="plRenderList()">
+          <option value="">Tất cả lĩnh vực</option>
+        </select>
+        <select class="pl-filter-select" id="plFilterTrangThai" onchange="plRenderList()">
+          <option value="">Tất cả trạng thái</option>
+          <option value="con_hieu_luc">🟢 Còn hiệu lực</option>
+          <option value="het_hieu_luc">🔴 Hết hiệu lực</option>
+          <option value="het_hieu_luc_mot_phan">🟡 Hết hiệu lực một phần</option>
+          <option value="chua_co_hieu_luc">🔵 Chưa có hiệu lực</option>
+        </select>
+      </div>
+      <div class="pl-empty-note">Chỉ hiển thị văn bản đã xác minh nguồn — xem chi tiết tại <a href="https://thuvienphapluat.vn" target="_blank">thuvienphapluat.vn</a> cho từng văn bản.</div>
+      <div id="plList" class="pl-list"></div>
+    </div>
+
   </div><!-- /.main -->
 </div><!-- /.page-layout -->
+
+<!-- Document Reader overlay -->
+<div class="pl-reader-overlay" id="plReaderOverlay" onclick="if(event.target===this) plCloseReader()">
+  <div class="pl-reader-box">
+    <div class="pl-reader-head">
+      <div style="flex:1;min-width:0">
+        <h2 id="plReaderTitle"></h2>
+        <div class="pl-reader-meta" id="plReaderMeta"></div>
+      </div>
+      <button class="pl-reader-close" onclick="plCloseReader()">✕</button>
+    </div>
+    <div class="pl-reader-body">
+      <div class="pl-toc" id="plToc"></div>
+      <div class="pl-content" id="plContent"></div>
+    </div>
+  </div>
+</div>
 
 <div class="toast" id="toast"></div>
 
@@ -527,6 +628,7 @@ function switchTab(name, el) {
   document.getElementById('panel-' + name).classList.add('active');
   if (name === 'history') loadHistory();
   if (name === 'khotrue' && !_ktLoaded) { _ktLoaded = true; ktRender(); }
+  if (name === 'phapluat' && !_plLoaded) { _plLoaded = true; plLoadList(); }
 }
 
 loadStats();
@@ -908,6 +1010,154 @@ function _showSyncInfo(lastUpdated, total) {
     el.textContent = 'Cập nhật lần cuối: ' + fmt + ' · ' + total + ' văn bản';
     el.style.display = 'block';
   }
+}
+
+// ═══════════════════════════════════════════════════════════════
+// PHÁP LUẬT (XÁC MINH) — Document Reader
+// ═══════════════════════════════════════════════════════════════
+var plDocs = [];
+var _plLoaded = false;
+var plCurrentDieuAnchors = [];
+
+var PL_STATUS_LABEL = {
+  con_hieu_luc: '🟢 Còn hiệu lực',
+  het_hieu_luc: '🔴 Hết hiệu lực',
+  het_hieu_luc_mot_phan: '🟡 Hết hiệu lực một phần',
+  chua_co_hieu_luc: '🔵 Chưa có hiệu lực',
+  chua_xac_dinh: '⚪ Chưa xác định',
+};
+
+function plStatusBadge(doc) {
+  var label = PL_STATUS_LABEL[doc.tinhTrangHieuLuc] || PL_STATUS_LABEL.chua_xac_dinh;
+  return '<span class="pl-status pl-status-' + doc.tinhTrangHieuLuc + '">' + label + '</span>';
+}
+
+async function plLoadList() {
+  try {
+    var r = await fetch('/api/legal/documents');
+    var data = await r.json();
+    plDocs = data.documents || [];
+    document.getElementById('plTotalBadge').textContent = plDocs.length;
+
+    var linhVucSet = {};
+    plDocs.forEach(function(d) { (d.linhVuc || []).forEach(function(lv) { linhVucSet[lv] = true; }); });
+    var sel = document.getElementById('plFilterLinhVuc');
+    Object.keys(linhVucSet).sort().forEach(function(lv) {
+      var opt = document.createElement('option'); opt.value = lv; opt.textContent = lv; sel.appendChild(opt);
+    });
+
+    plRenderList();
+  } catch (e) {
+    document.getElementById('plList').innerHTML = '<div class="kt-empty"><div class="kt-empty-icon">⚠️</div><div>Không tải được danh sách văn bản</div></div>';
+  }
+}
+
+function plRenderList() {
+  var q = (document.getElementById('plSearch').value || '').toLowerCase().trim();
+  var lv = document.getElementById('plFilterLinhVuc').value;
+  var tt = document.getElementById('plFilterTrangThai').value;
+
+  var filtered = plDocs.filter(function(d) {
+    if (lv && (d.linhVuc || []).indexOf(lv) === -1) return false;
+    if (tt && d.tinhTrangHieuLuc !== tt) return false;
+    if (q && (d.tenVanBan + ' ' + d.soHieu).toLowerCase().indexOf(q) === -1) return false;
+    return true;
+  });
+
+  var el = document.getElementById('plList');
+  if (!filtered.length) {
+    el.innerHTML = '<div class="kt-empty"><div class="kt-empty-icon">📂</div><div style="font-size:14px;font-weight:600;color:#3a3a3c">' +
+      (plDocs.length ? 'Không tìm thấy kết quả' : 'Chưa có văn bản nào được xác minh') + '</div></div>';
+    return;
+  }
+
+  el.innerHTML = filtered.map(function(d) {
+    var meta = [d.coQuanBanHanh, d.ngayBanHanh ? '📅 ' + d.ngayBanHanh : '', '# ' + d.soHieu, d.soDieu ? d.soDieu + ' Điều' : '']
+      .filter(Boolean).map(function(m) { return escHtml(m); }).join(' &nbsp;·&nbsp; ');
+    var tags = (d.linhVuc || []).map(function(t) { return '<span class="pl-tag">' + escHtml(t) + '</span>'; }).join('');
+    return '<div class="pl-doc-item" onclick="plOpenDoc(\'' + encodeURIComponent(d.soHieu) + '\')">'
+      + '<div class="pl-doc-top"><div class="pl-doc-title">' + escHtml(d.tenVanBan) + '</div>' + plStatusBadge(d) + '</div>'
+      + '<div class="pl-doc-meta">' + meta + '</div>'
+      + (tags ? '<div class="pl-tags">' + tags + '</div>' : '')
+      + '</div>';
+  }).join('');
+}
+
+async function plOpenDoc(soHieuEncoded) {
+  try {
+    var r = await fetch('/api/legal/document?so_hieu=' + soHieuEncoded);
+    if (!r.ok) { showToast('⚠️ Không tải được văn bản'); return; }
+    var doc = await r.json();
+    plRenderReader(doc);
+    document.getElementById('plReaderOverlay').classList.add('show');
+  } catch (e) { showToast('⚠️ Lỗi kết nối server'); }
+}
+
+function plCloseReader() {
+  document.getElementById('plReaderOverlay').classList.remove('show');
+}
+
+function plRenderReader(doc) {
+  document.getElementById('plReaderTitle').textContent = doc.tenVanBan;
+  var meta = [doc.loaiVanBan, doc.coQuanBanHanh, doc.ngayBanHanh ? 'Ban hành: ' + doc.ngayBanHanh : '', doc.ngayHieuLuc ? 'Hiệu lực: ' + doc.ngayHieuLuc : '']
+    .filter(Boolean).map(escHtml).join(' &nbsp;·&nbsp; ') + ' &nbsp;·&nbsp; ' + plStatusBadge(doc);
+  document.getElementById('plReaderMeta').innerHTML = meta;
+
+  var toc = document.getElementById('plToc');
+  var content = document.getElementById('plContent');
+  var tocHtml = '<div class="pl-toc-label">Mục lục</div>';
+  var contentHtml = '';
+  plCurrentDieuAnchors = [];
+
+  var chuongList = (doc.noiDung && doc.noiDung.chuong) || [];
+  if (!chuongList.length) {
+    contentHtml = '<div class="kt-empty"><div class="kt-empty-icon">📄</div><div>Chưa có toàn văn cho văn bản này.</div></div>';
+  }
+  chuongList.forEach(function(c) {
+    if (c.so) {
+      tocHtml += '<div class="pl-toc-chuong">Chương ' + escHtml(c.so) + '</div>';
+      contentHtml += '<div class="pl-chuong-block"><div class="pl-chuong-so">CHƯƠNG ' + escHtml(c.so) + '</div><div class="pl-chuong-ten">' + escHtml(c.tieuDe) + '</div></div>';
+    }
+    (c.dieu || []).forEach(function(d) {
+      var anchorId = 'pl-dieu-' + d.so;
+      plCurrentDieuAnchors.push(d.so);
+      tocHtml += '<a class="pl-toc-item" id="pl-toc-' + d.so + '" onclick="plScrollToDieu(\'' + d.so + '\')">Điều ' + escHtml(d.so) + (d.tieuDe ? '. ' + escHtml(d.tieuDe) : '') + '</a>';
+
+      contentHtml += '<div class="pl-dieu-block" id="' + anchorId + '">'
+        + '<div class="pl-dieu-title">Điều ' + escHtml(d.so) + (d.tieuDe ? '. ' + escHtml(d.tieuDe) : '') + '</div>'
+        + (d.text ? '<div class="pl-dieu-text">' + escHtml(d.text) + '</div>' : '');
+      (d.khoan || []).forEach(function(k) {
+        contentHtml += '<div class="pl-khoan">' + escHtml(k.so) + '. ' + escHtml(k.text) + '</div>';
+        (k.diem || []).forEach(function(p) {
+          contentHtml += '<div class="pl-diem">' + escHtml(p.kyHieu) + ') ' + escHtml(p.text) + '</div>';
+        });
+      });
+      contentHtml += '</div>';
+    });
+  });
+
+  var rels = doc.quanHeHieuLuc || [];
+  if (rels.length) {
+    contentHtml += '<div class="pl-relations"><h3>Quan hệ hiệu lực</h3>' + rels.map(function(rel) {
+      return '<div class="pl-rel-item">' + escHtml(rel.moTa) + '<br><a href="' + escHtml(rel.url) + '" target="_blank">🔗 Xem nguồn</a></div>';
+    }).join('') + '</div>';
+  }
+
+  if (doc.nguon && doc.nguon.url) {
+    contentHtml += '<div class="pl-source-line">Nguồn: <a href="' + escHtml(doc.nguon.url) + '" target="_blank">' + escHtml(doc.nguon.trangNguon || doc.nguon.url) + ' ↗</a></div>';
+  }
+
+  toc.innerHTML = tocHtml;
+  content.innerHTML = contentHtml;
+  content.scrollTop = 0;
+}
+
+function plScrollToDieu(so) {
+  var el = document.getElementById('pl-dieu-' + so);
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  document.querySelectorAll('.pl-toc-item').forEach(function(t) { t.classList.remove('active'); });
+  var tocEl = document.getElementById('pl-toc-' + so);
+  if (tocEl) tocEl.classList.add('active');
 }
 
 // ── Init ──
