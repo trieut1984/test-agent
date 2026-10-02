@@ -165,6 +165,11 @@
   .kt-cat-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
   .kt-cat-title { font-size: 15px; font-weight: 700; color: #1d1d1f; }
   .kt-doc-count { font-size: 13px; color: #8e8e93; }
+  .kt-group-header { display: flex; align-items: center; gap: 8px; margin: 20px 0 10px; }
+  .kt-group-header:first-child { margin-top: 0; }
+  .kt-group-title { font-size: 12.5px; font-weight: 700; color: #534AB7; text-transform: uppercase; letter-spacing: .05em; }
+  .kt-group-count { font-size: 11px; font-weight: 600; color: #aeaeb2; background: #f2f2f7; padding: 1px 8px; border-radius: 8px; }
+  .kt-group-line { flex: 1; height: 1px; background: #f2f2f7; }
 
   .kt-doc-card { background: #fff; border-radius: 12px; border: 1px solid #e5e5ea; padding: 1rem 1.25rem; margin-bottom: 10px; transition: border-color .15s; }
   .kt-doc-card:hover { border-color: #c7c7cc; }
@@ -757,6 +762,42 @@ function ktRenderHeader() {
   if (cntEl) cntEl.textContent = cnt + ' văn bản';
 }
 
+// Thứ tự nhóm hiển thị; "Khác" luôn ở cuối (xem ktLoaiVanBan bên dưới)
+var KT_LOAIVANBAN_ORDER = ['Luật', 'Pháp lệnh', 'Nghị quyết', 'Nghị định', 'Thông tư', 'Quyết định', 'Công điện', 'Công văn', 'Khác'];
+
+function ktLoaiVanBan(d) {
+  var ten = (d.ten || '');
+  var soHieu = (d.soHieu || '').toUpperCase();
+  var checks = [
+    [/^\s*Luật\b/i, 'Luật'],
+    [/^\s*Pháp lệnh\b/i, 'Pháp lệnh'],
+    [/^\s*Nghị quyết\b/i, 'Nghị quyết'],
+    [/^\s*Nghị định\b/i, 'Nghị định'],
+    [/^\s*Thông tư\b/i, 'Thông tư'],
+    [/^\s*Quyết định\b/i, 'Quyết định'],
+    [/^\s*Công điện\b/i, 'Công điện'],
+    [/^\s*Công văn\b/i, 'Công văn'],
+  ];
+  for (var i = 0; i < checks.length; i++) { if (checks[i][0].test(ten)) return checks[i][1]; }
+  // Fallback: suy từ hậu tố số hiệu khi tiêu đề không bắt đầu bằng loại văn bản
+  if (/\/QH\d*$/.test(soHieu)) return 'Luật';
+  if (/-(ND|NQ)-CP$/.test(soHieu) || /\/NQ-/.test(soHieu)) return soHieu.indexOf('NQ') >= 0 ? 'Nghị quyết' : 'Nghị định';
+  if (/-TT-/.test(soHieu) || soHieu.indexOf('TT-') >= 0) return 'Thông tư';
+  if (/-QD-/.test(soHieu) || soHieu.indexOf('QĐ') >= 0) return 'Quyết định';
+  return 'Khác';
+}
+
+function ktGroupByLoaiVanBan(docs) {
+  var groups = {};
+  docs.forEach(function(d) {
+    var g = ktLoaiVanBan(d);
+    (groups[g] = groups[g] || []).push(d);
+  });
+  return KT_LOAIVANBAN_ORDER
+    .filter(function(g) { return groups[g] && groups[g].length; })
+    .map(function(g) { return { loai: g, docs: groups[g] }; });
+}
+
 function ktRenderList() {
   var docs = ktFiltered().sort(function(a, b) { return (b.ngay || '').localeCompare(a.ngay || ''); });
   var el = document.getElementById('ktContent'); if (!el) return;
@@ -767,7 +808,7 @@ function ktRenderList() {
   }
   var SL = { hieuluc: 'Còn hiệu lực', chuahieuluc: 'Chưa hiệu lực', hethieuluc: 'Hết hiệu lực' };
   var SC = { hieuluc: 'kt-status-hl', chuahieuluc: 'kt-status-chl', hethieuluc: 'kt-status-het' };
-  el.innerHTML = docs.map(function(d) {
+  function renderCard(d) {
     var tt = d.tinhtrang || 'hieuluc';
     var cat = ktCatObj(d.loai);
     var isOpen = !!ktExpanded[d.id];
@@ -795,6 +836,12 @@ function ktRenderList() {
       + highlightsHtml
       + toggleHtml
       + '</div>';
+  }
+
+  var groups = ktGroupByLoaiVanBan(docs);
+  el.innerHTML = groups.map(function(g) {
+    return '<div class="kt-group-header"><span class="kt-group-title">' + escHtml(g.loai) + '</span><span class="kt-group-count">' + g.docs.length + '</span><span class="kt-group-line"></span></div>'
+      + g.docs.map(renderCard).join('');
   }).join('');
 }
 
@@ -1184,6 +1231,8 @@ function plScrollToDieu(so) {
     // First load — fetch from server (falls back to KT_SEED on error)
     ktSyncServer(false);
   }
+  _plLoaded = true;
+  plLoadList();
 })();
 </script>
 </body>
