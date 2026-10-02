@@ -1,0 +1,204 @@
+"""Backfill already-issued tax/accounting regulations that the database is missing.
+
+daily_update_legal_db.py only picks up *new* documents; this fills the gaps in
+what was already issued. Two phases, both resumable and deliberately slow:
+
+  1. Build a candidate queue (backfill_queue.json) from topic searches on
+     thuvienphapluat.vn. A search hit is only queued if its số hiệu token is
+     present, its issuing body is on the whitelist below (national level only —
+     no provincial HĐND/UBND), the year is >= MIN_YEAR, the title actually
+     mentions the topic, and it is not already in legal_documents.json.
+  2. Fetch up to --limit queued documents per run, one request each (the search
+     hit already carries the URL). Each is accepted only if the page's own
+     "Thuộc tính" table repeats the expected số hiệu — same rule as everywhere
+     else; relevance filtering above never replaces that verification.
+
+Run it repeatedly (Task Scheduler does): each run takes the next slice, saves
+progress after every document, and stops at the first sign of a Cloudflare
+challenge (BlockedError) — see feedback_tvpl_rate_limit memory.
+
+Usage: python backfill_legal_db.py [--limit 20] [--rebuild-queue]
+"""
+import argparse
+import json
+import logging
+import os
+import re
+import sys
+import time
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+os.chdir(HERE)
+
+from dotenv import load_dotenv
+
+load_dotenv(HERE / ".env")
+
+_handlers = [logging.FileHandler(HERE / "backfill_legal_db.log", encoding="utf-8")]
+if sys.stderr is not None:
+    _handlers.append(logging.StreamHandler())
+logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s", handlers=_handlers)
+logger = logging.getLogger("backfill")
+
+import tvpl_client as tc
+
+DB_FILE = HERE / "legal_documents.json"
+QUEUE_FILE = HERE / "backfill_queue.json"
+PAUSE_SECONDS = 7
+MIN_YEAR = 2013
+QUEUE_MAX_AGE_DAYS = 30
+FIRST_RUN_FETCH_CAP = 10  # a run that also builds the queue (~30 searches) fetches fewer documents
+
+# National-level issuers only: Quốc hội, UBTVQH, Chính phủ, Thủ tướng, Bộ Tài chính.
+ALLOWED_SUFFIX = re.compile(r"/(QH\d*|UBTVQH\d*|NĐ-CP|NQ-CP|TT-BTC|QĐ-TTg)$")
+_LOAI_AT_START = re.compile(r"^\s*(Luật|Bộ luật|Nghị định|Nghị quyết|Thông tư|Quyết định)\b", re.IGNORECASE)
+_ENGLISH_TITLE = re.compile(r"^(Decree|Circular|Law|Resolution|Decision|Official|Joint|Ordinance|Directive)\b")
+
+# (lĩnh vực label, queries, title must contain one of these keywords)
+TOPICS = [
+    ("Thuế GTGT", ["Luật thuế giá trị gia tăng", "Nghị định thuế giá trị gia tăng", "Thông tư thuế giá trị gia tăng"],
+     ["giá trị gia tăng", "gtgt"]),
+    ("Thuế TNDN", ["Luật thuế thu nhập doanh nghiệp", "Nghị định thuế thu nhập doanh nghiệp", "Thông tư thuế thu nhập doanh nghiệp"],
+     ["thu nhập doanh nghiệp", "tndn"]),
+    ("Thuế TNCN", ["Luật thuế thu nhập cá nhân", "Nghị định thuế thu nhập cá nhân", "Thông tư thuế thu nhập cá nhân"],
+     ["thu nhập cá nhân", "tncn"]),
+    ("Thuế NTNN", ["thuế nhà thầu nước ngoài", "Thông tư nhà thầu nước ngoài hoạt động kinh doanh tại Việt Nam"],
+     ["nhà thầu"]),
+    ("Thuế TTĐB", ["Luật thuế tiêu thụ đặc biệt", "Nghị định thuế tiêu thụ đặc biệt"],
+     ["tiêu thụ đặc biệt"]),
+    ("Quản lý thuế", ["Luật quản lý thuế", "Nghị định quản lý thuế", "Thông tư quản lý thuế"],
+     ["quản lý thuế"]),
+    ("Hóa đơn chứng từ", ["Nghị định hóa đơn chứng từ", "Thông tư hóa đơn điện tử"],
+     ["hóa đơn", "chứng từ"]),
+    ("Giao dịch liên kết", ["quản lý thuế doanh nghiệp có giao dịch liên kết", "Thông tư giao dịch liên kết"],
+     ["giao dịch liên kết"]),
+    ("Chế độ kế toán", ["Luật kế toán", "Thông tư chế độ kế toán doanh nghiệp", "Nghị định kế toán"],
+     ["kế toán"]),
+    ("Xử phạt hành chính", ["xử phạt vi phạm hành chính về thuế hóa đơn", "xử phạt vi phạm hành chính trong lĩnh vực kế toán"],
+     ["xử phạt"]),
+]
+
+
+def _key(so_hieu: str) -> str:
+    """Comparable identity of a số hiệu: its digits plus its letters, case-insensitive."""
+    return tc._digits(so_hieu) + re.sub(r"[^A-ZĐ]", "", (so_hieu or "").upper())
+
+
+def load_db() -> dict:
+    return json.loads(DB_FILE.read_text(encoding="utf-8")) if DB_FILE.exists() else {"documents": []}
+
+
+def save_db(data: dict):
+    data["lastBackfill"] = time.strftime("%Y-%m-%dT%H:%M:%S")
+    DB_FILE.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def load_queue():
+    if not QUEUE_FILE.exists():
+        return None
+    q = json.loads(QUEUE_FILE.read_text(encoding="utf-8"))
+    if time.time() - q.get("built", 0) > QUEUE_MAX_AGE_DAYS * 86400:
+        return None
+    return q
+
+
+def save_queue(q: dict):
+    QUEUE_FILE.write_text(json.dumps(q, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def candidate_from_hit(hit: dict, keywords: list):
+    """Return (số hiệu, year) for a search hit worth queueing, else None."""
+    title = hit["title"]
+    if _ENGLISH_TITLE.match(title):
+        return None
+    # The document's own số hiệu is the first one in its title; a title that doesn't
+    # start with a legal-instrument word (e.g. "Công điện ... triển khai Nghị định
+    # 72/2024/NĐ-CP") only *mentions* someone else's số hiệu, so it must not be taken.
+    if not _LOAI_AT_START.match(title):
+        return None
+    m = tc._SOHIEU_IN_TITLE_RE.search(title)
+    if not m:
+        return None
+    so_hieu = re.sub(r"\s+", "", m.group())
+    if not ALLOWED_SUFFIX.search(so_hieu):
+        return None
+    year = int(so_hieu.split("/")[1])
+    if year < MIN_YEAR:
+        return None
+    low = title.lower()
+    if not any(k in low for k in keywords):
+        return None
+    return so_hieu
+
+
+def build_queue(session, known_keys: set) -> dict:
+    items = {}
+    for linh_vuc, queries, keywords in TOPICS:
+        for query in queries:
+            time.sleep(PAUSE_SECONDS)
+            hits = tc.search(session, query)
+            kept = 0
+            for hit in hits:
+                so_hieu = candidate_from_hit(hit, keywords)
+                if not so_hieu or _key(so_hieu) in known_keys:
+                    continue
+                item = items.setdefault(_key(so_hieu), {"soHieu": so_hieu, "url": hit["url"], "title": hit["title"], "linhVuc": []})
+                if linh_vuc not in item["linhVuc"]:
+                    item["linhVuc"].append(linh_vuc)
+                kept += 1
+            logger.info(f"  [{linh_vuc}] {query!r}: {len(hits)} hits, {kept} queued")
+    ordered = sorted(items.values(), key=lambda i: -int(i["soHieu"].split("/")[1]))
+    return {"built": time.time(), "items": ordered}
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--limit", type=int, default=20)
+    ap.add_argument("--rebuild-queue", action="store_true")
+    args = ap.parse_args()
+
+    data = load_db()
+    known_keys = {_key(d["soHieu"]) for d in data["documents"] if d.get("soHieu")}
+    queue = None if args.rebuild_queue else load_queue()
+    limit = args.limit
+
+    try:
+        session = tc.login()
+        if queue is None:
+            logger.info("Building candidate queue from topic searches ...")
+            queue = build_queue(session, known_keys)
+            save_queue(queue)
+            logger.info(f"Queue built: {len(queue['items'])} candidates")
+            limit = min(limit, FIRST_RUN_FETCH_CAP)
+
+        # drop anything that entered the DB since the queue was built (e.g. via the daily job)
+        queue["items"] = [i for i in queue["items"] if _key(i["soHieu"]) not in known_keys]
+        if not queue["items"]:
+            logger.info("Queue empty — nothing left to backfill.")
+            save_queue(queue)
+            return
+
+        done = 0
+        for item in list(queue["items"][:limit]):
+            so_hieu = item["soHieu"]
+            logger.info(f"[{done + 1}/{min(limit, len(queue['items']))}] {so_hieu} — {item['title'][:70]}")
+            rec = tc.fetch_and_verify_with_relogin(session, so_hieu, url=item["url"])
+            rec["linhVuc"] = item["linhVuc"]
+            data["documents"].append(rec)
+            queue["items"] = [i for i in queue["items"] if i["soHieu"] != so_hieu]
+            save_db(data)
+            save_queue(queue)
+            done += 1
+            logger.info("  OK" if rec["xacMinh"] else f"  CHƯA XÁC MINH ({rec['nguon'].get('lyDoChuaXacMinh')})")
+            time.sleep(PAUSE_SECONDS)
+        logger.info(f"=== Run done: {done} fetched, {len(queue['items'])} still queued ===")
+    except tc.BlockedError as e:
+        logger.error(f"BLOCKED: {e}. Progress is saved; the next scheduled run will resume.")
+        if queue is not None:
+            save_queue(queue)
+        sys.exit(2)
+
+
+if __name__ == "__main__":
+    main()

@@ -106,6 +106,16 @@ def login(force: bool = False) -> requests.Session:
     return s
 
 
+def parse_search_results(html: str) -> list:
+    soup = BeautifulSoup(html, "lxml")
+    return [
+        {"title": a.get_text(" ", strip=True), "url": a["href"]}
+        for item in soup.select("div.nq")
+        for a in [item.select_one("p.nqTitle a")]
+        if a and a.get("href")
+    ]
+
+
 _consecutive_empty_searches = 0
 MAX_CONSECUTIVE_EMPTY = 3
 
@@ -124,13 +134,7 @@ def search(session: requests.Session, query: str) -> list:
                      headers={"Referer": BASE + "/"}, timeout=25)
     if "Just a moment" in r.text[:2000]:
         raise BlockedError("thuvienphapluat.vn is serving a Cloudflare challenge on search")
-    soup = BeautifulSoup(r.text, "lxml")
-    out = [
-        {"title": a.get_text(" ", strip=True), "url": a["href"]}
-        for item in soup.select("div.nq")
-        for a in [item.select_one("p.nqTitle a")]
-        if a and a.get("href")
-    ]
+    out = parse_search_results(r.text)
     if out:
         _consecutive_empty_searches = 0
     else:
@@ -275,7 +279,14 @@ def fetch_and_verify(session: requests.Session, so_hieu: str) -> dict:
     except VerificationError as e:
         base_record["nguon"]["lyDoChuaXacMinh"] = str(e)
         return base_record
+    return verify_url(session, url, so_hieu)
 
+
+def verify_url(session: requests.Session, url: str, so_hieu: str) -> dict:
+    """Fetch a known document URL and trust it only if the page's own "Thuộc tính"
+    table carries the expected số hiệu. Used directly when a search-result URL is
+    already in hand (saves one request per document)."""
+    base_record = {"soHieu": so_hieu, "xacMinh": False, "nguon": {"trangNguon": "thuvienphapluat.vn"}}
     r = session.get(url, headers={"Referer": BASE + "/"}, timeout=25)
     if "Just a moment" in r.text[:2000]:
         raise BlockedError("thuvienphapluat.vn is serving a Cloudflare challenge on a document page")
@@ -306,14 +317,16 @@ def fetch_and_verify(session: requests.Session, so_hieu: str) -> dict:
     return record
 
 
-def fetch_and_verify_with_relogin(session: requests.Session, so_hieu: str) -> dict:
-    """fetch_and_verify, but if the page came back verified yet without its full
-    text, the cached login probably expired — log in fresh once and retry. The
-    session object is updated in place so the caller keeps using it."""
-    rec = fetch_and_verify(session, so_hieu)
+def fetch_and_verify_with_relogin(session: requests.Session, so_hieu: str, url: str = None) -> dict:
+    """fetch_and_verify (or verify_url when a URL is already known), but if the page
+    came back verified yet without its full text, the cached login probably expired —
+    log in fresh once and retry. The session object is updated in place so the caller
+    keeps using it."""
+    run = (lambda: verify_url(session, url, so_hieu)) if url else (lambda: fetch_and_verify(session, so_hieu))
+    rec = run()
     if rec.get("xacMinh") and not rec.get("noiDungDayDu"):
         fresh = login(force=True)
         session.cookies.clear()
         session.cookies.update(fresh.cookies)
-        rec = fetch_and_verify(session, so_hieu)
+        rec = run()
     return rec

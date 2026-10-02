@@ -661,8 +661,14 @@ var KT_ALL_CATS = [
 ];
 
 // Nhãn lĩnh vực của kho "xác minh nguồn" (legal_documents.json) -> id mục ở thanh bên trái.
-// Chỉ các mục này được trộn dữ liệu đã xác minh vào; các mục thuế cũ giữ nguyên nguồn khotrue.json.
+// Văn bản đã xác minh được trộn vào mọi mục; trùng số hiệu với kho thuế cũ thì gộp (không đếm đôi).
 var KT_VERIFIED_CATMAP = {
+  'Thuế GTGT': 'GTGT',
+  'Thuế TNDN': 'TNDN',
+  'Thuế NTNN': 'NTNN',
+  'Thuế TNCN': 'TNCN',
+  'Thuế TTĐB': 'TTDB',
+  'Quản lý thuế': 'QuanLyThue',
   'Hóa đơn chứng từ': 'HoaDon',
   'Giao dịch liên kết': 'GiaoDichLienKet',
   'Chế độ kế toán': 'KeToan',

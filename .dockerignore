@@ -9,3 +9,5 @@ __pycache__/
 .agentbase/
 .tvpl_session.json
 .venv/
+backfill_queue.json
+*.log
