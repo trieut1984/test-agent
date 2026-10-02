@@ -62,7 +62,8 @@ def main():
 
     candidates = scraper_tax.scrape_all_tax()
     new = [d for d in candidates
-           if d.get("soHieu") and d["soHieu"] not in known and _LOOKS_LIKE_SOHIEU.search(d["soHieu"])]
+           if d.get("soHieu") and d["soHieu"] not in known and _LOOKS_LIKE_SOHIEU.search(d["soHieu"])
+           and tc.wanted_document(d.get("ten", ""), tc.LOAI_TO_LINHVUC.get(d.get("loai")), so_hieu=d["soHieu"])]
     logger.info(f"Discovery found {len(candidates)} documents, {len(new)} are new")
     if not new:
         logger.info("Nothing new today.")

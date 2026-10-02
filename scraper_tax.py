@@ -198,5 +198,10 @@ def scrape_all_tax() -> list:
             seen.add(key)
             deduped.append(doc)
 
-    logger.info(f"Tax tổng hợp: {len(deduped)} văn bản")
-    return deduped
+    # Chỉ giữ Luật/Nghị định/Thông tư lớn của cấp quốc gia; Nghị quyết chỉ khi liên quan
+    # trực tiếp GTGT/TNDN/TNCN (Quyết định, công văn, nghị quyết địa phương... bỏ qua).
+    from tvpl_client import wanted_document, LOAI_TO_LINHVUC
+    kept = [d for d in deduped
+            if wanted_document(d.get("ten", ""), LOAI_TO_LINHVUC.get(d.get("loai")), so_hieu=d.get("soHieu"))]
+    logger.info(f"Tax tổng hợp: {len(kept)}/{len(deduped)} văn bản sau khi lọc theo phạm vi")
+    return kept

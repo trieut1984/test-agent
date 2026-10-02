@@ -33,6 +33,7 @@ SEED_FILE = Path("khotrue.json")
 OUTPUT_FILE = Path("legal_documents.json")
 PAUSE_SECONDS = 6
 _LOOKS_LIKE_SOHIEU = re.compile(r"\d+\s*/")
+_TITLE_HAS_LOAI = re.compile(r"^\s*(Luật|Bộ luật|Nghị định|Nghị quyết|Thông tư|Quyết định|Công văn|Công điện|Văn bản hợp nhất|Pháp lệnh)\b", re.I)
 
 
 def load_seed() -> list:
@@ -45,7 +46,7 @@ def load_seed() -> list:
         if not so_hieu:
             continue
         linh_vuc = tc.LOAI_TO_LINHVUC.get(d.get("loai"), d.get("loai"))
-        by_sohieu.setdefault(so_hieu, {"soHieu": so_hieu, "linhVuc": linh_vuc})
+        by_sohieu.setdefault(so_hieu, {"soHieu": so_hieu, "linhVuc": linh_vuc, "ten": d.get("ten", "")})
     return list(by_sohieu.values())
 
 
@@ -82,9 +83,13 @@ def main():
     done = 0
     for i, seed in enumerate(todo, 1):
         so_hieu = seed["soHieu"]
+        ten = seed.get("ten", "")
         if not _LOOKS_LIKE_SOHIEU.search(so_hieu):
             rec = {"soHieu": so_hieu, "xacMinh": False,
                    "nguon": {"lyDoChuaXacMinh": "không phải số hiệu văn bản (không tra cứu được)"}}
+        elif _TITLE_HAS_LOAI.match(ten) and not tc.wanted_document(ten, seed.get("linhVuc"), so_hieu=so_hieu):
+            rec = {"soHieu": so_hieu, "xacMinh": False,
+                   "nguon": {"lyDoChuaXacMinh": "ngoài phạm vi thu thập (chỉ Luật/Nghị định/Thông tư lớn; Nghị quyết chỉ khi liên quan GTGT/TNDN/TNCN)"}}
         else:
             logger.info(f"[{i}/{len(todo)}] {so_hieu} ...")
             try:

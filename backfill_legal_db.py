@@ -4,10 +4,10 @@ daily_update_legal_db.py only picks up *new* documents; this fills the gaps in
 what was already issued. Two phases, both resumable and deliberately slow:
 
   1. Build a candidate queue (backfill_queue.json) from topic searches on
-     thuvienphapluat.vn. A search hit is only queued if its số hiệu token is
-     present, its issuing body is on the whitelist below (national level only —
-     no provincial HĐND/UBND), the year is >= MIN_YEAR, the title actually
-     mentions the topic, and it is not already in legal_documents.json.
+     thuvienphapluat.vn. A search hit is only queued if tc.wanted_document accepts
+     it (big Luật / Nghị định / Thông tư from national issuers; Nghị quyết only when
+     it bears on GTGT, TNDN or TNCN), the title actually mentions the topic, and it
+     is not already in legal_documents.json.
   2. Fetch up to --limit queued documents per run, one request each (the search
      hit already carries the URL). Each is accepted only if the page's own
      "Thuộc tính" table repeats the expected số hiệu — same rule as everywhere
@@ -46,14 +46,8 @@ import tvpl_client as tc
 DB_FILE = HERE / "legal_documents.json"
 QUEUE_FILE = HERE / "backfill_queue.json"
 PAUSE_SECONDS = 7
-MIN_YEAR = 2013
 QUEUE_MAX_AGE_DAYS = 30
 FIRST_RUN_FETCH_CAP = 10  # a run that also builds the queue (~30 searches) fetches fewer documents
-
-# National-level issuers only: Quốc hội, UBTVQH, Chính phủ, Thủ tướng, Bộ Tài chính.
-ALLOWED_SUFFIX = re.compile(r"/(QH\d*|UBTVQH\d*|NĐ-CP|NQ-CP|TT-BTC|QĐ-TTg)$")
-_LOAI_AT_START = re.compile(r"^\s*(Luật|Bộ luật|Nghị định|Nghị quyết|Thông tư|Quyết định)\b", re.IGNORECASE)
-_ENGLISH_TITLE = re.compile(r"^(Decree|Circular|Law|Resolution|Decision|Official|Joint|Ordinance|Directive)\b")
 
 # (lĩnh vực label, queries, title must contain one of these keywords)
 TOPICS = [
@@ -107,27 +101,14 @@ def save_queue(q: dict):
     QUEUE_FILE.write_text(json.dumps(q, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
-def candidate_from_hit(hit: dict, keywords: list):
-    """Return (số hiệu, year) for a search hit worth queueing, else None."""
-    title = hit["title"]
-    if _ENGLISH_TITLE.match(title):
+def candidate_from_hit(hit: dict, keywords: list, linh_vuc: str = None):
+    """Return the số hiệu of a search hit worth queueing, else None. The shared policy
+    (tc.wanted_document) decides type / issuer / year / Nghị quyết relevance; the topic
+    keyword check on top keeps unrelated documents that merely came back from a search."""
+    so_hieu = tc.wanted_document(hit["title"], linh_vuc)
+    if not so_hieu:
         return None
-    # The document's own số hiệu is the first one in its title; a title that doesn't
-    # start with a legal-instrument word (e.g. "Công điện ... triển khai Nghị định
-    # 72/2024/NĐ-CP") only *mentions* someone else's số hiệu, so it must not be taken.
-    if not _LOAI_AT_START.match(title):
-        return None
-    m = tc._SOHIEU_IN_TITLE_RE.search(title)
-    if not m:
-        return None
-    so_hieu = re.sub(r"\s+", "", m.group())
-    if not ALLOWED_SUFFIX.search(so_hieu):
-        return None
-    year = int(so_hieu.split("/")[1])
-    if year < MIN_YEAR:
-        return None
-    low = title.lower()
-    if not any(k in low for k in keywords):
+    if not any(k in hit["title"].lower() for k in keywords):
         return None
     return so_hieu
 
@@ -140,7 +121,7 @@ def build_queue(session, known_keys: set) -> dict:
             hits = tc.search(session, query)
             kept = 0
             for hit in hits:
-                so_hieu = candidate_from_hit(hit, keywords)
+                so_hieu = candidate_from_hit(hit, keywords, linh_vuc)
                 if not so_hieu or _key(so_hieu) in known_keys:
                     continue
                 item = items.setdefault(_key(so_hieu), {"soHieu": so_hieu, "url": hit["url"], "title": hit["title"], "linhVuc": []})
@@ -148,6 +129,17 @@ def build_queue(session, known_keys: set) -> dict:
                     item["linhVuc"].append(linh_vuc)
                 kept += 1
             logger.info(f"  [{linh_vuc}] {query!r}: {len(hits)} hits, {kept} queued")
+    # Also queue in-scope số hiệu from the older Kho thuế list that never got verified
+    # (no URL known -> resolved by search when fetched; costs one extra request each).
+    legacy_file = HERE / "khotrue.json"
+    if legacy_file.exists():
+        for d in json.loads(legacy_file.read_text(encoding="utf-8")).get("documents", []):
+            so_hieu, ten = (d.get("soHieu") or "").strip(), d.get("ten", "")
+            label = tc.LOAI_TO_LINHVUC.get(d.get("loai"))
+            if not so_hieu or _key(so_hieu) in known_keys or _key(so_hieu) in items:
+                continue
+            if tc.wanted_document(ten, label, so_hieu=so_hieu):
+                items[_key(so_hieu)] = {"soHieu": so_hieu, "url": None, "title": ten, "linhVuc": [label] if label else []}
     ordered = sorted(items.values(), key=lambda i: -int(i["soHieu"].split("/")[1]))
     return {"built": time.time(), "items": ordered}
 
@@ -159,7 +151,9 @@ def main():
     args = ap.parse_args()
 
     data = load_db()
-    known_keys = {_key(d["soHieu"]) for d in data["documents"] if d.get("soHieu")}
+    # Only *verified* documents count as "already have it"; an earlier unverified record
+    # (blocked, or never found) is retried and replaced by the new result.
+    known_keys = {_key(d["soHieu"]) for d in data["documents"] if d.get("soHieu") and d.get("xacMinh")}
     queue = None if args.rebuild_queue else load_queue()
     limit = args.limit
 
@@ -185,7 +179,7 @@ def main():
             logger.info(f"[{done + 1}/{min(limit, len(queue['items']))}] {so_hieu} — {item['title'][:70]}")
             rec = tc.fetch_and_verify_with_relogin(session, so_hieu, url=item["url"])
             rec["linhVuc"] = item["linhVuc"]
-            data["documents"].append(rec)
+            data["documents"] = [d for d in data["documents"] if _key(d.get("soHieu", "")) != _key(so_hieu)] + [rec]
             queue["items"] = [i for i in queue["items"] if i["soHieu"] != so_hieu]
             save_db(data)
             save_queue(queue)

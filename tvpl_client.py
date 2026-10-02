@@ -330,3 +330,50 @@ def fetch_and_verify_with_relogin(session: requests.Session, so_hieu: str, url: 
         session.cookies.update(fresh.cookies)
         rec = run()
     return rec
+
+
+# ── Which documents are worth collecting ─────────────────────────────────────
+# Policy (user, 2026-10-02): mainly the big Luật / Nghị định / Thông tư; Nghị quyết
+# only when it bears directly on GTGT, TNDN or TNCN; everything else (Quyết định,
+# công văn, Nghị quyết địa phương, văn bản hợp nhất...) is not collected.
+NATIONAL_SUFFIX = re.compile(r"/(QH\d*|UBTVQH\d*|NĐ-CP|NQ-CP|TT-BTC)$")
+_LOAI_AT_START = re.compile(r"^\s*(Luật|Bộ luật|Nghị định|Nghị quyết|Thông tư)\b", re.IGNORECASE)
+_ENGLISH_TITLE = re.compile(r"^(Decree|Circular|Law|Resolution|Decision|Official|Joint|Ordinance|Directive)\b")
+CORE_TAX_KEYWORDS = {
+    "Thuế GTGT": ["giá trị gia tăng", "gtgt"],
+    "Thuế TNDN": ["thu nhập doanh nghiệp", "tndn"],
+    "Thuế TNCN": ["thu nhập cá nhân", "tncn"],
+}
+
+
+def wanted_document(title: str, linh_vuc: str = None, so_hieu: str = None, min_year: int = 2013):
+    """Return the document's số hiệu if it should be collected, else None.
+
+    The số hiệu is the one the *document itself* carries: the caller's `so_hieu` when
+    it has one, otherwise the first token in the title — and only for titles that
+    start with a legal-instrument word, since "Công điện ... triển khai Nghị định
+    72/2024/NĐ-CP" merely mentions someone else's number."""
+    if not title or _ENGLISH_TITLE.match(title):
+        return None
+    m_loai = _LOAI_AT_START.match(title)
+    if not m_loai:
+        return None
+    if so_hieu:
+        so = re.sub(r"\s+", "", so_hieu)
+    else:
+        m = _SOHIEU_IN_TITLE_RE.search(title)
+        if not m:
+            return None
+        so = re.sub(r"\s+", "", m.group())
+    if not NATIONAL_SUFFIX.search(so):
+        return None
+    try:
+        if int(so.split("/")[1]) < min_year:
+            return None
+    except (IndexError, ValueError):
+        return None
+    if m_loai.group(1).lower() == "nghị quyết":
+        kws = CORE_TAX_KEYWORDS.get(linh_vuc)
+        if not kws or not any(k in title.lower() for k in kws):
+            return None
+    return so
