@@ -11,3 +11,4 @@ debug_error.py
 deploy_runtime.py
 test-agent/
 greennode-agentbase-skills/
+.tvpl_session.json

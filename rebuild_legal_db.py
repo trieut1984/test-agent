@@ -1,18 +1,21 @@
-"""One-off (and re-runnable) rebuild of the legal document database.
+"""Rebuild / backfill the legal document database from a seed list of số hiệu.
 
 Reads the existing khotrue.json purely as a SEED LIST of số hiệu + lĩnh vực tags
 to look up — none of its other fields (url, ngày, diemNB, ...) are trusted or
-carried over, since that data was found to be largely unverifiable (see project
-notes). Every record in the output has been independently re-fetched and
-verified against thuvienphapluat.vn's own "Thuộc tính" table.
+carried over, since that data was found to be largely unverifiable. Every record
+in the output has been independently re-fetched and verified against
+thuvienphapluat.vn's own "Thuộc tính" table.
+
+Re-runnable: số hiệu already verified in legal_documents.json are skipped, and
+progress is saved after every document. If thuvienphapluat.vn starts serving its
+Cloudflare challenge the run stops immediately (BlockedError) instead of retrying
+— wait a few hours and run it again, it picks up where it left off.
 
 Usage: python rebuild_legal_db.py
-Output: legal_documents.json — one record per số hiệu, schema documented in
-        legal_parser.py / tvpl_client.py docstrings. Unverifiable entries are
-        kept (xacMinh: false, no noiDung) for audit, never silently dropped.
 """
 import json
 import logging
+import re
 import sys
 import time
 from pathlib import Path
@@ -28,15 +31,8 @@ logger = logging.getLogger(__name__)
 
 SEED_FILE = Path("khotrue.json")
 OUTPUT_FILE = Path("legal_documents.json")
-
-# Old "loai" values were a tax-category tag (GTGT/TNDN/...), not a document type —
-# preserve that curation as linhVuc since thuvienphapluat doesn't provide it and
-# it isn't something we can verify or re-derive automatically.
-_LOAI_TO_LINHVUC = {
-    "GTGT": "Thuế GTGT", "TNDN": "Thuế TNDN", "NTNN": "Thuế NTNN",
-    "TNCN": "Thuế TNCN", "TTDB": "Thuế TTĐB", "PhatHC": "Xử phạt hành chính",
-    "QuanLyThue": "Quản lý thuế",
-}
+PAUSE_SECONDS = 6
+_LOOKS_LIKE_SOHIEU = re.compile(r"\d+\s*/")
 
 
 def load_seed() -> list:
@@ -48,71 +44,73 @@ def load_seed() -> list:
         so_hieu = (d.get("soHieu") or "").strip()
         if not so_hieu:
             continue
-        linh_vuc = _LOAI_TO_LINHVUC.get(d.get("loai"), d.get("loai"))
-        if so_hieu not in by_sohieu:
-            by_sohieu[so_hieu] = {"soHieu": so_hieu, "linhVuc": linh_vuc}
-        elif linh_vuc:
-            by_sohieu[so_hieu]["linhVuc"] = linh_vuc
+        linh_vuc = tc.LOAI_TO_LINHVUC.get(d.get("loai"), d.get("loai"))
+        by_sohieu.setdefault(so_hieu, {"soHieu": so_hieu, "linhVuc": linh_vuc})
     return list(by_sohieu.values())
 
 
-def load_existing() -> dict:
-    """Keyed by số hiệu, so a re-run can skip documents already verified instead
-    of re-spending requests (and re-risking a rate-limit) on them."""
-    if not OUTPUT_FILE.exists():
-        return {}
-    data = json.loads(OUTPUT_FILE.read_text(encoding="utf-8"))
-    return {d["soHieu"]: d for d in data.get("documents", []) if d.get("xacMinh")}
+def load_output() -> dict:
+    if OUTPUT_FILE.exists():
+        return json.loads(OUTPUT_FILE.read_text(encoding="utf-8"))
+    return {"documents": []}
+
+
+def save_output(data: dict):
+    data["rebuiltAt"] = time.strftime("%Y-%m-%dT%H:%M:%S")
+    OUTPUT_FILE.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
 def main():
     seeds = load_seed()
-    logger.info(f"Seed list: {len(seeds)} số hiệu from {SEED_FILE}")
     if not seeds:
-        logger.error("No seed số hiệu found — nothing to rebuild.")
+        logger.error("No seed số hiệu found — nothing to do.")
         sys.exit(1)
 
-    already_verified = load_existing()
-    if already_verified:
-        logger.info(f"Resuming: {len(already_verified)} số hiệu already verified in {OUTPUT_FILE}, will skip those.")
+    data = load_output()
+    by_sohieu = {d["soHieu"]: d for d in data["documents"]}
+    todo = [s for s in seeds if not by_sohieu.get(s["soHieu"], {}).get("xacMinh")]
+    logger.info(f"{len(seeds)} seeds, {len(seeds) - len(todo)} already verified, {len(todo)} to process")
+    if not todo:
+        return
 
-    session = tc.login()
-    logger.info("Logged in to thuvienphapluat.vn")
+    try:
+        session = tc.login()
+    except tc.BlockedError as e:
+        logger.error(f"Blocked at login: {e}. Wait a few hours and re-run.")
+        sys.exit(2)
 
-    records = []
-    verified_count = 0
-    for i, seed in enumerate(seeds, 1):
+    done = 0
+    for i, seed in enumerate(todo, 1):
         so_hieu = seed["soHieu"]
-        if so_hieu in already_verified:
-            logger.info(f"[{i}/{len(seeds)}] {so_hieu} — already verified, skipping")
-            records.append(already_verified[so_hieu])
-            verified_count += 1
-            continue
-        logger.info(f"[{i}/{len(seeds)}] {so_hieu} ...")
-        try:
-            rec = tc.fetch_and_verify(session, so_hieu)
-        except Exception as e:
-            logger.error(f"  ERROR fetching {so_hieu}: {e}")
-            rec = {"soHieu": so_hieu, "xacMinh": False, "nguon": {"lyDoChuaXacMinh": f"lỗi khi fetch: {e}"}}
+        if not _LOOKS_LIKE_SOHIEU.search(so_hieu):
+            rec = {"soHieu": so_hieu, "xacMinh": False,
+                   "nguon": {"lyDoChuaXacMinh": "không phải số hiệu văn bản (không tra cứu được)"}}
+        else:
+            logger.info(f"[{i}/{len(todo)}] {so_hieu} ...")
+            try:
+                rec = tc.fetch_and_verify_with_relogin(session, so_hieu)
+            except tc.BlockedError as e:
+                logger.error(f"BLOCKED after {done} documents: {e}. Progress saved; wait a few hours and re-run.")
+                save_output(data)
+                sys.exit(2)
+            except Exception as e:
+                logger.error(f"  ERROR fetching {so_hieu}: {e}")
+                rec = {"soHieu": so_hieu, "xacMinh": False, "nguon": {"lyDoChuaXacMinh": f"lỗi khi fetch: {e}"}}
+            time.sleep(PAUSE_SECONDS)
 
         if seed.get("linhVuc"):
             rec["linhVuc"] = [seed["linhVuc"]]
-
+        # replace any earlier (unverified) record for this số hiệu
+        data["documents"] = [d for d in data["documents"] if d["soHieu"] != so_hieu] + [rec]
+        save_output(data)
+        done += 1
         if rec["xacMinh"]:
-            verified_count += 1
-            dieu_count = sum(len(c["dieu"]) for c in rec.get("noiDung", {}).get("chuong", [])) if rec.get("noiDung") else 0
-            logger.info(f"  OK — {rec.get('loaiVanBan')} | {rec.get('tinhTrangHieuLuc')} | {dieu_count} Điều | {len(rec.get('quanHeHieuLuc', []))} quan hệ")
+            logger.info(f"  OK — {rec.get('loaiVanBan')} | {rec.get('tinhTrangHieuLuc')}")
         else:
             logger.warning(f"  CHƯA XÁC MINH — {rec['nguon'].get('lyDoChuaXacMinh')}")
 
-        records.append(rec)
-        time.sleep(1)  # be polite to the source
-
-    OUTPUT_FILE.write_text(
-        json.dumps({"documents": records, "rebuiltAt": time.strftime("%Y-%m-%dT%H:%M:%S")}, ensure_ascii=False, indent=2),
-        encoding="utf-8",
-    )
-    logger.info(f"=== Done: {verified_count}/{len(seeds)} verified. Written to {OUTPUT_FILE} ===")
+    verified = sum(1 for d in data["documents"] if d.get("xacMinh"))
+    logger.info(f"=== Done: {verified}/{len(data['documents'])} verified in {OUTPUT_FILE} ===")
 
 
 if __name__ == "__main__":

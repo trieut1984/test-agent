@@ -7,10 +7,12 @@ Every record this module returns is either verified against the source page's ow
 unverified with no content attached — callers must not treat an unverified record
 as authoritative.
 """
+import json
 import logging
 import os
 import re
 import time
+from pathlib import Path
 
 import requests
 from bs4 import BeautifulSoup
@@ -39,11 +41,51 @@ class VerificationError(Exception):
     """Raised when a document can't be confidently matched to the requested số hiệu."""
 
 
-def login() -> requests.Session:
-    user = os.environ["THUVIENPHAPLUAT_USERNAME"]
-    pwd = os.environ["THUVIENPHAPLUAT_PASSWORD"]
+class BlockedError(Exception):
+    """thuvienphapluat.vn is (very likely) serving a Cloudflare bot-challenge. Callers
+    must stop the whole run and save progress — retrying only extends the block and
+    risks flagging the paid account."""
+
+
+# Tax-category tag used by khotrue/scraper_tax -> lĩnh vực label of the verified store.
+LOAI_TO_LINHVUC = {
+    "GTGT": "Thuế GTGT", "TNDN": "Thuế TNDN", "NTNN": "Thuế NTNN",
+    "TNCN": "Thuế TNCN", "TTDB": "Thuế TTĐB", "PhatHC": "Xử phạt hành chính",
+    "QuanLyThue": "Quản lý thuế",
+}
+
+# Logging in on every script run is itself a bot-like pattern (repeated login POSTs),
+# so a successful login's cookies are cached and reused for a few hours.
+SESSION_FILE = Path(__file__).with_name(".tvpl_session.json")
+SESSION_MAX_AGE = 3 * 3600
+
+
+def _new_session() -> requests.Session:
     s = requests.Session()
     s.headers.update({"User-Agent": UA, "Accept-Language": "vi-VN,vi;q=0.9"})
+    return s
+
+
+def _load_cached_session():
+    try:
+        data = json.loads(SESSION_FILE.read_text(encoding="utf-8"))
+        if time.time() - data["saved"] > SESSION_MAX_AGE or "lg_user" not in data["cookies"]:
+            return None
+        s = _new_session()
+        s.cookies.update(data["cookies"])
+        return s
+    except Exception:
+        return None
+
+
+def login(force: bool = False) -> requests.Session:
+    if not force:
+        cached = _load_cached_session()
+        if cached is not None:
+            return cached
+    user = os.environ["THUVIENPHAPLUAT_USERNAME"]
+    pwd = os.environ["THUVIENPHAPLUAT_PASSWORD"]
+    s = _new_session()
     s.get(LOGIN_PAGE, headers={"Referer": BASE + "/"}, timeout=20)
     h = {
         "Referer": LOGIN_PAGE,
@@ -53,34 +95,49 @@ def login() -> requests.Session:
     s.post(AJAX_URL, headers=h, data={"l_txtUser": user, "l_txtPass": pwd, "action": "CheckFullLogin"}, timeout=20)
     r = s.post(AJAX_URL, headers=h, data={"l_txtUser": user, "l_txtPass": pwd, "action": "Login"}, timeout=20)
     if r.text.strip() != "<ok>":
+        if "Just a moment" in r.text:
+            raise BlockedError("thuvienphapluat.vn is serving a Cloudflare challenge at login")
         raise RuntimeError(f"thuvienphapluat.vn login failed: {r.text[:200]!r}")
+    try:
+        SESSION_FILE.write_text(json.dumps({"saved": time.time(), "cookies": requests.utils.dict_from_cookiejar(s.cookies)}),
+                                encoding="utf-8")
+    except OSError:
+        pass
     return s
 
 
-def search(session: requests.Session, query: str, _retries: int = 3) -> list:
+_consecutive_empty_searches = 0
+MAX_CONSECUTIVE_EMPTY = 3
+
+
+def search(session: requests.Session, query: str) -> list:
     """Returns [{"title": ..., "url": ...}, ...] from the real search-results page
     (not the autocomplete endpoint, which doesn't return URLs).
 
-    A genuine "no such document" still returns some (non-matching) results for a
-    well-formed số hiệu query, so a truly empty page is treated as this request
-    having been rate-limited rather than as a real empty result, and retried with
-    backoff rather than reported to the caller as "not found"."""
-    for attempt in range(_retries):
-        r = session.get(SEARCH_URL, params={"keyword": query, "match": "True", "area": "0"},
-                         headers={"Referer": BASE + "/"}, timeout=25)
-        soup = BeautifulSoup(r.text, "lxml")
-        out = [
-            {"title": a.get_text(" ", strip=True), "url": a["href"]}
-            for item in soup.select("div.nq")
-            for a in [item.select_one("p.nqTitle a")]
-            if a and a.get("href")
-        ]
-        if out or attempt == _retries - 1:
-            return out
-        wait = 20 * (attempt + 1)
-        logger.warning(f"search({query!r}) returned 0 results — likely rate-limited, retrying in {wait}s")
-        time.sleep(wait)
-    return []
+    One empty page can be a genuine "nothing matches" (e.g. a query that isn't a
+    real số hiệu), but several different queries in a row coming back empty is the
+    signature of a Cloudflare challenge — a short backoff does not clear it (only
+    hours do), so instead of sleeping and retrying this raises BlockedError and
+    lets the caller stop and save its progress."""
+    global _consecutive_empty_searches
+    r = session.get(SEARCH_URL, params={"keyword": query, "match": "True", "area": "0"},
+                     headers={"Referer": BASE + "/"}, timeout=25)
+    if "Just a moment" in r.text[:2000]:
+        raise BlockedError("thuvienphapluat.vn is serving a Cloudflare challenge on search")
+    soup = BeautifulSoup(r.text, "lxml")
+    out = [
+        {"title": a.get_text(" ", strip=True), "url": a["href"]}
+        for item in soup.select("div.nq")
+        for a in [item.select_one("p.nqTitle a")]
+        if a and a.get("href")
+    ]
+    if out:
+        _consecutive_empty_searches = 0
+    else:
+        _consecutive_empty_searches += 1
+        if _consecutive_empty_searches >= MAX_CONSECUTIVE_EMPTY:
+            raise BlockedError(f"{_consecutive_empty_searches} searches in a row returned nothing — treating as blocked")
+    return out
 
 
 def _sohieu_matches(expected_so_hieu: str, candidate_text: str) -> bool:
@@ -220,6 +277,8 @@ def fetch_and_verify(session: requests.Session, so_hieu: str) -> dict:
         return base_record
 
     r = session.get(url, headers={"Referer": BASE + "/"}, timeout=25)
+    if "Just a moment" in r.text[:2000]:
+        raise BlockedError("thuvienphapluat.vn is serving a Cloudflare challenge on a document page")
     soup = BeautifulSoup(r.text, "lxml")
     metadata = extract_metadata(soup)
     if not metadata or _digits(metadata.get("soHieu", "")) != _digits(so_hieu):
@@ -245,3 +304,16 @@ def fetch_and_verify(session: requests.Session, so_hieu: str) -> dict:
         "quanHeHieuLuc": extract_relationships(r.text),
     }
     return record
+
+
+def fetch_and_verify_with_relogin(session: requests.Session, so_hieu: str) -> dict:
+    """fetch_and_verify, but if the page came back verified yet without its full
+    text, the cached login probably expired — log in fresh once and retry. The
+    session object is updated in place so the caller keeps using it."""
+    rec = fetch_and_verify(session, so_hieu)
+    if rec.get("xacMinh") and not rec.get("noiDungDayDu"):
+        fresh = login(force=True)
+        session.cookies.clear()
+        session.cookies.update(fresh.cookies)
+        rec = fetch_and_verify(session, so_hieu)
+    return rec
