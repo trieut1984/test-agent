@@ -41,6 +41,7 @@ if sys.stderr is not None:
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s", handlers=_handlers)
 logger = logging.getLogger("backfill")
 
+import scope
 import tvpl_client as tc
 
 DB_FILE = HERE / "legal_documents.json"
@@ -59,8 +60,6 @@ TOPICS = [
      ["thu nhập cá nhân", "tncn"]),
     ("Thuế NTNN", ["thuế nhà thầu nước ngoài", "Thông tư nhà thầu nước ngoài hoạt động kinh doanh tại Việt Nam"],
      ["nhà thầu"]),
-    ("Thuế TTĐB", ["Luật thuế tiêu thụ đặc biệt", "Nghị định thuế tiêu thụ đặc biệt"],
-     ["tiêu thụ đặc biệt"]),
     ("Quản lý thuế", ["Luật quản lý thuế", "Nghị định quản lý thuế", "Thông tư quản lý thuế"],
      ["quản lý thuế"]),
     ("Hóa đơn chứng từ", ["Nghị định hóa đơn chứng từ", "Thông tư hóa đơn điện tử"],
@@ -71,6 +70,8 @@ TOPICS = [
      ["kế toán"]),
     ("Xử phạt hành chính", ["xử phạt vi phạm hành chính về thuế hóa đơn", "xử phạt vi phạm hành chính trong lĩnh vực kế toán"],
      ["xử phạt"]),
+    ("Doanh nghiệp và thương mại", ["Luật doanh nghiệp", "Nghị định đăng ký doanh nghiệp", "Luật thương mại"],
+     ["luật doanh nghiệp", "đăng ký doanh nghiệp", "luật thương mại"]),
 ]
 
 
@@ -140,7 +141,20 @@ def build_queue(session, known_keys: set) -> dict:
                 continue
             if tc.wanted_document(ten, label, so_hieu=so_hieu):
                 items[_key(so_hieu)] = {"soHieu": so_hieu, "url": None, "title": ten, "linhVuc": [label] if label else []}
-    ordered = sorted(items.values(), key=lambda i: -int(i["soHieu"].split("/")[1]))
+    # Hand-picked documents (curated_documents.json) are collected regardless of the rules —
+    # the way to bring in a specific công văn.
+    for so_hieu, entry in scope.load_whitelist().items():
+        if _key(so_hieu) not in known_keys and _key(so_hieu) not in items:
+            items[_key(so_hieu)] = {"soHieu": so_hieu, "url": None, "title": entry.get("ghiChu", ""),
+                                    "linhVuc": entry.get("linhVuc", [])}
+    ordered = sorted(items.values(), key=lambda i: -int((i["soHieu"].split("/") + ["0", "0"])[1] or 0))
+    # Last: re-fetch verified records saved before real titles were captured (the title feeds
+    # classification and search). Old record is only replaced by a *verified* refresh.
+    docs = {d["soHieu"]: d for d in load_db()["documents"]}
+    for d in docs.values():
+        url = (d.get("nguon") or {}).get("url")
+        if d.get("xacMinh") and not d.get("tenVanBan") and url:
+            ordered.append({"soHieu": d["soHieu"], "url": url, "title": "", "linhVuc": d.get("linhVuc", []), "refresh": True})
     return {"built": time.time(), "items": ordered}
 
 
@@ -167,7 +181,7 @@ def main():
             limit = min(limit, FIRST_RUN_FETCH_CAP)
 
         # drop anything that entered the DB since the queue was built (e.g. via the daily job)
-        queue["items"] = [i for i in queue["items"] if _key(i["soHieu"]) not in known_keys]
+        queue["items"] = [i for i in queue["items"] if i.get("refresh") or _key(i["soHieu"]) not in known_keys]
         if not queue["items"]:
             logger.info("Queue empty — nothing left to backfill.")
             save_queue(queue)
@@ -179,7 +193,10 @@ def main():
             logger.info(f"[{done + 1}/{min(limit, len(queue['items']))}] {so_hieu} — {item['title'][:70]}")
             rec = tc.fetch_and_verify_with_relogin(session, so_hieu, url=item["url"])
             rec["linhVuc"] = item["linhVuc"]
-            data["documents"] = [d for d in data["documents"] if _key(d.get("soHieu", "")) != _key(so_hieu)] + [rec]
+            if item.get("refresh") and not rec["xacMinh"]:
+                logger.warning("  refresh failed verification — keeping the existing verified record")
+            else:
+                data["documents"] = [d for d in data["documents"] if _key(d.get("soHieu", "")) != _key(so_hieu)] + [rec]
             queue["items"] = [i for i in queue["items"] if i["soHieu"] != so_hieu]
             save_db(data)
             save_queue(queue)

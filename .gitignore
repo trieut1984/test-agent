@@ -13,3 +13,4 @@ test-agent/
 greennode-agentbase-skills/
 .tvpl_session.json
 backfill_queue.json
+backups/

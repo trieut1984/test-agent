@@ -16,6 +16,7 @@ load_dotenv()
 
 from scraper import scrape_all_sources, get_document_detail
 from scraper_tax import scrape_all_tax
+import scope
 from summarizer import summarize_document, generate_highlights, test_connection
 
 logging.basicConfig(
@@ -304,27 +305,57 @@ async def api_khotrue_status():
 # ─────────────────────────────────────────────
 
 LEGAL_DB_FILE = Path("legal_documents.json")
+_legal_cache = {"mtime": None, "docs": []}
 
 
 def load_legal_db() -> list:
-    if not LEGAL_DB_FILE.exists():
-        return []
+    """Verified documents only. legal_documents.json is several MB, so re-parse it only
+    when the file actually changed."""
     try:
-        data = json.loads(LEGAL_DB_FILE.read_text(encoding="utf-8"))
-    except Exception:
+        mtime = LEGAL_DB_FILE.stat().st_mtime
+    except OSError:
         return []
-    return [d for d in data.get("documents", []) if d.get("xacMinh")]
+    if _legal_cache["mtime"] != mtime:
+        try:
+            data = json.loads(LEGAL_DB_FILE.read_text(encoding="utf-8"))
+        except Exception:
+            return []
+        _legal_cache.update(mtime=mtime, docs=[d for d in data.get("documents", []) if d.get("xacMinh")])
+    return _legal_cache["docs"]
 
 
 def _display_title(d: dict) -> str:
     return d.get("tenVanBan") or f"{d.get('loaiVanBan', 'Văn bản')} {d['soHieu']}"
 
 
+def _legacy_by_sohieu() -> dict:
+    return {(d.get("soHieu") or "").strip(): d for d in load_khotrue().get("documents", []) if d.get("soHieu")}
+
+
+def _verified_scope(d: dict, legacy_by: dict) -> dict:
+    lg = legacy_by.get(d["soHieu"], {})
+    return scope.classify_verified(d, lg.get("ten"), lg.get("loai"))
+
+
+@app.get("/api/scope")
+async def api_scope():
+    """Scope + group of every known document (legacy Kho thuế and verified). Documents
+    outside the scope are only *flagged* here — nothing is ever deleted."""
+    legacy_by = _legacy_by_sohieu()
+    docs = {so: scope.classify_legacy(d) for so, d in legacy_by.items()}
+    for v in load_legal_db():
+        docs[v["soHieu"]] = _verified_scope(v, legacy_by)
+    return JSONResponse({"groups": [{"id": i, "label": l} for i, l in scope.GROUPS], "docs": docs})
+
+
 @app.get("/api/legal/documents")
-async def api_legal_documents():
-    docs = load_legal_db()
+async def api_legal_documents(all: int = 0):
+    legacy_by = _legacy_by_sohieu()
     summaries = []
-    for d in docs:
+    for d in load_legal_db():
+        sc = _verified_scope(d, legacy_by)
+        if not sc["trongPham"] and not all:
+            continue
         dieu_count = sum(len(c.get("dieu", [])) for c in d.get("noiDung", {}).get("chuong", [])) if d.get("noiDung") else 0
         summaries.append({
             "soHieu": d["soHieu"],
@@ -336,6 +367,9 @@ async def api_legal_documents():
             "tinhTrangHieuLuc": d.get("tinhTrangHieuLuc", "chua_xac_dinh"),
             "tinhTrangGhiChu": d.get("tinhTrangGhiChu"),
             "linhVuc": d.get("linhVuc") or [],
+            "nhom": sc["nhom"],
+            "trongPham": sc["trongPham"],
+            "lyDo": sc["lyDo"],
             "soDieu": dieu_count,
             "soQuanHe": len(d.get("quanHeHieuLuc", [])),
         })

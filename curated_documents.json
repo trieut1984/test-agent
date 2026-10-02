@@ -1,0 +1,4 @@
+{
+  "_huongDan": "Danh sách văn bản được giữ/thu thập thủ công bất kể quy tắc phạm vi (ví dụ một công văn hướng dẫn quan trọng). Thêm {\"soHieu\": \"...\", \"linhVuc\": [\"Thuế GTGT\"], \"ghiChu\": \"lý do\"} vào mảng include; lần cào kế tiếp sẽ tải và xác minh văn bản đó từ nguồn.",
+  "include": []
+}

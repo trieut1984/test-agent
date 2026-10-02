@@ -380,6 +380,9 @@
         <button class="kt-inline-add-btn" onclick="ktShowForm()">+ Thêm văn bản</button>
       </div>
       <div id="ktSyncInfo" style="font-size:11px;color:#8e8e93;padding:0 0 8px;display:none"></div>
+      <label style="display:flex;align-items:center;gap:6px;font-size:12px;color:#6e6e73;padding:0 0 10px;cursor:pointer" title="Các văn bản này chỉ bị ẩn khỏi danh sách chính, không bị xóa">
+        <input type="checkbox" id="ktShowAll" onchange="ktToggleScope()"> Hiện cả văn bản ngoài phạm vi theo dõi (<span id="ktOutCount">0</span>)
+      </label>
 
       <div id="ktForm" class="kt-form" style="display:none">
         <h3 id="ktFormTitle">Thêm văn bản mới</h3>
@@ -392,16 +395,15 @@
           <div class="kt-form-group">
             <label>Loại thuế</label>
             <select id="ktFLoai">
+              <option value="KeToan">Kế toán</option>
               <option value="GTGT">Thuế GTGT</option>
               <option value="TNDN">Thuế TNDN</option>
-              <option value="NTNN">Thuế NTNN</option>
               <option value="TNCN">Thuế TNCN</option>
-              <option value="TTDB">Thuế TTĐB</option>
-              <option value="PhatHC">Xử phạt</option>
+              <option value="NTNN">Thuế nhà thầu nước ngoài</option>
               <option value="QuanLyThue">Quản lý thuế</option>
-              <option value="HoaDon">Hóa đơn chứng từ</option>
-              <option value="GiaoDichLienKet">Giao dịch liên kết</option>
-              <option value="KeToan">Chế độ kế toán</option>
+              <option value="HoaDon">Hóa đơn, chứng từ</option>
+              <option value="DoanhNghiep">Doanh nghiệp và thương mại</option>
+              <option value="Khac">Khác</option>
             </select>
           </div>
           <div class="kt-form-group full">
@@ -454,7 +456,7 @@
           <input type="text" id="plSearch" placeholder="Tìm theo số hiệu, tên văn bản..." oninput="plRenderList()">
         </div>
         <select class="pl-filter-select" id="plFilterLinhVuc" onchange="plRenderList()">
-          <option value="">Tất cả lĩnh vực</option>
+          <option value="">Tất cả nhóm</option>
         </select>
         <select class="pl-filter-select" id="plFilterTrangThai" onchange="plRenderList()">
           <option value="">Tất cả trạng thái</option>
@@ -647,32 +649,24 @@ loadStats();
 var KT_KEY = 'khotrue_v7';
 
 var KT_ALL_CATS = [
-  { id: 'all',    label: 'Tất cả',    icon: '⊞', color: '#534AB7', bg: '#EEEDFE' },
-  { id: 'GTGT',   label: 'Thuế GTGT', icon: '🧾', color: '#085041', bg: '#E1F5EE' },
-  { id: 'TNDN',   label: 'Thuế TNDN', icon: '🏢', color: '#3C3489', bg: '#EEEDFE' },
-  { id: 'NTNN',   label: 'Thuế NTNN', icon: '🌐', color: '#085041', bg: '#E1F5EE' },
-  { id: 'TNCN',   label: 'Thuế TNCN', icon: '👤', color: '#633806', bg: '#FAEEDA' },
-  { id: 'TTDB',        label: 'Thuế TTĐB',   icon: '🍺', color: '#5C4A00', bg: '#FFF8E1' },
-  { id: 'PhatHC',      label: 'Xử phạt',     icon: '⚖️', color: '#A32D2D', bg: '#FCEBEB' },
-  { id: 'QuanLyThue',  label: 'Quản lý thuế', icon: '🏛️', color: '#0A3060', bg: '#E5F0FF' },
-  { id: 'HoaDon',          label: 'Hóa đơn chứng từ',  icon: '📑', color: '#0A5C6B', bg: '#E0F4F7' },
-  { id: 'GiaoDichLienKet', label: 'Giao dịch liên kết', icon: '🔗', color: '#5B3A8C', bg: '#F1E9FB' },
-  { id: 'KeToan',          label: 'Chế độ kế toán',     icon: '📒', color: '#7A3E00', bg: '#FFEBD6' },
+  { id: 'all',         label: 'Tất cả',                      icon: '⊞',  color: '#534AB7', bg: '#EEEDFE' },
+  { id: 'KeToan',      label: 'Kế toán',                     icon: '📒', color: '#7A3E00', bg: '#FFEBD6' },
+  { id: 'GTGT',        label: 'Thuế GTGT',                   icon: '🧾', color: '#085041', bg: '#E1F5EE' },
+  { id: 'TNDN',        label: 'Thuế TNDN',                   icon: '🏢', color: '#3C3489', bg: '#EEEDFE' },
+  { id: 'TNCN',        label: 'Thuế TNCN',                   icon: '👤', color: '#633806', bg: '#FAEEDA' },
+  { id: 'NTNN',        label: 'Thuế nhà thầu nước ngoài',    icon: '🌐', color: '#0A5C6B', bg: '#E0F4F7' },
+  { id: 'QuanLyThue',  label: 'Quản lý thuế',                icon: '🏛️', color: '#0A3060', bg: '#E5F0FF' },
+  { id: 'HoaDon',      label: 'Hóa đơn, chứng từ',           icon: '📑', color: '#5B3A8C', bg: '#F1E9FB' },
+  { id: 'DoanhNghiep', label: 'Doanh nghiệp và thương mại',  icon: '🤝', color: '#A32D2D', bg: '#FCEBEB' },
+  { id: 'Khac',        label: 'Khác (ngoài trọng tâm)',      icon: '📁', color: '#5C4A00', bg: '#FFF8E1' },
 ];
 
-// Nhãn lĩnh vực của kho "xác minh nguồn" (legal_documents.json) -> id mục ở thanh bên trái.
-// Văn bản đã xác minh được trộn vào mọi mục; trùng số hiệu với kho thuế cũ thì gộp (không đếm đôi).
-var KT_VERIFIED_CATMAP = {
-  'Thuế GTGT': 'GTGT',
-  'Thuế TNDN': 'TNDN',
-  'Thuế NTNN': 'NTNN',
-  'Thuế TNCN': 'TNCN',
-  'Thuế TTĐB': 'TTDB',
-  'Quản lý thuế': 'QuanLyThue',
-  'Hóa đơn chứng từ': 'HoaDon',
-  'Giao dịch liên kết': 'GiaoDichLienKet',
-  'Chế độ kế toán': 'KeToan',
-  'Xử phạt hành chính': 'PhatHC'
+// Nhóm của văn bản kho thuế cũ khi server chưa trả phân loại (/api/scope) — chỉ là dự phòng;
+// nguồn chính là scope.py ở server để quy tắc chỉ nằm một chỗ.
+var KT_LEGACY_GROUP = {
+  GTGT: 'GTGT', TNDN: 'TNDN', NTNN: 'NTNN', TNCN: 'TNCN', QuanLyThue: 'QuanLyThue',
+  PhatHC: 'QuanLyThue', GiaoDichLienKet: 'QuanLyThue', HoaDon: 'HoaDon', KeToan: 'KeToan',
+  DoanhNghiep: 'DoanhNghiep', TTDB: 'Khac'
 };
 var KT_VERIFIED_TT = {
   con_hieu_luc: 'hieuluc', het_hieu_luc: 'hethieuluc', chua_co_hieu_luc: 'chuahieuluc',
@@ -767,43 +761,48 @@ function ktIsoDate(s) {
   return m ? m[3] + '-' + m[2] + '-' + m[1] : (s || '');
 }
 
-// Danh sách hiển thị = văn bản kho thuế (ktDocs) + văn bản đã xác minh thuộc các mục mới.
-// Chỉ dùng để hiển thị; không bao giờ ghi ngược vào ktDocs/localStorage.
+var ktScope = null;        // { groups, docs: { soHieu: {nhom, trongPham, lyDo} } } từ /api/scope
+var ktShowAll = false;     // bật để xem cả văn bản ngoài phạm vi (chỉ bị ẩn, không bị xóa)
+
+// Danh sách hiển thị = văn bản kho thuế (ktDocs) + văn bản đã xác minh (plDocs), mỗi văn bản
+// gắn nhóm do server phân loại. Chỉ dùng để hiển thị; không bao giờ ghi ngược vào ktDocs/localStorage.
 function ktView() {
+  var scopeDocs = (ktScope && ktScope.docs) || {};
   var bySo = {};
   var view = ktDocs.map(function(d) {
-    var c = Object.assign({}, d); c.cats = [d.loai];
-    (bySo[d.soHieu] = bySo[d.soHieu] || []).push(c);
+    var c = Object.assign({}, d);
+    var so = (d.soHieu || '').trim();
+    var sc = scopeDocs[so];
+    c.cats = sc ? sc.nhom : [KT_LEGACY_GROUP[d.loai] || (ktCatObj(d.loai) ? d.loai : 'Khac')];
+    // văn bản người dùng tự thêm tay (id kt_...) thì không bao giờ bị ẩn
+    c.outOfScope = !!(sc && !sc.trongPham) && String(d.id).indexOf('kt_') !== 0;
+    c.lyDo = sc && sc.lyDo;
+    (bySo[so] = bySo[so] || []).push(c);
     return c;
   });
   (plDocs || []).forEach(function(v) {
-    var cats = [];
-    (v.linhVuc || []).forEach(function(lv) {
-      var id = KT_VERIFIED_CATMAP[lv];
-      if (id && cats.indexOf(id) < 0) cats.push(id);
-    });
-    if (!cats.length) return;
     var existing = bySo[v.soHieu];
-    if (existing) {
-      existing.forEach(function(e) {
-        cats.forEach(function(id) { if (e.cats.indexOf(id) < 0) e.cats.push(id); });
-        e.verified = true;
-      });
+    var tt = KT_VERIFIED_TT[v.tinhTrangHieuLuc] || 'chuaxacdinh';
+    var common = { verified: true, cats: v.nhom, outOfScope: !v.trongPham, lyDo: v.lyDo,
+                   ngayHieuLuc: ktIsoDate(v.ngayHieuLuc), ghiChuHL: v.tinhTrangGhiChu || '', tinhtrang: tt };
+    if (existing) {          // trạng thái hiệu lực lấy từ nguồn đã xác minh, không dùng nhãn cũ
+      existing.forEach(function(e) { Object.assign(e, common); });
       return;
     }
-    view.push({
-      id: 'pl_' + v.soHieu, cats: cats, loai: cats[0], verified: true, virtual: true,
-      soHieu: v.soHieu, ten: v.tenVanBan, coQuan: v.coQuanBanHanh || '',
-      ngay: ktIsoDate(v.ngayBanHanh), tinhtrang: KT_VERIFIED_TT[v.tinhTrangHieuLuc] || 'chuaxacdinh'
-    });
+    view.push(Object.assign({
+      id: 'pl_' + v.soHieu, virtual: true, loai: (v.nhom || ['Khac'])[0],
+      soHieu: v.soHieu, ten: v.tenVanBan, coQuan: v.coQuanBanHanh || '', ngay: ktIsoDate(v.ngayBanHanh)
+    }, common));
   });
   return view;
 }
 
+function ktVisible(d) { return ktShowAll || !d.outOfScope; }
+
 function ktFiltered() {
   var q = ktGetQuery();
   return ktView().filter(function(d) {
-    return (ktActiveCat === 'all' || d.cats.indexOf(ktActiveCat) >= 0) && ktMatch(d, q);
+    return ktVisible(d) && (ktActiveCat === 'all' || d.cats.indexOf(ktActiveCat) >= 0) && ktMatch(d, q);
   });
 }
 
@@ -825,8 +824,8 @@ function ktRenderHeader() {
   if (cntEl) cntEl.textContent = cnt + ' văn bản';
 }
 
-// Thứ tự nhóm hiển thị; "Khác" luôn ở cuối (xem ktLoaiVanBan bên dưới)
-var KT_LOAIVANBAN_ORDER = ['Luật', 'Pháp lệnh', 'Nghị quyết', 'Nghị định', 'Thông tư', 'Văn bản hợp nhất', 'Quyết định', 'Công điện', 'Công văn', 'Khác'];
+// Thứ tự loại văn bản trong từng mục: Luật → Nghị định → Thông tư → Nghị quyết → còn lại
+var KT_LOAIVANBAN_ORDER = ['Luật', 'Pháp lệnh', 'Nghị định', 'Thông tư', 'Nghị quyết', 'Văn bản hợp nhất', 'Quyết định', 'Công điện', 'Công văn', 'Khác'];
 
 function ktLoaiVanBan(d) {
   var ten = (d.ten || '');
@@ -843,7 +842,7 @@ function ktLoaiVanBan(d) {
     [/^\s*Công văn\b/i, 'Công văn'],
   ];
   for (var i = 0; i < checks.length; i++) { if (checks[i][0].test(ten)) return checks[i][1]; }
-  // Fallback: suy từ hậu tố số hiệu khi tiêu đề không bắt đầu bằng loại văn bản
+  // Dự phòng: suy từ hậu tố số hiệu khi tiêu đề không bắt đầu bằng loại văn bản
   if (/VBHN/.test(soHieu)) return 'Văn bản hợp nhất';
   if (/\/QH\d*$/.test(soHieu)) return 'Luật';
   if (/\/N[ĐD]-CP$/.test(soHieu)) return 'Nghị định';
@@ -853,19 +852,35 @@ function ktLoaiVanBan(d) {
   return 'Khác';
 }
 
-function ktGroupByLoaiVanBan(docs) {
-  var groups = {};
-  docs.forEach(function(d) {
-    var g = ktLoaiVanBan(d);
-    (groups[g] = groups[g] || []).push(d);
-  });
-  return KT_LOAIVANBAN_ORDER
-    .filter(function(g) { return groups[g] && groups[g].length; })
-    .map(function(g) { return { loai: g, docs: groups[g] }; });
+// Thứ tự ưu tiên hiển thị trong mỗi mục
+var KT_BUCKETS = [
+  { id: 'nen', label: 'Văn bản nền tảng đang có hiệu lực' },
+  { id: 'moi', label: 'Mới ban hành (60 ngày gần đây)' },
+  { id: 'sua', label: 'Văn bản sửa đổi, bổ sung' },
+  { id: 'sap', label: 'Sắp có hiệu lực' },
+  { id: 'het', label: 'Hết hiệu lực' },
+];
+
+// Chỉ dựa trên dữ liệu có sẵn từ nguồn (trạng thái, ngày, tiêu đề) — không suy đoán thêm.
+function ktBucket(d) {
+  var tt = d.tinhtrang || 'hieuluc';
+  if (tt === 'hethieuluc') return 'het';
+  var today = new Date().toISOString().slice(0, 10);
+  if (tt === 'chuahieuluc' || (d.ngayHieuLuc && d.ngayHieuLuc > today)) return 'sap';
+  var cutoff = new Date(Date.now() - 60 * 86400000).toISOString().slice(0, 10);
+  if (d.ngay && d.ngay >= cutoff) return 'moi';
+  if (/sửa đổi|bổ sung/i.test(d.ten || '')) return 'sua';
+  return 'nen';
+}
+
+function ktCompare(a, b) {
+  var la = KT_LOAIVANBAN_ORDER.indexOf(ktLoaiVanBan(a)), lb = KT_LOAIVANBAN_ORDER.indexOf(ktLoaiVanBan(b));
+  if (la !== lb) return la - lb;
+  return (b.ngay || '').localeCompare(a.ngay || '');
 }
 
 function ktRenderList() {
-  var docs = ktFiltered().sort(function(a, b) { return (b.ngay || '').localeCompare(a.ngay || ''); });
+  var docs = ktFiltered();
   var el = document.getElementById('ktContent'); if (!el) return;
   if (!docs.length) {
     var q = ktGetQuery();
@@ -876,7 +891,7 @@ function ktRenderList() {
   var SC = { hieuluc: 'kt-status-hl', chuahieuluc: 'kt-status-chl', hethieuluc: 'kt-status-het', motphan: 'kt-status-chl', chuaxacdinh: 'kt-status-chl' };
   function renderCard(d) {
     var tt = d.tinhtrang || 'hieuluc';
-    var cat = ktCatObj(d.loai);
+    var cat = ktCatObj(d.cats[0]);
     var isOpen = !!ktExpanded[d.id];
     var hasHighlights = d.diemNB && d.diemNB.length;
     var highlightsHtml = '';
@@ -889,28 +904,37 @@ function ktRenderList() {
       if (d.url) highlightsHtml += '<div style="margin-top:8px"><a href="' + escHtml(d.url) + '" target="_blank" class="link-out">🔗 Xem toàn văn ↗</a></div>';
     }
     var toggleHtml = (hasHighlights || d.ghiChu) ? '<div class="kt-toggle-btn" onclick="ktToggle(\'' + d.id + '\')">' + (isOpen ? '▲ Thu gọn' : '▼ Xem điểm nổi bật · ' + (hasHighlights ? d.diemNB.length + ' điểm' : '')) + '</div>' : '';
-    return '<div class="kt-doc-card">'
+    var replaced = (ktBucket(d) === 'het')
+      ? '<span title="Chưa có dữ liệu quan hệ thay thế từ nguồn — không suy đoán">' + (d.ghiChuHL ? escHtml(d.ghiChuHL) + ' · ' : '') + 'Văn bản thay thế: chưa xác định</span>' : '';
+    var outBadge = d.outOfScope
+      ? '<span class="kt-status kt-status-het" style="background:#f2f2f7;color:#6e6e73" title="' + escHtml(d.lyDo || '') + '">Ngoài phạm vi theo dõi</span>' : '';
+    return '<div class="kt-doc-card"' + (d.outOfScope ? ' style="opacity:.6"' : '') + '>'
       + '<div class="kt-doc-header"><div class="kt-doc-title">' + escHtml(d.ten) + '</div>'
       + '<div class="kt-doc-actions">'
       + (d.verified ? '<button class="kt-btn-edit" style="background:#E1F5EE;color:#085041" title="Văn bản đã xác minh nguồn" onclick="event.stopPropagation();plOpenDoc(\'' + encodeURIComponent(d.soHieu) + '\')">📖 Đọc toàn văn</button>' : '')
       + (d.virtual ? '' : '<button class="kt-btn-edit" onclick="event.stopPropagation();ktEdit(\'' + d.id + '\')">✏️ Sửa</button><button class="kt-btn-del" onclick="event.stopPropagation();ktDelete(\'' + d.id + '\')">🗑 Xóa</button>')
       + '</div></div>'
       + '<div class="kt-doc-meta">'
+      + '<span class="kt-cat-pill" style="background:#f2f2f7;color:#3a3a3c">' + escHtml(ktLoaiVanBan(d)) + '</span>'
       + (d.soHieu ? '<span># ' + escHtml(d.soHieu) + '</span>' : '')
       + (d.coQuan ? '<span>🏛 ' + escHtml(d.coQuan) + '</span>' : '')
       + (d.ngay   ? '<span>📅 ' + d.ngay + '</span>' : '')
       + (cat && ktActiveCat === 'all' ? '<span class="kt-cat-pill" style="background:' + cat.bg + ';color:' + cat.color + '">' + cat.icon + ' ' + cat.label + '</span>' : '')
       + '<span class="kt-status ' + (SC[tt] || '') + '">' + (SL[tt] || '') + '</span>'
+      + outBadge
+      + replaced
       + '</div>'
       + highlightsHtml
       + toggleHtml
       + '</div>';
   }
 
-  var groups = ktGroupByLoaiVanBan(docs);
-  el.innerHTML = groups.map(function(g) {
-    return '<div class="kt-group-header"><span class="kt-group-title">' + escHtml(g.loai) + '</span><span class="kt-group-count">' + g.docs.length + '</span><span class="kt-group-line"></span></div>'
-      + g.docs.map(renderCard).join('');
+  var buckets = {};
+  docs.forEach(function(d) { var b = ktBucket(d); (buckets[b] = buckets[b] || []).push(d); });
+  el.innerHTML = KT_BUCKETS.filter(function(b) { return buckets[b.id]; }).map(function(b) {
+    var list = buckets[b.id].sort(ktCompare);
+    return '<div class="kt-group-header"><span class="kt-group-title">' + escHtml(b.label) + '</span><span class="kt-group-count">' + list.length + '</span><span class="kt-group-line"></span></div>'
+      + list.map(renderCard).join('');
   }).join('');
 }
 
@@ -920,14 +944,31 @@ function ktToggle(id) {
 }
 
 function ktUpdateBadge() {
-  var b = document.getElementById('ktTotalBadge'); if (b) b.textContent = ktView().length;
+  var view = ktView();
+  var b = document.getElementById('ktTotalBadge'); if (b) b.textContent = view.filter(ktVisible).length;
+  var o = document.getElementById('ktOutCount'); if (o) o.textContent = view.filter(function(d) { return d.outOfScope; }).length;
+}
+
+function ktToggleScope() {
+  ktShowAll = !!document.getElementById('ktShowAll').checked;
+  ktRender();
+  if (typeof plRenderList === 'function') plRenderList();
+}
+
+// Phân loại nhóm + phạm vi do server (scope.py) tính — quy tắc chỉ nằm một chỗ.
+function ktLoadScope() {
+  return fetch('/api/scope')
+    .then(function(r) { return r.json(); })
+    .then(function(s) { ktScope = s; })
+    .catch(function() { ktScope = null; })
+    .then(function() { plLoadList(); });
 }
 
 // ── Global sidebar ──
 function gsRenderCats() {
   var el = document.getElementById('gsSidebarCats'); if (!el) return;
   var q = ktGetQuery();
-  var view = ktView();
+  var view = ktView().filter(ktVisible);
   el.innerHTML = KT_ALL_CATS.map(function(cat) {
     var cnt = cat.id === 'all'
       ? view.filter(function(d){ return ktMatch(d, q); }).length
@@ -942,7 +983,7 @@ function gsRenderCats() {
 function gsRenderStats() {
   var el = document.getElementById('gsStats'); if (!el) return;
   var hl = 0, chl = 0, het = 0;
-  ktView().forEach(function(d) {
+  ktView().filter(ktVisible).forEach(function(d) {
     if (d.tinhtrang === 'chuahieuluc') chl++;
     else if (d.tinhtrang === 'hethieuluc') het++;
     else if (d.tinhtrang !== 'chuaxacdinh') hl++;
@@ -1003,7 +1044,7 @@ function ktEdit(id) {
   document.getElementById('ktFormTitle').textContent = 'Sửa văn bản';
   document.getElementById('ktEditId').value = id;
   document.getElementById('ktFSoHieu').value = doc.soHieu || '';
-  document.getElementById('ktFLoai').value   = doc.loai   || 'GTGT';
+  document.getElementById('ktFLoai').value   = KT_LEGACY_GROUP[doc.loai] || doc.loai || 'GTGT';
   document.getElementById('ktFTen').value    = doc.ten    || '';
   document.getElementById('ktFCoQuan').value = doc.coQuan || '';
   document.getElementById('ktFNgay').value   = doc.ngay   || '';
@@ -1151,17 +1192,17 @@ function plStatusBadge(doc) {
 
 async function plLoadList() {
   try {
-    var r = await fetch('/api/legal/documents');
+    var r = await fetch('/api/legal/documents?all=1');
     var data = await r.json();
     plDocs = data.documents || [];
-    document.getElementById('plTotalBadge').textContent = plDocs.length;
+    document.getElementById('plTotalBadge').textContent = plDocs.filter(function(d) { return ktShowAll || d.trongPham; }).length;
 
-    var linhVucSet = {};
-    plDocs.forEach(function(d) { (d.linhVuc || []).forEach(function(lv) { linhVucSet[lv] = true; }); });
     var sel = document.getElementById('plFilterLinhVuc');
-    Object.keys(linhVucSet).sort().forEach(function(lv) {
-      var opt = document.createElement('option'); opt.value = lv; opt.textContent = lv; sel.appendChild(opt);
-    });
+    if (sel.options.length <= 1) {
+      KT_ALL_CATS.filter(function(c) { return c.id !== 'all'; }).forEach(function(c) {
+        var opt = document.createElement('option'); opt.value = c.id; opt.textContent = c.label; sel.appendChild(opt);
+      });
+    }
 
     plRenderList();
     // Thanh bên "Kho phân loại" trộn văn bản đã xác minh vào các mục mới -> vẽ lại khi dữ liệu về
@@ -1177,7 +1218,8 @@ function plRenderList() {
   var tt = document.getElementById('plFilterTrangThai').value;
 
   var filtered = plDocs.filter(function(d) {
-    if (lv && (d.linhVuc || []).indexOf(lv) === -1) return false;
+    if (!ktShowAll && !d.trongPham) return false;
+    if (lv && (d.nhom || []).indexOf(lv) === -1) return false;
     if (tt && d.tinhTrangHieuLuc !== tt) return false;
     if (q && (d.tenVanBan + ' ' + d.soHieu).toLowerCase().indexOf(q) === -1) return false;
     return true;
@@ -1193,7 +1235,7 @@ function plRenderList() {
   el.innerHTML = filtered.map(function(d) {
     var meta = [d.coQuanBanHanh, d.ngayBanHanh ? '📅 ' + d.ngayBanHanh : '', '# ' + d.soHieu, d.soDieu ? d.soDieu + ' Điều' : '']
       .filter(Boolean).map(function(m) { return escHtml(m); }).join(' &nbsp;·&nbsp; ');
-    var tags = (d.linhVuc || []).map(function(t) { return '<span class="pl-tag">' + escHtml(t) + '</span>'; }).join('');
+    var tags = (d.nhom || []).map(function(g) { var c = ktCatObj(g); return '<span class="pl-tag">' + escHtml(c ? c.label : g) + '</span>'; }).join('');
     return '<div class="pl-doc-item" onclick="plOpenDoc(\'' + encodeURIComponent(d.soHieu) + '\')">'
       + '<div class="pl-doc-top"><div class="pl-doc-title">' + escHtml(d.tenVanBan) + '</div>' + plStatusBadge(d) + '</div>'
       + '<div class="pl-doc-meta">' + meta + '</div>'
@@ -1304,7 +1346,7 @@ function plScrollToDieu(so) {
     ktSyncServer(false);
   }
   _plLoaded = true;
-  plLoadList();
+  ktLoadScope();
 })();
 </script>
 </body>
