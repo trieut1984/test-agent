@@ -35,6 +35,7 @@ if sys.stderr is not None:
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s", handlers=_handlers)
 logger = logging.getLogger("daily_update")
 
+import publish
 import scraper_tax
 import tvpl_client as tc
 
@@ -102,6 +103,8 @@ def main():
         time.sleep(PAUSE_SECONDS)
 
     logger.info(f"=== Done: {added} new document(s) processed ===")
+    if added:
+        publish.publish_if_changed(f"Daily update: +{added} legal documents (automated)")
 
 
 if __name__ == "__main__":

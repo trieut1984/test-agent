@@ -41,6 +41,7 @@ if sys.stderr is not None:
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s", handlers=_handlers)
 logger = logging.getLogger("backfill")
 
+import publish
 import scope
 import tvpl_client as tc
 
@@ -243,6 +244,8 @@ def main():
             logger.info("  OK" if rec["xacMinh"] else f"  CHƯA XÁC MINH ({rec['nguon'].get('lyDoChuaXacMinh')})")
             time.sleep(PAUSE_SECONDS)
         logger.info(f"=== Run done: {done} fetched, {len(queue['items'])} still queued ===")
+        if done:
+            publish.publish_if_changed(f"Backfill: +{done} legal documents (automated)")
     except tc.BlockedError as e:
         logger.error(f"BLOCKED: {e}. Progress is saved; the next scheduled run will resume.")
         if queue is not None:
