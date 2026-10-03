@@ -292,6 +292,11 @@ def verify_url(session: requests.Session, url: str, so_hieu: str) -> dict:
         raise BlockedError("thuvienphapluat.vn is serving a Cloudflare challenge on a document page")
     soup = BeautifulSoup(r.text, "lxml")
     metadata = extract_metadata(soup)
+    if metadata and not metadata.get("tenVanBan") and soup.title:
+        # many pages leave the <h1> empty; the page <title> carries the source's own title
+        page_title = re.sub(r"\s*[:\-–]\s*Toàn văn mới nhất.*$", "", soup.title.get_text(" ", strip=True)).strip()
+        if page_title:
+            metadata["tenVanBan"] = page_title
     if not metadata or _digits(metadata.get("soHieu", "")) != _digits(so_hieu):
         base_record["nguon"]["lyDoChuaXacMinh"] = (
             f"trang tải về không khớp số hiệu mong đợi (tìm thấy: {metadata.get('soHieu', '(không có)')!r})"

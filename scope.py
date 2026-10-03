@@ -50,7 +50,7 @@ TITLE_KEYWORDS = [
     ("GTGT", ["giá trị gia tăng", "gtgt"]),
     ("TNDN", ["thu nhập doanh nghiệp", "tndn"]),
     ("TNCN", ["thu nhập cá nhân", "tncn", "giảm trừ gia cảnh"]),
-    ("NTNN", ["nhà thầu nước ngoài", "nhà thầu"]),
+    ("NTNN", ["nhà thầu nước ngoài", "thuế nhà thầu", "nhà cung cấp nước ngoài"]),
     ("QuanLyThue", ["quản lý thuế", "giao dịch liên kết"]),
     ("HoaDon", ["hóa đơn", "chứng từ"]),
     ("KeToan", ["kế toán"]),
@@ -83,7 +83,7 @@ def title_groups(title: str) -> list:
     return [gid for gid, kws in TITLE_KEYWORDS if any(k in low for k in kws)]
 
 
-def groups_for(tags, title: str, legacy_loai: str = None) -> list:
+def _raw_groups(tags, title: str, legacy_loai: str = None) -> list:
     out = []
     low = (title or "").lower()
     for t in tags or []:
@@ -104,11 +104,22 @@ def groups_for(tags, title: str, legacy_loai: str = None) -> list:
         if g not in seen:
             seen.add(g)
             ordered.append(g)
-    # the 4 old PhatHC-only curated docs fall through to "Khác" unless the title ties them to tax
-    return ordered or ["Khac"]
+    return ordered
 
 
-def _decide(loai: str, so_hieu: str, nq_groups: set, whitelist: dict):
+def groups_for(tags, title: str, legacy_loai: str = None) -> list:
+    # curated TTĐB / non-tax "Xử phạt" docs land in "Khác" rather than disappearing
+    return _raw_groups(tags, title, legacy_loai) or ["Khac"]
+
+
+def _has_signal(tags, title: str, legacy_loai: str = None) -> bool:
+    """Did anything — a topic keyword in the title, or a curated/crawler tag — tie this
+    document to a topic? A Nghị định that mentions none (e.g. one about đấu thầu that
+    only matched the word "nhà thầu") is not part of the tool's focus."""
+    return bool(_raw_groups(tags, title, legacy_loai) or tags or legacy_loai)
+
+
+def _decide(loai: str, so_hieu: str, nq_groups: set, whitelist: dict, has_signal: bool = True):
     """(in_scope, reason). `loai` is the normalised document type. `nq_groups` are the
     groups the *title itself* points to — the only evidence accepted for a Nghị quyết
     (old curated tags are not reliable enough to let one through)."""
@@ -121,6 +132,8 @@ def _decide(loai: str, so_hieu: str, nq_groups: set, whitelist: dict):
             return True, None
         return False, "Nghị quyết không liên quan trực tiếp đến thuế GTGT, TNDN, TNCN"
     if loai in MAIN_LOAI:
+        if not has_signal:
+            return False, "Không thuộc nhóm theo dõi (tiêu đề không nêu chủ đề kế toán, thuế hay doanh nghiệp)"
         return True, None
     if not loai:
         return True, None  # cannot judge — keep rather than hide what we cannot classify
@@ -134,7 +147,8 @@ def classify_verified(doc: dict, legacy_title: str = None, legacy_loai: str = No
     # No title at all yet (record fetched before titles were captured): fall back to the
     # crawler-assigned tags, which were only set when the title matched a topic keyword.
     nq_groups = set(title_groups(real_title)) if real_title else {TAG_TO_GROUP.get(t) for t in doc.get("linhVuc") or []}
-    ok, why = _decide(_norm_loai(doc.get("loaiVanBan")), doc.get("soHieu", ""), nq_groups, load_whitelist())
+    ok, why = _decide(_norm_loai(doc.get("loaiVanBan")), doc.get("soHieu", ""), nq_groups, load_whitelist(),
+                      _has_signal(doc.get("linhVuc"), title, legacy_loai))
     return {"nhom": groups, "trongPham": ok, "lyDo": why}
 
 
@@ -144,7 +158,8 @@ def classify_legacy(doc: dict) -> dict:
     groups = groups_for(None, title, doc.get("loai"))
     m = _LOAI_WORD.match(title)
     loai = _norm_loai(m.group(1)) if m else ""
-    ok, why = _decide(loai, (doc.get("soHieu") or "").strip(), set(title_groups(title)), load_whitelist())
+    ok, why = _decide(loai, (doc.get("soHieu") or "").strip(), set(title_groups(title)), load_whitelist(),
+                      _has_signal(None, title, doc.get("loai")))
     return {"nhom": groups, "trongPham": ok, "lyDo": why}
 
 

@@ -59,7 +59,7 @@ TOPICS = [
     ("Thuế TNCN", ["Luật thuế thu nhập cá nhân", "Nghị định thuế thu nhập cá nhân", "Thông tư thuế thu nhập cá nhân"],
      ["thu nhập cá nhân", "tncn"]),
     ("Thuế NTNN", ["thuế nhà thầu nước ngoài", "Thông tư nhà thầu nước ngoài hoạt động kinh doanh tại Việt Nam"],
-     ["nhà thầu"]),
+     ["nhà thầu nước ngoài", "thuế nhà thầu", "nhà cung cấp nước ngoài"]),
     ("Quản lý thuế", ["Luật quản lý thuế", "Nghị định quản lý thuế", "Thông tư quản lý thuế"],
      ["quản lý thuế"]),
     ("Hóa đơn chứng từ", ["Nghị định hóa đơn chứng từ", "Thông tư hóa đơn điện tử"],
@@ -69,7 +69,7 @@ TOPICS = [
     ("Chế độ kế toán", ["Luật kế toán", "Thông tư chế độ kế toán doanh nghiệp", "Nghị định kế toán"],
      ["kế toán"]),
     ("Xử phạt hành chính", ["xử phạt vi phạm hành chính về thuế hóa đơn", "xử phạt vi phạm hành chính trong lĩnh vực kế toán"],
-     ["xử phạt"]),
+     ["vi phạm hành chính về thuế", "vi phạm hành chính trong lĩnh vực thuế", "hóa đơn", "kế toán"]),
     ("Doanh nghiệp và thương mại", ["Luật doanh nghiệp", "Nghị định đăng ký doanh nghiệp", "Luật thương mại"],
      ["luật doanh nghiệp", "đăng ký doanh nghiệp", "luật thương mại"]),
 ]
@@ -158,6 +158,40 @@ def build_queue(session, known_keys: set) -> dict:
     return {"built": time.time(), "items": ordered}
 
 
+_TOPIC_KEYWORDS = {label: kws for label, _queries, kws in TOPICS}
+
+
+def prune_queue(queue: dict) -> int:
+    """Re-apply the current topic keywords to queued items (offline, no requests): drops
+    items a stricter rule no longer accepts, and trims their tags to topics that still match."""
+    kept, dropped = [], 0
+    for item in queue["items"]:
+        if item.get("refresh") or not item.get("title"):
+            kept.append(item)
+            continue
+        low = item["title"].lower()
+        topics = [t for t in item["linhVuc"] if any(k in low for k in _TOPIC_KEYWORDS.get(t, [t.lower()]))]
+        if topics or not item["linhVuc"]:
+            item["linhVuc"] = topics or item["linhVuc"]
+            kept.append(item)
+        else:
+            dropped += 1
+    queue["items"] = kept
+    return dropped
+
+
+def ensure_refresh_items(queue: dict, data: dict) -> int:
+    """Queue a re-fetch for any verified record that still has no title."""
+    queued = {_key(i["soHieu"]) for i in queue["items"]}
+    added = 0
+    for d in data["documents"]:
+        url = (d.get("nguon") or {}).get("url")
+        if d.get("xacMinh") and not d.get("tenVanBan") and url and _key(d["soHieu"]) not in queued:
+            queue["items"].append({"soHieu": d["soHieu"], "url": url, "title": "", "linhVuc": d.get("linhVuc", []), "refresh": True})
+            added += 1
+    return added
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--limit", type=int, default=20)
@@ -180,6 +214,9 @@ def main():
             logger.info(f"Queue built: {len(queue['items'])} candidates")
             limit = min(limit, FIRST_RUN_FETCH_CAP)
 
+        dropped, refreshed = prune_queue(queue), ensure_refresh_items(queue, data)
+        if dropped or refreshed:
+            logger.info(f"Queue adjusted: {dropped} dropped by stricter topic keywords, {refreshed} title refreshes added")
         # drop anything that entered the DB since the queue was built (e.g. via the daily job)
         queue["items"] = [i for i in queue["items"] if i.get("refresh") or _key(i["soHieu"]) not in known_keys]
         if not queue["items"]:
@@ -193,6 +230,8 @@ def main():
             logger.info(f"[{done + 1}/{min(limit, len(queue['items']))}] {so_hieu} — {item['title'][:70]}")
             rec = tc.fetch_and_verify_with_relogin(session, so_hieu, url=item["url"])
             rec["linhVuc"] = item["linhVuc"]
+            if rec["xacMinh"] and not rec.get("tenVanBan") and item.get("title"):
+                rec["tenVanBan"] = item["title"]  # the site's own search-result title
             if item.get("refresh") and not rec["xacMinh"]:
                 logger.warning("  refresh failed verification — keeping the existing verified record")
             else:
