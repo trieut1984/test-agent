@@ -282,10 +282,14 @@ def fetch_and_verify(session: requests.Session, so_hieu: str) -> dict:
     return verify_url(session, url, so_hieu)
 
 
-def verify_url(session: requests.Session, url: str, so_hieu: str) -> dict:
+def verify_url(session: requests.Session, url: str, so_hieu: str = None, expect_loai: str = None) -> dict:
     """Fetch a known document URL and trust it only if the page's own "Thuộc tính"
     table carries the expected số hiệu. Used directly when a search-result URL is
-    already in hand (saves one request per document)."""
+    already in hand (saves one request per document).
+
+    Laws are listed without a số hiệu in search results ("Luật Doanh nghiệp 2020"), so
+    for those the số hiệu is read from the page itself (so_hieu=None) and the identity
+    check becomes: the page's own loại văn bản must be `expect_loai` (e.g. "luật")."""
     base_record = {"soHieu": so_hieu, "xacMinh": False, "nguon": {"trangNguon": "thuvienphapluat.vn"}}
     r = session.get(url, headers={"Referer": BASE + "/"}, timeout=25)
     if "Just a moment" in r.text[:2000]:
@@ -297,7 +301,16 @@ def verify_url(session: requests.Session, url: str, so_hieu: str) -> dict:
         page_title = re.sub(r"\s*[:\-–]\s*Toàn văn mới nhất.*$", "", soup.title.get_text(" ", strip=True)).strip()
         if page_title:
             metadata["tenVanBan"] = page_title
-    if not metadata or _digits(metadata.get("soHieu", "")) != _digits(so_hieu):
+    if metadata and so_hieu is None:
+        if expect_loai and not (metadata.get("loaiVanBan") or "").strip().lower().startswith(expect_loai):
+            base_record["nguon"]["lyDoChuaXacMinh"] = (
+                f"trang tải về có loại văn bản {metadata.get('loaiVanBan')!r}, không phải {expect_loai!r}")
+            base_record["nguon"]["url"] = url
+            base_record["soHieu"] = metadata.get("soHieu") or url
+            return base_record
+        so_hieu = metadata.get("soHieu") or ""
+        base_record["soHieu"] = so_hieu
+    if not metadata or not so_hieu or _digits(metadata.get("soHieu", "")) != _digits(so_hieu):
         base_record["nguon"]["lyDoChuaXacMinh"] = (
             f"trang tải về không khớp số hiệu mong đợi (tìm thấy: {metadata.get('soHieu', '(không có)')!r})"
         )
@@ -322,12 +335,12 @@ def verify_url(session: requests.Session, url: str, so_hieu: str) -> dict:
     return record
 
 
-def fetch_and_verify_with_relogin(session: requests.Session, so_hieu: str, url: str = None) -> dict:
+def fetch_and_verify_with_relogin(session: requests.Session, so_hieu: str, url: str = None, expect_loai: str = None) -> dict:
     """fetch_and_verify (or verify_url when a URL is already known), but if the page
     came back verified yet without its full text, the cached login probably expired —
     log in fresh once and retry. The session object is updated in place so the caller
     keeps using it."""
-    run = (lambda: verify_url(session, url, so_hieu)) if url else (lambda: fetch_and_verify(session, so_hieu))
+    run = (lambda: verify_url(session, url, so_hieu, expect_loai)) if url else (lambda: fetch_and_verify(session, so_hieu))
     rec = run()
     if rec.get("xacMinh") and not rec.get("noiDungDayDu"):
         fresh = login(force=True)

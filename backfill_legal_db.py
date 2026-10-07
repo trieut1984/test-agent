@@ -59,7 +59,8 @@ TOPICS = [
      ["thu nhập doanh nghiệp", "tndn"]),
     ("Thuế TNCN", ["Luật thuế thu nhập cá nhân", "Nghị định thuế thu nhập cá nhân", "Thông tư thuế thu nhập cá nhân"],
      ["thu nhập cá nhân", "tncn"]),
-    ("Thuế NTNN", ["thuế nhà thầu nước ngoài", "Thông tư nhà thầu nước ngoài hoạt động kinh doanh tại Việt Nam"],
+    ("Thuế NTNN", ["thuế nhà thầu nước ngoài", "Thông tư nhà thầu nước ngoài hoạt động kinh doanh tại Việt Nam",
+                   "thuế nhà cung cấp nước ngoài thương mại điện tử"],
      ["nhà thầu nước ngoài", "thuế nhà thầu", "nhà cung cấp nước ngoài"]),
     ("Quản lý thuế", ["Luật quản lý thuế", "Nghị định quản lý thuế", "Thông tư quản lý thuế"],
      ["quản lý thuế"]),
@@ -67,7 +68,7 @@ TOPICS = [
      ["hóa đơn", "chứng từ"]),
     ("Giao dịch liên kết", ["quản lý thuế doanh nghiệp có giao dịch liên kết", "Thông tư giao dịch liên kết"],
      ["giao dịch liên kết"]),
-    ("Chế độ kế toán", ["Luật kế toán", "Thông tư chế độ kế toán doanh nghiệp", "Nghị định kế toán"],
+    ("Chế độ kế toán", ["Luật kế toán", "Thông tư chế độ kế toán doanh nghiệp", "Nghị định kế toán", "chuẩn mực kế toán"],
      ["kế toán"]),
     ("Xử phạt hành chính", ["xử phạt vi phạm hành chính về thuế hóa đơn", "xử phạt vi phạm hành chính trong lĩnh vực kế toán"],
      ["vi phạm hành chính về thuế", "vi phạm hành chính trong lĩnh vực thuế", "hóa đơn", "kế toán"]),
@@ -103,6 +104,28 @@ def save_queue(q: dict):
     QUEUE_FILE.write_text(json.dumps(q, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
+_LAW_TITLE = re.compile(r"^\s*(Luật|Bộ luật)\b", re.IGNORECASE)
+_SLUG_SOHIEU = re.compile(r"(\d{1,4})-(\d{4})-([A-Z]{2,}\d*)")
+
+
+def _ikey(item: dict) -> str:
+    return _key(item["soHieu"]) if item.get("soHieu") else "url:" + item["url"]
+
+
+def law_candidate_from_hit(hit: dict, keywords: list):
+    """Search results list laws without a số hiệu ("Luật Doanh nghiệp 2020"), so they can't
+    pass candidate_from_hit. Returns (số hiệu from the URL slug or None, True) when the hit
+    is a Luật/Bộ luật whose title names the topic; the real số hiệu is then read from the
+    page after fetching."""
+    title = hit["title"]
+    if not _LAW_TITLE.match(title) or tc._ENGLISH_TITLE.match(title):
+        return None
+    if not any(k in title.lower() for k in keywords):
+        return None
+    m = _SLUG_SOHIEU.search(hit["url"].rsplit("/", 1)[-1])
+    return (f"{m.group(1)}/{m.group(2)}/{m.group(3)}" if m else None), True
+
+
 def candidate_from_hit(hit: dict, keywords: list, linh_vuc: str = None):
     """Return the số hiệu of a search hit worth queueing, else None. The shared policy
     (tc.wanted_document) decides type / issuer / year / Nghị quyết relevance; the topic
@@ -123,6 +146,17 @@ def build_queue(session, known_keys: set) -> dict:
             hits = tc.search(session, query)
             kept = 0
             for hit in hits:
+                law = law_candidate_from_hit(hit, keywords)
+                if law:
+                    so_hint = law[0]
+                    if so_hint and _key(so_hint) in known_keys:
+                        continue
+                    item = items.setdefault(("url:" + hit["url"]) if not so_hint else _key(so_hint),
+                                            {"soHieu": so_hint, "url": hit["url"], "title": hit["title"], "linhVuc": [], "law": True})
+                    if linh_vuc not in item["linhVuc"]:
+                        item["linhVuc"].append(linh_vuc)
+                    kept += 1
+                    continue
                 so_hieu = candidate_from_hit(hit, keywords, linh_vuc)
                 if not so_hieu or _key(so_hieu) in known_keys:
                     continue
@@ -148,7 +182,8 @@ def build_queue(session, known_keys: set) -> dict:
         if _key(so_hieu) not in known_keys and _key(so_hieu) not in items:
             items[_key(so_hieu)] = {"soHieu": so_hieu, "url": None, "title": entry.get("ghiChu", ""),
                                     "linhVuc": entry.get("linhVuc", [])}
-    ordered = sorted(items.values(), key=lambda i: -int((i["soHieu"].split("/") + ["0", "0"])[1] or 0))
+    # laws first (the user's priority), then newest instruments first
+    ordered = sorted(items.values(), key=lambda i: (not i.get("law"), -int(((i["soHieu"] or "0/0").split("/") + ["0", "0"])[1] or 0)))
     # Last: re-fetch verified records saved before real titles were captured (the title feeds
     # classification and search). Old record is only replaced by a *verified* refresh.
     docs = {d["soHieu"]: d for d in load_db()["documents"]}
@@ -183,7 +218,7 @@ def prune_queue(queue: dict) -> int:
 
 def ensure_refresh_items(queue: dict, data: dict) -> int:
     """Queue a re-fetch for any verified record that still has no title."""
-    queued = {_key(i["soHieu"]) for i in queue["items"]}
+    queued = {_ikey(i) for i in queue["items"]}
     added = 0
     for d in data["documents"]:
         url = (d.get("nguon") or {}).get("url")
@@ -219,7 +254,7 @@ def main():
         if dropped or refreshed:
             logger.info(f"Queue adjusted: {dropped} dropped by stricter topic keywords, {refreshed} title refreshes added")
         # drop anything that entered the DB since the queue was built (e.g. via the daily job)
-        queue["items"] = [i for i in queue["items"] if i.get("refresh") or _key(i["soHieu"]) not in known_keys]
+        queue["items"] = [i for i in queue["items"] if i.get("refresh") or not i.get("soHieu") or _key(i["soHieu"]) not in known_keys]
         if not queue["items"]:
             logger.info("Queue empty — nothing left to backfill.")
             save_queue(queue)
@@ -227,17 +262,33 @@ def main():
 
         done = 0
         for item in list(queue["items"][:limit]):
-            so_hieu = item["soHieu"]
-            logger.info(f"[{done + 1}/{min(limit, len(queue['items']))}] {so_hieu} — {item['title'][:70]}")
-            rec = tc.fetch_and_verify_with_relogin(session, so_hieu, url=item["url"])
+            so_hieu = item.get("soHieu")
+            logger.info(f"[{done + 1}/{min(limit, len(queue['items']))}] {so_hieu or '(luật, đọc số hiệu từ trang)'} — {item['title'][:70]}")
+            rec = tc.fetch_and_verify_with_relogin(session, so_hieu, url=item["url"], expect_loai="luật" if item.get("law") else None)
+            so_hieu = rec["soHieu"]
             rec["linhVuc"] = item["linhVuc"]
             if rec["xacMinh"] and not rec.get("tenVanBan") and item.get("title"):
                 rec["tenVanBan"] = item["title"]  # the site's own search-result title
+            skip_reason = None
             if item.get("refresh") and not rec["xacMinh"]:
-                logger.warning("  refresh failed verification — keeping the existing verified record")
+                skip_reason = "refresh failed verification — keeping the existing verified record"
+            elif item.get("law") and rec["xacMinh"]:
+                if _key(so_hieu) in known_keys:
+                    skip_reason = f"{so_hieu} is already in the database"
+                else:
+                    try:
+                        year = int(so_hieu.split("/")[1])
+                    except (IndexError, ValueError):
+                        year = 9999
+                    if rec.get("tinhTrangHieuLuc") == "het_hieu_luc" and year < 2013:
+                        skip_reason = f"{so_hieu} is an old, expired law — not collected"
+            if skip_reason:
+                logger.warning("  skipped: " + skip_reason)
             else:
                 data["documents"] = [d for d in data["documents"] if _key(d.get("soHieu", "")) != _key(so_hieu)] + [rec]
-            queue["items"] = [i for i in queue["items"] if i["soHieu"] != so_hieu]
+                if rec["xacMinh"]:
+                    known_keys.add(_key(so_hieu))
+            queue["items"] = [i for i in queue["items"] if i is not item and _ikey(i) != _ikey(item)]
             save_db(data)
             save_queue(queue)
             done += 1

@@ -265,6 +265,36 @@
     .hot-grid { grid-template-columns: 1fr; }
     .kt-form-grid { grid-template-columns: 1fr; }
   }
+  /* ── Hỏi đáp ── */
+  .chat-box { background: #fff; border: 1px solid #e5e5ea; border-radius: 14px; display: flex; flex-direction: column; height: calc(100vh - 230px); min-height: 420px; }
+  .chat-msgs { flex: 1; overflow-y: auto; padding: 1.1rem 1.3rem; display: flex; flex-direction: column; gap: 14px; }
+  .chat-welcome { margin: auto; max-width: 560px; text-align: center; color: #6e6e73; font-size: 13px; line-height: 1.6; }
+  .chat-welcome h3 { font-size: 16px; color: #1c1c1e; margin: 6px 0; }
+  .chat-suggest { display: flex; flex-direction: column; gap: 6px; margin-top: 14px; }
+  .chat-suggest button { text-align: left; padding: 9px 12px; border: 1px solid #e5e5ea; background: #fafafc; border-radius: 10px; font-size: 13px; color: #3a3a3c; cursor: pointer; }
+  .chat-suggest button:hover { background: #f2f2f7; }
+  .chat-q { align-self: flex-end; max-width: 78%; background: #534AB7; color: #fff; padding: 9px 13px; border-radius: 14px 14px 3px 14px; font-size: 14px; white-space: pre-wrap; }
+  .chat-a { align-self: flex-start; max-width: 92%; background: #f7f7fa; border: 1px solid #ececf1; padding: 11px 14px; border-radius: 14px 14px 14px 3px; font-size: 14px; line-height: 1.6; color: #1c1c1e; }
+  .chat-a.none { background: #fff9e6; border-color: #ffc340; color: #633806; }
+  .chat-a .cite { display: inline-block; background: #EEEDFE; color: #3C3489; border-radius: 6px; padding: 0 5px; font-size: 11px; font-weight: 600; cursor: pointer; margin: 0 1px; }
+  .chat-src { margin-top: 10px; border-top: 1px dashed #d8d8df; padding-top: 8px; display: flex; flex-direction: column; gap: 6px; }
+  .chat-src-item { background: #fff; border: 1px solid #e5e5ea; border-radius: 9px; padding: 7px 10px; font-size: 12.5px; }
+  .chat-src-item.flash { border-color: #534AB7; box-shadow: 0 0 0 2px #EEEDFE; }
+  .chat-src-head { display: flex; gap: 6px; align-items: baseline; flex-wrap: wrap; cursor: pointer; }
+  .chat-src-head b { color: #3C3489; }
+  .chat-src-body { display: none; margin-top: 6px; white-space: pre-wrap; color: #3a3a3c; border-top: 1px solid #f0f0f4; padding-top: 6px; }
+  .chat-src-item.open .chat-src-body { display: block; }
+  .chat-src-actions { margin-top: 6px; display: none; gap: 10px; }
+  .chat-src-item.open .chat-src-actions { display: flex; }
+  .chat-src-actions a, .chat-src-actions button { font-size: 12px; color: #085041; background: #E1F5EE; border: none; border-radius: 6px; padding: 3px 8px; cursor: pointer; text-decoration: none; }
+  .chat-warn-het { color: #A32D2D; font-weight: 600; }
+  .chat-input-row { display: flex; gap: 8px; padding: 10px 12px; border-top: 1px solid #ececf1; }
+  .chat-input-row textarea { flex: 1; resize: none; border: 1px solid #d8d8df; border-radius: 10px; padding: 9px 12px; font: inherit; font-size: 14px; max-height: 120px; }
+  .chat-input-row button { background: #534AB7; color: #fff; border: none; border-radius: 10px; padding: 0 20px; font-size: 14px; font-weight: 600; cursor: pointer; }
+  .chat-input-row button:disabled { opacity: .5; cursor: default; }
+  .chat-foot { font-size: 11px; color: #8e8e93; text-align: center; padding: 0 12px 8px; }
+  .chat-typing { color: #8e8e93; font-size: 13px; }
+
 </style>
 </head>
 <body>
@@ -274,12 +304,8 @@
     <div class="brand-icon">⚖</div>
     <div>
       <div class="brand-name">Trợ lý pháp lý AI</div>
-      <div class="brand-sub">congbao · luatvietnam · baochinhphu</div>
+      <div class="brand-sub">Kế toán &amp; Thuế doanh nghiệp · nguồn đã xác minh</div>
     </div>
-  </div>
-  <div class="status-pill">
-    <div class="dot idle" id="statusDot"></div>
-    <span id="statusText">Sẵn sàng</span>
   </div>
 </div>
 
@@ -299,73 +325,35 @@
   <!-- ── Main content ── -->
   <div class="main">
 
-    <div class="api-warning" id="apiWarning">
-      ⚠️ Chưa kết nối được GreenNode AI — tóm tắt AI sẽ không hoạt động. Kiểm tra <code>GREENNODE_API_KEY</code>.
-    </div>
-
-    <div class="stat-row">
-      <div class="stat-card">
-        <div class="stat-label">📄 Lần chạy này</div>
-        <div class="stat-value" id="statNew">—</div>
-        <div class="stat-hint">văn bản mới</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-label">🔍 Tìm thấy</div>
-        <div class="stat-value" id="statFound">—</div>
-        <div class="stat-hint">từ 3 nguồn</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-label">📦 Đã xử lý</div>
-        <div class="stat-value" id="statTotal">—</div>
-        <div class="stat-hint">tất cả thời gian</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-label">🕐 Lần cuối</div>
-        <div class="stat-value" id="statLastTime" style="font-size:16px;margin-top:4px">—</div>
-        <div class="stat-hint" id="statLastDate"></div>
-      </div>
-    </div>
-
-    <div class="run-section">
-      <div class="run-info">
-        <h2>Kiểm tra văn bản mới</h2>
-        <p>Công báo Chính phủ · LuatVietnam · Báo Chính phủ · Tóm tắt AI · Top 5 quan trọng nhất</p>
-      </div>
-      <button class="run-btn" id="runBtn" onclick="runAgent()">▶ Chạy agent</button>
-    </div>
-
     <div class="tabs">
-      <button class="tab active" onclick="switchTab('docs', this)">📋 Văn bản mới</button>
-      <button class="tab" onclick="switchTab('history', this)">📅 Lịch sử</button>
+      <button class="tab active" onclick="switchTab('chat', this)">💬 Hỏi đáp</button>
       <button class="tab" onclick="switchTab('khotrue', this)">📂 Kho thuế <span id="ktTotalBadge" class="tab-count">0</span></button>
       <button class="tab" onclick="switchTab('phapluat', this)">⚖️ Pháp luật (xác minh) <span id="plTotalBadge" class="tab-count">0</span></button>
     </div>
 
-    <!-- Panel: Văn bản mới -->
-    <div id="panel-docs" class="panel active">
-      <div class="empty-state" id="emptyState">
-        <div class="empty-icon">⚖️</div>
-        <h3>Chưa có dữ liệu</h3>
-        <p>Nhấn "Chạy agent" để bắt đầu kiểm tra văn bản pháp luật mới</p>
-      </div>
-      <div id="hotSection" style="display:none">
-        <div class="hot-section">
-          <div class="hot-section-title"><span style="font-size:20px">🔥</span> Tin nổi bật hôm nay</div>
-          <div class="hot-grid" id="hotGrid"></div>
+    <!-- Panel: Hỏi đáp -->
+    <div id="panel-chat" class="panel active">
+      <div class="chat-box">
+        <div class="chat-msgs" id="chatMsgs">
+          <div class="chat-welcome" id="chatWelcome">
+            <div style="font-size:30px">💬</div>
+            <h3>Hỏi về kế toán và thuế</h3>
+            <p>Trợ lý chỉ trả lời dựa trên các văn bản đã xác minh nguồn trong hệ thống, luôn kèm Điều, khoản và nguồn để bạn đối chiếu.
+               Nếu văn bản không nói rõ, trợ lý sẽ nói là không quy định rõ chứ không đoán.</p>
+            <div class="chat-suggest">
+              <button onclick="chatAsk(this.textContent)">Mức giảm trừ gia cảnh cho người phụ thuộc hiện nay là bao nhiêu?</button>
+              <button onclick="chatAsk(this.textContent)">Nhà cung cấp nước ngoài kê khai, nộp thuế như thế nào?</button>
+              <button onclick="chatAsk(this.textContent)">Mức phạt khi nộp chậm hồ sơ khai thuế?</button>
+              <button onclick="chatAsk(this.textContent)">Hóa đơn điện tử phải lập vào thời điểm nào?</button>
+            </div>
+          </div>
         </div>
-        <div class="section-divider">
-          <div class="section-divider-line"></div>
-          <div class="section-divider-label">Văn bản khác</div>
-          <div class="section-divider-line"></div>
+        <div class="chat-input-row">
+          <textarea id="chatInput" rows="1" maxlength="600" placeholder="Nhập câu hỏi, ví dụ: Thuế suất GTGT áp dụng cho dịch vụ giáo dục?"
+            onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();chatSend();}"></textarea>
+          <button id="chatSendBtn" onclick="chatSend()">Gửi</button>
         </div>
-      </div>
-      <div id="docList"></div>
-    </div>
-
-    <!-- Panel: Lịch sử -->
-    <div id="panel-history" class="panel">
-      <div class="history-list" id="historyList">
-        <div style="padding:2rem;text-align:center;color:#8e8e93;font-size:14px">Chưa có lịch sử</div>
+        <div class="chat-foot">Câu trả lời chỉ mang tính tham khảo — luôn đối chiếu nguyên văn trước khi áp dụng.</div>
       </div>
     </div>
 
@@ -493,9 +481,6 @@
 <div class="toast" id="toast"></div>
 
 <script>
-var isRunning = false;
-var pollInterval = null;
-
 var BADGE_MAP = { 'Nghị định': 'badge-nd', 'Thông tư': 'badge-tt', 'Quyết định': 'badge-qd', 'Luật': 'badge-luat' };
 function badgeClass(loai) { return BADGE_MAP[loai] || 'badge-other'; }
 
@@ -505,130 +490,8 @@ function showToast(msg, dur) {
   setTimeout(function(){ t.classList.remove('show'); }, dur || 3000);
 }
 
-function setRunning(running) {
-  isRunning = running;
-  var btn = document.getElementById('runBtn');
-  var dot = document.getElementById('statusDot');
-  var txt = document.getElementById('statusText');
-  if (running) {
-    btn.disabled = true; btn.innerHTML = '<span class="spinner"></span> Đang chạy...';
-    dot.className = 'dot running'; txt.textContent = 'Đang chạy...';
-  } else {
-    btn.disabled = false; btn.innerHTML = '▶ Chạy agent';
-    dot.className = 'dot'; txt.textContent = 'Sẵn sàng';
-  }
-}
-
-async function runAgent() {
-  if (isRunning) return;
-  setRunning(true); showToast('🚀 Agent đang chạy...', 60000);
-  try {
-    await fetch('/api/run', { method: 'POST' });
-    pollInterval = setInterval(pollResult, 2000);
-  } catch(e) { setRunning(false); showToast('❌ Lỗi kết nối server'); }
-}
-
-async function pollResult() {
-  try {
-    var r = await fetch('/api/result');
-    var data = await r.json();
-    if (data.status === 'running') return;
-    clearInterval(pollInterval); setRunning(false);
-    if (data.status === 'error') { showToast('❌ Lỗi: ' + data.message); return; }
-    renderDocs(data); loadStats();
-    if (data.status === 'no_new') {
-      var cnt = (data.hot_documents ? data.hot_documents.length : 0) + (data.documents ? data.documents.length : 0);
-      showToast('ℹ️ Không có văn bản mới. Hiển thị ' + cnt + ' văn bản gần nhất');
-    } else {
-      showToast('✅ Xong! Tìm thấy ' + data.new_documents + ' văn bản mới');
-    }
-  } catch(e) { clearInterval(pollInterval); setRunning(false); }
-}
-
 function escHtml(s) {
   return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-}
-
-function sourceLabel(src) {
-  if (!src) return '';
-  if (src.indexOf('congbao') >= 0) return 'Công báo';
-  if (src.indexOf('luatvietnam') >= 0) return 'LuatVietnam';
-  if (src.indexOf('baochinhphu') >= 0) return 'Báo Chính phủ';
-  return src;
-}
-
-function renderHotCard(doc, rank) {
-  var meta = [doc.co_quan || '', doc.ngay_ban_hanh ? '📅 ' + doc.ngay_ban_hanh : '', doc.so_hieu ? '# ' + doc.so_hieu : ''].filter(Boolean);
-  return '<div class="hot-card">'
-    + '<span class="hot-badge">🔥 TOP ' + rank + '</span>'
-    + '<div class="hot-card-header"><div class="hot-rank">' + rank + '</div><div class="hot-title">' + escHtml(doc.title) + '</div></div>'
-    + (meta.length ? '<div class="hot-meta">' + meta.map(function(m){ return '<span class="hot-meta-item">' + escHtml(m) + '</span>'; }).join('') + '</div>' : '')
-    + (doc.tom_tat ? '<div class="hot-summary"><div class="hot-summary-title">Tóm tắt AI</div><div class="hot-summary-text">' + escHtml(doc.tom_tat) + '</div></div>' : '')
-    + '<div class="hot-footer"><a class="hot-link" href="' + escHtml(doc.url) + '" target="_blank">🔗 Xem toàn văn ↗</a><span class="source-tag">' + escHtml(sourceLabel(doc.source)) + '</span></div>'
-    + '</div>';
-}
-
-function renderDocCard(doc) {
-  var bc = badgeClass(doc.loai);
-  var meta = [doc.co_quan ? '🏛 ' + doc.co_quan : '', doc.ngay_ban_hanh ? '📅 ' + doc.ngay_ban_hanh : '', doc.ngay_hieu_luc ? '⏰ Hiệu lực: ' + doc.ngay_hieu_luc : '', doc.so_hieu ? '# ' + doc.so_hieu : ''].filter(Boolean);
-  return '<div class="doc-card">'
-    + '<div class="doc-header"><div class="doc-title">' + escHtml(doc.title) + '</div><span class="badge ' + bc + '">' + escHtml(doc.loai) + '</span></div>'
-    + (meta.length ? '<div class="doc-meta">' + meta.map(function(m){ return '<span class="meta-item">' + m + '</span>'; }).join('') + '</div>' : '')
-    + (doc.tom_tat ? '<div class="summary"><div class="summary-title">Tóm tắt AI</div><div class="summary-text">' + escHtml(doc.tom_tat) + '</div></div>' : '')
-    + '<div class="doc-footer"><a class="link-out" href="' + escHtml(doc.url) + '" target="_blank">🔗 Xem toàn văn ↗</a><span class="time-tag">' + escHtml(sourceLabel(doc.source)) + (doc.processed_at ? ' · ' + new Date(doc.processed_at).toLocaleString('vi-VN') : '') + '</span></div>'
-    + '</div>';
-}
-
-function renderDocs(data) {
-  var hotDocs = data.hot_documents || [];
-  var otherDocs = data.documents || [];
-  var totalDocs = hotDocs.length + otherDocs.length;
-  var empty = document.getElementById('emptyState');
-  var hotSection = document.getElementById('hotSection');
-  var hotGrid = document.getElementById('hotGrid');
-  var list = document.getElementById('docList');
-  if (totalDocs === 0) {
-    empty.style.display = 'block';
-    empty.querySelector('h3').textContent = 'Không có văn bản mới';
-    empty.querySelector('p').textContent = 'Chưa tìm thấy văn bản pháp luật mới. Hãy thử lại sau.';
-    hotSection.style.display = 'none'; list.innerHTML = ''; return;
-  }
-  empty.style.display = 'none';
-  var noNewBanner = data.status === 'no_new' ? '<div style="background:#fff9e6;border:1px solid #ffc340;border-radius:10px;padding:10px 14px;font-size:13px;color:#633806;margin-bottom:12px;display:flex;align-items:center;gap:8px;">ℹ️ Không có văn bản mới. Đang hiển thị kết quả từ lần chạy trước.</div>' : '';
-  if (hotDocs.length > 0) {
-    hotSection.style.display = 'block';
-    hotGrid.innerHTML = noNewBanner + hotDocs.map(function(doc, i){ return renderHotCard(doc, i + 1); }).join('');
-  } else { hotSection.style.display = 'none'; }
-  list.innerHTML = (hotDocs.length === 0 ? noNewBanner : '') + otherDocs.map(renderDocCard).join('');
-}
-
-async function loadStats() {
-  try {
-    var r = await fetch('/api/status');
-    var s = await r.json();
-    document.getElementById('statTotal').textContent = s.total_processed || 0;
-    if (s.last_run) {
-      var t = new Date(s.last_run.time);
-      document.getElementById('statLastTime').textContent = t.toLocaleTimeString('vi-VN', {hour:'2-digit', minute:'2-digit'});
-      document.getElementById('statLastDate').textContent = t.toLocaleDateString('vi-VN');
-      document.getElementById('statNew').textContent = s.last_run.new || 0;
-      document.getElementById('statFound').textContent = s.last_run.found || 0;
-    }
-  } catch(e) {}
-}
-
-async function loadHistory() {
-  try {
-    var r = await fetch('/api/history');
-    var data = await r.json();
-    var runs = data.runs || [];
-    var el = document.getElementById('historyList');
-    if (!runs.length) { el.innerHTML = '<div style="padding:2rem;text-align:center;color:#8e8e93;font-size:14px">Chưa có lịch sử</div>'; return; }
-    el.innerHTML = runs.slice().reverse().map(function(run) {
-      var t = new Date(run.time); var isNew = run.new > 0;
-      return '<div class="history-row"><div><div style="font-weight:500">' + t.toLocaleDateString('vi-VN') + ' · ' + t.toLocaleTimeString('vi-VN', {hour:'2-digit', minute:'2-digit'}) + '</div><div style="font-size:12px;color:#6e6e73;margin-top:2px">Tìm thấy ' + run.found + ' · Mới ' + run.new + ' · Xử lý ' + run.processed + '</div></div><span class="' + (isNew ? 'tag-ok' : 'tag-empty') + '">' + (isNew ? run.new + ' văn bản mới' : 'Không có gì mới') + '</span></div>';
-    }).join('');
-  } catch(e) {}
 }
 
 function switchTab(name, el) {
@@ -636,12 +499,84 @@ function switchTab(name, el) {
   document.querySelectorAll('.panel').forEach(function(p){ p.classList.remove('active'); });
   el.classList.add('active');
   document.getElementById('panel-' + name).classList.add('active');
-  if (name === 'history') loadHistory();
   if (name === 'khotrue' && !_ktLoaded) { _ktLoaded = true; ktRender(); }
   if (name === 'phapluat' && !_plLoaded) { _plLoaded = true; plLoadList(); }
 }
 
-loadStats();
+
+// ═══════════════════════════════════════════════════════════════
+// HỎI ĐÁP — chỉ dựa trên văn bản đã xác minh (server: /api/chat)
+// ═══════════════════════════════════════════════════════════════
+var chatBusy = false;
+var chatPrevQs = [];
+
+function chatScroll() { var m = document.getElementById('chatMsgs'); m.scrollTop = m.scrollHeight; }
+
+function chatFmt(text, n) {
+  // escape trước, rồi mới thêm định dạng: **đậm**, xuống dòng, [n] → nút nguồn
+  var h = escHtml(text).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>').replace(/\n/g, '<br>');
+  return h.replace(/\[(\d{1,2})\]/g, function(m, k) {
+    return '<span class="cite" onclick="chatJump(' + n + ',' + k + ')">' + k + '</span>';
+  });
+}
+
+function chatJump(msgId, k) {
+  var el = document.getElementById('csrc_' + msgId + '_' + k);
+  if (!el) return;
+  el.classList.add('open', 'flash');
+  el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  setTimeout(function() { el.classList.remove('flash'); }, 1500);
+}
+
+function chatSrcHtml(msgId, s) {
+  var het = s.tinhTrang === 'het_hieu_luc'
+    ? ' <span class="chat-warn-het">· ĐÃ HẾT HIỆU LỰC</span>'
+    : (s.tinhTrangNhan && s.tinhTrang !== 'con_hieu_luc' ? ' · ' + escHtml(s.tinhTrangNhan) : '');
+  return '<div class="chat-src-item" id="csrc_' + msgId + '_' + s.n + '">'
+    + '<div class="chat-src-head" onclick="this.parentNode.classList.toggle(\'open\')">'
+    + '<span class="cite">' + s.n + '</span><b>Điều ' + escHtml(s.dieu) + '</b>'
+    + '<span>' + escHtml(s.tieuDe) + '</span><span style="color:#6e6e73">— ' + escHtml(s.soHieu) + het + '</span></div>'
+    + '<div class="chat-src-body">' + escHtml(s.trichDan) + '</div>'
+    + '<div class="chat-src-actions"><button onclick="plOpenDoc(\'' + encodeURIComponent(s.soHieu) + '\')">📖 Đọc toàn văn</button>'
+    + (s.url ? '<a href="' + escHtml(s.url) + '" target="_blank">🔗 Nguồn ↗</a>' : '') + '</div></div>';
+}
+
+var chatMsgSeq = 0;
+function chatAdd(cls, html) {
+  var w = document.getElementById('chatWelcome'); if (w) w.remove();
+  var d = document.createElement('div'); d.className = cls; d.innerHTML = html;
+  document.getElementById('chatMsgs').appendChild(d); chatScroll(); return d;
+}
+
+async function chatAsk(q) { document.getElementById('chatInput').value = q; chatSend(); }
+
+async function chatSend() {
+  if (chatBusy) return;
+  var inp = document.getElementById('chatInput');
+  var q = inp.value.trim(); if (!q) return;
+  inp.value = '';
+  chatBusy = true; document.getElementById('chatSendBtn').disabled = true;
+  chatAdd('chat-q', escHtml(q));
+  var wait = chatAdd('chat-a', '<span class="chat-typing">Đang tra cứu văn bản…</span>');
+  try {
+    var r = await fetch('/api/chat', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+                                       body: JSON.stringify({ question: q, history: chatPrevQs }) });
+    if (!r.ok) throw new Error('http ' + r.status);
+    var data = await r.json();
+    var id = ++chatMsgSeq;
+    if (data.mode === 'khong_co_can_cu') wait.classList.add('none');
+    var body = chatFmt(data.answer || '', id);
+    if (data.sources && data.sources.length) {
+      body += '<div class="chat-src">' + data.sources.map(function(s) { return chatSrcHtml(id, s); }).join('') + '</div>';
+    }
+    wait.innerHTML = body;
+    chatPrevQs.push(q); chatPrevQs = chatPrevQs.slice(-3);
+  } catch (e) {
+    wait.classList.add('none'); wait.textContent = 'Không gửi được câu hỏi. Vui lòng thử lại.';
+  }
+  chatBusy = false; document.getElementById('chatSendBtn').disabled = false; chatScroll();
+  inp.focus();
+}
 
 // ═══════════════════════════════════════════════════════════════
 // KHO THUẾ
@@ -794,7 +729,14 @@ function ktView() {
       soHieu: v.soHieu, ten: v.tenVanBan, coQuan: v.coQuanBanHanh || '', ngay: ktIsoDate(v.ngayBanHanh)
     }, common));
   });
-  return view;
+  // Kho cũ có vài số hiệu bị lặp (cùng một văn bản nhập hai lần) — chỉ hiện một bản
+  var seenSo = {};
+  return view.filter(function(d) {
+    var so = (d.soHieu || '').trim();
+    if (!so) return true;
+    if (seenSo[so]) return false;
+    seenSo[so] = true; return true;
+  });
 }
 
 function ktVisible(d) { return ktShowAll || !d.outOfScope; }

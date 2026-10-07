@@ -14,10 +14,11 @@ from fastapi.responses import HTMLResponse, JSONResponse
 
 load_dotenv()
 
-from scraper import scrape_all_sources, get_document_detail
+from scraper import get_document_detail
 from scraper_tax import scrape_all_tax
 import scope
-from summarizer import summarize_document, generate_highlights, test_connection
+from summarizer import generate_highlights, test_connection
+import chatbot
 
 logging.basicConfig(
     level=logging.INFO,
@@ -29,100 +30,8 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-HISTORY_FILE = Path("history.json")
 KHOTRUE_FILE = Path("khotrue.json")
 app = FastAPI(title="Trợ lý pháp lý AI")
-
-HOT_COUNT = 5       # số tin nổi bật
-PROCESS_MAX = 12    # tối đa văn bản xử lý AI mỗi lần
-DISPLAY_MAX = 20    # tối đa văn bản hiện lên UI
-
-
-def load_history() -> dict:
-    if HISTORY_FILE.exists():
-        try:
-            return json.loads(HISTORY_FILE.read_text(encoding="utf-8"))
-        except Exception:
-            pass
-    return {"processed_urls": [], "runs": [], "summaries": {}}
-
-
-def save_history(data: dict):
-    HISTORY_FILE.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
-
-
-def run_agent() -> dict:
-    logger.info("=== Bắt đầu chạy agent ===")
-    history = load_history()
-    processed_urls: set = set(history.get("processed_urls", []))
-    # summaries: url → tom_tat string (persistent AI cache)
-    summaries: dict = history.get("summaries", {})
-
-    logger.info("Đang scrape 3 nguồn (congbao, luatvietnam, baochinhphu)...")
-    all_docs = scrape_all_sources()   # sorted by score desc
-    logger.info(f"Tổng tìm thấy {len(all_docs)} văn bản từ tất cả nguồn")
-
-    new_docs = [d for d in all_docs if d["url"] not in processed_urls]
-    logger.info(f"Văn bản chưa tóm tắt: {len(new_docs)}")
-
-    # Process new docs with AI (up to PROCESS_MAX at a time)
-    newly_processed = 0
-    for doc in new_docs[:PROCESS_MAX]:
-        logger.info(f"Tóm tắt: {doc['title'][:60]}...")
-        content = get_document_detail(
-            url=doc["url"],
-            source=doc.get("source", ""),
-            excerpt=doc.get("excerpt", ""),
-        )
-        summary = summarize_document(
-            title=doc["title"],
-            content=content,
-            so_hieu=doc.get("so_hieu", ""),
-            co_quan=doc.get("co_quan", ""),
-        )
-        summaries[doc["url"]] = summary
-        processed_urls.add(doc["url"])
-        newly_processed += 1
-
-    # Build display list from top DISPLAY_MAX scored docs in current scrape
-    # Attach cached summaries even for "old" docs
-    display_docs = []
-    for doc in all_docs[:DISPLAY_MAX]:
-        doc.pop("_score", None)
-        if doc["url"] in summaries:
-            doc["tom_tat"] = summaries[doc["url"]]
-            doc["processed_at"] = ""   # already cached
-        display_docs.append(doc)
-
-    hot_docs = display_docs[:HOT_COUNT]
-    other_docs = display_docs[HOT_COUNT:]
-
-    for i, d in enumerate(hot_docs):
-        d["is_hot"] = True
-
-    # Persist
-    history["processed_urls"] = list(processed_urls)[-1000:]
-    history["summaries"] = dict(list(summaries.items())[-300:])
-    history["runs"].append({
-        "time": datetime.now(timezone.utc).isoformat(),
-        "found": len(all_docs),
-        "new": newly_processed,
-        "processed": len(processed_urls),
-    })
-    history["runs"] = history["runs"][-30:]
-    save_history(history)
-
-    status = "success" if newly_processed > 0 else "no_new"
-    logger.info(f"=== Xong. Mới tóm tắt {newly_processed}, hiện thị {len(display_docs)} văn bản ===")
-    return {
-        "status": status,
-        "timestamp": datetime.now().isoformat(),
-        "total_found": len(all_docs),
-        "new_documents": newly_processed,
-        "message": "" if newly_processed > 0 else "Không có văn bản mới. Hiển thị kết quả gần nhất.",
-        "hot_documents": hot_docs,
-        "documents": other_docs,
-    }
 
 
 @app.get("/", response_class=HTMLResponse)
@@ -135,68 +44,15 @@ async def index():
     })
 
 
-@app.post("/api/run")
-async def api_run(background_tasks: BackgroundTasks):
-    background_tasks.add_task(_run_and_cache)
-    return JSONResponse({"status": "running", "message": "Agent đang chạy..."})
-
-
-_last_result: dict | None = None
-_is_running: bool = False
-
-
-def _run_and_cache():
-    global _last_result, _is_running
-    _is_running = True
-    try:
-        _last_result = run_agent()
-    except Exception as e:
-        logger.error(f"Lỗi khi chạy agent: {e}")
-        _last_result = {"status": "error", "message": str(e), "hot_documents": [], "documents": []}
-    finally:
-        _is_running = False
-
-
-@app.get("/api/status")
-async def api_status():
-    history = load_history()
-    runs = history.get("runs", [])
-    last_run = runs[-1] if runs else None
-    return JSONResponse(
-        {
-            "is_running": _is_running,
-            "has_result": _last_result is not None,
-            "last_run": last_run,
-            "total_processed": len(history.get("processed_urls", [])),
-        },
-        headers={"Cache-Control": "no-store"},
-    )
-
-
 @app.get("/health")
 async def health():
     return JSONResponse({"status": "ok"})
-
-
-@app.get("/api/result")
-async def api_result():
-    if _is_running:
-        return JSONResponse({"status": "running"})
-    if _last_result:
-        return JSONResponse(_last_result)
-    return JSONResponse({"status": "idle", "hot_documents": [], "documents": []})
 
 
 @app.get("/api/test-ai")
 async def api_test_ai():
     result = test_connection()
     return JSONResponse(result)
-
-
-@app.get("/api/history")
-async def api_history():
-    history = load_history()
-    return JSONResponse({"runs": history.get("runs", [])[-10:]})
 
 
 # ─────────────────────────────────────────────
@@ -384,6 +240,24 @@ async def api_legal_document_detail(so_hieu: str):
             out["tenVanBan"] = _display_title(d)
             return JSONResponse(out)
     return JSONResponse({"error": "not_found"}, status_code=404)
+
+
+def _chat_docs() -> list:
+    """Verified documents inside the tracked scope — the only material the chatbot may cite."""
+    legacy_by = _legacy_by_sohieu()
+    return [d for d in load_legal_db() if d.get("noiDung") and _verified_scope(d, legacy_by)["trongPham"]]
+
+
+@app.post("/api/chat")
+async def api_chat(payload: dict):
+    question = (payload.get("question") or "").strip()
+    if not question:
+        return JSONResponse({"error": "empty"}, status_code=400)
+    history_q = [h for h in (payload.get("history") or []) if isinstance(h, str)][-3:]
+    chatbot.build_index(_chat_docs(), (_legal_cache["mtime"], len(load_legal_db())))
+    result = await asyncio.get_event_loop().run_in_executor(None, chatbot.answer, question, history_q)
+    return JSONResponse(result)
+
 
 
 @asynccontextmanager

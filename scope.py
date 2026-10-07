@@ -140,13 +140,45 @@ def _decide(loai: str, so_hieu: str, nq_groups: set, whitelist: dict, has_signal
     return False, f"{loai.capitalize()} không thuộc nhóm thu thập tự động (Luật, Nghị định, Thông tư)"
 
 
+# Văn bản thuế hướng dẫn nghĩa vụ của nhà thầu / nhà cung cấp nước ngoài thường không nêu điều đó trong
+# tiêu đề (ví dụ Thông tư hướng dẫn Luật TNDN có Điều về hợp đồng nhà thầu). Bằng chứng ở đây là
+# nội dung Điều có thật trong văn bản đã xác minh, không phải suy đoán.
+_NTNN_TITLE = re.compile(r"nhà thầu nước ngoài|nhà thầu, nhà thầu phụ nước ngoài|nhà cung cấp (?:ở )?nước ngoài|"
+                         r"(?:tổ chức|cá nhân)[^.;]{0,30}nước ngoài[^.;]{0,40}(?:kinh doanh|cung cấp)", re.IGNORECASE)
+_NTNN_BODY = re.compile(r"nhà thầu nước ngoài|hợp đồng nhà thầu|nhà thầu, nhà thầu phụ nước ngoài|nhà cung cấp (?:ở )?nước ngoài",
+                        re.IGNORECASE)
+_TAX_GROUPS = {"GTGT", "TNDN", "TNCN", "QuanLyThue"}
+_ntnn_cache = {}
+
+
+def has_ntnn_content(doc: dict) -> bool:
+    key = (doc.get("soHieu"), id(doc))
+    if key in _ntnn_cache:
+        return _ntnn_cache[key]
+    body_hits, title_hit = 0, False
+    for ch in (doc.get("noiDung") or {}).get("chuong", []):
+        for d in ch.get("dieu", []):
+            if _NTNN_TITLE.search(d.get("tieuDe", "")):
+                title_hit = True
+                continue
+            txt = (d.get("text", "") + " " + " ".join(k.get("text", "") for k in d.get("khoan", [])))
+            if _NTNN_BODY.search(txt):
+                body_hits += 1
+    _ntnn_cache[key] = title_hit or body_hits >= 2
+    return _ntnn_cache[key]
+
+
 def classify_verified(doc: dict, legacy_title: str = None, legacy_loai: str = None) -> dict:
     real_title = doc.get("tenVanBan") or legacy_title
-    title = real_title or ""
+    # The source's own title is often a short form ("...kéo dài thời hạn áp dụng thuế nhập
+    # khẩu mặt hàng xăng dầu") while the older full title names GTGT/TNDN — use both.
+    title = " ".join(t for t in (doc.get("tenVanBan"), legacy_title) if t)
     groups = groups_for(doc.get("linhVuc"), title, legacy_loai)
+    if "NTNN" not in groups and _TAX_GROUPS & set(groups) and has_ntnn_content(doc):
+        groups = groups + ["NTNN"]
     # No title at all yet (record fetched before titles were captured): fall back to the
     # crawler-assigned tags, which were only set when the title matched a topic keyword.
-    nq_groups = set(title_groups(real_title)) if real_title else {TAG_TO_GROUP.get(t) for t in doc.get("linhVuc") or []}
+    nq_groups = set(title_groups(title)) if real_title else {TAG_TO_GROUP.get(t) for t in doc.get("linhVuc") or []}
     ok, why = _decide(_norm_loai(doc.get("loaiVanBan")), doc.get("soHieu", ""), nq_groups, load_whitelist(),
                       _has_signal(doc.get("linhVuc"), title, legacy_loai))
     return {"nhom": groups, "trongPham": ok, "lyDo": why}
