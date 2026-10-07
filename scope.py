@@ -22,7 +22,7 @@ CURATED_FILE = HERE / "curated_documents.json"
 
 # (id, label) — display order of the main groups
 GROUPS = [
-    ("KeToan", "Kế toán"),
+    ("KeToan", "Chuẩn mực kế toán"),
     ("GTGT", "Thuế GTGT"),
     ("TNDN", "Thuế TNDN"),
     ("TNCN", "Thuế TNCN"),
