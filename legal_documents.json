@@ -157656,10 +157656,141 @@
       "linhVuc": [
         "Thuế GTGT"
       ]
+    },
+    {
+      "soHieu": "152/2026/TT-BTC",
+      "loaiVanBan": "Thông tư",
+      "coQuanBanHanh": "Bộ Tài chính",
+      "nguoiKy": "Cao Anh Tuấn",
+      "ngayBanHanh": "09/10/2026",
+      "ngayHieuLuc": "09/10/2026",
+      "tinhTrangHieuLuc": "con_hieu_luc",
+      "tinhTrangGhiChu": "Còn hiệu lực",
+      "tenVanBan": "Thông tư 152/2026/TT-BTC mức thu phí và lệ phí an ninh mạng mới nhất",
+      "xacMinh": true,
+      "nguon": {
+        "trangNguon": "thuvienphapluat.vn",
+        "url": "https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Thong-tu-152-2026-TT-BTC-muc-thu-phi-va-le-phi-an-ninh-mang-728850.aspx"
+      },
+      "noiDung": {
+        "chuong": [
+          {
+            "so": null,
+            "tieuDe": "",
+            "dieu": [
+              {
+                "so": "1",
+                "tieuDe": "Phạm vi điều chỉnh, đối tượng áp dụng",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Thông tư này quy định mức thu, chế độ thu, nộp phí và lệ phí thuộc lĩnh vực an ninh mạng, bao gồm: phí thẩm định cấp giấy phép kinh doanh sản phẩm, dịch vụ an ninh mạng; phí thẩm định và chứng nhận hợp chuẩn, hợp quy về an ninh mạng; lệ phí cấp giấy phép nhập khẩu sản phẩm an ninh mạng; lệ phí cấp tên định danh người gửi dùng trong hoạt động quảng cáo trên mạng (lệ phí cấp giấy chứng nhận tên định danh người gửi dùng trong hoạt động quảng cáo trên mạng).",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Thông tư này áp dụng đối với người nộp phí, lệ phí, tổ chức thu phí, lệ phí và tổ chức, cá nhân khác có liên quan đến thu, nộp phí và lệ phí thuộc lĩnh vực an ninh mạng.",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "2",
+                "tieuDe": "Người nộp phí và lệ phí",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Tổ chức, cá nhân khi nộp hồ sơ đề nghị thẩm định cấp giấy phép kinh doanh sản phẩm, dịch vụ an ninh mạng; thẩm định và chứng nhận hợp chuẩn, hợp quy về an ninh mạng; cấp giấy phép nhập khẩu sản phẩm an ninh mạng phải nộp phí và lệ phí theo quy định tại Thông tư này;",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Tổ chức, cá nhân được cấp giấy chứng nhận tên định danh người gửi dùng trong hoạt động quảng cáo trên mạng phải nộp lệ phí theo quy định tại Thông tư này.",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "3",
+                "tieuDe": "Tổ chức thu phí và lệ phí",
+                "text": "Cơ quan nhà nước có thẩm quyền thẩm định cấp giấy phép kinh doanh sản phẩm, dịch vụ an ninh mạng; thẩm định và chứng nhận hợp chuẩn, hợp quy về an ninh mạng; cấp giấy phép nhập khẩu sản phẩm an ninh mạng; cấp giấy chứng nhận tên định danh người gửi dùng trong hoạt động quảng cáo trên mạng là tổ chức thu phí và lệ phí theo quy định tại Thông tư này.",
+                "khoan": []
+              },
+              {
+                "so": "4",
+                "tieuDe": "Mức thu phí và lệ phí",
+                "text": "Mức thu phí và lệ phí được quy định tại Biểu mức thu phí và lệ phí thuộc lĩnh vực an ninh mạng ban hành kèm theo Thông tư này.",
+                "khoan": []
+              },
+              {
+                "so": "5",
+                "tieuDe": "Khai, nộp phí, lệ phí và quyết toán phí",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Người nộp phí, lệ phí nộp tiền phí, lệ phí vào ngân sách nhà nước theo hình thức quy định tại khoản 1 Điều 3 Nghị định số 362/2025/NĐ-CP quy định chi tiết một số điều và biện pháp để tổ chức, hướng dẫn thi hành Luật Phí và lệ phí.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Tổ chức thu phí, lệ phí nộp 100% số tiền phí, lệ phí thu được vào ngân sách nhà nước theo chương, tiểu mục của Mục lục ngân sách nhà nước hiện hành, bao gồm tiền lãi phát sinh (nếu có) trên số dư tài khoản liên quan trong quá trình thu phí, lệ phí. Nguồn chi phí trang trải cho hoạt động cung cấp dịch vụ, thu phí, lệ phí được ngân sách nhà nước bố trí trong dự toán của tổ chức thu phí, lệ phí theo chế độ, định mức chi ngân sách nhà nước theo quy định của pháp luật. Tổ chức thu phí, lệ phí khai, nộp phí, lệ phí và quyết toán phí theo quy định tại khoản 3 Điều 3 Nghị định số 362/2025/NĐ-CP.",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "6",
+                "tieuDe": "Tổ chức thực hiện",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Thông tư này có hiệu lực thi hành từ ngày 09 tháng 10 năm 2026.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Thông tư số 269/2016/TT-BTC quy định mức thu, chế độ thu, nộp, quản lý và sử dụng phí và lệ phí thuộc lĩnh vực an toàn thông tin hết hiệu lực thi hành kể từ ngày Thông tư này có hiệu lực thi hành.",
+                    "diem": []
+                  },
+                  {
+                    "so": "3",
+                    "text": "Đối với hồ sơ đề nghị thẩm định cấp giấy phép kinh doanh sản phẩm, dịch vụ an ninh mạng; thẩm định và chứng nhận hợp chuẩn, hợp quy về an ninh mạng; cấp giấy phép nhập khẩu sản phẩm an ninh mạng; cấp giấy chứng nhận tên định danh người gửi dùng trong hoạt động quảng cáo trên mạng nộp cho cơ quan nhà nước có thẩm quyền trước ngày Thông tư này có hiệu lực nhưng chưa nộp phí, lệ phí thì tổ chức thu phí, lệ phí thực hiện thu phí, lệ phí theo quy định tại Thông tư này.",
+                    "diem": []
+                  },
+                  {
+                    "so": "4",
+                    "text": "Các nội dung khác liên quan đến việc khai, thu, nộp, công khai chế độ thu phí, lệ phí không quy định tại Thông tư này được thực hiện theo quy định tại các văn bản: Luật Phí và lệ phí số 97/2015/QH13; Luật Quản lý thuế số 108/2025/QH15 và Nghị định số 252/2026/NĐ-CP quy định chi tiết một số điều và biện pháp để tổ chức, hướng dẫn thi hành Luật Quản lý thuế; Nghị định số 362/2025/NĐ-CP; Nghị định số 347/2025/NĐ-CP quy định về thủ tục hành chính thuộc lĩnh vực Kho bạc Nhà nước.",
+                    "diem": []
+                  },
+                  {
+                    "so": "5",
+                    "text": "Trường hợp các văn bản viện dẫn tại Thông tư này được sửa đổi, bổ sung hoặc thay thế thì thực hiện theo văn bản sửa đổi, bổ sung hoặc thay thế đó.",
+                    "diem": []
+                  },
+                  {
+                    "so": "6",
+                    "text": "Trong quá trình thực hiện, trường hợp có vướng mắc, đề nghị các tổ chức, cá nhân phản ánh kịp thời về Bộ Tài chính để nghiên cứu, hướng dẫn bổ sung./. Nơi nhận: - Ban Bí thư Trung ương Đảng; - Thủ tướng, các Phó Thủ tướng Chính phủ; - Văn phòng Trung ương Đảng và các Ban của Đảng; - Văn phòng Tổng Bí thư; - Văn phòng Quốc hội; - Hội đồng Dân tộc; - Ủy ban Kinh tế và Tài chính; - Văn phòng Chủ tịch nước; - Viện kiểm sát nhân dân tối cao; - Toà án nhân dân tối cao; - Kiểm toán nhà nước; - Cơ quan trung ương của các đoàn thể; - Các bộ, cơ quan ngang bộ; - HĐND, UBND các tỉnh, thành phố trực thuộc trung ương; - Thuế, Sở Tài chính các tỉnh, thành phố trực thuộc trung ương; - Kho bạc Nhà nước các khu vực; - Cục Kiểm tra văn bản và Tổ chức thi hành pháp luật, Bộ Tư pháp; - Công báo; - Cổng Thông tin điện tử Chính phủ; - Cơ sở dữ liệu quốc gia về pháp luật; - Cổng Thông tin điện tử Bộ Tài chính; - Bộ trưởng (để b/c); - Các đơn vị thuộc Bộ Tài chính; - Lưu: VT, CST (160b). KT. BỘ TRƯỞNG THỨ TRƯỞNG Cao Anh Tuấn PHỤ LỤC BIỂU MỨC THU PHÍ VÀ LỆ PHÍ THUỘC LĨNH VỰC AN NINH MẠNG (Ban hành kèm theo Thông tư số 152/2026/TT-BTC ngày 09 tháng 10 năm 2026 của Bộ trưởng Bộ Tài chính) A. Mức phí STT DANH MỤC MỨC PHÍ (đồng/lần) 1 Phí thẩm định cấp giấy phép kinh doanh sản phẩm, dịch vụ an ninh mạng 1.1 Thẩm định cấp giấy phép lần đầu/cấp lại: 1.1.1 Cho một loại hình sản phẩm hoặc dịch vụ 8.000.000 1.1.2 Thêm một loại hình sản phẩm hoặc dịch vụ 2.000.000 1.2 Thẩm định cấp đổi giấy phép: 1.2.1 Đổi tên, đổi người đại diện theo pháp luật 3.000.000 1.2.2 Thay đổi một loại hình sản phẩm hoặc dịch vụ 3.000.000 1.2.3 Thêm một loại hình sản phẩm hoặc dịch vụ 1.000.000 1.3 Thẩm định gia hạn giấy phép 500.000 2 Phí thẩm định và chứng nhận hợp chuẩn, hợp quy về an ninh mạng 2.1 Thẩm định chứng nhận hợp quy lần đầu 5.000.000 2.2 Thẩm định công bố hợp quy, hợp chuẩn 100.000 2.3 Thẩm định chứng nhận hợp chuẩn lần đầu 5.000.000 B. Mức lệ phí STT DANH MỤC MỨC LỆ PHÍ (đồng/ lần cấp) 1 Lệ phí cấp giấy phép nhập khẩu sản phẩm an ninh mạng 1.1 Cấp lần đầu 200.000 1.2 Cấp lại 100.000 2 Lệ phí cấp giấy chứng nhận tên định danh người gửi dùng trong hoạt động quảng cáo trên mạng 2.1 Cấp lần đầu 200.000 2.2 Cấp lại, gia hạn 100.000",
+                    "diem": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "noiDungDayDu": true,
+      "quanHeHieuLuc": [],
+      "linhVuc": [
+        "Thuế GTGT"
+      ]
     }
   ],
   "rebuiltAt": "2026-10-01T10:20:42",
   "lastBackfill": "2026-10-07T20:18:36",
   "publishCheck": "2026-10-03T10:33:22",
-  "lastDailyUpdate": "2026-10-10T09:57:54"
+  "lastDailyUpdate": "2026-10-14T09:00:03"
 }
