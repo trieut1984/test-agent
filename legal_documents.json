@@ -157787,10 +157787,208 @@
       "linhVuc": [
         "Thuế GTGT"
       ]
+    },
+    {
+      "soHieu": "156/2026/TT-BTC",
+      "loaiVanBan": "Thông tư",
+      "coQuanBanHanh": "Bộ Tài chính",
+      "nguoiKy": "Cao Anh Tuấn",
+      "ngayBanHanh": "20/10/2026",
+      "ngayHieuLuc": "01/11/2026",
+      "tinhTrangHieuLuc": "chua_co_hieu_luc",
+      "tinhTrangGhiChu": "Chưa có hiệu lực",
+      "tenVanBan": "Thông tư 156/2026/TT-BTC mức thu phí khai thác và sử dụng Cơ sở dữ liệu tổng hợp quốc gia mới nhất",
+      "xacMinh": true,
+      "nguon": {
+        "trangNguon": "thuvienphapluat.vn",
+        "url": "https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Thong-tu-156-2026-TT-BTC-muc-thu-phi-khai-thac-va-su-dung-Co-so-du-lieu-tong-hop-quoc-gia-729819.aspx"
+      },
+      "noiDung": {
+        "chuong": [
+          {
+            "so": null,
+            "tieuDe": "",
+            "dieu": [
+              {
+                "so": "1",
+                "tieuDe": "Phạm vi điều chỉnh và đối tượng áp dụng",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Thông tư này quy định về mức thu, giảm, chế độ thu, nộp phí khai thác và sử dụng thông tin trong Cơ sở dữ liệu tổng hợp quốc gia.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Thông tư này áp dụng đối với người nộp phí, tổ chức thu phí khai thác và sử dụng thông tin trong Cơ sở dữ liệu tổng hợp quốc gia và các tổ chức, cá nhân khác có liên quan đến thu, nộp phí khai thác và sử dụng thông tin trong Cơ sở dữ liệu tổng hợp quốc gia.",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "2",
+                "tieuDe": "Người nộp phí và tổ chức thu phí",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Tổ chức, cá nhân khi yêu cầu khai thác và sử dụng thông tin trong Cơ sở dữ liệu tổng hợp quốc gia theo quy định của pháp luật là người nộp phí khai thác và sử dụng thông tin trong Cơ sở dữ liệu tổng hợp quốc gia theo quy định tại Thông tư này, trừ các trường hợp không phải nộp phí theo quy định của pháp luật về dữ liệu và pháp luật về giao dịch điện tử.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Trung tâm Dữ liệu quốc gia là tổ chức thu phí theo quy định tại Thông tư này.",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "3",
+                "tieuDe": "Mức thu phí",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Kể từ ngày Thông tư này có hiệu lực thi hành đến hết ngày 31 tháng 12 năm 2028, mức thu phí khai thác và sử dụng thông tin trong Cơ sở dữ liệu tổng hợp quốc gia là 300 đồng/trường dữ liệu.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Kể từ ngày 01 tháng 01 năm 2029 trở đi, mức thu phí khai thác và sử dụng thông tin trong Cơ sở dữ liệu tổng hợp quốc gia là 600 đồng/trường dữ liệu.",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "4",
+                "tieuDe": "Các trường hợp được giảm phí",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Cá nhân khai thác và sử dụng thông tin trong Cơ sở dữ liệu tổng hợp quốc gia được giảm 50% mức thu phí quy định tại Điều 3 Thông tư này khi thuộc một trong các trường hợp sau:",
+                    "diem": [
+                      {
+                        "kyHieu": "a",
+                        "text": "Trẻ em theo quy định của pháp luật về trẻ em;"
+                      },
+                      {
+                        "kyHieu": "b",
+                        "text": "Cá nhân thuộc hộ nghèo theo quy định của pháp luật về chuẩn nghèo;"
+                      },
+                      {
+                        "kyHieu": "c",
+                        "text": "Người cao tuổi theo quy định của pháp luật về người cao tuổi;"
+                      },
+                      {
+                        "kyHieu": "d",
+                        "text": "Người khuyết tật theo quy định của pháp luật về người khuyết tật;"
+                      },
+                      {
+                        "kyHieu": "đ",
+                        "text": "Người có công với cách mạng theo quy định của pháp luật về ưu đãi người có công với cách mạng;"
+                      },
+                      {
+                        "kyHieu": "e",
+                        "text": "Đồng bào dân tộc thiểu số ở các xã có điều kiện kinh tế - xã hội đặc biệt khó khăn theo quy định của pháp luật."
+                      }
+                    ]
+                  },
+                  {
+                    "so": "2",
+                    "text": "Cá nhân thuộc từ hai trường hợp quy định tại khoản 1 Điều này trở lên thì chỉ được giảm 50% mức thu phí khai thác và sử dụng thông tin trong Cơ sở dữ liệu tổng hợp quốc gia.",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "5",
+                "tieuDe": "Khai, thu, nộp, quyết toán và hoàn trả phí",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Người nộp phí nộp tiền phí vào ngân sách nhà nước theo hình thức quy định tại khoản 1 Điều 3 Nghị định số 362/2025/NĐ-CP quy định chi tiết một số điều và biện pháp để tổ chức, hướng dẫn thi hành Luật Phí và lệ phí.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Tổ chức thu phí nộp 100% số tiền phí thu được vào ngân sách nhà nước theo chương, tiểu mục của Mục lục ngân sách nhà nước hiện hành, bao gồm tiền lãi phát sinh (nếu có) trên số dư tài khoản liên quan trong quá trình thu phí. Nguồn chi phí trang trải cho hoạt động cung cấp dịch vụ, thu phí được ngân sách nhà nước bố trí trong dự toán của tổ chức thu phí theo chế độ, định mức chi ngân sách nhà nước theo quy định của pháp luật. Tổ chức thu phí khai, nộp và quyết toán phí theo quy định tại khoản 3 Điều 3 Nghị định số 362/2025/NĐ-CP.",
+                    "diem": []
+                  },
+                  {
+                    "so": "3",
+                    "text": "Trường hợp người nộp phí đã nộp phí nhưng không được cung cấp hoặc chỉ được cung cấp một phần thông tin theo yêu cầu đã thanh toán hoặc phát sinh giao dịch thu trùng, thu vượt mức quy định, tổ chức thu phí có trách nhiệm kiểm tra, đối soát, xác định số tiền phí được hoàn trả và hoàn trả cho người nộp phí theo quy định của pháp luật về quản lý thuế.",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "6",
+                "tieuDe": "Hiệu lực thi hành",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Thông tư này có hiệu lực thi hành từ ngày 01 tháng 11 năm 2026.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Các nội dung khác liên quan đến việc khai, thu, nộp, công khai chế độ thu phí không quy định tại Thông tư này được thực hiện theo quy định tại các văn bản: Luật Phí và lệ phí số 97/2015/QH13; Luật Quản lý thuế số 108/2025/QH15; Nghị định số 252/2026/NĐ-CP quy định chi tiết một số điều và biện pháp để tổ chức, hướng dẫn thi hành Luật Quản lý thuế; Nghị định số 254/2026/NĐ-CP quy định chi tiết một số điều và biện pháp để tổ chức, hướng dẫn thi hành Luật Quản lý thuế số 108/2025/QH15 về hóa đơn điện tử, chứng từ điện tử; Nghị định số 362/2025/NĐ-CP; Nghị định số 347/2025/NĐ-CP quy định về thủ tục hành chính thuộc lĩnh vực Kho bạc Nhà nước.",
+                    "diem": []
+                  },
+                  {
+                    "so": "3",
+                    "text": "Trường hợp các văn bản viện dẫn tại Thông tư này được sửa đổi, bổ sung hoặc thay thế thì thực hiện theo văn bản sửa đổi, bổ sung hoặc thay thế đó.",
+                    "diem": []
+                  },
+                  {
+                    "so": "4",
+                    "text": "Trong quá trình thực hiện, trường hợp có vướng mắc, đề nghị các tổ chức, cá nhân phản ánh kịp thời về Bộ Tài chính để nghiên cứu, hướng dẫn bổ sung./. Nơi nhận: - Ban Bí thư Trung ương Đảng; - Thủ tướng, các Phó Thủ tướng Chính phủ; - Văn phòng Trung ương Đảng và các Ban của Đảng; - Văn phòng Tổng Bí thư; - Văn phòng Quốc hội; - Hội đồng Dân tộc; - Ủy ban Kinh tế và Tài chính; - Văn phòng Chủ tịch nước; - Viện kiểm sát nhân dân tối cao; - Toà án nhân dân tối cao; - Kiểm toán nhà nước; - Cơ quan trung ương của các đoàn thể; - Các bộ, cơ quan ngang bộ; - HĐND, UBND các tỉnh, thành phố trực thuộc trung ương; - Sở Tài chính các tỉnh, thành phố trực thuộc trung ương; - Thuế các tỉnh, thành phố trực thuộc trung ương; - Kho bạc Nhà nước các khu vực; - Cục Kiểm tra văn bản và Tổ chức thi hành pháp luật, Bộ Tư pháp; - Công báo; - Cổng Thông tin điện tử Chính phủ; - Cơ sở dữ liệu quốc gia về pháp luật; - Bộ trưởng (để báo cáo); - Cổng Thông tin điện tử Bộ Tài chính; - Các đơn vị thuộc Bộ Tài chính; - Lưu: VT, CST (170b). KT. BỘ TRƯỞNG THỨ TRƯỞNG Cao Anh Tuấn",
+                    "diem": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "noiDungDayDu": true,
+      "quanHeHieuLuc": [],
+      "linhVuc": [
+        "Thuế GTGT"
+      ]
+    },
+    {
+      "soHieu": "154/2026/TT-BTC",
+      "loaiVanBan": "Thông tư",
+      "coQuanBanHanh": "Bộ Tài chính",
+      "nguoiKy": "Nguyễn Đức Chi",
+      "ngayBanHanh": "15/10/2026",
+      "ngayHieuLuc": "01/01/2027",
+      "tinhTrangHieuLuc": "chua_co_hieu_luc",
+      "tinhTrangGhiChu": "Chưa có hiệu lực",
+      "tenVanBan": "Thông tư 154/2026/TT-BTC sửa đổi Thông tư 80/2019/TT-BTC thủ tục hải quan hàng hoá xuất khẩu mới nhất",
+      "xacMinh": true,
+      "nguon": {
+        "trangNguon": "thuvienphapluat.vn",
+        "url": "https://thuvienphapluat.vn/van-ban/Xuat-nhap-khau/Thong-tu-154-2026-TT-BTC-sua-doi-Thong-tu-80-2019-TT-BTC-thu-tuc-hai-quan-hang-hoa-xuat-khau-729898.aspx"
+      },
+      "noiDung": {
+        "chuong": [],
+        "raw": "Thông tư 154/2026/TT-BTC ngày 15/10/2026 sửa đổi Thông tư 80/2019/TT-BTC hướng dẫn thủ tục hải quan, quản lý thuế, phí và lệ phí đối với hàng hoá xuất khẩu, nhập khẩu theo Nghị định 14/2018/NĐ-CP hướng dẫn về hoạt động thương mại biên giới do Bộ trưởng Bộ Tài chính ban hành Văn bản này đang cập nhật Nội dung => Bạn vui lòng \"Tải về\" để xem.Tải về Hoặc Nhận thông báo qua Email khi văn bản có nội dung"
+      },
+      "noiDungDayDu": true,
+      "quanHeHieuLuc": [],
+      "linhVuc": [
+        "Quản lý thuế"
+      ]
     }
   ],
   "rebuiltAt": "2026-10-01T10:20:42",
   "lastBackfill": "2026-10-07T20:18:36",
   "publishCheck": "2026-10-03T10:33:22",
-  "lastDailyUpdate": "2026-10-14T09:00:03"
+  "lastDailyUpdate": "2026-10-22T08:43:25"
 }
