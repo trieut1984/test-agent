@@ -158903,10 +158903,21 @@
       "linhVuc": [
         "Thuế TNDN"
       ]
+    },
+    {
+      "soHieu": "163/2026/TT-BTC",
+      "xacMinh": false,
+      "nguon": {
+        "trangNguon": "thuvienphapluat.vn",
+        "lyDoChuaXacMinh": "no search result matched số hiệu '163/2026/TT-BTC' (20 candidates seen)"
+      },
+      "linhVuc": [
+        "Thuế GTGT"
+      ]
     }
   ],
   "rebuiltAt": "2026-10-01T10:20:42",
   "lastBackfill": "2026-10-07T20:18:36",
   "publishCheck": "2026-10-03T10:33:22",
-  "lastDailyUpdate": "2026-11-01T08:00:18"
+  "lastDailyUpdate": "2026-11-03T08:44:01"
 }
