@@ -158914,10 +158914,345 @@
       "linhVuc": [
         "Thuế GTGT"
       ]
+    },
+    {
+      "soHieu": "158/2026/TT-BTC",
+      "loaiVanBan": "Thông tư",
+      "coQuanBanHanh": "Bộ Tài chính",
+      "nguoiKy": "Tạ Anh Tuấn",
+      "ngayBanHanh": "28/10/2026",
+      "ngayHieuLuc": "15/12/2026",
+      "tinhTrangHieuLuc": "chua_co_hieu_luc",
+      "tinhTrangGhiChu": "Chưa có hiệu lực",
+      "tenVanBan": "Thông tư 158/2026/TT-BTC bãi bỏ một số văn bản quy phạm pháp luật của Bộ Tài chính mới nhất",
+      "xacMinh": true,
+      "nguon": {
+        "trangNguon": "thuvienphapluat.vn",
+        "url": "https://thuvienphapluat.vn/van-ban/Bo-may-hanh-chinh/Thong-tu-158-2026-TT-BTC-bai-bo-mot-so-van-ban-quy-pham-phap-luat-cua-Bo-Tai-chinh-730956.aspx"
+      },
+      "noiDung": {
+        "chuong": [
+          {
+            "so": null,
+            "tieuDe": "",
+            "dieu": [
+              {
+                "so": "1",
+                "tieuDe": "Bãi bỏ một số văn bản quy phạm pháp luật thuộc thẩm quyền của Bộ trưởng Bộ Tài chính",
+                "text": "Bãi bỏ toàn bộ 54 Thông tư và 02 Quyết định sau đây:",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Thông tư số 76/2003/TT-BTC ngày 04 tháng 8 năm 2003 của Bộ trưởng Bộ Tài chính hướng dẫn về bảo hiểm trong đầu tư và xây dựng.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Thông tư số 108/2003/TT-BTC ngày 07 tháng 11 năm 2003 của Bộ trưởng Bộ Tài chính hướng dẫn cơ chế tài chính áp dụng đối với các dự án vệ sinh môi trường sử dụng nguồn vốn hỗ trợ phát triển chính thức (ODA).",
+                    "diem": []
+                  },
+                  {
+                    "so": "3",
+                    "text": "Thông tư số 07/2005/TT-BTC ngày 18 tháng 01 năm 2005 của Bộ trưởng Bộ Tài chính hướng dẫn quản lý tài chính đối với các hoạt động của Hội Chữ thập đỏ.",
+                    "diem": []
+                  },
+                  {
+                    "so": "4",
+                    "text": "Thông tư số 52/2005/TT-BTC ngày 20 tháng 6 năm 2005 của Bộ trưởng Bộ Tài chính hướng dẫn việc thành lập, tổ chức và hoạt động của tổ chức bảo hiểm tương hỗ trong lĩnh vực nông nghiệp, lâm nghiệp và ngư nghiệp.",
+                    "diem": []
+                  },
+                  {
+                    "so": "5",
+                    "text": "Thông tư số 08/2008/TT-BTC ngày 29 tháng 01 năm 2008 của Bộ trưởng Bộ Tài chính sửa đổi, bổ sung Thông tư số 108/2003/TT-BTC ngày 07 tháng 11 năm 2003 hướng dẫn cơ chế tài chính áp dụng đối với các dự án xử lý rác thải sinh hoạt và chất thải rắn đô thị sử dụng nguồn hỗ trợ phát triển chính thức (ODA).",
+                    "diem": []
+                  },
+                  {
+                    "so": "6",
+                    "text": "Thông tư số 20/2008/TT-BTC ngày 19 tháng 02 năm 2008 của Bộ trưởng Bộ Tài chính hướng dẫn về kinh phí bảo đảm hoạt động của Ban Chỉ đạo tỉnh, thành phố trực thuộc Trung ương về phòng, chống tham nhũng và bộ phận giúp việc của Ban Chỉ đạo.",
+                    "diem": []
+                  },
+                  {
+                    "so": "7",
+                    "text": "Thông tư số 50/2008/TT-BTC ngày 12 tháng 6 năm 2008 của Bộ trưởng Bộ Tài chính hướng dẫn lập, quản lý, sử dụng và quyết toán kinh phí ngân sách nhà nước thực hiện Chương trình quản lý tổng hợp dải ven biển vùng Bắc Trung Bộ và Duyên hải Trung Bộ đến năm 2010, định hướng đến năm 2020.",
+                    "diem": []
+                  },
+                  {
+                    "so": "8",
+                    "text": "Thông tư số 80/2008/TT-BTC ngày 18 tháng 9 năm 2008 của Bộ trưởng Bộ Tài chính về việc hướng dẫn chế độ tài chính để phòng, chống dịch bệnh gia súc, gia cầm.",
+                    "diem": []
+                  },
+                  {
+                    "so": "9",
+                    "text": "Thông tư số 107/2008/TT-BTC ngày 18 tháng 11 năm 2008 của Bộ trưởng Bộ Tài chính hướng dẫn bổ sung một số điểm về quản lý, điều hành ngân sách nhà nước.",
+                    "diem": []
+                  },
+                  {
+                    "so": "10",
+                    "text": "Thông tư số 141/2011/TT-BTC ngày 20 tháng 10 năm 2011 của Bộ trưởng Bộ Tài chính quy định về chế độ thanh toán tiền nghỉ phép hàng năm đối với cán bộ, công chức, viên chức, lao động hợp đồng làm việc trong các cơ quan nhà nước và đơn vị sự nghiệp công lập.",
+                    "diem": []
+                  },
+                  {
+                    "so": "11",
+                    "text": "Thông tư số 13/2012/TT-BTC ngày 07 tháng 02 năm 2012 của Bộ trưởng Bộ Tài chính quy định về bảo hiểm bắt buộc bảo hiểm nghề nghiệp, bảo hiểm trách nhiệm dân sự và bảo hiểm trách nhiệm bồi thường thiệt hại về môi trường đối với tổ chức, cá nhân tiến hành công việc bức xạ.",
+                    "diem": []
+                  },
+                  {
+                    "so": "12",
+                    "text": "Thông tư số 140/2012/TT-BTC ngày 21 tháng 8 năm 2012 của Bộ trưởng Bộ Tài chính hướng dẫn Nghị định số 60/2012/NĐ-CP ngày 30 tháng 7 năm 2012 của Chính phủ quy định chi tiết thi hành Nghị quyết số 29/2012/QH13 của Quốc hội về ban hành một số chính sách thuế nhằm tháo gỡ khó khăn cho tổ chức và cá nhân.",
+                    "diem": []
+                  },
+                  {
+                    "so": "13",
+                    "text": "Thông tư số 98/2013/TT-BTC ngày 24 tháng 7 năm 2013 của Bộ trưởng Bộ Tài chính hướng dẫn việc quản lý, cấp phát, thanh toán, quyết toán nguồn vốn hỗ trợ người có công với cách mạng về nhà ở theo Quyết định số 22/2013/QĐ-TTg ngày 26 tháng 4 năm 2013 của Thủ tướng Chính phủ về hỗ trợ người có công với cách mạng về nhà ở.",
+                    "diem": []
+                  },
+                  {
+                    "so": "14",
+                    "text": "Thông tư số 186/2013/TT-BTC ngày 05 tháng 12 năm 2013 của Bộ trưởng Bộ Tài chính hướng dẫn thực hiện xử phạt vi phạm hành chính trong lĩnh vực quản lý phí, lệ phí.",
+                    "diem": []
+                  },
+                  {
+                    "so": "15",
+                    "text": "Thông tư số 196/2013/TT-BTC ngày 18 tháng 12 năm 2013 của Bộ trưởng Bộ Tài chính sửa đổi, bổ sung Thông tư số 107/2008/TT-BTC ngày 18 tháng 11 năm 2008 của Bộ Tài chính hướng dẫn bổ sung một số điểm về quản lý, điều hành ngân sách nhà nước.",
+                    "diem": []
+                  },
+                  {
+                    "so": "16",
+                    "text": "Thông tư số 57/2014/TT-BTC ngày 06 tháng 5 năm 2014 của Bộ trưởng Bộ Tài chính sửa đổi, bổ sung một số điều của Thông tư số 141/2011/TT-BTC quy định về chế độ thanh toán tiền nghỉ phép hàng năm đối với cán bộ, công chức, viên chức, lao động hợp đồng làm việc trong các cơ quan nhà nước và đơn vị sự nghiệp công lập.",
+                    "diem": []
+                  },
+                  {
+                    "so": "17",
+                    "text": "Thông tư số 190/2014/TT-BTC ngày 11 tháng 12 năm 2014 của Bộ trưởng Bộ Tài chính quy định thực hiện chính sách hỗ trợ tiền điện cho hộ nghèo và hộ chính sách xã hội.",
+                    "diem": []
+                  },
+                  {
+                    "so": "18",
+                    "text": "Thông tư số 18/2015/TT-BTC ngày 03 tháng 02 năm 2015 của Bộ trưởng Bộ Tài chính hướng dẫn công tác lập dự toán, quản lý, cấp phát, thanh toán, quyết toán nguồn vốn hỗ trợ hộ nghèo xây dựng nhà ở phòng, tránh bão, lụt khu vực miền Trung theo Quyết định số 48/2014/QĐ-TTg ngày 28 tháng 8 năm 2014 của Thủ tướng Chính phủ về chính sách hỗ trợ hộ nghèo xây dựng nhà ở phòng, tránh bão, lụt khu vực miền Trung.",
+                    "diem": []
+                  },
+                  {
+                    "so": "19",
+                    "text": "Thông tư số 79/2015/TT-BTC ngày 25 tháng 5 năm 2015 của Bộ trưởng Bộ Tài chính quy định về kiểm tra và xử lý văn bản quy phạm pháp luật trong lĩnh vực tài chính.",
+                    "diem": []
+                  },
+                  {
+                    "so": "20",
+                    "text": "Thông tư số 205/2015/TT-BTC ngày 23 tháng 12 năm 2015 của Bộ trưởng Bộ Tài chính quy định về cơ chế tài chính thực hiện Quyết định số 50/2014/QĐ-TTg ngày 04 tháng 9 năm 2014 của Thủ tướng Chính phủ về chính sách hỗ trợ nâng cao hiệu quả chăn nuôi nông hộ giai đoạn 2015-2020.",
+                    "diem": []
+                  },
+                  {
+                    "so": "21",
+                    "text": "Thông tư số 68/2016/TT-BTC ngày 05 tháng 5 năm 2016 của Bộ trưởng Bộ Tài chính hướng dẫn quản lý và sử dụng kinh phí thực hiện Đề án Đẩy mạnh các hoạt động học tập suốt đời trong công nhân lao động tại các doanh nghiệp đến năm 2020.",
+                    "diem": []
+                  },
+                  {
+                    "so": "22",
+                    "text": "Thông tư số 111/2016/TT-BTC ngày 30 tháng 6 năm 2016 của Bộ trưởng Bộ Tài chính quy định về quản lý tài chính đối với các chương trình, dự án sử dụng nguồn vốn hỗ trợ phát triển chính thức (ODA) và vốn vay ưu đãi của các nhà tài trợ nước ngoài.",
+                    "diem": []
+                  },
+                  {
+                    "so": "23",
+                    "text": "Thông tư số 348/2016/TT-BTC ngày 30 tháng 12 năm 2016 của Bộ trưởng Bộ Tài chính quy định quản lý tài chính thực hiện “Chương trình hỗ trợ, ứng dụng, chuyển giao tiến bộ khoa học và công nghệ thúc đẩy phát triển kinh tế - xã hội nông thôn, miền núi, vùng dân tộc thiểu số giai đoạn 2016 - 2025”.",
+                    "diem": []
+                  },
+                  {
+                    "so": "24",
+                    "text": "Thông tư số 02/2017/TT-BKHĐT ngày 18 tháng 4 năm 2017 của Bộ trưởng Bộ Kế hoạch và Đầu tư hướng dẫn về cơ chế phối hợp giải quyết thủ tục đăng ký đầu tư và đăng ký doanh nghiệp đối với nhà đầu tư nước ngoài.",
+                    "diem": []
+                  },
+                  {
+                    "so": "25",
+                    "text": "Thông tư số 60/2017/TT-BTC ngày 15 tháng 6 năm 2017 của Bộ trưởng Bộ Tài chính hướng dẫn chế độ quản lý, sử dụng, thanh toán và quyết toán kinh phí quản lý, bảo trì đường bộ.",
+                    "diem": []
+                  },
+                  {
+                    "so": "26",
+                    "text": "Thông tư số 69/2017/TT-BTC ngày 07 tháng 7 năm 2017 của Bộ trưởng Bộ Tài chính hướng dẫn lập kế hoạch tài chính 05 năm và kế hoạch tài chính - ngân sách nhà nước 03 năm.",
+                    "diem": []
+                  },
+                  {
+                    "so": "27",
+                    "text": "Thông tư số 88/2017/TT-BTC ngày 22 tháng 8 năm 2017 của Bộ trưởng Bộ Tài chính hướng dẫn cơ chế tài chính thực hiện Đề án đào tạo, bồi dưỡng nhân lực khoa học và công nghệ ở trong nước và nước ngoài bằng ngân sách nhà nước.",
+                    "diem": []
+                  },
+                  {
+                    "so": "28",
+                    "text": "Thông tư số 105/2017/TT-BTC ngày 05 tháng 10 năm 2017 của Bộ trưởng Bộ Tài chính hướng dẫn cơ chế quản lý tài chính thực hiện Quyết định số 2085/QĐ-TTg ngày 31 tháng 10 năm 2016 của Thủ tướng Chính phủ phê duyệt chính sách đặc thù hỗ trợ phát triển kinh tế - xã hội vùng dân tộc thiểu số và miền núi giai đoạn 2017-2020.",
+                    "diem": []
+                  },
+                  {
+                    "so": "29",
+                    "text": "Thông tư số 142/2017/TT-BTC ngày 29 tháng 12 năm 2017 của Bộ trưởng Bộ Tài chính quy định cơ chế tài chính thực hiện Chương trình hỗ trợ phát triển doanh nghiệp khoa học và công nghệ và tổ chức khoa học và công nghệ công lập thực hiện cơ chế tự chủ, tự chịu trách nhiệm.",
+                    "diem": []
+                  },
+                  {
+                    "so": "30",
+                    "text": "Thông tư số 63/2018/TT-BTC ngày 30 tháng 7 năm 2018 của Bộ trưởng Bộ Tài chính hướng dẫn một số điều của Nghị định số 70/2018/NĐ-CP ngày 15 tháng 5 năm 2018 của Chính phủ quy định việc quản lý, sử dụng tài sản được hình thành thông qua việc triển khai thực hiện nhiệm vụ khoa học và công nghệ sử dụng vốn nhà nước.",
+                    "diem": []
+                  },
+                  {
+                    "so": "31",
+                    "text": "Thông tư số 70/2018/TT-BTC ngày 08 tháng 8 năm 2018 của Bộ trưởng Bộ Tài chính quy định quản lý và sử dụng kinh phí sự nghiệp thực hiện Chương trình mục tiêu ứng phó với biến đổi khí hậu và tăng trưởng xanh giai đoạn 2016-2020.",
+                    "diem": []
+                  },
+                  {
+                    "so": "32",
+                    "text": "Thông tư số 08/2018/TT-BKHĐT ngày 27 tháng 12 năm 2018 của Bộ trưởng Bộ Kế hoạch và Đầu tư sửa đổi, bổ sung một số điều của các Thông tư liên quan đến chế độ báo cáo định kỳ thuộc phạm vi quản lý nhà nước của Bộ Kế hoạch và Đầu tư.",
+                    "diem": []
+                  },
+                  {
+                    "so": "33",
+                    "text": "Thông tư số 10/2019/TT-BTC ngày 20 tháng 02 năm 2019 của Bộ trưởng Bộ Tài chính hướng dẫn việc xác định giá trị tài sản là kết quả của nhiệm vụ khoa học và công nghệ sử dụng vốn nhà nước.",
+                    "diem": []
+                  },
+                  {
+                    "so": "34",
+                    "text": "Thông tư số 38/2019/TT-BTC ngày 28 tháng 6 năm 2019 của Bộ trưởng Bộ Tài chính hướng dẫn xây dựng dự toán ngân sách nhà nước năm 2020, kế hoạch tài chính - ngân sách nhà nước 03 năm 2020-2022; kế hoạch tài chính 05 năm tỉnh, thành phố trực thuộc trung ương giai đoạn 2021-2025.",
+                    "diem": []
+                  },
+                  {
+                    "so": "35",
+                    "text": "Thông tư số 45/2019/TT-BTC ngày 19 tháng 7 năm 2019 của Bộ trưởng Bộ Tài chính quy định quản lý tài chính thực hiện Đề án “Hỗ trợ hệ sinh thái khởi nghiệp đổi mới sáng tạo quốc gia đến năm 2025”.",
+                    "diem": []
+                  },
+                  {
+                    "so": "36",
+                    "text": "Thông tư số 09/2019/TT-BKHĐT ngày 29 tháng 7 năm 2019 của Bộ trưởng Bộ Kế hoạch và Đầu tư sửa đổi, bổ sung, bãi bỏ một số điều khoản của các Thông tư liên quan đến chế độ báo cáo định kỳ thuộc phạm vi quản lý nhà nước và hệ thống thông tin báo cáo của Bộ Kế hoạch và Đầu tư.",
+                    "diem": []
+                  },
+                  {
+                    "so": "37",
+                    "text": "Thông tư số 30/2020/TT-BTC ngày 17 tháng 4 năm 2020 của Bộ trưởng Bộ Tài chính hướng dẫn một số điều của Nghị định số 30/2018/NĐ-CP ngày 07 tháng 3 năm 2018 của Chính phủ quy định chi tiết việc thành lập và hoạt động của Hội đồng định giá tài sản; trình tự, thủ tục định giá tài sản trong tố tụng hình sự và Nghị định số 97/2019/NĐ-CP ngày 23 tháng 12 năm 2019 của Chính phủ sửa đổi, bổ sung một số điều của Nghị định số 30/2018/NĐ-CP.",
+                    "diem": []
+                  },
+                  {
+                    "so": "38",
+                    "text": "Thông tư số 86/2020/TT-BTC ngày 26 tháng 10 năm 2020 của Bộ trưởng Bộ Tài chính quy định chi tiết chế độ dinh dưỡng đặc thù đối với huấn luyện viên thể thao thành tích cao, vận động viên thể thao thành tích cao.",
+                    "diem": []
+                  },
+                  {
+                    "so": "39",
+                    "text": "Thông tư số 04/2021/TT-BTC ngày 15 tháng 01 năm 2021 của Bộ trưởng Bộ Tài chính quy định chi tiết một số điều của Nghị định số 03/2021/NĐ-CP ngày 15 tháng 01 năm 2021 của Chính phủ về bảo hiểm bắt buộc trách nhiệm dân sự của chủ xe cơ giới.",
+                    "diem": []
+                  },
+                  {
+                    "so": "40",
+                    "text": "Thông tư số 41/2021/TT-BTC ngày 02 tháng 6 năm 2021 của Bộ trưởng Bộ Tài chính hướng dẫn về tổ chức, hoạt động, quản lý, sử dụng và kế toán, quyết toán, công khai tài chính Quỹ vắc-xin phòng Covid-19 Việt Nam.",
+                    "diem": []
+                  },
+                  {
+                    "so": "41",
+                    "text": "Thông tư số 61/2021/TT-BTC ngày 26 tháng 7 năm 2021 của Bộ trưởng Bộ Tài chính hướng dẫn xây dựng dự toán ngân sách nhà nước năm 2022, kế hoạch tài chính - ngân sách nhà nước 03 năm 2022-2024.",
+                    "diem": []
+                  },
+                  {
+                    "so": "42",
+                    "text": "Thông tư số 109/2021/TT-BTC ngày 09 tháng 12 năm 2021 của Bộ trưởng Bộ Tài chính sửa đổi, bổ sung một số điều của Thông tư số 58/2019/TT-BTC ngày 30 tháng 8 năm 2019 của Bộ trưởng Bộ Tài chính quy định về quản lý và sử dụng tài khoản của Kho bạc Nhà nước mở tại Ngân hàng Nhà nước Việt Nam và các ngân hàng thương mại.",
+                    "diem": []
+                  },
+                  {
+                    "so": "43",
+                    "text": "Thông tư số 14/2022/TT-BTC ngày 28 tháng 02 năm 2022 của Bộ trưởng Bộ Tài chính sửa đổi, bổ sung một số điều của Thông tư số 50/2017/TT-BTC ngày 15 tháng 5 năm 2017 của Bộ Tài chính hướng dẫn thi hành Nghị định số 73/2016/NĐ-CP ngày 01 tháng 7 năm 2016 của Chính phủ quy định chi tiết thi hành Luật Kinh doanh bảo hiểm và Luật sửa đổi, bổ sung một số điều của Luật Kinh doanh bảo hiểm và Thông tư số 04/2021/TT-BTC ngày 15 tháng 01 năm 2021 của Bộ Tài chính quy định chi tiết một số điều của Nghị định số 03/2021/NĐ-CP ngày 15 tháng 01 năm 2021 của Chính phủ về bảo hiểm bắt buộc trách nhiệm dân sự của chủ xe cơ giới.",
+                    "diem": []
+                  },
+                  {
+                    "so": "44",
+                    "text": "Thông tư số 47/2022/TT-BTC ngày 29 tháng 7 năm 2022 của Bộ trưởng Bộ Tài chính hướng dẫn xây dựng dự toán ngân sách nhà nước năm 2023, kế hoạch tài chính - ngân sách nhà nước 03 năm 2023-2025.",
+                    "diem": []
+                  },
+                  {
+                    "so": "45",
+                    "text": "Thông tư số 50/2022/TT-BTC ngày 11 tháng 8 năm 2022 của Bộ trưởng Bộ Tài chính hướng dẫn thực hiện một số điều của Nghị định số 119/2015/NĐ-CP ngày 13 tháng 11 năm 2015 của Chính phủ quy định bảo hiểm bắt buộc trong hoạt động đầu tư xây dựng và Nghị định số 20/2022/NĐ-CP ngày 10 tháng 3 năm 2022 sửa đổi, bổ sung một số điều của Nghị định số 119/2015/NĐ-CP ngày 13 tháng 11 năm 2015 của Chính phủ quy định bảo hiểm bắt buộc trong hoạt động đầu tư xây dựng.",
+                    "diem": []
+                  },
+                  {
+                    "so": "46",
+                    "text": "Thông tư số 58/2022/TT-BTC ngày 22 tháng 9 năm 2022 của Bộ trưởng Bộ Tài chính quy định nội dung và mức chi thực hiện một số hoạt động của Chương trình “Đào tạo, đào tạo lại nâng cao kỹ năng nguồn nhân lực đáp ứng yêu cầu của cuộc Cách mạng công nghiệp lần thứ tư”.",
+                    "diem": []
+                  },
+                  {
+                    "so": "47",
+                    "text": "Thông tư số 74/2022/TT-BTC ngày 22 tháng 12 năm 2022 của Bộ trưởng Bộ Tài chính quy định về hình thức, thời hạn thu, nộp, kê khai các khoản phí, lệ phí thuộc thẩm quyền quy định của Bộ Tài chính.",
+                    "diem": []
+                  },
+                  {
+                    "so": "48",
+                    "text": "Thông tư số 78/2022/TT-BTC ngày 26 tháng 12 năm 2022 của Bộ trưởng Bộ Tài chính quy định về tổ chức thực hiện dự toán ngân sách nhà nước năm 2023.",
+                    "diem": []
+                  },
+                  {
+                    "so": "49",
+                    "text": "Thông tư số 03/2023/TT-BTC ngày 10 tháng 01 năm 2023 của Bộ trưởng Bộ Tài chính quy định lập dự toán, quản lý sử dụng và quyết toán kinh phí ngân sách nhà nước thực hiện nhiệm vụ khoa học và công nghệ.",
+                    "diem": []
+                  },
+                  {
+                    "so": "50",
+                    "text": "Thông tư số 21/2023/TT-BTC ngày 14 tháng 4 năm 2023 của Bộ trưởng Bộ Tài chính quy định quản lý và sử dụng kinh phí sự nghiệp thực hiện Chương trình Phát triển lâm nghiệp bền vững giai đoạn 2021-2025.",
+                    "diem": []
+                  },
+                  {
+                    "so": "51",
+                    "text": "Thông tư số 16/2023/TT-BKHĐT ngày 29 tháng 12 năm 2023 của Bộ trưởng Bộ Kế hoạch và Đầu tư ban hành Quy chế bảo vệ bí mật nhà nước của Bộ Kế hoạch và Đầu tư.",
+                    "diem": []
+                  },
+                  {
+                    "so": "52",
+                    "text": "Thông tư số 65/2024/TT-BTC ngày 05 tháng 9 năm 2024 của Bộ trưởng Bộ Tài chính sửa đổi, bổ sung khoản 1 Điều 2 Thông tư số 03/2023/TT-BTC ngày 10 tháng 01 năm 2023 của Bộ Tài chính quy định lập dự toán, quản lý sử dụng và quyết toán kinh phí ngân sách nhà nước thực hiện nhiệm vụ khoa học và công nghệ.",
+                    "diem": []
+                  },
+                  {
+                    "so": "53",
+                    "text": "Thông tư số 93/2024/TT-BTC ngày 31 tháng 12 năm 2024 của Bộ trưởng Bộ Tài chính sửa đổi, bổ sung một số điều của Thông tư số 21/2023/TT-BTC ngày 14 tháng 4 năm 2023 của Bộ trưởng Bộ Tài chính quy định quản lý và sử dụng kinh phí sự nghiệp thực hiện Chương trình Phát triển lâm nghiệp bền vững giai đoạn 2021 - 2025.",
+                    "diem": []
+                  },
+                  {
+                    "so": "54",
+                    "text": "Thông tư số 85/2025/TT-BTC ngày 22 tháng 8 năm 2025 của Bộ trưởng Bộ Tài chính hướng dẫn về lập dự toán, chấp hành và quyết toán kinh phí chi trả tiền bồi dưỡng giám định tư pháp của các cơ quan tiến hành tố tụng theo quy định tại Quyết định số 08/2025/QĐ-TTg ngày 04 tháng 4 năm 2025 của Thủ tướng Chính phủ về chế độ bồi dưỡng giám định tư pháp.",
+                    "diem": []
+                  },
+                  {
+                    "so": "55",
+                    "text": "Quyết định số 34/2006/QĐ-BTC ngày 06 tháng 6 năm 2006 của Bộ trưởng Bộ Tài chính về việc thành lập Chi cục Kiểm tra sau thông quan trực thuộc Cục Hải quan tỉnh, liên tỉnh, thành phố.",
+                    "diem": []
+                  },
+                  {
+                    "so": "56",
+                    "text": "Quyết định số 16/2007/QĐ-BTC ngày 20 tháng 3 năm 2007 của Bộ trưởng Bộ Tài chính về việc thành lập Đội Kiểm soát phòng, chống ma túy trực thuộc Cục Hải quan tỉnh, liên tỉnh, thành phố.",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "2",
+                "tieuDe": "Điều khoản thi hành",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Thông tư này có hiệu lực thi hành kể từ ngày 15 tháng 12 năm 2026.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Thủ trưởng các đơn vị thuộc Bộ Tài chính và các cơ quan, tổ chức, cá nhân có liên quan chịu trách nhiệm thi hành Thông tư này./. Nơi nhận: - Thủ tướng, các Phó Thủ tướng Chính phủ; - Văn phòng Trung ương Đảng và các Ban của Đảng; - Văn phòng Tổng Bí thư; - Văn phòng Quốc hội; - Văn phòng Chính phủ; - Văn phòng Chủ tịch nước; - Hội đồng Dân tộc và các Ủy ban của Quốc hội; - Viện kiểm sát nhân dân tối cao; - Tòa án nhân dân tối cao; - Kiểm toán Nhà nước; - Ủy ban Trung ương Mặt trận Tổ quốc Việt Nam; - Các Bộ, cơ quan ngang Bộ; - HĐND, UBND các tỉnh, thành phố; - Liên đoàn Thương mại và Công nghiệp Việt Nam; - Các đơn vị thuộc Bộ Tài chính; - Sở Tài chính các tỉnh, thành phố; - Cục Kiểm tra văn bản và Tổ chức thi hành pháp luật, Bộ Tư pháp; - Cục Thông tin và Truyền thông Chính phủ - Văn phòng Chính phủ (để đăng tải); - Công báo; - Cổng pháp luật quốc gia, - Cổng Thông tin điện tử Bộ Tài chính; - Lưu: VT, PC (15 b). KT. BỘ TRƯỞNG THỨ TRƯỞNG Tạ Anh Tuấn",
+                    "diem": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "noiDungDayDu": true,
+      "quanHeHieuLuc": [],
+      "linhVuc": [
+        "Thuế GTGT"
+      ]
     }
   ],
   "rebuiltAt": "2026-10-01T10:20:42",
   "lastBackfill": "2026-10-07T20:18:36",
   "publishCheck": "2026-10-03T10:33:22",
-  "lastDailyUpdate": "2026-11-03T08:44:01"
+  "lastDailyUpdate": "2026-11-05T08:45:01"
 }
