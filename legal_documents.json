@@ -159249,10 +159249,817 @@
       "linhVuc": [
         "Thuế GTGT"
       ]
+    },
+    {
+      "soHieu": "119/2026/TT-BTC",
+      "loaiVanBan": "Thông tư",
+      "coQuanBanHanh": "Bộ Tài chính",
+      "nguoiKy": "Tạ Anh Tuấn",
+      "ngayBanHanh": "18/08/2026",
+      "ngayHieuLuc": "01/01/2027",
+      "tinhTrangHieuLuc": "chua_co_hieu_luc",
+      "tinhTrangGhiChu": "Chưa có hiệu lực",
+      "tenVanBan": "Thông tư 119/2026/TT-BTC chế độ kế toán đối với các khoản vay trả nợ của Chính phủ mới nhất",
+      "xacMinh": true,
+      "nguon": {
+        "trangNguon": "thuvienphapluat.vn",
+        "url": "https://thuvienphapluat.vn/van-ban/Ke-toan-Kiem-toan/Thong-tu-119-2026-TT-BTC-che-do-ke-toan-doi-voi-cac-khoan-vay-tra-no-cua-Chinh-phu-721136.aspx"
+      },
+      "noiDung": {
+        "chuong": [
+          {
+            "so": "I",
+            "tieuDe": "QUY ĐỊNH CHUNG",
+            "dieu": [
+              {
+                "so": "1",
+                "tieuDe": "Phạm vi điều chỉnh",
+                "text": "Thông tư này hướng dẫn các nội dung sau:",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Kế toán nợ công, bao gồm kế toán đối với các khoản vay, lãi, phí và chi phí đi vay, trả nợ vay của Chính phủ, chính quyền địa phương.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Thống kê, theo dõi các khoản nợ cho vay lại (cho vay lại từ vốn vay ODA, vay ưu đãi nước ngoài) và bảo lãnh Chính phủ (các khoản vay, phát hành trái phiếu của các đơn vị được Chính phủ bảo lãnh).",
+                    "diem": []
+                  },
+                  {
+                    "so": "3",
+                    "text": "Tổng hợp báo cáo nợ công.",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "2",
+                "tieuDe": "Đối tượng áp dụng",
+                "text": "Thông tư này áp dụng cho:",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Cục Quản lý Nợ và Kinh tế đối ngoại (sau đây viết tắt là Cục QLN và KTĐN) thuộc Bộ Tài chính;",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Sở Tài chính, Kho bạc Nhà nước (sau đây viết tắt là KBNN) các cấp;",
+                    "diem": []
+                  },
+                  {
+                    "so": "3",
+                    "text": "Các đơn vị có trách nhiệm nộp báo cáo cho Bộ Tài chính (KBNN) theo quy định của pháp luật để tổng hợp báo cáo nợ công;",
+                    "diem": []
+                  },
+                  {
+                    "so": "4",
+                    "text": "Các tổ chức, cá nhân có liên quan đến quản lý và sử dụng nợ công.",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "3",
+                "tieuDe": "Nội dung của kế toán, thống kê và báo cáo nợ công",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Nội dung kế toán nợ công là việc thu thập, xử lý, kiểm tra, giám sát, phân tích và cung cấp thông tin một cách kịp thời, đầy đủ, chính xác, trung thực, liên tục và có hệ thống về tình hình vay, lãi, phí, chi phí đi vay và tình hình trả nợ vay của Chính phủ và chính quyền địa phương.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Nội dung công tác thống kê là hoạt động tổng hợp số liệu báo cáo về tình hình bảo lãnh Chính phủ và số liệu báo cáo về tình hình cho vay lại trên cơ sở báo cáo của các đơn vị có liên quan.",
+                    "diem": []
+                  },
+                  {
+                    "so": "3",
+                    "text": "Báo cáo nợ công bao gồm các thông tin về vay, trả nợ nước ngoài của Chính phủ; vay, trả nợ trong nước của Chính phủ và chính quyền địa phương; các khoản được Chính phủ bảo lãnh; các khoản cho vay lại từ nguồn vay nước ngoài và các khoản vay khác theo quy định của pháp luật về quản lý nợ công và các quy định của pháp luật khác có liên quan; thuyết minh, giải trình về tình hình nợ công.",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "4",
+                "tieuDe": "Tổ chức bộ phận nghiệp vụ, bộ máy kế toán của đơn vị",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Cục QLN và KTĐN, KBNN các cấp tổ chức bộ phận nghiệp vụ hoặc bộ máy kế toán để thực hiện kế toán đối với các khoản vay, trả nợ của Chính phủ, chính quyền địa phương; thống kê, theo dõi các khoản nợ cho vay lại và bảo lãnh Chính phủ theo quy định của pháp luật về kế toán, quản lý nợ công, pháp luật khác có liên quan và quy định của Thông tư này, như sau:",
+                    "diem": [
+                      {
+                        "kyHieu": "a",
+                        "text": "Cục QLN và KTĐN: Tổ chức bộ phận nghiệp vụ và phân công nhiệm vụ các bộ phận có liên quan để kế toán các khoản vay, trả nợ nước ngoài của Chính phủ; thống kê, theo dõi các khoản nợ cho vay lại và bảo lãnh Chính phủ."
+                      },
+                      {
+                        "kyHieu": "b",
+                        "text": "KBNN các cấp: Tổ chức bộ máy kế toán và phân công nhiệm vụ các bộ phận có liên quan để kế toán các khoản vay, trả nợ trong nước của Chính phủ và chính quyền địa phương, tổng hợp báo cáo nợ công."
+                      }
+                    ]
+                  },
+                  {
+                    "so": "2",
+                    "text": "Sở Tài chính: Thực hiện theo dõi, tổng hợp và báo cáo nợ công của chính quyền địa phương.",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "5",
+                "tieuDe": "Nhiệm vụ của kế toán và tổng hợp báo cáo nợ công",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Thu thập, ghi chép, xử lý và quản lý dữ liệu về tình hình vay, trả nợ trong nước, nợ nước ngoài của Chính phủ và chính quyền địa phương.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Theo dõi việc chấp hành chế độ thanh toán và các quy định liên quan đến vay, trả nợ của Chính phủ và chính quyền địa phương.",
+                    "diem": []
+                  },
+                  {
+                    "so": "3",
+                    "text": "Chấp hành chế độ báo cáo theo quy định; cung cấp đầy đủ, kịp thời các số liệu, thông tin báo cáo nợ công.",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "6",
+                "tieuDe": "Đơn vị tính",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Đơn vị tiền tệ sử dụng trong kế toán nợ công là đồng Việt Nam (ký hiệu quốc gia là “đ”, ký hiệu quốc tế là “VND”).",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Kế toán ngoại tệ phải ghi theo nguyên tệ và quy đổi ra đồng Việt Nam theo tỷ giá ngoại tệ do Bộ Tài chính quy định tại thời điểm hạch toán. Trong trường hợp cụ thể, nếu có quy định tỷ giá khác của cơ quan nhà nước có thẩm quyền, thì kế toán thực hiện theo quy định đó.",
+                    "diem": []
+                  },
+                  {
+                    "so": "3",
+                    "text": "Khi lập hoặc công khai báo cáo nợ công, đơn vị được sử dụng đơn vị tiền tệ rút gọn và được làm tròn số theo nguyên tắc sau:",
+                    "diem": [
+                      {
+                        "kyHieu": "a",
+                        "text": "Đối với đồng Việt Nam: Được rút gọn đến đơn vị tỷ đồng Việt Nam. Chữ số sau chữ số hàng đơn vị tiền tệ rút gọn nếu bằng năm (5) trở lên thì được tăng thêm một (1) đơn vị; nếu nhỏ hơn năm (5) thì không tính."
+                      },
+                      {
+                        "kyHieu": "b",
+                        "text": "Đối với ngoại tệ: Được rút gọn đến triệu đơn vị ngoại tệ. Chữ số thập phân phần nghìn (chữ số thứ 3 sau dấu phẩy thập phân), nếu bằng năm (5) trở lên thì được tăng thêm một phần trăm (1%) đơn vị; nếu nhỏ hơn năm (5) thì không tính."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "so": "7",
+                "tieuDe": "Chữ viết, chữ số sử dụng",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Chữ viết sử dụng trong kế toán và báo cáo nợ công là tiếng Việt. Tài liệu kèm theo chứng từ kế toán bằng tiếng nước ngoài không phải dịch ra tiếng Việt, trừ khi có yêu cầu của cơ quan nhà nước có thẩm quyền.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Chữ số sử dụng trong kế toán là chữ số Ả-Rập: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9; sau chữ số hàng nghìn, triệu, tỷ, nghìn tỷ, triệu tỷ, tỷ tỷ phải đặt dấu chấm (.); còn khi ghi chữ số sau chữ số hàng đơn vị phải đặt dấu phẩy (,).",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "8",
+                "tieuDe": "Kỳ, phương thức gửi, nhận báo cáo nợ công",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Báo cáo nợ công được lập theo kỳ quý và kỳ năm; kỳ báo cáo năm được tính từ ngày 01/01 đến 31/12 năm thực hiện (dương lịch).",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Phương thức gửi, nhận báo cáo nợ công: Báo cáo nợ công được thể hiện dưới hình thức văn bản giấy hoặc văn bản điện tử tùy theo điều kiện thực tế và yêu cầu của cơ quan nhận báo cáo.",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "9",
+                "tieuDe": "Ứng dụng công nghệ thông tin và chuyển đổi số trong công tác kế toán và tổng hợp báo cáo",
+                "text": "1. Ứng dụng công nghệ thông tin và chuyển đổi số trong công tác kế toán phải bảo đảm hiệu quả, an toàn; tuân thủ khung kiến trúc quốc gia số, khung kiến trúc Chính phủ số và Bộ Tài chính số; bảo đảm kết nối, chia sẻ dữ liệu giữa các đơn vị trong và ngoài ngành tài chính.",
+                "khoan": [
+                  {
+                    "so": "2",
+                    "text": "Cục QLN và KTĐN thực hiện kế toán vay, trả nợ nước ngoài của Chính phủ trên hệ thống thông tin do đơn vị quản lý; hệ thống này phải đáp ứng yêu cầu kết nối, chia sẻ dữ liệu, an toàn thông tin, tuân thủ kiến trúc Bộ Tài chính số.",
+                    "diem": []
+                  },
+                  {
+                    "so": "3",
+                    "text": "KBNN thực hiện kế toán vay, trả nợ trong nước của Chính phủ và chính quyền địa phương trên hệ thống thông tin quản lý ngân sách và kế toán nhà nước và các hệ thống ứng dụng về quản lý vay nợ.",
+                    "diem": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "so": "II",
+            "tieuDe": "KẾ TOÁN CÁC KHOẢN VAY, TRẢ NỢ NƯỚC NGOÀI CỦA CHÍNH PHỦ ÁP DỤNG CHO CỤC QUẢN LÝ NỢ VÀ KINH TẾ ĐỐI NGOẠI",
+            "dieu": [
+              {
+                "so": "10",
+                "tieuDe": "Quy định về chứng từ kế toán",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Cục QLN và KTĐN được tự thiết kế mẫu chứng từ kế toán để phản ánh các nghiệp vụ kinh tế, tài chính phát sinh liên quan đến các khoản vay, trả nợ nước ngoài của Chính phủ, trừ chứng từ kế toán đã có quy định tại các văn bản pháp luật có liên quan. Chứng từ kế toán tự thiết kế phải phản ánh đúng bản chất của nghiệp vụ kinh tế, tài chính phát sinh, đáp ứng các nội dung quy định tại Luật Kế toán, phù hợp với thông tin cần ghi sổ kế toán và yêu cầu quản lý của Cục QLN và KTĐN.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Trường hợp Cục QLN và KTĐN sử dụng các chứng từ kế toán in sẵn, thì phải thực hiện bảo quản cẩn thận, không được để hư hỏng, mục nát. Đối với loại chứng từ kế toán được cơ quan có thẩm quyền quy định phải quản lý riêng biệt, chặt chẽ như quản lý tiền, thì đơn vị phải thực hiện đúng quy trình quản lý, bảo đảm tuyệt đối an toàn.",
+                    "diem": []
+                  },
+                  {
+                    "so": "3",
+                    "text": "Cục QLN và KTĐN được sử dụng chứng từ kế toán điện tử trong quá trình thực hiện kế toán các khoản vay, trả nợ nước ngoài của Chính phủ theo quy định của pháp luật về kế toán và pháp luật về giao dịch điện tử.",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "11",
+                "tieuDe": "Quy định về tài khoản kế toán",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Danh mục tài khoản kế toán, nội dung tài khoản kế toán và phương pháp kế toán các nghiệp vụ vay, trả nợ nước ngoài của Chính phủ quy định tại Phụ lục I “Hệ thống tài khoản kế toán vay, trả nợ nước ngoài của Chính phủ” ban hành kèm theo Thông tư này.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Tài khoản kế toán được sử dụng để phân loại, phản ánh thường xuyên, liên tục, có hệ thống các nghiệp vụ kinh tế, tài chính phát sinh liên quan đến đối tượng vay, trả nợ vay theo thời hạn và mục đích vay, phục vụ cho việc tổ chức dữ liệu, từ đó chiết xuất ra các báo cáo theo tiêu chí khác nhau.",
+                    "diem": []
+                  },
+                  {
+                    "so": "3",
+                    "text": "Tài khoản kế toán được xây dựng, thiết kế nhằm đáp ứng yêu cầu kế toán, quản lý, tổng hợp và cung cấp thông tin về vay, trả nợ nước ngoài của Chính phủ và bảo đảm các yêu cầu sau:",
+                    "diem": [
+                      {
+                        "kyHieu": "a",
+                        "text": "Phù hợp với quy định của pháp luật về ngân sách nhà nước, kế toán và quản lý nợ công;"
+                      },
+                      {
+                        "kyHieu": "b",
+                        "text": "Phản ánh đầy đủ các hoạt động nghiệp vụ liên quan đến vay và trả nợ vay;"
+                      },
+                      {
+                        "kyHieu": "c",
+                        "text": "Bảo đảm khả năng ứng dụng công nghệ thông tin trong việc thu thập, xử lý, khai thác, chia sẻ và cung cấp thông tin phục vụ công tác quản lý nợ công."
+                      }
+                    ]
+                  },
+                  {
+                    "so": "4",
+                    "text": "Tài khoản kế toán trong kế toán vay, trả nợ nước ngoài của Chính phủ được mở chi tiết theo các nội dung phù hợp với tính chất của từng tài khoản, gồm: Mã loại hình vay; Mã nhà tài trợ; Mã đơn vị quan hệ vay nợ; Mã khoản vay.",
+                    "diem": [
+                      {
+                        "kyHieu": "a",
+                        "text": "Mã loại hình vay dùng để phản ánh và theo dõi thông tin vay theo các loại hình vay ODA, vay ưu đãi hoặc vay thương mại. Mã loại hình vay được bố trí cho từng dự án theo các loại thỏa thuận vay với các hình thức khác nhau."
+                      },
+                      {
+                        "kyHieu": "b",
+                        "text": "Mã nhà tài trợ dùng để theo dõi chi tiết các khoản vay theo từng nhà tài trợ, được phân loại theo các tiêu chí song phương, đa phương và chủ nợ khác theo phương án phân loại của nghiệp vụ quản lý nợ. Mã nhà tài trợ thực hiện theo Danh mục dùng chung ngành tài chính. Trường hợp phát sinh nhà tài trợ chưa có trong Danh mục dùng chung ngành tài chính, việc cấp mới, cập nhật mã được thực hiện theo quy định về quản lý Danh mục dùng chung ngành tài chính."
+                      },
+                      {
+                        "kyHieu": "c",
+                        "text": "Mã đơn vị quan hệ vay nợ dùng để theo dõi chi tiết việc sử dụng vốn vay nước ngoài của Chính phủ cho mục đích cấp phát hoặc cho vay lại theo từng địa bàn, dự án, đơn vị, phục vụ công tác quản lý, đối chiếu số liệu với KBNN và các đơn vị có liên quan. Mã đơn vị quan hệ vay nợ được sử dụng như sau: - Đối với ngân sách địa phương: sử dụng mã địa bàn hành chính theo quy định tại Quyết định số 19/2025/QĐ-TTg ngày 30/6/2025 của Thủ tướng Chính phủ và các văn bản sửa đổi, bổ sung, thay thế (nếu có). - Đối với các đơn vị: sử dụng mã đơn vị có quan hệ với ngân sách do cơ quan có thẩm quyền cấp theo quy định của Bộ Tài chính. Trường hợp đơn vị chưa được cấp mã, thực hiện cấp mã theo quy định của pháp luật hiện hành."
+                      },
+                      {
+                        "kyHieu": "d",
+                        "text": "Mã khoản vay dùng để phản ánh các khoản vay theo từng hiệp định vay, qua đó giúp các cấp quản lý có thông tin theo từng khoản vay của từng hiệp định vay. Mã khoản vay do hệ thống quản lý thông tin nợ công cấp và quản lý, bảo đảm mỗi khoản vay chỉ được gắn với một mã duy nhất."
+                      }
+                    ]
+                  },
+                  {
+                    "so": "5",
+                    "text": "Cục QLN và KTĐN căn cứ vào hệ thống tài khoản ban hành trong danh mục tài khoản kế toán tại Phụ lục I kèm theo Thông tư này để áp dụng tại đơn vị; được bổ sung tài khoản kế toán chi tiết cho các tài khoản đã được quy định trong danh mục hệ thống tài khoản kế toán để phục vụ yêu cầu quản lý và hạch toán kế toán của đơn vị. Trường hợp cần bổ sung tài khoản ngang cấp với các tài khoản đã được quy định trong danh mục hệ thống tài khoản kế toán tại Phụ lục I kèm theo Thông tư này thì đơn vị phải thực hiện theo quy định tại Luật Kế toán để bảo đảm thống nhất trong sử dụng tài khoản và trình bày thông tin trên báo cáo, tránh bỏ sót hoặc trùng lặp thông tin báo cáo.",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "12",
+                "tieuDe": "Quy định về sổ kế toán",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Đơn vị phải mở sổ kế toán để ghi chép, lưu giữ toàn bộ và có hệ thống các nghiệp vụ kinh tế, tài chính đã phát sinh liên quan đến tình hình vay, trả nợ vay nước ngoài của Chính phủ.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Danh mục sổ kế toán, biểu mẫu sổ kế toán và phương pháp lập sổ kế toán được quy định tại Phụ lục II “Hệ thống sổ kế toán vay, trả nợ nước ngoài” ban hành kèm theo Thông tư này. Ngoài ra, đơn vị có thể mở thêm các sổ kế toán chi tiết theo yêu cầu quản lý, nhưng phải bảo đảm các quy định của pháp luật về kế toán và pháp luật có liên quan.",
+                    "diem": []
+                  },
+                  {
+                    "so": "3",
+                    "text": "Mở sổ kế toán a) Sổ kế toán phải được mở vào đầu kỳ kế toán năm. Sổ kế toán được mở đầu kỳ kế toán năm mới để chuyển thông tin, số liệu từ sổ kế toán năm cũ sang và ghi ngay nghiệp vụ kinh tế, tài chính mới phát sinh thuộc năm mới từ ngày 01/01 của năm tài chính mới.",
+                    "diem": [
+                      {
+                        "kyHieu": "b",
+                        "text": "Các thông tin, dữ liệu của sổ kế toán trên phần mềm kế toán phải bảo đảm đầy đủ các nội dung của sổ kế toán theo quy định của pháp luật về kế toán và quy định tại Thông tư này."
+                      }
+                    ]
+                  },
+                  {
+                    "so": "4",
+                    "text": "Ghi sổ kế toán a) Việc ghi sổ kế toán phải căn cứ vào chứng từ kế toán hoặc thông tin, dữ liệu chứng minh nghiệp vụ kinh tế, tài chính phát sinh; nội dung ghi sổ kế toán phù hợp với nghiệp vụ kinh tế, tài chính phát sinh; việc ghi sổ phải kịp thời, chính xác, trung thực; nghiêm cấm mọi nghiệp vụ ghi trên sổ kế toán không có chứng từ kế toán hoặc không có thông tin, dữ liệu chứng minh nghiệp vụ kinh tế, tài chính phát sinh.",
+                    "diem": [
+                      {
+                        "kyHieu": "b",
+                        "text": "Thông tin, số liệu trên sổ kế toán phải được phản ánh liên tục từ khi mở sổ đến khi khóa sổ kế toán; số liệu của kỳ sau phải kế tiếp số liệu của kỳ trước liền kề. Người có trách nhiệm theo quy định phải chịu trách nhiệm về tính chính xác, trung thực, đầy đủ của thông tin, số liệu đã ghi nhận trên sổ kế toán."
+                      }
+                    ]
+                  },
+                  {
+                    "so": "5",
+                    "text": "Khóa sổ kế toán Kế toán phải khóa sổ kế toán vào cuối kỳ kế toán quý, năm trước khi lập báo cáo tình hình vay, trả nợ nước ngoài của Chính phủ.",
+                    "diem": []
+                  },
+                  {
+                    "so": "6",
+                    "text": "Việc sửa chữa thông tin, số liệu trên sổ kế toán được thực hiện theo quy định của Luật Kế toán.",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "13",
+                "tieuDe": "Báo cáo tình hình vay, trả nợ nước ngoài của Chính phủ",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Báo cáo tình hình vay, trả nợ nước ngoài của Chính phủ phản ánh tình hình vay, trả nợ nước ngoài của Chính phủ trong kỳ báo cáo và cung cấp thông tin phục vụ công tác quản lý nợ công.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Cục QLN và KTĐN phải lập và gửi các báo cáo sau: STT Tên báo cáo Mẫu biểu Nơi nhận Thời hạn gửi 1 Bảng cân đối tài khoản nợ nước ngoài B01/NN KBNN - Trước ngày 05 của tháng thứ 2 của quý sau đối với báo cáo hàng quý; - Trước ngày 15/02 năm sau đối với báo cáo năm. 2 Báo cáo thực hiện vay, trả nợ nước ngoài của Chính phủ B02/NN KBNN 3 Báo cáo chi tiết theo kỳ hạn vay nợ của Chính phủ B03/NN KBNN 4 Thuyết minh báo cáo tình hình vay, trả nợ nước ngoài B04/NN KBNN 3. Mẫu biểu và phương pháp lập báo cáo tình hình vay, trả nợ nước ngoài của Chính phủ quy định tại Phụ lục III “Mẫu biểu, phương pháp lập báo cáo tình hình vay, trả nợ nước ngoài của Chính phủ” ban hành kèm theo Thông tư này.",
+                    "diem": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "so": "III",
+            "tieuDe": "KẾ TOÁN VAY, TRẢ NỢ TRONG NƯỚC CỦA CHÍNH PHỦ, CHÍNH QUYỀN ĐỊA PHƯƠNG",
+            "dieu": [
+              {
+                "so": "14",
+                "tieuDe": "Kế toán vay, trả nợ trong nước",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "KBNN các cấp (bộ phận kế toán nghiệp vụ tại các đơn vị) thực hiện các quy định về chứng từ kế toán, tài khoản kế toán, phương pháp hạch toán kế toán và ghi sổ kế toán theo quy định tại Thông tư số 77/2017/TT-BTC ngày 28/7/2017 của Bộ trưởng Bộ Tài chính hướng dẫn chế độ kế toán ngân sách nhà nước và hoạt động nghiệp vụ KBNN, được sửa đổi, bổ sung bởi Thông tư số 19/2020/TT-BTC ngày 31/3/2020 và các văn bản sửa đổi, bổ sung, thay thế (nếu có) để kế toán vay, trả nợ trong nước của Chính phủ và chính quyền địa phương.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Giám đốc KBNN hướng dẫn cụ thể về phương pháp lập chứng từ, nội dung ghi chép tài khoản kế toán, phương pháp hạch toán và ghi sổ kế toán theo thẩm quyền được giao tại Thông tư số 77/2017/TT-BTC được sửa đổi, bổ sung bởi Thông tư số 19/2020/TT-BTC và các văn bản sửa đổi, bổ sung, thay thế khác (nếu có).",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "15",
+                "tieuDe": "Kế toán vay lại vốn vay nước ngoài của Chính phủ",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Đối với khoản vay nước ngoài của Chính phủ cho chính quyền địa phương vay lại, Sở Tài chính thực hiện theo dõi, đánh giá quá trình quản lý vốn vay lại thuộc dự án theo quy định của Nghị định số 97/2018/NĐ-CP được sửa đổi, bổ sung bởi Nghị định số 79/2021/NĐ-CP ngày 16/8/2021; Nghị định số 317/2025/NĐ-CP ngày 10/12/2025 và Nghị định số 84/2026/NĐ-CP ngày 25/3/2026; các văn bản sửa đổi, bổ sung, thay thế (nếu có) và hợp đồng cho vay lại.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Định kỳ trước ngày 20 hàng tháng, trên cơ sở hồ sơ giải ngân vốn vay của nhà tài trợ đã tiếp nhận đến thời điểm lập Thông báo, Cục QLN và KTĐN gửi Thông báo về các khoản giải ngân cho Sở Tài chính (đồng thời gửi cho KBNN khu vực/cấp tỉnh) để Sở Tài chính đối chiếu với số liệu về tình hình vay nợ được tổng hợp từ các Chủ dự án. Thông báo về các khoản giải ngân phải bảo đảm đầy đủ các thông tin làm căn cứ đối chiếu, ghi nhận nợ và hạch toán khoản vay của chính quyền địa phương.",
+                    "diem": []
+                  },
+                  {
+                    "so": "3",
+                    "text": "Trong thời hạn 05 ngày làm việc, kể từ ngày nhận được thông báo của Bộ Tài chính (Cục QLN và KTĐN), trên cơ sở kết quả đối chiếu khớp đúng với Chủ dự án, Sở Tài chính gửi đề nghị ghi nhận nợ vay kèm bản sao Thông báo về các khoản giải ngân của nhà tài trợ cho KBNN khu vực/cấp tỉnh để KBNN thực hiện hạch toán khoản nhận nợ của chính quyền địa phương cùng thời điểm với thời điểm Chính phủ nhận nợ.",
+                    "diem": []
+                  },
+                  {
+                    "so": "4",
+                    "text": "Giám đốc KBNN hướng dẫn cụ thể về phương pháp hạch toán theo thẩm quyền được giao tại Thông tư số 77/2017/TT-BTC được sửa đổi, bổ sung bởi Thông tư số 19/2020/TT-BTC và các văn bản sửa đổi, bổ sung, thay thế khác (nếu có).",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "16",
+                "tieuDe": "Đối chiếu, thống nhất số liệu và báo cáo tình hình vay, trả nợ của chính quyền địa phương",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Sở Tài chính và KBNN khu vực/cấp tỉnh phải thực hiện đối chiếu, thống nhất số liệu về tình hình vay, trả nợ của chính quyền địa phương theo biểu mẫu số C01/TN, bảo đảm số liệu khớp đúng.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "KBNN khu vực/cấp tỉnh lập và gửi Sở Tài chính báo cáo về tình hình vay, trả nợ của chính quyền địa phương theo biểu mẫu số B02a/TN để Sở Tài chính tổng hợp, báo cáo Bộ Tài chính theo quy định pháp luật về quản lý nợ công.",
+                    "diem": []
+                  },
+                  {
+                    "so": "3",
+                    "text": "KBNN lập và gửi Sở Tài chính các biểu mẫu đối chiếu, báo cáo tình hình vay, trả nợ của chính quyền địa phương như sau: STT Tên biểu mẫu, báo cáo Mẫu biểu Nơi nhận Thời hạn gửi 1 Bảng đối chiếu số liệu vay, trả nợ của chính quyền địa phương C01/TN Sở Tài chính Hàng tháng và năm. 2 Báo cáo tình hình vay, trả nợ của chính quyền địa phương B02a/TN Sở Tài chính Trước thời hạn Sở Tài chính phải nộp các báo cáo tình hình vay, trả nợ của địa phương về Bộ Tài chính 05 ngày làm việc.",
+                    "diem": []
+                  },
+                  {
+                    "so": "4",
+                    "text": "Mẫu biểu và phương pháp lập bảng đối chiếu và báo cáo tình hình vay, trả nợ của chính quyền địa phương quy định tại Phụ lục IV “Mẫu biểu đối chiếu, báo cáo về tình hình vay, trả nợ của chính quyền địa phương” ban hành kèm theo Thông tư này.",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "17",
+                "tieuDe": "Báo cáo tổng hợp tình hình vay, trả nợ trong nước của Chính phủ, chính quyền địa phương",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Vụ Ngân sách nhà nước (Bộ Tài chính) lập và gửi cho KBNN báo cáo thực hiện vay, trả nợ trong nước của Chính phủ đối với các khoản vay nợ mà KBNN chưa có đủ thông tin hạch toán trên hệ thống thông tin quản lý ngân sách và kế toán nhà nước theo biểu mẫu số B01/TN “Báo cáo thực hiện vay, trả nợ trong nước theo đối tượng của Chính phủ” và thời hạn gửi báo cáo theo danh mục báo cáo nêu tại khoản 3 Điều này.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Căn cứ số liệu được kết xuất từ cơ sở dữ liệu trên hệ thống thông tin quản lý ngân sách và kế toán nhà nước; các hệ thống ứng dụng về quản lý vay nợ trong nước của KBNN; báo cáo của Vụ Ngân sách nhà nước; báo cáo thực hiện vay về cho vay lại của Cục QLN và KTĐN và báo cáo của các tỉnh, thành phố, KBNN tổng hợp báo cáo vay nợ trong nước theo biểu mẫu số B02/TN, B03/TN, B04/TN và thời hạn gửi báo cáo theo danh mục báo cáo nêu tại khoản 3 Điều này.",
+                    "diem": []
+                  },
+                  {
+                    "so": "3",
+                    "text": "Danh mục báo cáo tình hình vay, trả nợ trong nước: STT Tên báo cáo Mẫu biểu Trách nhiệm lập Nơi nhận Thời hạn gửi 1 Báo cáo thực hiện vay, trả nợ trong nước theo đối tượng của Chính phủ B01/TN Vụ Ngân sách nhà nước - Bộ Tài chính KBNN - Trước ngày 05 của tháng thứ 2 của quý sau đối với báo cáo hàng quý; - Trước ngày 05/02 năm sau đối với báo cáo năm. 2 Báo cáo tổng hợp thực hiện vay, trả nợ của chính quyền địa phương B02/TN KBNN Cục QLN và KTĐN - Trước ngày 15 của tháng thứ 2 của quý sau đối với báo cáo hàng quý; - Trước ngày 20/02 năm sau đối với báo cáo năm. 3 Báo cáo thực hiện vay, trả nợ trong nước theo hình thức vay của Chính phủ B03/TN KBNN Cục QLN và KTĐN 4 Báo cáo vay, trả nợ trong nước B04/TN KBNN Cục QLN và KTĐN 4. Mẫu biểu và phương pháp lập báo cáo tình hình vay, trả nợ trong nước quy định tại Phụ lục V “Mẫu biểu, phương pháp lập báo cáo tình hình vay, trả nợ trong nước” ban hành kèm theo Thông tư này.",
+                    "diem": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "so": "IV",
+            "tieuDe": "THỐNG KÊ BẢO LÃNH CHÍNH PHỦ",
+            "dieu": [
+              {
+                "so": "18",
+                "tieuDe": "Trách nhiệm nộp báo cáo của đơn vị được bảo lãnh",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Các đơn vị được bảo lãnh có trách nhiệm cung cấp thông tin về các chương trình, dự án được Chính phủ bảo lãnh cho Bộ Tài chính (Cục QLN và KTĐN) để tổng hợp báo cáo.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Mẫu biểu, kỳ hạn, quy trình lập, gửi báo cáo khoản vay, khoản phát hành trái phiếu được Chính phủ bảo lãnh quy định tại Thông tư số 58/2018/TT-BTC ngày 10/7/2018 của Bộ trưởng Bộ Tài chính hướng dẫn biểu, mẫu cung cấp thông tin, báo cáo đối với các chương trình, dự án được Chính phủ bảo lãnh và các văn bản sửa đổi, bổ sung, thay thế (nếu có).",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "19",
+                "tieuDe": "Trách nhiệm thống kê, tổng hợp báo cáo các khoản vay nợ được Chính phủ bảo lãnh",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Cục QLN và KTĐN có trách nhiệm thực hiện thống kê, tổng hợp và gửi cho KBNN các báo cáo sau: STT Tên báo cáo Mẫu biểu Nơi nhận Thời hạn gửi 1 Báo cáo thực hiện vay, trả nợ nước ngoài được Chính phủ bảo lãnh B01/BL KBNN - Trước ngày 05 tháng thứ 2 của quý sau đối với báo cáo hàng quý; - Trước ngày 15/02 năm sau đối với báo cáo năm. 2 Báo cáo thực hiện vay, trả nợ trong nước được Chính phủ bảo lãnh B02/BL KBNN 2. Mẫu biểu và phương pháp lập báo cáo các khoản được Chính phủ bảo lãnh quy định tại Phụ lục VI “Mẫu biểu, phương pháp lập báo cáo vay nợ được Chính phủ bảo lãnh” ban hành kèm theo Thông tư này.",
+                    "diem": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "so": "V",
+            "tieuDe": "THỐNG KÊ CÁC KHOẢN CHO VAY LẠI TỪ VỐN VAY ODA, VAY ƯU ĐÃI NƯỚC NGOÀI",
+            "dieu": [
+              {
+                "so": "20",
+                "tieuDe": "Trách nhiệm báo cáo của các đơn vị có liên quan",
+                "text": "1. Ủy ban nhân dân tỉnh, thành phố trực thuộc trung ương, các cơ quan cho vay lại có trách nhiệm cung cấp thông tin về tình hình cho vay lại cho Bộ Tài chính (Cục QLN và KTĐN) để tổng hợp báo cáo các khoản cho vay lại từ vốn vay ODA, vay ưu đãi nước ngoài.",
+                "khoan": [
+                  {
+                    "so": "2",
+                    "text": "Mẫu biểu, kỳ hạn, quy trình lập, gửi báo cáo khoản cho vay lại từ vốn vay ODA, vay ưu đãi nước ngoài được quy định tại Thông tư số 80/2018/TT-BTC ngày 28/8/2018 của Bộ trưởng Bộ Tài chính hướng dẫn mẫu biểu báo cáo về cho vay lại vốn vay ODA, vay ưu đãi nước ngoài của Chính phủ và các văn bản sửa đổi, bổ sung, thay thế (nếu có).",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "21",
+                "tieuDe": "Trách nhiệm thống kê, tổng hợp báo cáo các khoản cho vay lại vốn vay ODA, vay ưu đãi nước ngoài",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Cục QLN và KTĐN có trách nhiệm lập và gửi cho KBNN báo cáo sau: STT Tên báo cáo Mẫu biểu Nơi nhận Thời hạn gửi 1 Báo cáo thực hiện vay về cho vay lại B01/VL KBNN - Trước ngày 05 của tháng thứ 2 của quý sau đối với báo cáo hàng quý; - Trước ngày 15/02 năm sau đối với báo cáo năm.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Mẫu biểu và phương pháp lập báo cáo các khoản cho vay lại vốn vay ODA, vay ưu đãi nước ngoài quy định tại Phụ lục VII “Mẫu biểu, phương pháp lập báo cáo thực hiện vay về cho vay lại” ban hành kèm theo Thông tư này.",
+                    "diem": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "so": "VI",
+            "tieuDe": "BÁO CÁO TỔNG HỢP NỢ CÔNG",
+            "dieu": [
+              {
+                "so": "22",
+                "tieuDe": "Trách nhiệm lập báo cáo tổng hợp nợ công",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Căn cứ báo cáo của các đơn vị được lập và gửi theo quy định của Thông tư này, KBNN có trách nhiệm tổng hợp số liệu nợ công trên phạm vi toàn quốc.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Báo cáo tổng hợp số liệu nợ công được gửi cho Cục QLN và KTĐN để lập báo cáo công bố thông tin về nợ công và giải trình số liệu vay nợ nước ngoài theo quy định của Nghị định số 94/2018/NĐ-CP được sửa đổi, bổ sung bởi Nghị định số 84/2026/NĐ-CP ngày 25/3/2026 và các văn bản sửa đổi, bổ sung, thay thế (nếu có).",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "23",
+                "tieuDe": "Báo cáo tổng hợp nợ công",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "KBNN có trách nhiệm lập và gửi cho Cục QLN và KTĐN các báo cáo sau: STT Tên báo cáo Mẫu biểu Nơi nhận Thời hạn gửi 1 Báo cáo tình hình nợ công B01/TH Cục QLN và KTĐN - Trước ngày cuối của tháng thứ 2 của quý sau đối với báo cáo hàng quý; - Trước ngày 28/02 năm sau đối với báo cáo năm. 2 Báo cáo tổng hợp thực hiện vay, trả nợ của Chính phủ và chính quyền địa phương B02/TH 2. Mẫu biểu và phương pháp lập báo cáo tổng hợp nợ công quy định tại Phụ lục VIII “Mẫu biểu, phương pháp lập báo cáo tổng hợp nợ công” ban hành kèm theo Thông tư này.",
+                    "diem": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "so": "VII",
+            "tieuDe": "ĐIỀU KHOẢN THI HÀNH",
+            "dieu": [
+              {
+                "so": "24",
+                "tieuDe": "Hiệu lực thi hành",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Thông tư này có hiệu lực thi hành kể từ ngày 01 tháng 01 năm 2027 và áp dụng từ năm tài chính 2027.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Thông tư số 99/2021/TT-BTC ngày 15/11/2021 của Bộ Tài chính hướng dẫn chế độ kế toán đối với các khoản vay, trả nợ của Chính phủ, chính quyền địa phương; thống kê, theo dõi các khoản nợ cho vay lại và bảo lãnh Chính phủ hết hiệu lực kể từ ngày Thông tư này có hiệu lực thi hành.",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "25",
+                "tieuDe": "Sửa đổi mẫu biểu và phương pháp lập báo cáo tài chính tại Thông tư số 109/2018/TT-BTC ngày 15/11/2018 hướng dẫn chế độ kế toán áp dụng cho Quỹ Tích lũy trả nợ",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Bãi bỏ công thức tính “10 = 2 + 4 - 6” thuộc cột 10 mẫu Báo cáo các dự án có bảo lãnh Chính phủ được ứng vốn trả nợ thay từ Quỹ Tích lũy trả nợ (Mẫu B03-Q) tại Phụ lục 4 “Hệ thống báo cáo tài chính” ban hành kèm theo Thông tư số 109/2018/TT-BTC.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Bãi bỏ nội dung “Cột 10 = Cột 2 + Cột 4 - Cột 6” thuộc mục 3 “Giải thích nội dung và phương pháp lập báo cáo tài chính” đối với Báo cáo các dự án có bảo lãnh Chính phủ được ứng vốn trả nợ thay từ Quỹ Tích lũy trả nợ (Mẫu B03-Q) tại Phụ lục 4 “Hệ thống báo cáo tài chính” ban hành kèm theo Thông tư số 109/2018/TT-BTC.",
+                    "diem": []
+                  },
+                  {
+                    "so": "3",
+                    "text": "Số liệu tại cột 10 của Báo cáo các dự án có bảo lãnh Chính phủ được ứng vốn trả nợ thay từ Quỹ Tích lũy trả nợ (Mẫu B03-Q) tại Phụ lục 4 “Hệ thống báo cáo tài chính” ban hành kèm theo Thông tư số 109/2018/TT-BTC được xác định trên cơ sở số dư nợ cuối kỳ bằng nguyên tệ (cột 9) quy đổi theo tỷ giá quy định tại văn bản pháp luật về quản lý nợ công.",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "26",
+                "tieuDe": "Tổ chức thực hiện",
+                "text": "Cục trưởng Cục Quản lý nợ và Kinh tế đối ngoại, Giám đốc Kho bạc Nhà nước và các cơ quan, tổ chức, đơn vị trong phạm vi chức năng, quyền hạn có liên quan chịu trách nhiệm tổ chức triển khai, hướng dẫn thực hiện, kiểm tra và thi hành Thông tư này./. Nơi nhận: - Ban Bí thư Trung ương Đảng; - Thủ tướng, các Phó Thủ tướng Chính phủ; - Văn phòng Trung ương và các Ban của Đảng; - Văn phòng Tổng Bí thư; - Văn phòng Chính phủ; - Văn phòng Chủ tịch nước; - Văn phòng Quốc hội; - Hội đồng dân tộc và các Ủy ban của Quốc hội; - Ủy ban Trung ương Mặt trận Tổ quốc Việt Nam; - Tòa án nhân dân tối cao; - Viện Kiểm sát nhân dân tối cao; - Kiểm toán nhà nước; - Các Bộ, cơ quan ngang Bộ; - HĐND, UBND các tỉnh, thành phố trực thuộc TW; - Cục Kiểm tra văn bản và tổ chức thi hành pháp luật - Bộ Tư pháp; - Sở Tài chính các tỉnh, thành phố trực thuộc TW; - KBNN các khu vực; - Công báo; - Cổng thông tin điện tử Chính phủ; - Cổng thông tin điện tử Bộ Tài chính; - Cơ sở dữ liệu quốc gia và pháp luật; - Các đơn vị thuộc và trực thuộc Bộ Tài chính; - Lưu: VT, Cục QLKT ( b). KT. BỘ TRƯỞNG THỨ TRƯỞNG Tạ Anh Tuấn PHỤ LỤC I HỆ THỐNG TÀI KHOẢN KẾ TOÁN VAY, TRẢ NỢ NƯỚC NGOÀI CỦA CHÍNH PHỦ (Ban hành kèm theo Thông tư số 119/2026/TT-BTC ngày 18 tháng 8 năm 2026 của Bộ trưởng Bộ Tài chính) I. DANH MỤC TÀI KHOẢN KẾ TOÁN Số TT Số hiệu TK cấp 1 Số hiệu TK cấp 2, 3 Tên TK 1 131 Các khoản vay hỗ trợ ngân sách đã nhận nợ 2 133 Các khoản vay cấp cho dự án 1331 Cấp cho dự án đầu tư xây dựng 1332 Cấp cho dự án khác 3 134 Các khoản vay về cho vay lại vốn vay nước ngoài 1341 Cho ngân sách địa phương vay lại 1342 Cho vay lại khác 4 135 Phải thu Quỹ Tích lũy trả nợ 1351 Ngân sách địa phương trả lại 1352 Dự án trả lại 5 138 Các khoản vay chưa xác định được đối tượng sử dụng hoặc mục đích sử dụng 6 311 Phải trả về lãi vay nước ngoài 3111 Phải trả về lãi vay nước ngoài hỗ trợ ngân sách 3112 Phải trả về lãi vay nước ngoài cấp cho dự án 3113 Phải trả về lãi vay nước ngoài cho ngân sách địa phương vay lại 3114 Phải trả về lãi vay nước ngoài cho vay lại khác 7 312 Phải trả về phí, chi phí vay nước ngoài 3121 Phải trả về phí, chi phí vay nước ngoài hỗ trợ ngân sách 3122 Phải trả về phí, chi phí vay nước ngoài cấp cho dự án 3123 Phải trả về phí, chi phí vay nước ngoài cho ngân sách địa phương vay lại 3124 Phải trả về phí, chi phí vay nước ngoài cho vay lại khác 8 333 Thanh toán với ngân sách nhà nước 3331 Ngân sách nhà nước ứng để thanh toán vay nước ngoài cho ngân sách địa phương vay lại 3332 Ngân sách nhà nước ứng để thanh toán vay nước ngoài cho vay lại khác 9 361 Vay ngắn hạn nước ngoài của Chính phủ 3611 Vay ngắn hạn nước ngoài hỗ trợ ngân sách 3612 Vay ngắn hạn nước ngoài cấp cho dự án 3613 Vay ngắn hạn nước ngoài cho ngân sách địa phương vay lại 3614 Vay ngắn hạn nước ngoài cho vay lại khác 3618 Vay ngắn hạn nước ngoài khác 10 363 Vay trung hạn, dài hạn nước ngoài của Chính phủ 3631 Vay trung hạn, dài hạn nước ngoài hỗ trợ ngân sách 3632 Vay trung hạn, dài hạn nước ngoài cấp cho dự án 3633 Vay trung hạn, dài hạn nước ngoài cho ngân sách địa phương vay lại 3634 Vay trung hạn, dài hạn nước ngoài cho vay lại khác 3638 Vay trung hạn, dài hạn nước ngoài khác 11 413 Chênh lệch tỷ giá hối đoái 4131 Vay nước ngoài hỗ trợ ngân sách 4132 Vay nước ngoài cấp cho dự án 4133 Vay nước ngoài cho ngân sách địa phương vay lại 4134 Vay nước ngoài cho vay lại khác 4138 Vay nước ngoài khác II. NỘI DUNG TÀI KHOẢN KẾ TOÁN 1. Tài khoản 131 - Các khoản vay hỗ trợ ngân sách đã nhận nợ 1.1. Mục đích Tài khoản này dùng để phản ánh các khoản tiền vay nước ngoài hỗ trợ ngân sách đã nhận nợ với các tổ chức, cá nhân nước ngoài, kể cả khi chưa được chuyển về tài khoản của KBNN để ghi thu hoặc vay nợ của ngân sách nhà nước. 1.2. Nguyên tắc hạch toán - Khi có căn cứ về các khoản vay nợ nước ngoài của Chính phủ đã được giải ngân, kể cả khi chưa có chứng từ về việc tiền đã chuyển về tài khoản của KBNN để ghi thu hoặc vay nợ của ngân sách nhà nước, đơn vị phải hạch toán để ghi nhận khoản vay nợ của Chính phủ. - Căn cứ để hạch toán là chứng từ về đề nghị ghi nhận nợ nước ngoài do Cục QLN và KTĐN lập căn cứ thông báo giải ngân (chuyển tiền) của nhà tài trợ về khoản vay hỗ trợ ngân sách; chứng từ trả nợ cho các chủ nợ. - Kế toán các khoản vay hỗ trợ ngân sách đã nhận nợ phải được hạch toán chi tiết theo các đoạn mã sau: + Mã loại hình vay; + Mã nhà tài trợ; + Mã khoản vay. 1.3. Kết cấu và nội dung tài khoản Bên Nợ: Phản ánh tăng các khoản tiền vay nước ngoài đã nhận nợ với các tổ chức, cá nhân nước ngoài khi có căn cứ nhận nợ. Bên Có: Phản ánh giảm các khoản tiền vay nước ngoài đã nhận nợ với các tổ chức, cá nhân nước ngoài khi có chứng từ trả nợ cho các chủ nợ. Số dư Nợ: Phản ánh các khoản tiền vay nước ngoài đã nhận nợ với các tổ chức, cá nhân nước ngoài hỗ trợ ngân sách chưa được trả nợ.",
+                "khoan": [
+                  {
+                    "so": "2",
+                    "text": "Tài khoản 133 - Các khoản vay cấp cho dự án 2.1. Mục đích Tài khoản này dùng để phản ánh các khoản tiền vay nước ngoài đã nhận nợ đã được chuyển trực tiếp hoặc qua tài khoản đặc biệt cho dự án hoặc các đối tượng liên quan. 2.2. Nguyên tắc hạch toán - Tài khoản này được sử dụng để hạch toán các khoản tiền vay nước ngoài về đã được cấp phát cho dự án, nhưng chưa được ngân sách nhà nước thanh toán cho chủ nợ. - Khi có căn cứ về các khoản vay nợ nước ngoài của Chính phủ đã được cấp qua tài khoản đặc biệt hoặc trực tiếp cho dự án, đơn vị kế toán phải hạch toán để ghi nhận khoản vay nợ của Chính phủ. - Cục QLN và KTĐN phải mở sổ kế toán để theo dõi chi tiết các khoản vay cấp cho dự án. - Căn cứ để hạch toán là chứng từ về đề nghị ghi nhận nợ nước ngoài được Cục QLN và KTĐN lập căn cứ thông báo giải ngân (chuyển tiền) từ tài khoản đặc biệt hoặc trực tiếp cho dự án; chứng từ trả nợ cho chủ nợ. - Kế toán các khoản vay cấp cho dự án phải được hạch toán chi tiết theo các đoạn mã sau: + Mã loại hình vay; + Mã nhà tài trợ; + Mã khoản vay. 2.3. Kết cấu và nội dung tài khoản Bên Nợ: Phản ánh tăng các khoản vay nợ của Chính phủ cấp cho dự án từ tài khoản đặc biệt hoặc trực tiếp. Bên Có: Phản ánh giảm các vay nợ của Chính phủ đã cấp cho dự án khi có chứng từ trả nợ cho chủ nợ. Số dư Nợ: Phản ánh các khoản tiền vay nước ngoài đã nhận nợ với các tổ chức, cá nhân nước ngoài đã cấp cho dự án nhưng chưa trả nợ cho chủ nợ. Tài khoản 133 - Các khoản vay cấp cho dự án có 2 tài khoản cấp 2 như sau: (1) Tài khoản 1331 - Cấp cho dự án đầu tư xây dựng. (2) Tài khoản 1332 - Cấp cho dự án khác.",
+                    "diem": []
+                  },
+                  {
+                    "so": "3",
+                    "text": "Tài khoản 134 - Các khoản vay về cho vay lại vốn vay nước ngoài 3.1. Mục đích Mục đích của tài khoản này là để phản ánh các khoản tiền từ nguồn vay của các tổ chức, cá nhân nước ngoài mà Chính phủ đã nhận nợ và đã được chuyển cho các địa phương hoặc các đơn vị được cho vay lại; số tiền đã trực tiếp trả cho chủ nợ hoặc phải thu hồi Quỹ Tích lũy trả nợ. 3.2. Nguyên tắc hạch toán - Khi có căn cứ về các khoản vay nợ Chính phủ đã nhận nợ và được chuyển trực tiếp cho các địa phương, đơn vị, dự án vay lại, kế toán vay nợ phải hạch toán các khoản vay về cho vay lại của Chính phủ. - Cục QLN và KTĐN phải mở sổ kế toán để theo dõi chi tiết các khoản vay về cho vay lại vốn vay nước ngoài. - Căn cứ để hạch toán là căn cứ thông báo giải ngân (chuyển tiền) của nhà tài trợ về tài khoản cho đối tượng được hưởng. - Kế toán các khoản vay về cho vay lại vốn vay nước ngoài phải được hạch toán chi tiết theo các đoạn mã sau: + Mã loại hình vay; + Mã nhà tài trợ; + Mã khoản vay. 3.3. Kết cấu và nội dung tài khoản Bên Nợ: Phản ánh số tiền vay nước ngoài mà Chính phủ đã nhận nợ từ các tổ chức, cá nhân nước ngoài đã được chuyển cho các địa phương hoặc các đơn vị được cho vay lại. Bên Có: - Phản ánh số tiền trả nợ gốc vay trong trường hợp trả nợ trực tiếp cho nước ngoài không qua Quỹ Tích lũy trả nợ. - Phản ánh số kết chuyển sang Tài khoản 135 tương ứng với số phải thu hồi qua Quỹ Tích lũy trả nợ. Số dư Nợ: Phản ánh số tiền từ nguồn vay của các tổ chức, cá nhân nước ngoài đang cho các địa phương hoặc các đơn vị vay lại. Tài khoản 134 - Các khoản vay về cho vay lại vốn vay nước ngoài có 2 tài khoản cấp 2 như sau: (1) Tài khoản 1341 - Cho ngân sách địa phương vay lại. (2) Tài khoản 1342 - Cho vay lại khác.",
+                    "diem": []
+                  },
+                  {
+                    "so": "4",
+                    "text": "Tài khoản 135 - Phải thu Quỹ Tích lũy trả nợ 4.1. Mục đích Mục đích của tài khoản này là để phản ánh các khoản nợ vay nước ngoài đến hạn trả nợ phải thu Quỹ Tích lũy trả nợ. 4.2. Nguyên tắc hạch toán - Khi các khoản nợ cho vay lại của Chính phủ phải thu hồi qua Quỹ Tích lũy trả nợ đến hạn trả nợ, kế toán vay nợ phải thực hiện kết chuyển sang số phải thu Quỹ Tích lũy trả nợ. - Căn cứ để hạch toán là chứng từ do Cục QLN và KTĐN lập trên cơ sở Bảng kê lệnh chi trả nợ nước ngoài bằng ngoại tệ (chi tiết theo mục đích cho vay lại). 4.3. Kết cấu và nội dung tài khoản Bên Nợ: Phản ánh số tiền cho vay lại phải thu Quỹ Tích lũy trả nợ. Bên Có: Số tiền Quỹ Tích lũy trả nợ đã thanh toán với nhà tài trợ hoặc thanh toán với ngân sách nhà nước đối với khoản ngân sách nhà nước đã ứng ra thanh toán. Số dư Nợ: Số tiền còn phải thu Quỹ Tích lũy trả nợ để thanh toán cho nhà tài trợ hoặc thanh toán với ngân sách nhà nước đối với các khoản ngân sách nhà nước ứng ra thanh toán. Tài khoản 135 - Phải thu Quỹ Tích lũy trả nợ có 2 tài khoản cấp 2 như sau: (1) Tài khoản 1351 - Ngân sách địa phương trả lại. (2) Tài khoản 1352 - Dự án trả lại.",
+                    "diem": []
+                  },
+                  {
+                    "so": "5",
+                    "text": "Tài khoản 138 - Các khoản vay chưa xác định được đối tượng sử dụng hoặc mục đích sử dụng. 5.1. Mục đích Tài khoản này dùng để phản ánh các khoản tiền vay nước ngoài đã nhận nợ, nhà tài trợ đã chuyển tiền vào tài khoản tạm ứng của các Bộ, ngành nhưng chưa xác định được dự án hoặc các đối tượng sử dụng khoản vay này. 5.2. Nguyên tắc hạch toán - Khi có căn cứ về các khoản vay nợ nước ngoài của Chính phủ đã được chuyển về tài khoản tạm ứng theo quy định của Hiệp định vay nợ, kế toán phải hạch toán để ghi nhận nghĩa vụ nợ của Chính phủ. - Căn cứ để hạch toán là chứng từ về đề nghị ghi nhận nợ nước ngoài được Cục QLN và KTĐN lập căn cứ thông báo giải ngân của nhà tài trợ về tài khoản tạm ứng; bảng kê, hồ sơ, chứng từ có liên quan đến việc chuyển tiền từ tài khoản tạm ứng của Bộ, ngành cho các dự án và các đơn vị sử dụng vốn vay. - Kế toán các khoản vay chưa xác định được đối tượng sử dụng hoặc mục đích sử dụng phải được hạch toán chi tiết theo các đoạn mã sau: + Mã loại hình vay; + Mã nhà tài trợ; + Mã đơn vị quan hệ vay nợ; + Mã khoản vay. 5.3. Kết cấu và nội dung tài khoản Bên Nợ: Phản ánh các khoản vay nợ của Chính phủ mà nhà tài trợ đã giải ngân vào tài khoản tạm ứng của Bộ, ngành. Bên Có: Phản ánh các khoản đã chuyển từ tài khoản tạm ứng của Bộ, ngành cấp cho dự án khi xác định được đối tượng sử dụng, mục đích sử dụng cụ thể. Số dư Nợ: Phản ánh các khoản tiền vay nước ngoài đã nhận nợ với các tổ chức, cá nhân nước ngoài mà nhà tài trợ đã giải ngân vào tài khoản tạm ứng của Bộ, ngành nhưng chưa xác định được đối tượng và mục đích sử dụng cụ thể.",
+                    "diem": []
+                  },
+                  {
+                    "so": "6",
+                    "text": "Tài khoản 311 - Phải trả về lãi vay nước ngoài 6.1. Mục đích Mục đích của tài khoản này là để phản ánh nghĩa vụ phải trả của Chính phủ đối với các khoản tiền lãi đi vay được cam kết trong từng hiệp định vay nước ngoài. 6.2. Nguyên tắc hạch toán - Hạch toán tài khoản này ngay khi có căn cứ về các khoản lãi vay, được tính theo kỳ hạn quy định trong hiệp định vay. - Bảo đảm hạch toán kịp thời, chính xác các khoản lãi vay từ các hoạt động: vay nước ngoài về hỗ trợ ngân sách; vay về cấp phát cho dự án; vay về cho vay lại. - Kế toán phải trả về tiền lãi vay nước ngoài phải được hạch toán chi tiết theo các đoạn mã sau: + Mã loại hình vay; + Mã nhà tài trợ; + Mã khoản vay. 6.3. Kết cấu và nội dung tài khoản Bên Nợ: - Phản ánh số tiền lãi vay nước ngoài đã được thanh toán cho nhà tài trợ hoặc tính vào nợ gốc. - Các khoản ghi giảm tiền lãi vay nước ngoài khác (nếu có). Bên Có: - Phản ánh số tiền lãi vay nước ngoài phát sinh trong kỳ khi đến kỳ hạn thanh toán. - Các khoản ghi tăng tiền lãi vay nước ngoài khác (nếu có). Số dư Có: Phản ánh khoản tiền phải trả về lãi đi vay nước ngoài của Chính phủ chưa thanh toán. Tài khoản 311 - Phải trả về lãi vay nước ngoài có 4 tài khoản cấp 2 như sau: (1) Tài khoản 3111 - Phải trả về lãi vay nước ngoài hỗ trợ ngân sách. (2) Tài khoản 3112 - Phải trả về lãi vay nước ngoài cấp cho dự án. (3) Tài khoản 3113 - Phải trả về lãi vay nước ngoài cho ngân sách địa phương vay lại. (4) Tài khoản 3114 - Phải trả về lãi vay nước ngoài cho vay lại khác.",
+                    "diem": []
+                  },
+                  {
+                    "so": "7",
+                    "text": "Tài khoản 312 - Phải trả về phí, chi phí vay nước ngoài 7.1. Mục đích Mục đích của tài khoản này là để phản ánh nghĩa vụ phải trả của Chính phủ đối với các khoản tiền phí, chi phí đi vay được cam kết trong từng hiệp định vay nước ngoài. 7.2. Nguyên tắc hạch toán - Hạch toán tài khoản này ngay khi có căn cứ về các khoản phí, chi phí đi vay, được tính theo kỳ hạn quy định trong hiệp định vay. - Bảo đảm hạch toán kịp thời, chính xác các khoản phí, chi phí đi vay từ các hoạt động: vay nước ngoài về hỗ trợ ngân sách; vay về cấp phát cho dự án; vay về cho vay lại. - Kế toán phải trả về tiền phí, chi phí đi vay nước ngoài phải được hạch toán chi tiết theo các đoạn mã sau: + Mã loại hình vay; + Mã nhà tài trợ; + Mã khoản vay. 7.3. Kết cấu và nội dung tài khoản Bên Nợ: - Phản ánh số tiền phí, chi phí đi vay nước ngoài đã được thanh toán cho nhà tài trợ hoặc tính vào nợ gốc. - Các khoản ghi giảm tiền phí, chi phí đi vay nước ngoài khác (nếu có). Bên Có: - Phản ánh số tiền phí, chi phí đi vay nước ngoài phát sinh trong kỳ khi đến kỳ hạn thanh toán. - Các khoản ghi tăng tiền phí, chi phí đi vay nước ngoài khác (nếu có). Số dư Có: Phản ánh khoản tiền phải trả về phí, chi phí đi vay nước ngoài của Chính phủ chưa thanh toán. Tài khoản 312 - Phải trả về phí, chi phí vay nước ngoài có 4 tài khoản cấp 2 như sau: (1) Tài khoản 3121 - Phải trả về phí, chi phí vay nước ngoài hỗ trợ ngân sách. (2) Tài khoản 3122 - Phải trả về phí, chi phí vay nước ngoài cấp cho dự án. (3) Tài khoản 3123 - Phải trả về phí, chi phí vay nước ngoài cho ngân sách địa phương vay lại. (4) Tài khoản 3124 - Phải trả về phí, chi phí vay nước ngoài cho vay lại khác.",
+                    "diem": []
+                  },
+                  {
+                    "so": "8",
+                    "text": "Tài khoản 333 - Thanh toán với ngân sách nhà nước 8.1. Mục đích Mục đích của tài khoản này là để phản ánh khoản phải thanh toán với ngân sách nhà nước nếu phát sinh trường hợp ngân sách nhà nước ứng tiền để trả cho nhà tài trợ thay cho Quỹ Tích lũy trả nợ đối với các hoạt động vay về cho vay lại qua Quỹ Tích lũy trả nợ. 8.2. Nguyên tắc hạch toán - Hạch toán tài khoản này ngay khi có chứng từ về việc ngân sách nhà nước ứng tiền để thanh toán cho nhà tài trợ. - Kế toán thanh toán với ngân sách nhà nước phải được hạch toán chi tiết theo các đoạn mã sau: + Mã loại hình vay; + Mã nhà tài trợ. 8.3. Kết cấu và nội dung tài khoản Bên Nợ: - Phản ánh số tiền ngân sách nhà nước ứng trước để trả cho chủ nợ đã được Quỹ Tích lũy hoàn trả. - Các khoản ghi giảm ứng trước của ngân sách nhà nước (nếu có). Bên Có: - Phản ánh số tiền ngân sách nhà nước ứng trước để trả cho chủ nợ phát sinh trong kỳ. - Các khoản ghi tăng ứng trước của ngân sách nhà nước (nếu có). Số dư Có: Phản ánh khoản tiền ứng trước của ngân sách nhà nước để trả cho chủ nợ. Tài khoản 333 - Thanh toán với ngân sách nhà nước có 2 tài khoản cấp 2 như sau: (1) Tài khoản 3331 - Ngân sách nhà nước ứng để thanh toán vay nước ngoài cho ngân sách địa phương vay lại. (2) Tài khoản 3332 - Ngân sách nhà nước ứng để thanh toán vay nước ngoài cho vay lại khác.",
+                    "diem": []
+                  },
+                  {
+                    "so": "9",
+                    "text": "Tài khoản 361 - Vay ngắn hạn nước ngoài của Chính phủ 9.1. Mục đích Mục đích của tài khoản này là để phản ánh nghĩa vụ nợ của Chính phủ đối với các khoản vay nước ngoài có kỳ hạn từ 1 năm trở xuống theo cam kết trong hiệp định vay từ các tổ chức, cá nhân nước ngoài. 9.2. Nguyên tắc hạch toán - Hạch toán tài khoản này ngay khi có căn cứ về các khoản vay nợ, các giấy báo giải ngân của nhà tài trợ, kể cả khi tiền đang ở tài khoản đặc biệt, chưa có chứng từ về việc tiền đã chuyển về tài khoản của KBNN hoặc đã được cấp phát cho các đơn vị, dự án. - Kế toán phải trả về khoản vay ngắn hạn nước ngoài phải được hạch toán chi tiết theo các đoạn mã sau: + Mã loại hình vay; + Mã nhà tài trợ; + Mã khoản vay. 9.3. Kết cấu và nội dung tài khoản Bên Nợ: - Phản ánh khoản vay ngắn hạn nước ngoài của Chính phủ đã được thanh toán cho nhà tài trợ. - Các khoản ghi giảm khoản vay ngắn hạn nước ngoài của Chính phủ khác (nếu có). Bên Có: - Phản ánh số nợ vay ngắn hạn nước ngoài của Chính phủ khi nhận được thông báo giải ngân của nhà tài trợ về khoản tiền cho vay hỗ trợ ngân sách, cấp phát dự án, cho vay lại cho đối tượng được hưởng. - Các khoản ghi tăng khoản vay ngắn hạn nước ngoài của Chính phủ khác (nếu có). Số dư Có: Phản ánh khoản vay ngắn hạn nước ngoài của Chính phủ còn phải trả cho các nhà tài trợ. Tài khoản 361 - Vay ngắn hạn nước ngoài của Chính phủ có 5 tài khoản cấp 2 như sau: (1) Tài khoản 3611 - Vay ngắn hạn nước ngoài hỗ trợ ngân sách. (2) Tài khoản 3612 - Vay ngắn hạn nước ngoài cấp cho dự án. (3) Tài khoản 3613 - Vay ngắn hạn nước ngoài cho ngân sách địa phương vay lại. (4) Tài khoản 3614 - Vay ngắn hạn nước ngoài cho vay lại khác. (5) Tài khoản 3618 - Vay ngắn hạn nước ngoài khác.",
+                    "diem": []
+                  },
+                  {
+                    "so": "10",
+                    "text": "Tài khoản 363 - Vay trung hạn, dài hạn nước ngoài của Chính phủ 10.1. Mục đích Mục đích của tài khoản này là để phản ánh nghĩa vụ nợ của Chính phủ đối với các khoản vay nước ngoài có kỳ hạn lớn hơn 1 năm theo cam kết trong hiệp định vay từ các tổ chức, cá nhân nước ngoài. 10.2. Nguyên tắc hạch toán - Hạch toán tài khoản này ngay khi có căn cứ về các khoản vay nợ đã được nhận nợ, các giấy báo giải ngân của nhà tài trợ, kể cả khi tiền đang ở tài khoản đặc biệt, chưa có chứng từ về việc tiền đã chuyển về tài khoản của KBNN hoặc đã được cấp phát cho các đơn vị, dự án. - Các khoản vay trung hạn, dài hạn nước ngoài không được tái phân loại sang ngắn hạn khi lập báo cáo vay nợ cuối kỳ, kể cả khi thời hạn thanh toán còn dưới 12 tháng. - Kế toán phải trả về khoản vay trung hạn, dài hạn nước ngoài phải được hạch toán chi tiết theo các đoạn mã sau: + Mã loại hình vay; + Mã nhà tài trợ; + Mã khoản vay. 10.3. Kết cấu và nội dung tài khoản Bên Nợ: - Phản ánh khoản vay trung hạn, dài hạn nước ngoài của Chính phủ đã được thanh toán cho nhà tài trợ. - Các khoản ghi giảm khoản vay trung hạn, dài hạn nước ngoài của Chính phủ khác (nếu có). Bên Có: - Phản ánh số nợ vay trung hạn, dài hạn nước ngoài của Chính phủ khi nhận được thông báo giải ngân của nhà tài trợ về khoản tiền cho vay hỗ trợ ngân sách, cấp phát dự án, cho vay lại cho đối tượng được hưởng. - Các khoản ghi tăng khoản vay trung hạn, dài hạn nước ngoài của Chính phủ khác (nếu có). Số dư Có: Phản ánh khoản vay trung hạn, dài hạn nước ngoài của Chính phủ còn phải trả cho các nhà tài trợ. Tài khoản 363 - Vay trung hạn, dài hạn nước ngoài của Chính phủ có 5 tài khoản cấp 2 như sau: (1) Tài khoản 3631 - Vay trung hạn, dài hạn nước ngoài hỗ trợ ngân sách. (2) Tài khoản 3632 - Vay trung hạn, dài hạn nước ngoài cấp cho dự án. (3) Tài khoản 3633 - Vay trung hạn, dài hạn nước ngoài cho ngân sách địa phương vay lại. (4) Tài khoản 3634 - Vay trung hạn, dài hạn nước ngoài cho vay lại khác. (5) Tài khoản 3638 - Vay trung hạn, dài hạn nước ngoài khác.",
+                    "diem": []
+                  },
+                  {
+                    "so": "11",
+                    "text": "Tài khoản 413 - Chênh lệch tỷ giá hối đoái 11.1. Mục đích Tài khoản này dùng để phản ánh chênh lệch tỷ giá hối đoái so với tỷ giá ghi sổ đối với các khoản vay có Số dư tại thời điểm báo cáo. 11.2. Nguyên tắc hạch toán Chỉ đánh giá lại chênh lệch tỷ giá hối đoái vào thời điểm cuối kỳ hoặc khi được cấp có thẩm quyền yêu cầu. Việc xử lý các khoản chênh lệch tỷ giá hối đoái được thực hiện khi ngân sách nhà nước hoặc Quỹ Tích lũy trả nợ thanh toán các khoản vay cho nhà tài trợ: Việc hạch toán chênh lệch tỷ giá hối đoái được hạch toán theo từng đồng tiền vay. 11.3. Kết cấu và nội dung của tài khoản Bên Nợ: - Phản ánh số chênh lệch tỷ giá hối đoái do tỷ giá các đồng tiền đi vay tăng khi đánh giá các khoản phải trả. - Phản ánh số chênh lệch tỷ giá hối đoái do tỷ giá các đồng tiền đi vay giảm khi đánh giá các khoản phải thu. - Xử lý chênh lệch tỷ giá hối đoái khi thanh toán khoản vay cho nhà tài trợ, xóa nợ. Bên Có: - Phản ánh số chênh lệch tỷ giá hối đoái do tỷ giá các đồng tiền đi vay tăng khi đánh giá các khoản phải thu. - Phản ánh số chênh lệch tỷ giá hối đoái do tỷ giá các đồng tiền đi vay giảm khi đánh giá các khoản phải trả. - Xử lý chênh lệch tỷ giá hối đoái khi thanh toán khoản vay cho nhà tài trợ, xóa nợ. Số dư: Tài khoản 413 có thể có số dư Nợ hoặc dư Có, phản ánh số chênh lệch tỷ giá hối đoái chưa được xử lý. Tài khoản 413 - Chênh lệch tỷ giá hối đoái có 5 tài khoản cấp 2 như sau: (1) Tài khoản 4131 - Vay nước ngoài hỗ trợ ngân sách. (2) Tài khoản 4132 - Vay nước ngoài cấp cho dự án. (3) Tài khoản 4133 - Vay nước ngoài cho ngân sách địa phương vay lại. (4) Tài khoản 4134 - Vay nước ngoài cho vay lại khác. (5) Tài khoản 4138 - Vay nước ngoài khác. III. PHƯƠNG PHÁP KẾ TOÁN 1. Vay nước ngoài hỗ trợ ngân sách 1.1. Căn cứ thông báo giải ngân vốn vay của nhà tài trợ, báo Có của ngân hàng về khoản tiền vay nước ngoài hỗ trợ ngân sách, kế toán ghi: Nợ TK 131 - Các khoản vay hỗ trợ ngân sách đã nhận nợ Có TK 3611 - Vay ngắn hạn nước ngoài hỗ trợ ngân sách Có TK 3631 - Vay trung hạn, dài hạn nước ngoài hỗ trợ ngân sách 1.2. Khi trả nợ, căn cứ Lệnh chi trả nợ nước ngoài bằng ngoại tệ đã được KBNN thực hiện, kế toán vay nợ ghi: Nợ TK 3611 - Vay ngắn hạn nước ngoài hỗ trợ ngân sách Nợ TK 3631 - Vay trung hạn, dài hạn nước ngoài hỗ trợ ngân sách Có TK 131 - Các khoản vay hỗ trợ ngân sách đã nhận nợ. 1.3. Trường hợp được xóa nợ, căn cứ các chứng từ có căn cứ chắc chắn về việc được xóa nợ, kế toán vay nợ ghi: Nợ TK 3611 - Vay ngắn hạn nước ngoài hỗ trợ ngân sách Nợ TK 3631 - Vay trung hạn, dài hạn nước ngoài hỗ trợ ngân sách Có TK 131 - Các khoản vay hỗ trợ ngân sách đã nhận nợ.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Vay nước ngoài cấp phát cho các dự án 2.1. Căn cứ thông báo giải ngân của nhà tài trợ cấp trực tiếp cho dự án, kế toán vay nợ lập chứng từ đề nghị ghi nhận nợ nước ngoài, ghi: Nợ TK 133 - Các khoản vay cấp cho dự án Có TK 3612 - Vay ngắn hạn nước ngoài cấp cho dự án Có TK 3632 - Vay trung hạn, dài hạn nước ngoài cấp cho dự án. 2.2. Căn cứ Lệnh chi trả nợ nước ngoài bằng ngoại tệ đã được KBNN thực hiện trả cho chủ nợ, kế toán vay nợ ghi: Nợ TK 3612 - Vay ngắn hạn nước ngoài cấp cho dự án Nợ TK 3632 - Vay trung hạn, dài hạn nước ngoài cấp cho dự án Có TK 133 - Các khoản vay cấp cho dự án. 2.3. Trường hợp được xóa nợ, căn cứ các chứng từ có căn cứ chắc chắn về việc được xóa nợ, kế toán vay nợ ghi: Nợ TK 3612 - Vay ngắn hạn nước ngoài cấp cho dự án Nợ TK 3632 - Vay trung hạn, dài hạn nước ngoài cấp cho dự án Có TK 133 - Các khoản vay cấp cho dự án.",
+                    "diem": []
+                  },
+                  {
+                    "so": "3",
+                    "text": "Vay nước ngoài của Chính phủ về cho ngân sách địa phương vay lại 3.1. Căn cứ thông báo giải ngân của nhà tài trợ về các khoản cho địa phương vay lại, kế toán vay nợ lập chứng từ đề nghị ghi nhận nợ nước ngoài về số vay về cho địa phương vay lại, ghi: Nợ TK 134 - Các khoản vay về cho vay lại vốn vay nước ngoài (1341) Có TK 3613 - Vay ngắn hạn nước ngoài cho ngân sách địa phương vay lại Có TK 3633 - Vay trung hạn, dài hạn nước ngoài cho ngân sách địa phương vay lại. 3.2. Trường hợp ngân sách địa phương trực tiếp trả tiền vay cho nhà tài trợ không qua Quỹ Tích lũy trả nợ, căn cứ chứng từ thanh toán với nhà tài trợ, kế toán vay nợ ghi: Nợ TK 3613 - Vay ngắn hạn nước ngoài cho ngân sách địa phương vay lại Nợ TK 3633 - Vay trung hạn, dài hạn nước ngoài cho ngân sách địa phương vay lại Có TK134 - Các khoản vay về cho vay lại vốn vay nước ngoài (1341). 3.3. Trường hợp khoản vay lại của địa phương phải thu hồi qua Quỹ tích lũy trả nợ, căn cứ chứng từ do Cục QLN và KTĐN lập dựa trên Bảng kế lệnh chi trả nợ nước ngoài bằng ngoại tệ (chi tiết theo mục đích cho vay lại), phản ảnh số phải thu Quỹ Tích lũy trả nợ, kế toán vay nợ ghi: Nợ TK 135 - Phải thu Quỹ Tích lũy trả nợ (1351) Có TK 134 - Các khoản vay về cho vay lại vốn vay nước ngoài (1341). 3.4. Trường hợp ngân sách trung ương tạm ứng trả nợ vốn vay nước ngoài cho Quỹ Tích lũy trả nợ theo quy định: a. Căn cứ Lệnh chi trả nợ nước ngoài bằng ngoại tệ khi KBNN đã thực hiện, kế toán vay nợ ghi: Nợ TK 3613 - Vay ngắn hạn nước ngoài cho ngân sách địa phương vay lại Nợ TK 3633 - Vay trung hạn, dài hạn nước ngoài cho ngân sách địa phương vay lại Có TK 333 - Thanh toán với ngân sách nhà nước (3331). b. Khi Quỹ Tích lũy trả nợ hoàn ứng của ngân sách trung ương, kế toán vay nợ ghi: Nợ TK 333 - Thanh toán với ngân sách nhà nước (3331) Có TK 135 - Phải thu Quỹ Tích lũy trả nợ (1351). 3.5. Trường hợp Quỹ Tích lũy trả nợ trả nợ vốn vay nước ngoài, căn cứ chứng từ trả nợ nước ngoài, kế toán vay nợ ghi: Nợ TK 3613 - Vay ngắn hạn nước ngoài cho ngân sách địa phương vay lại Nợ TK 3633 - Vay trung hạn, dài hạn nước ngoài cho ngân sách địa phương vay lại Có TK 135 - Phải thu Quỹ Tích lũy trả nợ (1351). 3.6. Trường hợp được xóa nợ, căn cứ các chứng từ có căn cứ chắc chắn về việc được xóa nợ, kế toán vay nợ ghi: Nợ TK 3613 - Vay ngắn hạn nước ngoài cho ngân sách địa phương vay lại Nợ TK 3633 - Vay trung hạn, dài hạn nước ngoài cho ngân sách địa phương vay lại Có TK 134 - Các khoản vay về cho vay lại vốn vay nước ngoài (1341), hoặc Có TK 135 - Phải thu Quỹ Tích lũy trả nợ (1351).",
+                    "diem": []
+                  },
+                  {
+                    "so": "4",
+                    "text": "Vay nước ngoài của Chính phủ về cho vay lại khác 4.1. Căn cứ thông báo giải ngân của nhà tài trợ về các khoản cho dự án vay lại vào tài khoản dự án, kế toán vay nợ lập chứng từ đề nghị ghi nhận nợ nước ngoài, ghi: Nợ TK 134 - Các khoản vay về cho vay lại vốn vay nước ngoài (1342) Có TK 3614 - Vay ngắn hạn nước ngoài cho vay lại khác Có TK 3634 - Vay trung hạn, dài hạn nước ngoài cho vay lại khác. 4.2. Trường hợp cơ quan cho vay lại trực tiếp trả tiền vay cho nhà tài trợ không qua Quỹ Tích lũy trả nợ, căn cứ chứng từ thông báo trả nợ trực tiếp cho nước ngoài, kế toán vay nợ ghi: Nợ TK 3614 - Vay ngắn hạn nước ngoài cho vay lại khác Nợ TK 3634 - Vay trung hạn, dài hạn nước ngoài cho vay lại khác Có TK 134 - Các khoản vay về cho vay lại vốn vay nước ngoài (1342). 4.3. Trường hợp phải thu hồi qua Quỹ Tích lũy trả nợ, căn cứ chứng từ do Cục QLN và KTĐN lập dựa trên Bảng kê lệnh chi trả nợ nước ngoài bằng ngoại tệ (chi tiết theo mục đích cho vay lại), phản ánh số phải thu Quỹ Tích lũy trả nợ, kế toán vay nợ ghi: Nợ TK 135 - Phải thu Quỹ Tích lũy trả nợ (1352) Có TK 134 - Các khoản vay về cho vay lại vốn vay nước ngoài (1342). 4.4. Trường hợp ngân sách trung ương tạm ứng trả nợ vốn vay nước ngoài cho Quỹ Tích lũy trả nợ theo quy định: a. Căn cứ Lệnh chi trả nợ nước ngoài bằng ngoại tệ khi KBNN đã thực hiện, kế toán vay nợ ghi: Nợ TK 3614 - Vay ngắn hạn nước ngoài cho vay lại khác Nợ TK 3634 - Vay trung hạn, dài hạn nước ngoài cho vay lại khác Có TK 333 - Thanh toán với ngân sách nhà nước (3332). b. Khi Quỹ Tích lũy trả nợ hoàn ứng của ngân sách trung ương, kế toán vay nợ ghi: Nợ TK 333 - Thanh toán với ngân sách nhà nước (3332) Có TK 135 - Phải thu Quỹ Tích lũy trả nợ (1352) 4.5. Trường hợp Quỹ Tích lũy trả nợ vốn vay nước ngoài, căn cứ chứng từ trả nợ nước ngoài, kế toán vay nợ ghi: Nợ TK 3614 - Vay ngắn hạn nước ngoài cho vay lại khác Nợ TK 3634 - Vay trung hạn, dài hạn nước ngoài cho vay lại khác Có TK 135 - Phải thu Quỹ Tích lũy trả nợ (1352). 4.6. Trường hợp được xóa nợ, căn cứ các chứng từ có căn cứ chắc chắn về việc được xóa nợ, kế toán vay nợ ghi: Nợ TK 3614 - Vay ngắn hạn nước ngoài cho vay lại khác Nợ TK 3634 - Vay trung hạn, dài hạn nước ngoài cho vay lại khác Có TK 134 - Các khoản vay về cho vay lại vốn vay nước ngoài (1342), hoặc Có TK 135 - Phải thu Quỹ Tích lũy trả nợ (1352).",
+                    "diem": []
+                  },
+                  {
+                    "so": "5",
+                    "text": "Vay nợ nước ngoài chưa xác định được đối tượng sử dụng vốn vay 5.1. Căn cứ Thông báo giải ngân của nhà tài trợ nước ngoài về khoản vay đã chuyển về tài khoản tạm ứng của các Bộ, ngành nhưng chưa xác định được đối tượng trực tiếp sử dụng vốn vay, kế toán ghi: Nợ TK 138 - Các khoản vay chưa xác định được đối tượng sử dụng hoặc mục đích sử dụng Có TK 3618 - Vay ngắn hạn nước ngoài khác Có TK 3638 - Vay trung hạn, dài hạn nước ngoài khác. 5.2. Khi Bộ, ngành đã xác định được đối tượng trực tiếp sử dụng vốn vay cụ thể, căn cứ hồ sơ, tài liệu liên quan: - Kế toán kết chuyển vào tài khoản vay theo kỳ hạn tương ứng: Nợ TK 3618, 3638 Có TK 3613, 3633, .... - Đồng thời ghi: Nợ TK 133 - Các khoản vay cấp cho dự án (nếu cấp cho dự án) Nợ TK 134 - Các khoản vay về cho vay lại vốn vay nước ngoài (nếu cho vay lại) Có TK 138 - Các khoản vay chưa xác định được đối tượng sử dụng hoặc mục đích sử dụng.",
+                    "diem": []
+                  },
+                  {
+                    "so": "6",
+                    "text": "Lãi vay; phí, chi phí vay nước ngoài 6.1. Hạch toán lãi, phí, chi phí phải trả (1) Vay nước ngoài của Chính phủ về hỗ trợ ngân sách, căn cứ chứng từ lập khi đến hạn trả lãi, phí và chi phí khác, kế toán vay nợ ghi: Nợ TK 131 - Các khoản vay hỗ trợ ngân sách đã nhận nợ Có TK 3111 - Phải trả về lãi vay nước ngoài hỗ trợ ngân sách Có TK 3121 - Phải trả về phí, chi phí vay nước ngoài hỗ trợ ngân sách. (2) Vay nước ngoài của Chính phủ về cấp phát cho các dự án, căn cứ chứng từ lập khi đến hạn trả lãi, phí và chi phí khác, kế toán vay nợ ghi: Nợ TK 133 - Các khoản vay cấp cho dự án (1331, 1332) Có TK 3112 - Phải trả về lãi vay nước ngoài cấp cho dự án Có TK 3122 - Phải trả về phí, chi phí vay nước ngoài cấp cho dự án. (3) Vay nước ngoài của Chính phủ về cho ngân sách địa phương vay lại, căn cứ chứng từ lập khi đến hạn trả lãi, phí và chi phí khác, kế toán vay nợ ghi: Nợ TK 134 - Các khoản vay về cho vay lại vốn vay nước ngoài (1341) Nợ TK 135 - Phải thu Quỹ Tích lũy trả nợ (1351) Có TK 3113 - Phải trả về lãi vay nước ngoài cho ngân sách địa phương vay lại Có TK 3123 - Phải trả về phí, chi phí vay nước ngoài cho ngân sách địa phương vay lại. (4) Vay nước ngoài của Chính phủ về cho dự án vay lại, căn cứ chứng từ lập khi đến hạn trả lãi, phí và chi phí khác, kế toán vay nợ ghi: Nợ TK 134 - Các khoản vay về cho vay lại vốn vay nước ngoài (1342) Nợ TK 135 - Phải thu Quỹ Tích lũy trả nợ (1352) Có TK 3114 - Phải trả về lãi vay nước ngoài cho vay lại khác Có TK 3124 - Phải trả về phí, chi phí vay nước ngoài cho vay lại khác. 6.2. Tính vào nợ gốc Khoản lãi trong thời gian ân hạn, phí cam kết và các loại phí, chi phí khác được gốc hóa theo thỏa thuận với nhà tài trợ và thực hiện như trường hợp ghi nhận số nợ gốc, cụ thể: (1) Vay nước ngoài của Chính phủ hỗ trợ ngân sách, căn cứ số lãi, phí, chi phí được tính vào nợ gốc theo thỏa thuận trong từng hiệp định, kế toán vay nợ ghi: Nợ TK 3111 - Phải trả về lãi vay nước ngoài hỗ trợ ngân sách Nợ TK 3121 - Phải trả về phí, chi phí vay nước ngoài hỗ trợ ngân sách Có TK 3611 - Vay ngắn hạn nước ngoài hỗ trợ ngân sách Có TK 3631 - Vay trung hạn, dài hạn nước ngoài hỗ trợ ngân sách. (2) Vay nước ngoài của Chính phủ về cấp phát cho các dự án, căn cứ số lãi, phí được tính vào nợ gốc theo thỏa thuận trong từng hiệp định, kế toán vay nợ ghi: Nợ TK 3112 - Phải trả về lãi vay nước ngoài cấp cho dự án Nợ TK 3122 - Phải trả về phí, chi phí vay nước ngoài cấp cho dự án Có TK 3612 - Vay ngắn hạn nước ngoài cấp cho dự án Có TK 3632 - Vay trung hạn, dài hạn nước ngoài cấp cho dự án. (3) Vay nước ngoài của Chính phủ về cho ngân sách địa phương cho vay lại, căn cứ số lãi, phí được tính vào nợ gốc theo thỏa thuận trong từng hiệp định, kế toán vay nợ ghi: Nợ TK 3113 - Phải trả về lãi vay nước ngoài cho ngân sách địa phương vay lại Nợ TK 3123 - Phải trả về phí, chi phí vay nước ngoài cho ngân sách địa phương vay lại Có TK 3613 - Vay ngắn hạn nước ngoài cho ngân sách địa phương vay lại Có TK 3633 - Vay trung hạn, dài hạn nước ngoài cho ngân sách địa phương vay lại. (4) Vay nước ngoài của Chính phủ về cho dự án vay lại, căn cứ số lãi, phí được tính vào nợ gốc theo thỏa thuận trong từng hiệp định, kế toán vay nợ ghi: Nợ TK 3114 - Phải trả về lãi vay nước ngoài cho vay lại khác Nợ TK 3124 - Phải trả về phí, chi phí vay nước ngoài cho vay lại khác Có TK 3614 - Vay ngắn hạn nước ngoài cho vay lại khác Có TK 3634 - Vay trung hạn, dài hạn nước ngoài cho vay lại khác. 6.3. Kế toán thanh toán Thực hiện theo quy định đối với các khoản vay tương ứng tại Điểm 1, 2, 3, 4 nêu trên.",
+                    "diem": []
+                  },
+                  {
+                    "so": "7",
+                    "text": "Hạch toán Chênh lệch tỷ giá hối đoái 7.1. Đánh giá chênh lệch tỷ giá hối đoái cuối kỳ hoặc khi có yêu cầu của các cấp có thẩm quyền. a. Đối với các khoản phải thu: - Trường hợp khi đánh giá lại, tỷ giá các đồng tiền đi vay tăng so với thời điểm ghi nhận nợ gốc hoặc giá trị ghi sổ tại thời điểm đánh giá, kế toán ghi: Nợ các TK 131, 133, 134 (tương ứng phần chênh lệch tỷ giá) Có TK 413 - Chênh lệch tỷ giá hối đoái. - Trường hợp khi đánh giá lại, tỷ giá các đồng tiền đi vay giảm so với thời điểm ghi nhận nợ gốc hoặc giá trị ghi sổ tại thời điểm đánh giá, kế toán ghi: Nợ TK 413 - Chênh lệch tỷ giá hối đoái Có các TK 131, 133, 134 (tương ứng phần chênh lệch tỷ giá). b. Đối với các khoản phải trả: - Trường hợp khi đánh giá lại, tỷ giá các đồng tiền đi vay tăng so với thời điểm ghi nhận nợ gốc hoặc giá trị ghi sổ tại thời điểm đánh giá, kế toán ghi: Nợ TK 413 - Chênh lệch tỷ giá hối đoái Có các TK 361, 363 (phần vay nợ tương ứng với chênh lệch tỷ giá). - Trường hợp khi đánh giá lại, tỷ giá các đồng tiền đi vay giảm so với thời điểm ghi nhận nợ gốc hoặc giá trị ghi sổ tại thời điểm đánh giá, kế toán ghi: Nợ các TK 361, 363 (phần vay nợ tương ứng với chênh lệch tỷ giá). Có TK 413 - Chênh lệch tỷ giá hối đoái. 7.2. Khi thanh toán khoản vay nợ a. Trường hợp thanh toán khoản vay nợ có tỷ giá tăng so với giá trị ghi sổ tại thời điểm thanh toán, kế toán ghi: Nợ các TK 361, 363 (phần vay nợ tương ứng với chênh lệch tỷ giá). Có TK 413 - Chênh lệch tỷ giá hối đoái. b. Trường hợp thanh toán khoản vay nợ có tỷ giá giảm so với giá trị ghi sổ tại thời điểm thanh toán, kế toán ghi: Nợ TK 413 - Chênh lệch tỷ giá hối đoái Có các TK 361, 363 (phần vay nợ tương ứng với chênh lệch tỷ giá). 7.3. Đối với các khoản vay nợ được xóa nợ a. Trường hợp được xóa nợ, căn cứ các chứng từ có căn cứ chắc chắn về việc được xóa nợ, đối với khoản vay nợ có tỷ giá tăng so với giá trị ghi sổ tại thời điểm được xóa nợ, kế toán ghi: Nợ các TK 361, 363 (phần vay nợ tương ứng với chênh lệch tỷ giá). Có TK 413 - Chênh lệch tỷ giá hối đoái. b. Trường hợp được xóa nợ, căn cứ các chứng từ có căn cứ chắc chắn về việc được xóa nợ, đối với khoản vay nợ có tỷ giá giảm so với giá trị ghi sổ tại thời điểm được xóa nợ, kế toán ghi: Nợ TK 413 - Chênh lệch tỷ giá hối đoái Có các TK 361, 363 (phần vay nợ tương ứng với chênh lệch tỷ giá). PHỤ LỤC II HỆ THỐNG SỔ KẾ TOÁN VAY, TRẢ NỢ NƯỚC NGOÀI (Ban hành kèm theo Thông tư số 119/2026/TT-BTC ngày 18 tháng 8 năm 2026 của Bộ trưởng Bộ Tài chính) I. DANH MỤC SỔ KẾ TOÁN STT Tên sổ kế toán Mẫu số 1 Sổ cái tài khoản S01/NN 2 Sổ chi tiết các tài khoản S02/NN II. BIỂU MẪU SỔ KẾ TOÁN Mẫu số: S01/NN (Ban hành kèm theo Thông tư số 119/2026/TT-BTC ngày 18 tháng 8 năm 2026 của Bộ trưởng Bộ Tài chính) BỘ TÀI CHÍNH CỤC QUẢN LÝ NỢ VÀ KINH TẾ ĐỐI NGOẠI ------- CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM Độc lập - Tự do - Hạnh phúc --------------- SỔ CÁI TÀI KHOẢN Tài khoản: …………………….. Năm: …………………………… Ngày, tháng ghi sổ Chứng từ Diễn giải Số hiệu tài khoản đối ứng Số tiền Số hiệu Ngày, tháng Nợ Có A B C D E 1 2 - Số dư đầu năm - Điều chỉnh số dư đầu năm - Số phát sinh trong tháng - Cộng số phát sinh tháng x - Số dư cuối tháng x - Cộng lũy kế từ đầu năm x - Số này có ... trang, đánh số từ trang 01 đến trang ... - Ngày mở sổ: ............................................................. NGƯỜI LẬP SỔ (Ký, họ tên) NGƯỜI KIỂM SOÁT (Ký, họ tên) Ngày … tháng … năm … THỦ TRƯỞNG ĐƠN VỊ (Ký, họ tên, đóng dấu) Mẫu số: S02/NN (Ban hành kèm theo Thông tư số 119/2026/TT-BTC ngày 18 tháng 8 năm 2026 của Bộ trưởng Bộ Tài chính) BỘ TÀI CHÍNH CỤC QUẢN LÝ NỢ VÀ KINH TẾ ĐỐI NGOẠI ------- CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM Độc lập - Tự do - Hạnh phúc --------------- SỔ CHI TIẾT CÁC TÀI KHOẢN Năm: .............................. Tên tài khoản: ....................... Số hiệu: ....................... Mã tài khoản kế toán Mã loại hình vay Mã nhà tài trợ Mã đơn vị quan hệ vay nợ Mã khoản vay Ngày, tháng ghi sổ Chứng từ Diễn giải Tài khoản đối ứng Số phát sinh Số dư Số hiệu Ngày, tháng Nợ Có Nợ Có A B C D E 1 2 3 4 - Số dư đầu năm - Điều chỉnh số dư đầu năm - Số phát sinh trong tháng - Cộng phát sinh tháng - Số dư cuối tháng - Cộng lũy kế từ đầu năm - Số này có ... trang, đánh số từ trang 01 đến trang .............................................................................................................. - Ngày mở sổ: ......................................................................................................................................................................... NGƯỜI LẬP SỔ (Ký, họ tên) NGƯỜI KIỂM SOÁT (Ký, họ tên) Ngày … tháng … năm … THỦ TRƯỞNG ĐƠN VỊ (Ký, họ tên, đóng dấu) III. PHƯƠNG PHÁP GHI SỔ KẾ TOÁN SỔ CÁI TÀI KHOẢN (Mẫu số S01/NN) 1. Mục đích Sổ này sử dụng để ghi chép các nghiệp vụ vay và trả nợ vay phát sinh theo tài khoản kế toán phục vụ cho việc lập báo cáo về tình hình vay và trả nợ nước ngoài của Chính phủ.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Căn cứ và phương pháp ghi sổ - Mỗi tài khoản sử dụng một hoặc một số trang Sổ Cái. Cột A: Ghi ngày, tháng ghi sổ. Cột B, C: Ghi số hiệu, ngày, tháng của chứng từ kế toán dùng để ghi sổ. Cột D: Diễn giải tóm tắt nội dung nghiệp vụ kinh tế đã phát sinh. Cột E: Ghi số hiệu tài khoản đối ứng với tài khoản này. Cột 1, 2: Ghi số tiền ghi Nợ hoặc ghi Có của nghiệp vụ kinh tế. Hằng tháng cộng số phát sinh Nợ, phát sinh Có và tính số lũy kế từ đầu năm. Điều chỉnh số dư đầu năm: Phản ánh các khoản điều chỉnh số dư năm trước mang sang do điều chỉnh Số liệu báo cáo năm trước sau khi đã khóa sổ chuyển số dư (nếu có). Số liệu trên Sổ Cái sử dụng để lập Bảng cân đối tài khoản nợ nước ngoài và các báo cáo về tình hình vay, trả nợ nước ngoài của Chính phủ. SỔ CHI TIẾT CÁC TÀI KHOẢN (Mẫu số S02/NN) 1. Mục đích Sổ này dùng chung cho một số tài khoản chưa có thiết kế mẫu sổ riêng.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Căn cứ và phương pháp ghi sổ Mỗi tài khoản được mở một sổ chi tiết theo các mã hạch toán chi tiết phục vụ yêu cầu quản lý. Cục QLN và KTĐN căn cứ vào thực tế theo các mã chi tiết để mở sổ chi tiết phù hợp với tổ chức hoạt động đúng với yêu cầu cung cấp thông tin về quản lý khoản vay nước ngoài của Chính phủ. Căn cứ vào chứng từ kế toán hoặc bảng tổng hợp chứng từ kế toán để phản ánh vào sổ kế toán. Ghi số dư đầu năm và điều chỉnh số dư đầu năm trong trường hợp có phát sinh điều chỉnh số dư năm trước mang sang do điều chỉnh số liệu báo cáo năm trước sau khi đã khóa sổ chuyển số dư (nếu có). - Cột A: Ghi ngày, tháng ghi sổ. - Cột B, C: Ghi số hiệu, ngày tháng của chứng từ kế toán dùng để ghi sổ. - Cột D: Ghi nội dung nghiệp vụ kinh tế của chứng từ. - Cột E: Ghi tài khoản đối ứng. - Cột 1, 2: Ghi số tiền phát sinh Nợ, phát sinh có. - Cuối tháng cộng số phát sinh, tính số dư nếu dư Nợ ghi vào Cột 3 hoặc dư Có ghi vào Cột 4. Cuối năm cộng lũy kế phát sinh từ đầu năm. PHỤ LỤC III MẪU BIỂU, PHƯƠNG PHÁP LẬP BÁO CÁO TÌNH HÌNH VAY, TRẢ NỢ NƯỚC NGOÀI CỦA CHÍNH PHỦ (Ban hành kèm theo Thông tư số 119/2026/TT-BTC ngày 18 tháng 8 năm 2026 của Bộ trưởng Bộ Tài chính) Mẫu số: B01/NN (Ban hành kèm theo Thông tư số 119/2026/TT-BTC ngày 18 tháng 8 năm 2026 của Bộ trưởng Bộ Tài chính) BỘ TÀI CHÍNH CỤC QUẢN LÝ NỢ VÀ KINH TẾ ĐỐI NGOẠI ------- CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM Độc lập - Tự do - Hạnh phúc --------------- BẢNG CÂN ĐỐI TÀI KHOẢN NỢ NƯỚC NGOÀI Kỳ: .................................... Đơn vị tính: …………….. Số hiệu TK Tên tài khoản Số dư đầu kỳ Số phát sinh trong kỳ Số dư cuối kỳ Nợ Có Nợ Có Nợ Có A B 1 2 3 4 5 6 131 Các khoản vay hỗ trợ ngân sách đã nhận nợ 133 Các khoản vay cấp cho dự án 134 Các khoản vay về cho vay lại vốn vay nước ngoài 135 Phải thu Quỹ Tích lũy trả nợ 138 Các khoản vay chưa xác định được đối tượng sử dụng hoặc mục đích sử dụng 311 Phải trả về lãi vay nước ngoài 312 Phải trả về phí, chi phí vay nước ngoài 333 Thanh toán với ngân sách nhà nước 361 Vay ngắn hạn nước ngoài của Chính phủ 363 Vay trung hạn, dài hạn nước ngoài của Chính phủ 413 Chênh lệch tỷ giá Cộng NGƯỜI LẬP (Ký, họ tên) NGƯỜI KIỂM SOÁT (Ký, họ tên) Ngày … tháng … năm … THỦ TRƯỞNG ĐƠN VỊ (Ký, họ tên, đóng dấu) Mẫu số: B02/NN (Ban hành kèm theo Thông tư số 119/2026/TT-BTC ngày 18 tháng 8 năm 2026 của Bộ trưởng Bộ Tài chính) BỘ TÀI CHÍNH CỤC QUẢN LÝ NỢ VÀ KINH TẾ ĐỐI NGOẠI ------- CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM Độc lập - Tự do - Hạnh phúc --------------- BÁO CÁO THỰC HIỆN VAY, TRẢ NỢ NƯỚC NGOÀI CỦA CHÍNH PHỦ Từ ngày ………….. đến ngày ………….. Đơn vị tính: …………… Nội dung Dư nợ đầu kỳ Phát sinh trong kỳ Trả nợ trong kỳ Dư nợ cuối kỳ Gốc Lãi Phí, chi phí Tổng cộng A 1 2 3 4 5 6 7 I. Chủ nợ chính thức 1. Song phương - Nhật - Áo … 2. Đa phương - World Bank - ADB … II. Chủ nợ tư nhân 1. Chủ sở hữu trái phiếu 2. Ngân hàng thương mại 3. Chủ nợ khác TỔNG CỘNG NGƯỜI LẬP BIỂU (Ký, họ tên) NGƯỜI KIỂM SOÁT (Ký, họ tên) Ngày … tháng … năm … THỦ TRƯỞNG ĐƠN VỊ (Ký, họ tên, đóng dấu) Mẫu số: B03/NN (Ban hành kèm theo Thông tư số 119/2026/TT-BTC ngày 18 tháng 8 năm 2026 của Bộ trưởng Bộ Tài chính) BỘ TÀI CHÍNH CỤC QUẢN LÝ NỢ VÀ KINH TẾ ĐỐI NGOẠI ------- CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM Độc lập - Tự do - Hạnh phúc --------------- BÁO CÁO CHI TIẾT THEO KỲ HẠN VAY NỢ CỦA CHÍNH PHỦ Từ ngày …………… đến ngày …………… Đơn vị tính:………… Số TT Nội dung Đầu kỳ Phát sinh Cuối kỳ Tăng Giảm A B 1 2 3 4 I Vay ngắn hạn nước ngoài của Chính phủ 1 Vay ngắn hạn nước ngoài hỗ trợ ngân sách 2 Vay ngắn hạn nước ngoài cấp cho dự án 3 Vay ngắn hạn nước ngoài cho ngân sách địa phương vay lại 4 Vay ngắn hạn nước ngoài cho vay lại khác 5 Vay ngắn hạn nước ngoài khác II Vay trung hạn, dài hạn nước ngoài của Chính phủ 1 Vay trung hạn, dài hạn nước ngoài hỗ trợ ngân sách 2 Vay trung hạn, dài hạn nước ngoài cấp cho dự án 3 Vay trung hạn, dài hạn nước ngoài cho ngân sách địa phương vay lại 4 Vay trung hạn, dài hạn nước ngoài cho vay lại khác 5 Vay trung hạn, dài hạn nước ngoài khác NGƯỜI LẬP BIỂU (Ký, họ tên) NGƯỜI KIỂM SOÁT (Ký, họ tên) Ngày … tháng … năm … THỦ TRƯỞNG ĐƠN VỊ (Ký, họ tên, đóng dấu) Mẫu số: B04/NN (Ban hành kèm theo Thông tư số 119/2026/TT-BTC ngày 18 tháng 8 năm 2026 của Bộ trưởng Bộ Tài chính) BỘ TÀI CHÍNH CỤC QUẢN LÝ NỢ VÀ KINH TẾ ĐỐI NGOẠI ------- CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM Độc lập - Tự do - Hạnh phúc --------------- THUYẾT MINH BÁO CÁO TÌNH HÌNH VAY, TRẢ NỢ NƯỚC NGOÀI Kỳ: ……………. A. TÌNH HÌNH CHUNG I. Tình hình quản lý các khoản vay nợ nước ngoài ............................................................................................................................... ............................................................................................................................... II. Thực hiện các chỉ tiêu nhiệm vụ cơ bản ............................................................................................................................... ............................................................................................................................... III. Những công việc phát sinh đột xuất trong kỳ ............................................................................................................................... ............................................................................................................................... B. THUYẾT MINH CHI TIẾT I. Các khoản vay hỗ trợ ngân sách đã nhận nợ Thuyết minh chi tiết các khoản vay (số tăng, giảm, số dư còn lại): ............................................................................................................................... ............................................................................................................................... II. Các khoản cấp cho dự án Thuyết minh chi tiết các dự án nhận cấp (số tăng, giảm, số dư còn lại): ............................................................................................................................... ............................................................................................................................... III. Các khoản vay chưa xác định được đối tượng sử dụng hoặc mục đích sử dụng Thuyết minh chi tiết các khoản vay nước ngoài trên tài khoản tạm ứng của các Bộ, ngành đã nhận nợ (tăng, giảm, số còn lại tại ngày báo cáo) ............................................................................................................................... ............................................................................................................................... IV. Phải trả về lãi, phí và chi phí vay nước ngoài Thuyết minh chi tiết (số tăng, giảm, số dư còn lại) ............................................................................................................................... ............................................................................................................................... V. Thuyết minh chi tiết các khoản phải trả ngân sách, so sánh với các kỳ trước, dự báo cho kỳ sau. ............................................................................................................................... ............................................................................................................................... VI. Đánh giá cơ cấu nợ - Tăng, giảm so với kỳ trước, trong đó: + Ngắn hạn + Trung hạn và dài hạn. - Tỷ lệ so với GDP, trong đó: + Ngắn hạn + Trung hạn và dài hạn. VII. Các nội dung khác liên quan đến nợ công ............................................................................................................................... ............................................................................................................................... C. NHẬN XÉT VÀ KIẾN NGHỊ I. Đánh giá tình hình trong kỳ ............................................................................................................................... ............................................................................................................................... II. Kiến nghị ............................................................................................................................... ............................................................................................................................... NGƯỜI LẬP BIỂU (Ký, họ tên) NGƯỜI KIỂM SOÁT (Ký, họ tên) Ngày … tháng … năm … THỦ TRƯỞNG ĐƠN VỊ (Ký, họ tên, đóng dấu) BẢNG CÂN ĐỐI TÀI KHOẢN NỢ NƯỚC NGOÀI (Mẫu số B01/NN) 1. Mục đích Bảng cân đối tài khoản nợ nước ngoài là báo cáo tổng hợp, phản ánh tổng quát số dư đầu kỳ, số phát sinh trong kỳ và số dư cuối kỳ của các tài khoản. Số liệu trên Bảng cân đối tài khoản nợ nước ngoài còn là căn cứ để kiểm tra việc ghi chép trên sổ tổng hợp (sổ cái tài khoản), đồng thời đối chiếu và kiểm soát số liệu ghi trên các báo cáo khác.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Nội dung và phương pháp lập Nguồn số liệu để lập Bảng cân đối tài khoản nợ nước ngoài là số liệu dòng khóa sổ trên Sổ Cái tài khoản và các sổ kế toán chi tiết tài khoản; Bảng cân đối tài khoản nợ nước ngoài kỳ trước. Trước khi lập Bảng cân đối tài khoản nợ nước ngoài phải hoàn thành việc ghi sổ và khóa sổ kế toán chi tiết và tổng hợp, kiểm tra, đối chiếu giữa các số liệu có liên quan. Số liệu ghi vào Bảng cân đối tài khoản nợ nước ngoài chia làm 2 loại: - Loại số liệu phản ánh số dư các tài khoản tại thời điểm đầu kỳ (Cột 1, 2 ghi số dư đầu kỳ), tại thời điểm cuối kỳ (cột 5, 6 ghi số dư cuối kỳ), trong đó các tài khoản có số dư Nợ được phản ánh vào cột \"Nợ\", các tài khoản có số dư có được phản ánh vào cột \"Có\". - Loại số liệu phản ánh số phát sinh của các tài khoản từ đầu kỳ đến ngày cuối kỳ báo cáo (cột 3, 4 ghi số phát sinh trong kỳ này), trong đó tổng số phát sinh \"Nợ\" của các tài khoản được phản ánh vào cột \"Nợ\", tổng số phát sinh \"Có\" được phản ánh vào cột \"Có\". - Cột A, B - Ghi số hiệu tài khoản và ghi tên tài khoản của tất cả các tài khoản cấp I mà đơn vị đang sử dụng và một số tài khoản cấp II cần phân tích. - Cột 1, 2 - Số dư đầu kỳ: Phản ánh số dư đầu kỳ báo cáo. Số liệu để ghi vào các cột này được căn cứ vào dòng số dư cuối kỳ của Bảng cân đối tài khoản nợ nước ngoài kỳ trước hoặc số dư đầu kỳ của các tài khoản trên Sổ Cái tài khoản. Trường hợp có điều chỉnh số dư thì ghi theo số dư đã điều chỉnh. - Cột 3, 4 - Số phát sinh trong kỳ: Phản ánh tổng số phát sinh Nợ và tổng số phát sinh Có trong kỳ báo cáo của các tài khoản. Số liệu ghi vào phần này được căn cứ vào dòng \"Cộng phát sinh trong kỳ\" của từng tài khoản trên Sổ Cái tài khoản. - Cột 5, 6 - Số dư cuối kỳ: Phản ánh số dư ngày cuối cùng của kỳ báo cáo. Số liệu để ghi vào phần này được căn cứ vào số dư cuối kỳ của kỳ báo cáo của các tài khoản trên Sổ Cái tài khoản được tính căn cứ vào các cột số dư đầu kỳ (Cột 1, 2) cộng (+) số phát sinh trong kỳ (Cột 3, 4) trên Bảng cân đối tài khoản nợ nước ngoài kỳ này. Sau khi ghi đủ các số liệu có liên quan đến các tài khoản, phải thực hiện tổng cộng Bảng cân đối tài khoản nợ nước ngoài, số liệu “cộng” trong Bảng cân đối tài khoản nợ nước ngoài phải đảm bảo tính cân đối bắt buộc sau đây: Tổng số dư Nợ đầu kỳ (Cột 1) Phải bằng Tổng số dư Có đầu kỳ (Cột 2) của các tài khoản. Tổng số phát sinh Nợ (cột 3) phải bằng Tổng số phát sinh Có (Cột 4) của các tài khoản trong kỳ báo cáo. Tổng số dư Nợ cuối kỳ (cột 5) phải bằng Tổng số dư có cuối kỳ (cột 6) của các tài khoản. BÁO CÁO THỰC HIỆN VAY, TRẢ NỢ NƯỚC NGOÀI CỦA CHÍNH PHỦ (Mẫu số B02/NN) 1. Mục đích Báo cáo này do Cục QLN và KTĐN lập, gửi KBNN để phản ánh tình hình vay, trả nợ nước ngoài bao gồm cả gốc, lãi, phí và chi phí vay của Chính phủ.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Nội dung và phương pháp lập Báo cáo này phản ánh chi tiết theo từng nhà tài trợ bao gồm: nhà tài trợ chính thức (song phương, đa phương) và các chủ nợ tư nhân khác. - Cột A - Ghi tên từng nhà tài trợ theo quốc gia hoặc theo hình thức. - Cột 1 - Dư nợ đầu kỳ: Phản ánh số dư đầu kỳ báo cáo. Số liệu để ghi vào các cột này được căn cứ vào dòng số dư nợ cuối kỳ (cột 7) của báo cáo này kỳ trước. - Cột 2 - Phát sinh trong kỳ: Phản ánh tổng số nợ nước ngoài phát sinh trong kỳ báo cáo. Số liệu ghi vào phần này được căn cứ vào dòng \"Cộng phát sinh trong kỳ\" của sổ chi tiết tài khoản 361, 363. - Cột 3, 4, 5, 6 - Trả nợ: Phản ánh tình hình trả nợ nước ngoài của Chính phủ, trong đó: Cột 3: Phản ánh tình hình trả gốc các khoản nợ vay của Chính phủ Cột 4: Phản ánh tình hình trả lãi các khoản nợ vay của Chính phủ Cột 5: Phản ánh phí, chi phí của các khoản nợ vay Cột 6: Phản ánh tổng cộng tình hình trả nợ của Chính phủ (cột 6 = cột 3 + cột 4 + cột 5) - Cột 7 - Dư nợ cuối kỳ: Phản ánh số dư nợ nước ngoài còn lại của Chính phủ. BÁO CÁO CHI TIẾT THEO KỲ HẠN VAY NỢ CỦA CHÍNH PHỦ (Mẫu số B03/NN) 1. Mục đích Báo cáo này do Cục QLN và KTĐN lập, gửi KBNN để phản ánh chi tiết các khoản vay nợ của Chính phủ theo kỳ hạn vay ngắn hạn, trung hạn và dài hạn.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Nội dung và phương pháp lập - Cột A, B: ghi STT và nội dung chi tiết các khoản vay theo kỳ hạn vay, bao gồm: vay ngắn hạn nước ngoài, vay trung hạn và dài hạn nước ngoài. - Cột 1: Phản ánh số vay ngắn hạn nước ngoài, vay trung hạn và dài hạn nước ngoài mang sang đầu kỳ - Cột 2, 3: Phản ánh số vay ngắn hạn nước ngoài, vay trung hạn và dài hạn nước ngoài phát sinh tăng, giảm trong kỳ (tăng ghi cột 2, giảm ghi cột 3) - Cột 4: Phản ánh số vay ngắn hạn nước ngoài, vay trung hạn và dài hạn nước ngoài còn cuối kỳ. THUYẾT MINH BÁO CÁO TÌNH HÌNH VAY, TRẢ NỢ NƯỚC NGOÀI (Mẫu số B04/NN) 1. Mục đích Thuyết minh Báo cáo tình hình vay, trả nợ nước ngoài bao gồm các thông tin bổ sung cho các thông tin được trình bày trên Bảng cân đối tài khoản nợ nước ngoài, Báo cáo thực hiện vay, trả nợ nước ngoài của Chính phủ; Báo cáo chi tiết theo kỳ hạn vay nợ của Chính phủ cũng như các thông tin cần thiết khác theo yêu cầu. Thuyết minh cung cấp các diễn giải hoặc phân tích chi tiết các khoản mục được trình bày trong các báo cáo trên và thông tin về các khoản mục không đáp ứng tiêu chí được trình bày trong các báo cáo trên.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Nội dung và phương pháp lập Đơn vị phải mô tả các thông tin chi tiết về đơn vị mình như: tình hình quản lý các khoản vay nợ nước ngoài; tình hình thực hiện các chỉ tiêu nhiệm vụ cơ bản và những công việc phát sinh đột xuất khác trong kỳ. Các thông tin bổ sung chi tiết khác: - Các khoản vay hỗ trợ ngân sách đã được nhận nợ: Thuyết minh chi tiết các khoản vay hỗ trợ ngân sách đã được nhận nợ với nước ngoài. - Các khoản cấp cho dự án: Thuyết minh chi tiết các khoản vay đã cấp cho từng dự án. - Các khoản vay chưa xác định được đối tượng sử dụng hoặc mục đích sử dụng: Thuyết minh chi tiết các khoản vay nước ngoài trên tài khoản tạm ứng của các Bộ, ngành đã nhận nợ. - Phải trả về lãi, phí và chi phí vay nước ngoài: Thuyết minh chi tiết tình hình tăng, giảm và số phải trả về các khoản lãi, phí và chi phí liên quan đến khoản nợ vay. - Thuyết minh chi tiết các khoản phải trả NSNN trong đó có so sánh với các kỳ trước và đi kèm dự báo cho kỳ sau. - Thuyết minh đánh giá cơ cấu nợ và đánh giá so với các chỉ tiêu kinh tế xã hội. Đơn vị phải đưa ra nhận xét và kiến nghị cụ thể với cơ quan có thẩm quyền. PHỤ LỤC IV MẪU BIỂU ĐỐI CHIẾU, BÁO CÁO VỀ TÌNH HÌNH VAY, TRẢ NỢ CỦA CHÍNH QUYỀN ĐỊA PHƯƠNG (Ban hành kèm theo Thông tư số 119/2026/TT-BTC ngày 18 tháng 8 năm 2026 của Bộ trưởng Bộ Tài chính) Mẫu số: C01/TN (Ban hành kèm theo Thông tư số 119/2026/TT-BTC ngày 18 tháng 8 năm 2026 của Bộ trưởng Bộ Tài chính) KHO BẠC NHÀ NƯỚC KHO BẠC NHÀ NƯỚC KHU VỰC/CẤP TỈNH ------- CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM Độc lập - Tự do - Hạnh phúc --------------- BẢNG ĐỐI CHIẾU SỐ LIỆU VAY, TRẢ NỢ CỦA CHÍNH QUYỀN ĐỊA PHƯƠNG Từ ngày ............. đến ngày ............. Đơn vị tính: ............. Chỉ tiêu Dư nợ đầu kỳ Phát sinh trong kỳ Trả nợ trong kỳ Dư nợ cuối kỳ Gốc Lãi Phí, chi phí Tổng A 1 2 3 4 5 6= 3+4+5 7 1. Phát hành trái phiếu của chính quyền địa phương 2. Tạm ứng, vay ngân quỹ nhà nước 3. Vay của các tổ chức tài chính, tín dụng 3.1. Vay Ngân hàng Phát triển Việt Nam 3.2. Vay các tổ chức tín dụng khác 4. Vay lại trực tiếp vốn vay nước ngoài của Chính phủ 5. Vay các tổ chức khác Tổng cộng KHO BẠC NHÀ NƯỚC Ngày....tháng....năm... SỞ TÀI CHÍNH Ngày....tháng....năm... NGƯỜI LẬP BIỂU (Ký, họ tên) NGƯỜI KIỂM SOÁT (Ký, họ tên) THỦ TRƯỞNG ĐƠN VỊ (Ký, họ tên, đóng, dấu) NGƯỜI KIỂM SOÁT (Ký, họ tên) THỦ TRƯỞNG ĐƠN VỊ (Ký, họ tên, đóng dấu) Mẫu số: B02a/TN (Ban hành kèm theo Thông tư số 119/2026/TT-BTC ngày 18 tháng 8 năm 2026 của Bộ trưởng Bộ Tài chính) KHO BẠC NHÀ NƯỚC KHO BẠC NHÀ NƯỚC KHU VỰC/CẤP TỈNH ------- CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM Độc lập - Tự do - Hạnh phúc --------------- BÁO CÁO TÌNH HÌNH VAY, TRẢ NỢ CỦA CHÍNH QUYỀN ĐỊA PHƯƠNG Từ ngày ............. đến ngày ............. Đơn vị tính: ............. Chỉ tiêu Dư nợ đầu kỳ Phát sinh trong kỳ Trả nợ trong kỳ Dư nợ cuối kỳ Gốc Lãi Phí, chi phí Tổng A 1 2 3 4 5 6= 3+4+5 7 1. Phát hành trái phiếu của chính quyền địa phương 2. Tạm ứng, vay ngân quỹ nhà nước 3. Vay của các tổ chức tài chính, tín dụng 3.1. Vay Ngân hàng Phát triển Việt Nam 3.2. Vay các tổ chức tín dụng khác 4. Vay lại trực tiếp vốn vay nước ngoài của Chính phủ 5. Vay các tổ chức khác Tổng cộng NGƯỜI LẬP BIỂU (Ký, họ tên) KẾ TOÁN TRƯỞNG (Ký, họ tên) Ngày…….tháng…….năm…….. THỦ TRƯỞNG ĐƠN VỊ (Ký, họ tên, đóng dấu) BẢNG ĐỐI CHIẾU SỐ LIỆU VAY, TRẢ NỢ CỦA CHÍNH QUYỀN ĐỊA PHƯƠNG (Mẫu số C01/TN) 1. Mục đích Bảng này do KBNN khu vực/cấp tỉnh lập và gửi Sở Tài chính để đối chiếu số liệu tình hình vay, trả nợ của chính quyền địa phương, bao gồm gốc, lãi, phí, chi phí vay 2. Nội dung và phương pháp lập Bảng đối chiếu này phản ánh số liệu vay, trả nợ của chính quyền địa phương theo từng hình thức vay, bao gồm: vay phát hành trái phiếu chính quyền địa phương; tạm ứng, vay ngân quỹ nhà nước; vay Ngân hàng Phát triển Việt Nam; vay các tổ chức tín dụng khác; vay lại trực tiếp vốn vay nước ngoài của Chính phủ và vay các tổ chức khác. - Cột A - Ghi rõ theo từng hình thức vay của chính quyền địa phương. - Cột 1 - Dư nợ đầu kỳ: Phản ánh số dư nợ gốc đầu kỳ, số liệu để ghi vào các cột này được căn cứ vào dòng số dư nợ cuối kỳ (cột 7) của kỳ đối chiếu trước. - Cột 2 - Phát sinh trong kỳ: Phản ánh tổng số nợ phát sinh trong kỳ đối chiếu. - Cột 3, 4, 5, 6 - Trả nợ trong kỳ: Phản ánh tình hình trả nợ của chính quyền địa phương với các khoản đã vay, trong đó: Cột 3: Phản ánh tình hình trả gốc các khoản nợ vay trong kỳ đối chiếu. Cột 4: Phản ánh tình hình trả lãi các khoản nợ vay trong kỳ đối chiếu. Cột 5: Phản ánh tình hình trả phí, chi phí của các khoản nợ vay trong kỳ đối chiếu. Cột 6: Phản ánh tổng cộng tình hình trả nợ các khoản nợ vay của chính quyền địa phương trong kỳ đối chiếu (cột 6 = cột 3 + cột 4 + cột 5). Cột 7 - Dư nợ cuối kỳ: Phản ánh số dư nợ gốc còn lại của các khoản nợ vay của chính quyền địa phương tại thời điểm cuối kỳ đối chiếu. Bảng đối chiếu này được lập thành hai bản. Sau khi đối chiếu và thống nhất số liệu, Sở Tài chính và KBNN khu vực/cấp tỉnh ký xác nhận; mỗi đơn vị lưu một bản. BÁO CÁO TÌNH HÌNH VAY, TRẢ NỢ CỦA CHÍNH QUYỀN ĐỊA PHƯƠNG (Mẫu số B02a/TN) 1. Mục đích Báo cáo này do KBNN khu vực/cấp tỉnh, lập và gửi Sở Tài chính để phản ánh tình hình vay, trả nợ của chính quyền địa phương, bao gồm gốc, lãi, phí, chi phí vay.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Nội dung và phương pháp lập Báo cáo này phản ánh số liệu tình hình vay, trả nợ của chính quyền địa phương theo hình thức vay, bao gồm: vay phát hành trái phiếu chính quyền địa phương; tạm ứng, vay ngân quỹ nhà nước; vay Ngân hàng Phát triển Việt Nam; vay các tổ chức tín dụng khác; vay lại trực tiếp vốn vay nước ngoài của Chính phủ và vay các tổ chức khác. - Cột A - Ghi rõ theo từng hình thức vay của chính quyền địa phương. - Cột 1 - Dư nợ đầu kỳ: Phản ánh số dư nợ gốc đầu kỳ, số liệu để ghi vào các cột này được căn cứ vào dòng số dư nợ cuối kỳ (cột 7) của báo cáo này kỳ trước. - Cột 2 - Phát sinh trong kỳ: Phản ánh tổng số nợ phát sinh trong kỳ báo cáo. - Cột 3, 4, 5, 6 - Trả nợ trong kỳ: Phản ánh tình hình trả nợ của chính quyền địa phương với các khoản đã vay, trong đó: Cột 3: Phản ánh tình hình trả gốc các khoản nợ vay. Cột 4: Phản ánh tình hình trả lãi các khoản nợ vay. Cột 5: Phản ánh tình hình trả phí, chi phí của các khoản nợ vay. Cột 6: Phản ánh tổng cộng tình hình trả nợ các khoản nợ vay của chính quyền địa phương trong kỳ (cột 6 = cột 3 + cột 4 + cột 5). Cột 7 - Dư nợ cuối kỳ: Phản ánh số dư nợ gốc còn lại của các khoản nợ vay của chính quyền địa phương. PHỤ LỤC V MẪU BIỂU, PHƯƠNG PHÁP LẬP BÁO CÁO TÌNH HÌNH VAY, TRẢ NỢ TRONG NƯỚC (Ban hành kèm theo Thông tư số 119/2026/TT-BTC ngày 18 tháng 8 năm 2026 của Bộ trưởng Bộ Tài chính) Mẫu số: B01/TN (Ban hành kèm theo Thông tư số 119/2026/TT-BTC ngày 18 tháng 8 năm 2026 của Bộ trưởng Bộ Tài chính) BỘ TÀI CHÍNH VỤ NGÂN SÁCH NHÀ NƯỚC ------- CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM Độc lập - Tự do - Hạnh phúc --------------- BÁO CÁO THỰC HIỆN VAY, TRẢ NỢ TRONG NƯỚC THEO ĐỐI TƯỢNG CỦA CHÍNH PHỦ Từ ngày ............. đến ngày ............. Đơn vị tính: ............. Nội dung Dư nợ đầu kỳ Phát sinh trong kỳ Trả nợ trong kỳ Dư nợ cuối kỳ Gốc Lãi Phí, chi phí Tổng cộng A 1 2 3 4 5 6= 3+4+5 7= 1+2-3 TỔNG CỘNG 1. Vay Quỹ Tài chính, ngoài ngân sách 1.1. Quỹ A 1.2. Quỹ B .....",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Vay khác NGƯỜI LẬP BIỂU (Ký, họ tên) NGƯỜI KIỂM SOÁT (Ký, họ tên) Ngày…….tháng…….năm…….. THỦ TRƯỞNG ĐƠN VỊ (Ký, họ tên, đóng dấu) Mẫu số: B02/TN (Ban hành kèm theo Thông tư số 119/2026/TT-BTC ngày 18 tháng 8 năm 2026 của Bộ trưởng Bộ Tài chính) BỘ TÀI CHÍNH KHO BẠC NHÀ NƯỚC ------- CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM Độc lập - Tự do - Hạnh phúc --------------- BÁO CÁO TỔNG HỢP THỰC HIỆN VAY, TRẢ NỢ CỦA CHÍNH QUYỀN ĐỊA PHƯƠNG Từ ngày ............. đến ngày ............. Đơn vị tính: ............. Chỉ tiêu Dư nợ đầu kỳ Phát sinh trong kỳ Trả nợ trong kỳ Dư nợ cuối kỳ Gốc Lãi Phí, chi phí Tổng A 1 2 3 4 5 6= 3+4+5 7 I. Tỉnh A 1. Phát hành trái phiếu của chính quyền địa phương 2. Tạm ứng, vay ngân quỹ nhà nước 3. Vay của các Tổ chức tài chính, tín dụng 3.1. Vay Ngân hàng Phát triển Việt Nam. 3.2. Vay các tổ chức tín dụng khác 4. Vay lại trực tiếp vốn vay nước ngoài của Chính phủ 5. Vay các tổ chức khác II. Tỉnh B ................................ III. Tỉnh C ................................ Tổng cộng NGƯỜI LẬP BIỂU (Ký, họ tên) KẾ TOÁN TRƯỞNG (Ký, họ tên) Ngày…….tháng…….năm…….. THỦ TRƯỞNG ĐƠN VỊ (Ký, họ tên, đóng dấu) Mẫu số: B03/TN (Ban hành kèm theo Thông tư số 119/2026/TT-BTC ngày 18 tháng 8 năm 2026 của Bộ trưởng Bộ Tài chính) BỘ TÀI CHÍNH KHO BẠC NHÀ NƯỚC ------- CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM Độc lập - Tự do - Hạnh phúc --------------- BÁO CÁO THỰC HIỆN VAY, TRẢ NỢ TRONG NƯỚC THEO HÌNH THỨC VAY CỦA CHÍNH PHỦ Từ ngày ............. đến ngày ............. Đơn vị tính: ............. Nội dung Dư nợ đầu kỳ Phát sinh trong kỳ Trả nợ trong kỳ Dư nợ cuối kỳ Gốc Lãi Chi phí Tổng cộng A 1 2 3 4 5 6 7 =1+2-3 I. Phát hành công cụ nợ 1. Tín phiếu Kho bạc 2. Trái phiếu Chính phủ - Trái phiếu nội tệ - Trái phiếu ngoại tệ (quy đổi) - Trái phiếu xanh - Trái phiếu khác 3. Công trái 2. Ký kết thỏa thuận vay 1. Vay từ các quỹ tài chính 2. Tạm ứng/vay Ngân quỹ nhà nước 3. Vay khác Tổng NGƯỜI LẬP BIỂU (Ký, họ tên) KẾ TOÁN TRƯỞNG (Ký, họ tên) Ngày…….tháng…….năm…….. THỦ TRƯỞNG ĐƠN VỊ (Ký, họ tên, đóng dấu) Mẫu số: B04/TN (Ban hành kèm theo Thông tư số 119/2026/TT-BTC ngày 18 tháng 8 năm 2026 của Bộ trưởng Bộ Tài chính) BỘ TÀI CHÍNH KHO BẠC NHÀ NƯỚC ------- CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM Độc lập - Tự do - Hạnh phúc --------------- BÁO CÁO VAY, TRẢ NỢ TRONG NƯỚC Từ ngày ............. đến ngày ............. Đơn vị tính: ............. STT Các khoản vay Dư nợ gốc đầu kỳ Phát sinh trong kỳ Trả nợ trong kỳ Dư nợ gốc cuối kỳ Gốc Lãi Phí, chi phí Tổng cộng A B 1 2 3 4 5 6= 3+4+5 7 I Vay và trả nợ vay của Chính phủ 1 Phát hành công cụ nợ của Chính phủ tại thị trường trong nước 2 Vay từ các quỹ tài chính 3 Vay ngân quỹ nhà nước 4 Vay khác II Vay và trả nợ của chính quyền địa phương 1 Phát hành trái phiếu của chính quyền địa phương 2 Vay lại vốn vay nước ngoài của Chính phủ 3 Vay từ ngân quỹ nhà nước 4 Vay khác Tổng cộng (I+II) NGƯỜI LẬP BIỂU (Ký, họ tên) KẾ TOÁN TRƯỞNG (Ký, họ tên) Ngày…….tháng…….năm…….. THỦ TRƯỞNG ĐƠN VỊ (Ký, họ tên, đóng dấu) BÁO CÁO THỰC HIỆN VAY, TRẢ NỢ TRONG NƯỚC THEO ĐỐI TƯỢNG CỦA CHÍNH PHỦ (Mẫu số B01/TN) 1. Mục đích Báo cáo này do Vụ Ngân sách Nhà nước lập gửi KBNN để phản ánh tình hình vay, trả nợ trong nước của Chính phủ bao gồm cả gốc, lãi, phí và chi phí vay của Chính phủ.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Nội dung và phương pháp lập Báo cáo này phản ánh chi tiết theo từng chủ nợ bao gồm: vay Quỹ Tài chính ngoài ngân sách và vay khác. - Cột A - Ghi rõ tên từng quỹ cho vay - Cột 1- Dư nợ đầu kỳ: Phản ánh số dư nợ gốc các khoản nợ trong nước đầu kỳ báo cáo. Số liệu để ghi vào cột này được căn cứ vào dòng số dư nợ cuối kỳ (cột 7) của báo cáo này kỳ trước. - Cột 2 - Phát sinh trong kỳ: Phản ánh tổng số nợ trong nước phát sinh trong kỳ báo cáo. - Cột 3, 4, 5, 6 - Trả nợ trong kỳ: Phản ánh tình hình trả nợ của Chính phủ với các khoản vay trong nước, trong đó: Cột 3: Phản ánh tình hình trả gốc các khoản nợ vay của Chính phủ. Cột 4: Phản ánh tình hình trả lãi các khoản nợ vay của Chính phủ. Cột 5: Phản ánh tình hình trả phí, chi phí của các khoản nợ vay. Cột 6: Phản ánh tổng cộng tình hình trả nợ của Chính phủ trong kỳ (cột 6 = cột 3 + cột 4 + cột 5). - Cột 7- Dư nợ cuối kỳ: Phản ánh số dư nợ gốc còn lại của Chính phủ đối với khoản vay trong nước (cột 7 = cột 1 + cột 2 - cột 3). BÁO CÁO TỔNG HỢP THỰC HIỆN VAY, TRẢ NỢ CỦA CHÍNH QUYỀN ĐỊA PHƯƠNG (Mẫu số B02/TN) 1. Mục đích Báo cáo này do KBNN lập gửi Cục QLN và KTĐN để phản ánh tổng hợp tình hình vay, trả nợ của Chính quyền địa phương theo từng tỉnh, bao gồm cả gốc, lãi, phí, chi phí vay.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Nội dung và phương pháp lập Báo cáo này phản ánh chi tiết theo từng hình thức vay, bao gồm: vay phát hành trái phiếu chính quyền địa phương; tạm ứng, vay ngân quỹ nhà nước; vay Ngân hàng Phát triển Việt Nam; vay các tổ chức tín dụng khác; vay lại trực tiếp vốn vay nước ngoài của Chính phủ và vay các tổ chức khác. - Cột A - Ghi rõ tên từng tỉnh, theo từng hình thức vay. - Cột 1 - Dư nợ đầu kỳ: Phản ánh số dư nợ gốc đầu kỳ, số liệu để ghi vào cột này được căn cứ vào dòng số dư nợ cuối kỳ (cột 7) của báo cáo này kỳ trước. - Cột 2 - Phát sinh trong kỳ: Phản ánh tổng số nợ phát sinh trong kỳ báo cáo. - Cột 3, 4, 5, 6 - Trả nợ trong kỳ: Phản ánh tình hình trả nợ của chính quyền địa phương với các khoản đã vay, trong đó: Cột 3: Phản ánh tình hình trả gốc các khoản nợ vay. Cột 4: Phản ánh tình hình trả lãi các khoản nợ vay. Cột 5: Phản ánh tình hình trả phí, chi phí của các khoản nợ vay. Cột 6: Phản ánh tổng cộng tình hình trả nợ của chính quyền địa phương trong kỳ (cột 6 = cột 3 + cột 4 + cột 5). - Cột 7 - Dư nợ cuối kỳ: Phản ánh số dư nợ gốc còn lại của chính quyền địa phương. BÁO CÁO THỰC HIỆN VAY, TRẢ NỢ TRONG NƯỚC THEO HÌNH THỨC VAY CỦA CHÍNH PHỦ (Mẫu số B03/TN) 1. Mục đích Báo cáo này do KBNN lập gửi Cục QLN và KTĐN phản ánh tình hình thực hiện vay, trả nợ (bao gồm cả gốc, lãi, chi phí vay) theo hình thức vay của Chính phủ.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Nội dung và phương pháp lập Báo cáo này phản ánh thực hiện vay, trả nợ trong nước theo hình thức vay của Chính phủ chi tiết theo từng hình thức vay bao gồm: Phát hành công cụ nợ (tín phiếu kho bạc; trái phiếu Chính phủ; công trái) và Ký kết thỏa thuận vay (vay từ các quỹ tài chính, tạm ứng/vay Ngân quỹ nhà nước và vay khác). - Cột A - Ghi rõ hình thức vay. - Cột 1 - Dư nợ đầu kỳ: Phản ánh số dư nợ gốc vay trong nước đầu kỳ, số liệu để ghi vào cột này được căn cứ vào dòng số dư nợ cuối kỳ (cột 7) của báo cáo này kỳ trước. - Cột 2 - Phát sinh trong kỳ: Phản ánh tổng số nợ trong nước phát sinh trong kỳ báo cáo. - Cột 3, 4, 5, 6 - Trả nợ trong kỳ: Phản ánh tình hình trả nợ của Chính phủ với các khoản vay trong nước, trong đó: Cột 3: Phản ánh tình hình trả gốc các khoản nợ vay. Cột 4: Phản ánh tình hình trả lãi các khoản nợ vay. Cột 5: Phản ánh tình hình trả chi phí của các khoản nợ vay. Cột 6: Phản ánh tổng cộng tình hình trả nợ của Chính phủ trong kỳ (cột 6 = cột 3 + cột 4 + cột 5). - Cột 7 - Dư nợ cuối kỳ: Phản ánh số dư nợ gốc còn lại của Chính phủ đối với các khoản vay trong nước (cột 7 = cột 1 + cột 2 - cột 3). BÁO CÁO VAY, TRẢ NỢ TRONG NƯỚC (Mẫu số B04/TN) 1. Mục đích Báo cáo này do KBNN lập gửi Cục QLN và KTĐN tổng hợp tình hình vay và trả nợ các khoản nợ vay của Chính phủ và chính quyền địa phương.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Nội dung và phương pháp lập Báo cáo này phản ánh tổng hợp tình hình vay, trả nợ trong nước của Chính phủ và chính quyền địa phương. - Cột A, B - Ghi STT và chi tiết các khoản vay. - Cột 1 - Dư nợ gốc đầu kỳ: Phản ánh số dư nợ gốc đầu kỳ, số liệu để ghi vào cột này được căn cứ vào dòng số dư nợ gốc cuối kỳ (cột 7) của báo cáo này kỳ trước. - Cột 2 - Phát sinh trong kỳ: Phản ánh tổng số nợ phát sinh trong kỳ báo cáo. - Cột 3, 4, 5, 6 - Trả nợ trong kỳ: Phản ánh tình hình trả nợ trong nước của Chính phủ và chính quyền địa phương với các khoản đã vay, Trong đó: Cột 3: Phản ánh tình hình trả gốc các khoản nợ vay. Cột 4: Phản ánh tình hình trả lãi các khoản nợ vay. Cột 5: Phản ánh tình hình trả phí, chi phí của các khoản nợ vay. Cột 6: Phản ánh tổng cộng tình hình trả nợ của Chính phủ và chính quyền địa phương trong kỳ (cột 6 = cột 3 + cột 4 + cột 5). - Cột 7 - Dư nợ cuối kỳ: Phản ánh số dư nợ khoản vay trong nước còn lại của Chính phủ và chính quyền địa phương. PHỤ LỤC VI MẪU BIỂU, PHƯƠNG PHÁP LẬP BÁO CÁO VAY NỢ ĐƯỢC CHÍNH PHỦ BẢO LÃNH (Ban hành kèm theo Thông tư số 119/2026/TT-BTC ngày 18 tháng 8 năm 2026 của Bộ trưởng Bộ Tài chính) Mẫu số: B01/BL (Ban hành kèm theo Thông tư số 119/2026/TT-BTC ngày 18 tháng 8 năm 2026 của Bộ trưởng Bộ Tài chính) BỘ TÀI CHÍNH CỤC QUẢN LÝ NỢ VÀ KINH TẾ ĐỐI NGOẠI ------- CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM Độc lập - Tự do - Hạnh phúc --------------- BÁO CÁO THỰC HIỆN VAY, TRẢ NỢ NƯỚC NGOÀI ĐƯỢC CHÍNH PHỦ BẢO LÃNH Từ ngày ............. đến ngày ............. Đơn vị tính: ............. Chỉ tiêu Dư nợ đầu kỳ Phát sinh trong kỳ Trả nợ trong kỳ Dư nợ cuối kỳ Gốc Lãi Phí, chi phí Tổng A 1 2 3 4 5 6= 3+4+5 7 TỔNG CỘNG - Đối tượng được bảo lãnh (doanh nghiệp) - Đối tượng được bảo lãnh (doanh nghiệp) NGƯỜI LẬP BIỂU (Ký, họ tên) NGƯỜI KIỂM SOÁT (Ký, họ tên) Ngày…….tháng…….năm…….. THỦ TRƯỞNG ĐƠN VỊ (Ký, họ tên, đóng dấu) Mẫu số: B02/BL (Ban hành kèm theo Thông tư số 119/2026/TT-BTC ngày 18 tháng 8 năm 2026 của Bộ trưởng Bộ Tài chính) BỘ TÀI CHÍNH CỤC QUẢN LÝ NỢ VÀ KINH TẾ ĐỐI NGOẠI ------- CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM Độc lập - Tự do - Hạnh phúc --------------- BÁO CÁO THỰC HIỆN VAY, TRẢ NỢ TRONG NƯỚC ĐƯỢC CHÍNH PHỦ BẢO LÃNH Từ ngày ............. đến ngày ............. Đơn vị tính: ............. Chỉ tiêu Dư nợ đầu kỳ Phát sinh trong kỳ Trả nợ trong kỳ Dư nợ cuối kỳ Gốc Lãi Phí, chi phí Tổng A 1 2 3 4 5 6= 3+4+5 7 TỔNG CỘNG I. Bảo lãnh doanh nghiệp Đối tượng được bảo lãnh (doanh nghiệp) Đối tượng được bảo lãnh (doanh nghiệp) II. Bảo lãnh cho các ngân hàng chính sách 1. Ngân hàng Chính sách xã hội 2. Ngân hàng Phát triển Việt Nam 3. Đơn vị khác NGƯỜI LẬP BIỂU (Ký, họ tên) NGƯỜI KIỂM SOÁT (Ký, họ tên) Ngày…….tháng…….năm…….. THỦ TRƯỞNG ĐƠN VỊ (Ký, họ tên, đóng dấu) BÁO CÁO THỰC HIỆN VAY, TRẢ NỢ NƯỚC NGOÀI ĐƯỢC CHÍNH PHỦ BẢO LÃNH (Mẫu số B01/BL) 1. Mục đích Báo cáo này do Cục QLN và KTĐN lập, gửi KBNN để phản ánh tình hình thực hiện vay, trả nợ nước ngoài được Chính phủ bảo lãnh.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Nội dung và phương pháp lập Báo cáo này phản ánh chi tiết theo từng đối tượng được Chính phủ bảo lãnh. - Cột A - Ghi rõ tên từng doanh nghiệp được Chính phủ bảo lãnh khoản vay. - Cột 1 - Dư nợ đầu kỳ: Phản ánh số dư đầu kỳ báo cáo. Số liệu để ghi vào các cột này được căn cứ vào dòng số dư nợ cuối kỳ (cột 7) của báo cáo này kỳ trước. - Cột 2 - Phát sinh trong kỳ: Phản ánh tổng số nợ phát sinh trong kỳ báo cáo. - Cột 3, 4, 5, 6 - Trả nợ trong kỳ: Phản ánh tình hình trả nợ của các doanh nghiệp được Chính phủ bảo lãnh, trong đó: Cột 3: Phản ánh tình hình trả gốc các khoản nợ vay. Cột 4: Phản ánh tình hình trả lãi các khoản nợ vay. Cột 5: Phản ánh tình hình trả phí, chi phí của các khoản nợ vay. Cột 6: Phản ánh tổng cộng tình hình trả nợ trong kỳ (cột 6 = cột 3 + cột 4 + cột 5). - Cột 7 - Dư nợ cuối kỳ: Phản ánh số dư nợ còn lại cuối kỳ. BÁO CÁO THỰC HIỆN VAY, TRẢ NỢ TRONG NƯỚC ĐƯỢC CHÍNH PHỦ BẢO LÃNH (Mẫu số B02/BL) 1. Mục đích Báo cáo này do Cục QLN và KTĐN lập, gửi KBNN để phản ánh tình hình thực hiện vay, trả nợ trong nước được Chính phủ bảo lãnh.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Nội dung và phương pháp lập Báo cáo này phản ánh chi tiết theo từng đối tượng được Chính phủ bảo lãnh bao gồm doanh nghiệp và các ngân hàng chính sách. - Cột A - Ghi rõ tên từng doanh nghiệp, từng ngân hàng được Chính phủ bảo lãnh. - Cột 1 - Dư nợ đầu kỳ: Phản ánh số dư đầu kỳ báo cáo. Số liệu để ghi vào các cột này được căn cứ vào dòng số dư nợ cuối kỳ (cột 7) của báo cáo này kỳ trước. - Cột 2 - Phát sinh trong kỳ: Phản ánh tổng số nợ phát sinh trong kỳ báo cáo. - Cột 3, 4, 5, 6 - Trả nợ trong kỳ: Phản ánh tình hình trả nợ của các doanh nghiệp, ngân hàng được Chính phủ bảo lãnh, trong đó: Cột 3: Phản ánh tình hình trả gốc các khoản nợ vay. Cột 4: Phản ánh tình hình trả lãi các khoản nợ vay. Cột 5: Phản ánh tình hình trả phí, chi phí của các khoản nợ vay. Cột 6: Phản ánh tổng cộng tình hình trả nợ trong kỳ (cột 6 = cột 3 + cột 4 + cột 5). - Cột 7 - Dư nợ cuối kỳ: Phản ánh số dư nợ còn lại (cột 7 = cột 1 + cột 2 - cột 3). PHỤ LỤC VII MẪU BIỂU, PHƯƠNG PHÁP LẬP BÁO CÁO THỰC HIỆN VAY VỀ CHO VAY LẠI (Ban hành kèm theo Thông tư số 119/2026/TT-BTC ngày 18 tháng 8 năm 2026 của Bộ trưởng Bộ Tài chính) Mẫu số: B01/VL (Ban hành kèm theo Thông tư số 119/2026/TT-BTC ngày 18 tháng 8 năm 2026 của Bộ trưởng Bộ Tài chính) BỘ TÀI CHÍNH CỤC QUẢN LÝ NỢ VÀ KINH TẾ ĐỐI NGOẠI ------- CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM Độc lập - Tự do - Hạnh phúc --------------- BÁO CÁO THỰC HIỆN VAY VỀ CHO VAY LẠI Từ ngày ............. đến ngày ............. Đơn vị tính: ............. Chỉ tiêu Dư nợ đầu kỳ Số phát sinh trong kỳ Số trả nợ trong kỳ Dư nợ cuối kỳ Gốc Lãi Phí, chi phí Tổng cộng A 1 2 3 4 5 6=3+4+5 7 TỔNG CỘNG I. Bộ Tài chính cho vay lại trực tiếp II. Cơ quan cho vay lại - Ngân hàng ........ - Ngân hàng ........ NGƯỜI LẬP BIỂU (Ký, họ tên) NGƯỜI KIỂM SOÁT (Ký, họ tên) Ngày…….tháng…….năm…….. THỦ TRƯỞNG ĐƠN VỊ (Ký, họ tên, đóng dấu) BÁO CÁO THỰC HIỆN VAY VỀ CHO VAY LẠI (Mẫu số B01/VL) 1. Mục đích Báo cáo này do Cục QLN và KTĐN lập, gửi KBNN để phản ánh tình hình thực hiện vay về cho vay lại của Chính phủ.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Nội dung và phương pháp lập Báo cáo thực hiện vay về cho vay lại Báo cáo này phản ánh chi tiết theo từng cơ quan cho vay lại - Cột A - Ghi rõ tên cơ quan cho vay lại (như Bộ Tài chính, các ngân hàng). - Cột 1 - Dư nợ đầu kỳ: Phản ánh số dư đầu kỳ báo cáo. Số liệu để ghi vào cột này được căn cứ vào dòng số dư nợ cuối kỳ (cột 7) của báo cáo này kỳ trước. - Cột 2 - Phát sinh trong kỳ: Phản ánh tổng số cho vay lại phát sinh trong kỳ báo cáo. - Cột 3, 4, 5, 6 - Trả nợ trong kỳ: Phản ánh tình hình trả nợ trong kỳ, trong đó: Cột 3: Phản ánh tình hình trả gốc. Cột 4: Phản ánh tình hình trả lãi. Cột 5: Phản ánh tình hình trả phí, chi phí. Cột 6: Phản ánh tổng cộng tình hình trả nợ trong kỳ (cột 6 = cột 3 + cột 4 + cột 5). - Cột 7 - Dư nợ cuối kỳ: Phản ánh số dư các khoản cho vay lại cuối kỳ. PHỤ LỤC VIII MẪU BIỂU, PHƯƠNG PHÁP LẬP BÁO CÁO TỔNG HỢP NỢ CÔNG (Ban hành kèm theo Thông tư số 119/2026/TT-BTC ngày 18 tháng 8 năm 2026 của Bộ trưởng Bộ Tài chính) Mẫu số: B01/TH (Ban hành kèm theo Thông tư số 119/2026/TT-BTC ngày 18 tháng 8 năm 2026 của Bộ trưởng Bộ Tài chính) BỘ TÀI CHÍNH KHO BẠC NHÀ NƯỚC ------- CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM Độc lập - Tự do - Hạnh phúc --------------- BÁO CÁO TÌNH HÌNH NỢ CÔNG Từ ngày ............. đến ngày ............. Đơn vị tính: ............. Chỉ tiêu Dư nợ đầu kỳ Phát sinh trong kỳ Trả nợ trong kỳ Dư nợ cuối kỳ Gốc Lãi Phí, chi phí Tổng A 1 2 3 4 5 6= 3+4+5 7 I. Nợ của Chính phủ 1. Nợ nước ngoài 2. Nợ trong nước II. Nợ được Chính phủ bảo lãnh 1. Nước ngoài 2. Trong nước III. Nợ của chính quyền địa phương NGƯỜI LẬP BIỂU (Ký, họ tên) KẾ TOÁN TRƯỞNG (Ký, họ tên) Ngày…….tháng…….năm…….. THỦ TRƯỞNG ĐƠN VỊ (Ký, họ tên, đóng dấu) Mẫu số: B02/TH (Ban hành kèm theo Thông tư số 119/2026/TT-BTC ngày 18 tháng 8 năm 2026 của Bộ trưởng Bộ Tài chính) BỘ TÀI CHÍNH KHO BẠC NHÀ NƯỚC ------- CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM Độc lập - Tự do - Hạnh phúc --------------- BÁO CÁO TỔNG HỢP THỰC HIỆN VAY, TRẢ NỢ CỦA CHÍNH PHỦ VÀ CHÍNH QUYỀN ĐỊA PHƯƠNG Từ ngày ............. đến ngày ............. Đơn vị tính: ............. STT Chỉ tiêu Dư nợ gốc đầu kỳ Số phát sinh trong kỳ Trả nợ trong kỳ Dư nợ gốc cuối kỳ Gốc Lãi Phí, chi phí Tổng A B 1 2 3 4 5 6= 3+4+5 7 I Vay, trả nợ trong nước của Chính phủ 1 Phát hành công cụ nợ của Chính phủ tại thị trường trong nước 2 Vay từ các quỹ tài chính 3 Vay từ ngân quỹ nhà nước 4 Vay khác II Vay, trả nợ nước ngoài của Chính phủ 1 ............. 2 ............. III Vay, trả nợ của chính quyền địa phương 1 Phát hành trái phiếu của chính quyền địa phương 2 Vay lại vốn vay nước ngoài của Chính phủ 3 Vay từ ngân quỹ nhà nước 4 Vay khác TỔNG CỘNG NGƯỜI LẬP BIỂU (Ký, họ tên) KẾ TOÁN TRƯỞNG (Ký, họ tên) Ngày…….tháng…….năm…….. THỦ TRƯỞNG ĐƠN VỊ (Ký, họ tên, đóng dấu) BÁO CÁO TÌNH HÌNH NỢ CÔNG (Mẫu số B01/TH) 1. Mục đích Báo cáo này do KBNN lập, gửi Cục QLN và KTĐN để phản ánh tổng hợp tình hình nợ công của quốc gia, bao gồm nợ của Chính phủ; nợ được Chính phủ bảo lãnh và nợ của chính quyền địa phương.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Nội dung và phương pháp lập Báo cáo tình hình nợ công - Cột A - Ghi rõ các khoản nợ theo các nội dung nợ của Chính phủ; nợ được Chính phủ bảo lãnh và nợ của chính quyền địa phương. - Cột 1 - Dư nợ đầu kỳ: Phản ánh số dư đầu kỳ báo cáo. Số liệu để ghi vào cột này được căn cứ vào dòng số dư nợ cuối kỳ (cột 7) của báo cáo này kỳ trước. - Cột 2 - Phát sinh trong kỳ: Phản ánh số nợ công phát sinh trong kỳ báo cáo. - Cột 3, 4, 5, 6 - Trả nợ trong kỳ: Phản ánh tình hình trả nợ công trong kỳ, trong đó: Cột 3: Phản ánh tình hình trả gốc. Cột 4: Phản ánh tình hình trả lãi. Cột 5: Phản ánh tình hình trả phí, chi phí. Cột 6: Phản ánh tổng cộng tình hình trả nợ trong kỳ (cột 6 = cột 3 + cột 4 + cột 5). - Cột 7- Dư nợ cuối kỳ: Phản ánh số dư các khoản nợ công còn lại cuối kỳ. BÁO CÁO TỔNG HỢP THỰC HIỆN VAY, TRẢ NỢ CỦA CHÍNH PHỦ VÀ CHÍNH QUYỀN ĐỊA PHƯƠNG (Mẫu số B02/TH) 1. Mục đích Báo cáo này do KBNN lập, gửi Cục QLN và KTĐN để phản ánh tổng hợp tình hình thực hiện vay, trả nợ của Chính phủ và chính quyền địa phương, bao gồm các khoản vay, trả nợ trong nước của Chính phủ; vay, trả nợ nước ngoài của Chính phủ; vay, trả nợ của chính quyền địa phương.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Nội dung và phương pháp lập - Cột A, B: Ghi STT và các khoản nợ theo các nội dung vay, trả nợ trong nước của Chính phủ; vay, trả nợ nước ngoài của Chính phủ; vay, trả nợ của chính quyền địa phương. - Cột 1 - Dư nợ gốc đầu kỳ: Phản ánh số dư đầu kỳ báo cáo. Số liệu để ghi vào cột này được căn cứ vào dòng số dư nợ cuối kỳ (cột 7) của báo cáo này kỳ trước. - Cột 2 - Số phát sinh trong kỳ: Phản ánh số nợ của Chính phủ và chính quyền địa phương phát sinh trong kỳ báo cáo. - Cột 3, 4, 5, 6 - Trả nợ trong kỳ: Phản ánh tình hình trả nợ của Chính phủ và chính quyền địa phương trong kỳ, trong đó: Cột 3: Phản ánh tình hình trả gốc. Cột 4: Phản ánh tình hình trả lãi. Cột 5: Phản ánh tình hình trả phí, chi phí. Cột 6: Phản ánh tổng cộng tình hình trả nợ trong kỳ (cột 6 = cột 3 + cột 4 + cột 5). - Cột 7 - Dư nợ gốc cuối kỳ: Phản ánh số dư các khoản nợ của Chính phủ và chính quyền địa phương cuối kỳ.",
+                    "diem": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "noiDungDayDu": true,
+      "quanHeHieuLuc": [],
+      "linhVuc": [
+        "Chế độ kế toán"
+      ]
     }
   ],
   "rebuiltAt": "2026-10-01T10:20:42",
-  "lastBackfill": "2026-11-06T13:05:35",
+  "lastBackfill": "2026-11-06T20:02:54",
   "publishCheck": "2026-10-03T10:33:22",
   "lastDailyUpdate": "2026-11-05T08:45:01"
 }
