@@ -160056,10 +160056,469 @@
       "linhVuc": [
         "Chế độ kế toán"
       ]
+    },
+    {
+      "soHieu": "161/2026/TT-BTC",
+      "loaiVanBan": "Thông tư",
+      "coQuanBanHanh": "Bộ Tài chính",
+      "nguoiKy": "Lê Tấn Cận",
+      "ngayBanHanh": "29/10/2026",
+      "ngayHieuLuc": "29/10/2026",
+      "tinhTrangHieuLuc": "con_hieu_luc",
+      "tinhTrangGhiChu": "Còn hiệu lực",
+      "tenVanBan": "Thông tư 161/2026/TT-BTC mẫu biểu báo cáo về cho vay lại vốn vay ODA vay ưu đãi nước ngoài mới nhất",
+      "xacMinh": true,
+      "nguon": {
+        "trangNguon": "thuvienphapluat.vn",
+        "url": "https://thuvienphapluat.vn/van-ban/Tai-chinh-nha-nuoc/Thong-tu-161-2026-TT-BTC-mau-bieu-bao-cao-ve-cho-vay-lai-von-vay-ODA-vay-uu-dai-nuoc-ngoai-731152.aspx"
+      },
+      "noiDung": {
+        "chuong": [
+          {
+            "so": null,
+            "tieuDe": "",
+            "dieu": [
+              {
+                "so": "1",
+                "tieuDe": "Phạm vi điều chỉnh",
+                "text": "Thông tư này hướng dẫn mẫu biểu báo cáo tình hình cho vay lại vốn vay ODA, vay ưu đãi nước ngoài của Chính phủ theo quy định tại khoản 4 Điều 32 của Nghị định số 97/2018/NĐ-CP ngày 30 tháng 6 năm 2018 của Chính phủ về cho vay lại vốn vay ODA, vay ưu đãi nước ngoài của Chính phủ và tần suất, kỳ hạn, tỷ giá quy đổi, hình thức báo cáo. Các mẫu biểu báo cáo bao gồm:",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Mẫu biểu báo cáo tình hình vay lại vốn vay ODA, vay ưu đãi nước ngoài của Ủy ban nhân dân cấp tỉnh.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Mẫu biểu báo cáo phục vụ đối chiếu cho vay lại nguồn vốn vay ODA, vay ưu đãi nước ngoài của Chính phủ đối với Ủy ban nhân dân cấp tỉnh.",
+                    "diem": []
+                  },
+                  {
+                    "so": "3",
+                    "text": "Mẫu biểu báo cáo cho vay lại của Cơ quan được ủy quyền cho vay lại theo phương thức không chịu rủi ro tín dụng hoặc chịu một phần rủi ro tín dụng.",
+                    "diem": []
+                  },
+                  {
+                    "so": "4",
+                    "text": "Mẫu biểu báo cáo cho vay lại của Cơ quan được ủy quyền cho vay lại theo phương thức chịu toàn bộ rủi ro tín dụng.",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "2",
+                "tieuDe": "Đối tượng áp dụng",
+                "text": "1. Ủy ban nhân dân tỉnh, thành phố trực thuộc trung ương (sau đây gọi là Ủy ban nhân dân cấp tỉnh) vay lại nguồn vốn vay ODA, vay ưu đãi nước ngoài của Chính phủ.",
+                "khoan": [
+                  {
+                    "so": "2",
+                    "text": "Bộ Tài chính.",
+                    "diem": []
+                  },
+                  {
+                    "so": "3",
+                    "text": "Cơ quan được Bộ Tài chính ủy quyền làm cơ quan cho vay lại (sau đây gọi là Cơ quan được ủy quyền cho vay lại) được xác định theo Điều 22 Nghị định số 97/2018/NĐ-CP ngày 30 tháng 6 năm 2018 của Chính phủ về cho vay lại vốn vay ODA, vay ưu đãi nước ngoài của Chính phủ được sửa đổi, bổ sung tại khoản 8 Điều 5 Nghị định số 84/2026/NĐ-CP của Chính phủ sửa đổi các Nghị định trong lĩnh vực quản lý nợ công.",
+                    "diem": []
+                  },
+                  {
+                    "so": "4",
+                    "text": "Tổ chức, cá nhân có liên quan đến việc thực hiện chế độ báo cáo tình hình cho vay lại vốn vay ODA, vay ưu đãi nước ngoài của Chính phủ.",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "3",
+                "tieuDe": "Mẫu biểu báo cáo",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Bên vay lại là Ủy ban nhân dân cấp tỉnh gửi Bộ Tài chính báo cáo về cho vay lại nguồn vốn vay ODA, vay ưu đãi nước ngoài của Chính phủ theo mẫu biểu tại Phụ lục I, Phụ lục II Nghị định số 84/2026/NĐ-CP ngày 25 tháng 3 năm 2026 của Chính phủ về sửa đổi, bổ sung một số điều của các Nghị định của Chính phủ trong lĩnh vực quản lý nợ công. Trường hợp phát sinh nợ quá hạn vay lại nguồn vốn vay ODA, vay ưu đãi nước ngoài của Chính phủ tại kỳ báo cáo (nếu có), Bên vay lại là Ủy ban nhân dân cấp tỉnh gửi Bộ Tài chính báo cáo về tình hình vay lại phát sinh nợ quá hạn của Ủy ban nhân dân cấp tỉnh theo mẫu biểu quy định tại Phụ lục I Thông tư này cùng báo cáo định kỳ về cho vay lại nguồn vốn vay ODA, vay ưu đãi nước ngoài nêu trên. Ủy ban nhân dân cấp tỉnh báo cáo Bộ Tài chính tình hình nợ, bao gồm số rút vốn, số trả nợ, số dư nợ để phục vụ đối chiếu cho vay lại nguồn vốn vay ODA, vay ưu đãi nước ngoài của Chính phủ theo mẫu biểu quy định tại Phụ lục II Thông tư này. Đối với từng khoản thanh toán nợ cho vay lại với Bộ Tài chính, Sở Tài chính ghi đầy đủ nội dung thanh toán trên Lệnh chi trả nợ trong nước bằng VND theo cấu trúc sau: CVLĐP-Tên địa phương-Mã số đơn vị quan hệ ngân sách cấp cho dự án đầu tư (Mã dự án đầu tư)-Gốc/Lãi/Phí nhà tài trợ/Phí quản lý cho vay lại-Nội dung thanh toán (nếu cần). Kho bạc Nhà nước nơi giao dịch thực hiện thanh toán và ghi nội dung thanh toán theo nội dung trên chứng từ Sở Tài chính lập.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Cơ quan được ủy quyền cho vay lại theo phương thức không chịu rủi ro tín dụng hoặc chịu một phần rủi ro tín dụng báo cáo Bộ Tài chính theo các mẫu biểu quy định tại Phụ lục III ban hành kèm theo Thông tư này.",
+                    "diem": []
+                  },
+                  {
+                    "so": "3",
+                    "text": "Cơ quan được ủy quyền cho vay lại theo phương thức chịu toàn bộ rủi ro tín dụng báo cáo Bộ Tài chính theo các mẫu biểu quy định tại Phụ lục IV ban hành kèm theo Thông tư này.",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "4",
+                "tieuDe": "Tần suất và kỳ hạn báo cáo",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Bên vay lại là Ủy ban nhân dân cấp tỉnh báo cáo Bộ Tài chính một năm hai lần, lần 1 trước ngày 31 tháng 7 năm thực hiện cho kỳ báo cáo từ ngày 01 tháng 01 đến ngày 30 tháng 6 năm thực hiện và lần 2 trước ngày 15 tháng 02 năm sau cho kỳ báo cáo cả năm thực hiện.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Trước ngày cuối cùng của tháng đầu quý, Cơ quan được ủy quyền cho vay lại báo cáo Bộ Tài chính về tình hình rút vốn, trả nợ, dư nợ khoản vay lại của quý trước theo mẫu biểu 3.01 tại Phụ lục III và mẫu biểu 4.01 tại Phụ lục IV. Riêng đối với quý II và quý IV, Cơ quan được ủy quyền cho vay lại lập báo cáo cho kỳ báo cáo lũy kế 6 tháng trước ngày 31 tháng 8 năm thực hiện và cho kỳ báo cáo cả năm trước ngày 28 tháng 02 năm sau năm thực hiện theo các mẫu biểu quy định tại khoản 2, khoản 3 Điều 3 Thông tư này. 3. Ủy ban nhân dân cấp tỉnh, Cơ quan được ủy quyền cho vay lại định kỳ hằng năm thực hiện Báo cáo phục vụ đối chiếu cho vay lại nguồn vốn vay ODA, vay ưu đãi nước ngoài của Chính phủ theo quy định.",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "5",
+                "tieuDe": "Tỷ giá lập báo cáo, hình thức báo cáo",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Số liệu về dư nợ được lập theo nguyên tệ vay và quy đổi sang VND theo tỷ giá hạch toán kế toán và báo cáo thu chi ngoại tệ do Bộ Tài chính công bố tại thời điểm báo cáo. Số liệu dư nợ đầu kỳ bằng dư nợ cuối kỳ trước.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Số liệu về rút vốn của các dự án được lập theo nguyên tệ vay và quy đổi sang VND theo tỷ giá hạch toán kế toán và báo cáo thu chi ngoại tệ do Bộ Tài chính công bố tại thời điểm phát sinh giao dịch.",
+                    "diem": []
+                  },
+                  {
+                    "so": "3",
+                    "text": "Số liệu về thu nợ của các dự án được lập theo nguyên tệ vay và quy đổi sang VND theo tỷ giá bán ra đồng tiền cho vay lại tại thời điểm trả nợ do Ngân hàng Thương mại Cổ phần Ngoại thương Việt Nam công bố. Trường hợp hợp đồng cho vay lại, hợp đồng ủy quyền cho vay lại đã quy định tỷ giá quy đổi đối với các khoản thu hồi nợ thì áp dụng theo quy định tại hợp đồng cho vay lại, hợp đồng ủy quyền cho vay lại.",
+                    "diem": []
+                  },
+                  {
+                    "so": "4",
+                    "text": "Trường hợp tỷ giá của đồng nguyên tệ của khoản vay lại không được Ngân hàng Thương mại Cổ phần Ngoại thương Việt Nam và Bộ Tài chính công bố, việc quy đổi từ nguyên tệ sang USD sử dụng tỷ giá theo thông báo của nhà tài trợ và tỷ giá USD/VND theo quy định tại khoản 1, khoản 2, khoản 3 của Điều này.",
+                    "diem": []
+                  },
+                  {
+                    "so": "5",
+                    "text": "Đối với thông tin báo cáo theo Điều 3 Thông tư này, cơ quan, đơn vị gửi báo cáo về Bộ Tài chính (Cục Quản lý nợ và Kinh tế đối ngoại) bằng một trong các hình thức sau:",
+                    "diem": [
+                      {
+                        "kyHieu": "a",
+                        "text": "Văn bản giấy gửi theo đường văn thư;"
+                      },
+                      {
+                        "kyHieu": "b",
+                        "text": "Văn bản điện tử gửi thông qua hệ thống tiếp nhận báo cáo hoặc hệ thống quản lý văn bản và điều hành (hoặc phương thức điện tử khác) do Bộ Tài chính thông báo tại từng thời kỳ; trường hợp gửi qua thư điện tử thực hiện theo địa chỉ tiếp nhận do Bộ Tài chính công bố. Định dạng tệp, yêu cầu kỹ thuật và phương thức tiếp nhận báo cáo điện tử do Bộ Tài chính hướng dẫn, công bố và cập nhật."
+                      }
+                    ]
+                  },
+                  {
+                    "so": "6",
+                    "text": "Đối với thông tin thuộc danh mục bí mật nhà nước, cơ quan, đơn vị thực hiện theo quy định pháp luật về bảo vệ bí mật nhà nước.",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "6",
+                "tieuDe": "Hiệu lực thi hành",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Thông tư này có hiệu lực thi hành kể từ ngày 29/10/2026. Việc báo cáo theo quy định của Thông tư này áp dụng từ kỳ báo cáo quý IV năm 2026.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Thông tư số 80/2018/TT-BTC ngày 28 tháng 8 năm 2018 của Bộ Tài chính hướng dẫn mẫu biểu báo cáo về cho vay lại vốn vay ODA, vay ưu đãi nước ngoài của Chính phủ hết hiệu lực kể từ ngày Thông tư này có hiệu lực thi hành.",
+                    "diem": []
+                  },
+                  {
+                    "so": "3",
+                    "text": "Việc lập báo cáo tình hình cho vay lại, tình hình nợ của bên vay lại theo các hợp đồng cho vay lại, hợp đồng ủy quyền cho vay lại đã ký kết trước ngày có hiệu lực của Thông tư này thực hiện theo quy định tại Thông tư này. Bên vay lại là các ngân hàng, tổ chức tín dụng, quỹ đầu tư phát triển địa phương, Công ty Đầu tư Tài chính Nhà nước Thành phố Hồ Chí Minh đã ký hợp đồng vay lại trực tiếp với Bộ Tài chính báo cáo Bộ Tài chính theo các mẫu biểu quy định tại Phụ lục IV ban hành kèm theo Thông tư này.",
+                    "diem": []
+                  },
+                  {
+                    "so": "4",
+                    "text": "Trong quá trình thực hiện, nếu có khó khăn, vướng mắc, đề nghị các cơ quan, tổ chức, đơn vị kịp thời phản ánh về Bộ Tài chính để nghiên cứu, hướng dẫn, giải quyết. Nơi nhận: - Ban Bí thư Trung ương Đảng; - Thủ tướng và các Phó Thủ tướng Chính phủ; - Văn phòng Trung ương và các Ban của Đảng; - Văn phòng Tổng Bí thư; - Văn phòng Quốc hội; - Hội đồng Dân tộc và các Ủy ban của Quốc hội; - Văn phòng Chủ tịch nước; - Viện Kiểm sát nhân dân tối cao; - Tòa án nhân dân tối cao; - Kiểm toán Nhà nước; - Ủy ban Trung ương Mặt trận Tổ quốc Việt Nam; - Liên đoàn Thương mại và Công nghiệp Việt Nam; - Các Bộ, cơ quan ngang Bộ, cơ quan thuộc Chính phủ; - HĐND, UBND các tỉnh, thành phố trực thuộc trung ương; - Sở Tài chính các tỉnh, thành phố trực thuộc Trung ương; - Cục Kiểm tra văn bản và Tổ chức thi hành pháp luật (Bộ Tư pháp); - Công báo; Cổng thông tin điện tử: Chính phủ, Bộ Tài chính; - Cơ sở dữ liệu quốc gia về pháp luật; - Các đơn vị thuộc và trực thuộc Bộ Tài chính; - Lưu: VT, QLN ( 30 bản). KT. BỘ TRƯỞNG THỨ TRƯỞNG Lê Tấn Cận PHỤ LỤC I BÁO CÁO TÌNH HÌNH NỢ QUÁ HẠN VAY LẠI NGUỒN VỐN VAY ODA, VAY ƯU ĐÃI NƯỚC NGOÀI CỦA CHÍNH PHỦ (Ban hành kèm theo Thông tư số 161/2026/TT-BTC ngày 29 tháng 10 năm 2026 của Bộ trưởng Bộ Tài chính) Cơ quan thực hiện: UBND Tỉnh/Thành phố: ... Kỳ báo cáo : từ ngày..…… Đến ngày.... Đơn vị: Nguyên tệ STT Tên Dự án Nguồn vốn cho vay lại/Nhà tài trợ Loại tiền vay Nợ quá hạn (nguyên tệ) Gốc Lãi Phí trả nhà tài trợ theo Hiệp định vay Phí quản lý cho vay lại Tổng cộng 1 2 3 4 5 6 7 8 9 Tổng số X X X X X 1 Dự án A 2 Dự án B … … … … … … … … … … … … … … … … … … Ghi chú: - Chỉ báo cáo nếu có phát sinh NGƯỜI LẬP BIỂU (Ký tên, đóng dấu) ………, Ngày …… tháng …… năm …… THỦ TRƯỞNG ĐƠN VỊ (Ký tên, đóng dấu) PHỤ LỤC II BÁO CÁO PHỤC VỤ ĐỐI CHIẾU NỢ CHO VAY LẠI NGUỒN VỐN VAY ODA, VAY ƯU ĐÃI NƯỚC NGOÀI CỦA CHÍNH PHỦ ĐỐI VỚI CHÍNH QUYỀN ĐỊA PHƯƠNG - NĂM N (Ban hành kèm theo Thông tư số 161/2026/TT-BTC ngày 29 tháng 10 năm 2026 của Bộ trưởng Bộ Tài chính) Cơ quan thực hiện: UBND Tỉnh/Thành phố: … I. Các thông tin chung: - Tên dự án: - Mã DMFAS_ID với Bên vay lại: - Nhà tài trợ: - Số hiệu khoản vay (nếu có): - Trị giá Hợp đồng cho vay lại: - Đồng tiền cho vay lại: - Tỷ lệ cho vay lại: - Điều kiện cho vay lại (lãi suất, thời hạn trả nợ, các loại phí): Mã Đơn vị quan hệ ngân sách của dự án đầu tư: Mã DMFAS_ID với Nhà tài trợ: II. Số liệu phát sinh trong kỳ đối chiếu - năm N A. Tình hình vay, trả nợ Nguyên tệ Quy VND Địa phương trả nợ trong kỳ đối chiếu (chi tiết từng khoản) Dư nợ đầu kỳ … … Số tiền (VNĐ) Ngày trả nợ Tỷ giá Rút gốc trong kỳ … … … … … Trả gốc trong kỳ … … … … … Trả lãi trong kỳ … … … … … Trả phí trong kỳ … … … … … B. Chi tiết trừ nợ STT Nội dung Phân loại Số địa phương phải trả (Nguyên tệ) Số địa phương đã trả trong kỳ đối chiếu Tỷ giá quy đổi Ngày trừ nợ Còn phải trả đến ngày cuối kỳ đối chiếu Tổng đã trả (Nguyên tệ) Chi tiết (Nguyên tệ)1 Nguồn|Ngày chuyển tiền Số địa phương đã trả (VND) 1 2 3 4 5 6 7 8 = 6 * 9 9 10 11 I Số liệu năm N-1 (Trả nợ thiếu, nếu có) Chi tiết trừ nợ như sau: 1 Gốc Trong hạn - - - Lãi chậm trả của gốc - - - 2 Lãi Trong hạn - - - Lãi chậm trả của lãi - - - 3 Phí trả nhà tài trợ Trong hạn - - - Lãi chậm trả của phí trả nhà tài trợ - - - 4 Phí quản lý cho vay lại Trong hạn - - - Lãi chậm trả của phí cho vay lại - - - II Số liệu năm N (theo từng kỳ trả nợ) Chi tiết trừ nợ như sau: 1 Gốc Trong hạn - - - Lãi chậm trả của gốc - - - 2 Lãi Trong hạn - - - Lãi chậm trả của lãi - - - 3 Phí trả nhà tài trợ Trong hạn - - - Lãi chậm trả của phí trả nhà tài trợ - - - 4 Phí quản lý cho vay lại Trong hạn - - - Lãi chậm trả của phí cho vay lại - - - C. Dư nợ cuối kỳ Dư nợ cuối kỳ2: Dư nợ cuối kỳ: Số địa phương trả nợ thừa cuối kỳ: Số địa phương trả nợ thiếu cuối kỳ: Nguyên tệ Quy VND VND Nguyên tệ III. Ghi chú: (nếu có): IV. Các chênh lệch, chưa thống nhất (nếu có): BỘ TÀI CHÍNH Người lập (ký và ghi rõ họ tên) TRƯỞNG PHÒNG …, ngày … tháng … năm … SỞ TÀI CHÍNH TỈNH/THÀNH PHỐ … Người lập (ký và ghi rõ họ tên) TRƯỞNG PHÒNG (ký và ghi rõ họ tên) KT. CỤC TRƯỞNG PHÓ CỤC TRƯỞNG (ký và ghi rõ họ tên) (ký và ghi rõ họ tên) GIÁM ĐỐC SỞ TÀI CHÍNH (ký và ghi rõ họ tên) ___________________________ 1 Chi tiết theo từng khoản nợ 2 Bằng Dư nợ đầu kỳ + Rút vốn trong kỳ (bao gồm lãi phí gốc hóa, nếu có) - Trả gốc trong kỳ (số thực tế trả nợ gốc của địa phương); theo nguyên tệ Phụ lục chi tiết các khoản rút vốn Rút vốn trong kỳ đối chiếu (chi tiết từng khoản) Ngày nhận nợ Số tiền (nguyên tệ) Hợp phần vay (Tranche) Tỷ giá Số tiền quy VND … … … … … … … … … … PHỤ LỤC III MẪU BIỂU BÁO CÁO TÌNH HÌNH CHO VAY LẠI (Ban hành kèm theo Thông tư số 161/2026/TT-BTC ngày 29 tháng 10 năm 2026 của Bộ trưởng Bộ Tài chính) Cơ quan thực hiện: Cơ quan được ủy quyền cho vay lại theo phương thức không chịu rủi ro tín dụng hoặc chịu một phần rủi ro tín dụng Số mẫu biểu báo cáo Tên mẫu biểu báo cáo 3.01 Nợ của các khoản vay nước ngoài về cho vay lại theo chủ nợ cho vay 3.02 Nợ của các khoản vay nước ngoài về cho vay lại theo đơn vị nhận vay lại 3.03 Thực hiện trả nợ Bộ Tài chính 3.04 Thực hiện trả nợ trực tiếp cho nước ngoài 3.05 Báo cáo tình hình các dự án có nợ quá hạn và tổng hợp phân loại nợ quá hạn 3.06 Báo cáo tình hình quản lý tài sản bảo đảm 3.07 Báo cáo phục vụ đối chiếu số liệu cho vay lại Mẫu biểu số 3.01 Cơ quan thực hiện: ... (Cơ quan được ủy quyền cho vay lại không chịu rủi ro hoặc chịu một phần rủi ro tín dụng) NỢ CỦA CÁC KHOẢN VAY NƯỚC NGOÀI VỀ CHO VAY LẠI THEO CHỦ NỢ CHO VAY Kỳ báo cáo: từ ngày ... đến ngày... STT Tên Dự án Nguồn vốn nước ngoài Tỷ lệ chịu rủi ro tín dụng Loại tiền DƯ NỢ ĐẦU KỲ RÚT VỐN TRONG KỲ TRẢ NỢ TRONG KỲ DƯ NỢ CUỐI KỲ GỐC LÃI PHÍ DỰ PHÒNG RỦI RO TỔNG CỘNG Nguyên tệ Quy USD Quy VND Nguyên tệ Quy USD Quy VND Nguyên tệ Quy USD Quy VND Nguyên tệ Quy USD Quy VND Nguyên tệ Quy USD Quy VND Nguyên tệ Quy USD Quy VND Nguyên tệ Quy USD Quy VND Nguyên tệ Quy USD Quy VND A B C D 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 1 2 3 4 5 TỔNG CỘNG Dự án ... Dự án ... Dự án ... Dự án ... Dự án ... Nước ... Tổ chức ... Ngân hàng Ghi chú: - Cột C: điền số phần trăm (xx%). Dự án của vay lại theo phương thức không chịu rủi ro tín dụng thì điền 0% NGƯỜI LẬP BIỂU ……, Ngày ….. tháng …… năm….. THỦ TRƯỞNG ĐƠN VỊ (Ký tên, đóng dấu) Mẫu biểu số 3.02 Cơ quan thực hiện: ... (Cơ quan được ủy quyền cho vay lại không chịu rủi ro hoặc chịu một phần rủi ro tín dụng) NỢ CỦA CÁC KHOẢN VAY NƯỚC NGOÀI VỀ CHO VAY LẠI THEO ĐƠN VỊ NHẬN VAY LẠI Kỳ báo cáo: từ ngày ... đến ngày ... Đơn vị tính: Nguyên tệ STT Tên Dự án Nguồn vốn nước ngoài TÊN ĐƠN VỊ (người vay lại) Tỷ lệ chịu rủi ro tín dụng Loại tiền Dư nợ đầu kỳ Rút vốn trong kỳ Trả nợ trong kỳ Dư nợ cuối kỳ NỢ QUÁ HẠN Gốc Lãi Phí Dự phòng rủi ro Cộng Gốc Lãi+Phí Cộng A B C D E 1 2 3 4 5 6 7 8 9 10 11 TỔNG CỘNG 1 Người vay lại 1 Dự án …. Nước ... Người vay lại 1 Dự án …. Tổ chức ... Người vay lại 1 2 Người vay … Dự án …. Dự án …. 3 Người vay … Dự án …. Dự án …. 4 Người vay … Dự án …. Dự án …. 5 Người vay … Dự án …. Dự án …. Ghi chú: - Cột D: điền số phần trăm (xx%). Dự án cho vay lại theo phương thức không chịu rủi ro tín dụng thì điền 0% NGƯỜI LẬP BIỂU ……, Ngày ….. tháng …… năm…. THỦ TRƯỞNG ĐƠN VỊ (Ký tên, đóng dấu) Mẫu biểu số 3.03 Cơ quan thực hiện: ... (Cơ quan được ủy quyền cho vay lại không chịu rủi ro hoặc chịu một phần rủi ro tín dụng) THỰC HIỆN TRẢ NỢ BỘ TÀI CHÍNH Kỳ báo cáo: từ ngày ... đến ngày ... Tên Dự án Nguồn vốn nước ngoài Loại tiền Tổng trả nợ của dự án theo nguyên tệ Quy USD Quy VND Gốc Lãi Phí CVL cơ quan được UQCVL hưởng Phí CVL trả Bộ Tài chính Phí khác (nếu có) Dự phòng rủi ro được giữ Dự phòng rủi ro trả BTC Tổng trả Bộ Tài chính A B C 1 2 3 4 5 6 7 8 9 10 TỔNG CỘNG Dự án ….. Dự án ….. Dự án ….. Dự án ….. Dự án ….. Tổng trả nợ bằng VND Tổng trả nợ bằng USD (từng loại tiền khác nếu có) VND USD ... NGƯỜI LẬP BIỂU ……, Ngày ….. tháng …… năm…. THỦ TRƯỞNG ĐƠN VỊ (Ký tên, đóng dấu) Mẫu biểu số 3.04 Cơ quan thực hiện: ... (Cơ quan được ủy quyền cho vay lại không chịu rủi ro hoặc chịu một phần rủi ro tín dụng) THỰC HIỆN TRẢ NỢ TRỰC TIẾP CHO NƯỚC NGOÀI Kỳ báo cáo: từ ngày ... đến ngày ... STT Tên Dự án Nguồn vốn nước ngoài Loại tiền Tổng trả nợ của dự án theo nguyên tệ Quy USD Quy VND Gốc Lãi Phí Cộng A B C 1 2 3 4 5 6 1 2 3 4 TỔNG CỘNG Dự án ...... Dự án ...... Dự án ...... Dự án ...... Nước ... Tổ chức ... Ngân hàng... NGƯỜI LẬP BIỂU ……, Ngày ….. tháng …… năm…. THỦ TRƯỞNG ĐƠN VỊ (Ký tên, đóng dấu) Mẫu biểu số 3.05 Cơ quan thực hiện: ... (Cơ quan được ủy quyền cho vay lại không chịu rủi ro hoặc chịu một phần rủi ro tín dụng) BÁO CÁO TÌNH HÌNH CÁC DỰ ÁN CÓ NỢ QUÁ HẠN Kỳ báo cáo: từ ngày ... đến ngày ... Đơn vị: Nguyên tệ STT Tên Dự án Nguồn vốn Loại tiền DƯ NỢ ĐẾN dd/mm/yyyy TRONG ĐÓ NỢ QUÁ HẠN Phân loại nợ quá hạn Nội dung xử lý hoặc kiến nghị Nguyên tệ Quy USD Quy VND Gốc Lãi Phí Dự phòng rủi ro Cộng A B C 1 2 3 4 5 6 7 8 C D 1 2 3 4 TỔNG CỘNG Dự án ...... Dự án ...... Dự án ...... Dự án ...... TỔNG HỢP PHÂN LOẠI NỢ QUÁ HẠN Nhóm nợ Loại tiền DƯ NỢ ĐẾN dd/mm/yyyy Nguyên tệ Quy USD Quy VND Nhóm 2 Nhóm 3 Nhóm 4 Nhóm 5 TỔNG NỢ QUÁ HẠN NGƯỜI LẬP BIỂU ……, Ngày ….. tháng …… năm…. THỦ TRƯỞNG ĐƠN VỊ (Ký tên, đóng dấu) Mẫu biểu số 3.06 Cơ quan thực hiện: ... (Cơ quan được ủy quyền cho vay lại không chịu rủi ro hoặc chịu một phần rủi ro tín dụng) BÁO CÁO TÌNH HÌNH QUẢN LÝ TÀI SẢN BẢO ĐẢM Kỳ báo cáo: từ ngày ... đến ngày ... Đồng tiền: nguyên tệ, VND Tên dự án Nguồn vốn vay Đồng tiền vay Dư nợ cuối kỳ báo cáo (Nguyên tệ) Dư nợ cuối kỳ báo cáo (quy VND) Loại tài sản bảo đảm Trị giá tại Hợp đồng đăng ký giao dịch đảm bảo Trị giá tài sản đảm bảo còn lại (theo giá trị sổ sách) Chênh lệch Nội dung xử lý hoặc kiến nghị Tài sản hình thành từ vốn vay Tài sản khác 1 2 3 4 5 6 7 8 9 10=5-9 11 Dự án ..... Dự án ..... Dự án ..... NGƯỜI LẬP BIỂU ……, Ngày ….. tháng …… năm…. THỦ TRƯỞNG ĐƠN VỊ (Ký tên, đóng dấu) Mẫu biểu số 3.07 CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM Độc lập - Tự do - Hạnh phúc -------------- Cơ quan thực hiện: ... (Cơ quan được ủy quyền cho vay lại không chịu rủi ro hoặc chịu một phần rủi ro tín dụng BÁO CÁO PHỤC VỤ ĐỐI CHIẾU SỐ LIỆU CHO VAY LẠI THEO PHƯƠNG THỨC KHÔNG CHỊU RỦI RO TÍN DỤNG HOẶC CHỊU MỘT PHẦN RỦI RO TÍN DỤNG Kỳ báo cáo: từ ngày ... đến ngày... Nguồn vốn nước ngoài Tỷ lệ chịu RRTD Loại tiền DƯ NỢ ĐẦU KỲ RÚT VỐN TRONG KỲ TRẢ NỢ TRONG KỲ DƯ NỢ CUỐI KỲ Nguyên tệ Quy USD Quy VND Gốc Lãi Phí Dự phòng rủi ro Tổng cộng Nguyên tệ Quy USD Quy VND A B C D 1 2 3 4 5 6 7 8 9 10 11 12 TỔNG CỘNG Dự án… Dự án… Dự án… Dự án… Dự án… Dự án… Dự án… Dự án… BỘ TÀI CHÍNH CỤC QUẢN LÝ NỢ VÀ KINH TẾ ĐỐI NGOẠI (Ký, đóng dấu) ………, ngày … tháng … năm … CƠ QUAN CHO VAY LẠI (Ký, đóng dấu) PHỤ LỤC IV MẪU BIỂU BÁO CÁO TÌNH HÌNH CHO VAY LẠI (Ban hành kèm theo Thông tư số 161/2026/TT-BTC ngày 29 tháng 10 năm 2026 của Bộ trưởng Bộ Tài chính) Cơ quan thực hiện: Cơ quan được ủy quyền cho vay lại theo phương thức chịu toàn bộ rủi ro tín dụng Số mẫu biểu báo cáo Tên mẫu biểu báo cáo 4.01 Nợ của các khoản vay nước ngoài về cho vay lại theo chủ nợ cho vay 4.02 Nợ của các khoản vay nước ngoài về cho vay lại theo đơn vị nhận vay lại 4.03 Thực hiện trả nợ Bộ Tài chính 4.04 Báo cáo phục vụ đối chiếu số liệu cho vay lại Mẫu biểu số 4.01 Cơ quan thực hiện: ... (Cơ quan được ủy quyền cho vay lại theo phương thức chịu toàn bộ rủi ro tín dụng) NỢ CỦA CÁC KHOẢN VAY NƯỚC NGOÀI VỀ CHO VAY LẠI THEO CHỦ NỢ CHO VAY Kỳ báo cáo: từ ngày ... đến ngày... STT Tên dự án Nguồn vốn nước ngoài Loại tiền DƯ NỢ ĐẦU KỲ RÚT VỐN TRONG KỲ TRẢ NỢ TRONG KỲ DƯ NỢ CUỐI KỲ GỐC LÃI PHÍ DỰ PHÒNG RỦI RO TỔNG CỘNG Nguyên tệ Quy USD Quy VND Nguyên tệ Quy USD Quy VND Nguyên tệ Quy USD Quy VND Nguyên tệ Quy USD Quy VND Nguyên tệ Quy USD Quy VND Nguyên tệ Quy USD Quy VND Nguyên tệ Quy USD Quy VND Nguyên tệ Quy USD Quy VND A B C 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 1 2 3 4 5 6 TỔNG CỘNG Dự án ... Dự án ... Dự án ... Dự án ... Dự án ... Dự án ... Nước ... Tổ chức ... Ngân hàng ... NGƯỜI LẬP BIỂU ……, Ngày ….. tháng …… năm…. THỦ TRƯỞNG ĐƠN VỊ (Ký tên, đóng dấu) Mẫu biểu số 4.02 Cơ quan thực hiện: ... (Cơ quan được ủy quyền cho vay lại theo phương thức chịu toàn bộ rủi ro tín dụng) NỢ CỦA CÁC KHOẢN VAY NƯỚC NGOÀI VỀ CHO VAY LẠI THEO ĐƠN VỊ NHẬN VAY LẠI Kỳ báo cáo: từ ngày ... đến ngày ... Đơn vị tính: Nguyên tệ STT Tên Dự án Nguồn vốn nước ngoài Tên đơn vị (người vay lại) Loại tiền Dư nợ đầu kỳ Rút vốn trong kỳ TRẢ NỢ TRONG KỲ Dư nợ cuối kỳ NỢ QUÁ HẠN Gốc Lãi Phí Dự phòng rủi ro Cộng Gốc Lãi+Phí Cộng A B C D 1 2 3 4 5 6 7 8 9 10 11 TỔNG CỘNG 1 Người vay … Dự án …. Nước ... Người vay lại 1 Dự án …. Tổ chức ... Người vay lại 1 2 Người vay … Dự án …. Dự án …. 3 Người vay … Dự án …. Dự án …. 4 Người vay … Dự án …. Dự án …. 5 Người vay … Dự án …. Dự án …. NGƯỜI LẬP BIỂU ……, Ngày ….. tháng …… năm…. THỦ TRƯỞNG ĐƠN VỊ (Ký tên, đóng dấu) Mẫu biểu số 4.03 Cơ quan thực hiện: ... (Cơ quan được ủy quyền cho vay lại theo phương thức chịu toàn bộ rủi ro tín dụng) THỰC HIỆN TRẢ NỢ BỘ TÀI CHÍNH Kỳ báo cáo: từ ngày ... đến ngày ... Tên Dự án Nguồn vốn nước ngoài Loại tiền Tổng trả nợ của dự án theo nguyên tệ Quy USD Quy VND Gốc Lãi Phí CVL cơ quan được ủy quyền CVL hưởng Phí CVL trả Bộ Tài chính Phí khác (nếu có) Dự phòng rủi ro Tổng trả BTC A B C 1 2 3 4 5 6 7 9 10 TỔNG CỘNG Dự án ..... Dự án ..... Dự án ..... Dự án ..... Nước ... Tổ chức ... Ngân hàng ... NGƯỜI LẬP BIỂU ……, Ngày ….. tháng …… năm…. THỦ TRƯỞNG ĐƠN VỊ (Ký tên, đóng dấu) Mẫu biểu số 4.04 CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM Độc lập - Tự do - Hạnh phúc --------------- Cơ quan thực hiện: ... (Cơ quan được ủy quyền cho vay lại theo phương thức chịu toàn bộ rủi ro tín dụng) BÁO CÁO PHỤC VỤ ĐỐI CHIẾU SỐ LIỆU CHO VAY LẠI THEO PHƯƠNG THỨC CHỊU TOÀN BỘ RỦI RO TÍN DỤNG Kỳ báo cáo: từ ngày ... đến ngày... Đơn vị: Nguyên tệ, USD, VND Nguồn vốn nước ngoài Loại tiền DƯ NỢ ĐẦU KỲ RÚT VỐN TRONG KỲ TRẢ NỢ TRONG KỲ DƯ NỢ CUỐI KỲ Nguyên tệ Quy USD Quy VND GỐC LÃI PHÍ TỔNG CỘNG Nguyên tệ Quy USD Quy VND A B 1 2 3 4 5 6 7 8 9 10 11 TỔNG CỘNG Dự án ... Dự án ... Dự án ... Dự án ... Dự án ... Dự án ... Dự án ... BỘ TÀI CHÍNH CỤC QUẢN LÝ NỢ VÀ KINH TẾ ĐỐI NGOẠI (Ký, đóng dấu) ………, ngày … tháng … năm … CƠ QUAN CHO VAY LẠI (Ký, đóng dấu)",
+                    "diem": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "noiDungDayDu": true,
+      "quanHeHieuLuc": [],
+      "linhVuc": [
+        "Thuế GTGT"
+      ]
+    },
+    {
+      "soHieu": "160/2026/TT-BTC",
+      "loaiVanBan": "Thông tư",
+      "coQuanBanHanh": "Bộ Tài chính",
+      "nguoiKy": "Trần Quốc Phương",
+      "ngayBanHanh": "29/10/2026",
+      "ngayHieuLuc": "15/12/2026",
+      "tinhTrangHieuLuc": "chua_co_hieu_luc",
+      "tinhTrangGhiChu": "Chưa có hiệu lực",
+      "tenVanBan": "Thông tư 160/2026/TT-BTC lập dự toán quản lý sử dụng kinh phí bảo đảm công tác dẫn độ mới nhất",
+      "xacMinh": true,
+      "nguon": {
+        "trangNguon": "thuvienphapluat.vn",
+        "url": "https://thuvienphapluat.vn/van-ban/Trach-nhiem-hinh-su/Thong-tu-160-2026-TT-BTC-lap-du-toan-quan-ly-su-dung-kinh-phi-bao-dam-cong-tac-dan-do-731149.aspx"
+      },
+      "noiDung": {
+        "chuong": [
+          {
+            "so": null,
+            "tieuDe": "",
+            "dieu": [
+              {
+                "so": "1",
+                "tieuDe": "Phạm vi điều chỉnh và đối tượng áp dụng",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Phạm vi điều chỉnh Thông tư này hướng dẫn việc lập dự toán, quản lý, sử dụng và quyết toán kinh phí ngân sách nhà nước bảo đảm cho công tác dẫn độ, công tác chuyển giao người đang chấp hành án phạt tù, công tác tương trợ tư pháp về hình sự.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Đối tượng áp dụng a) Thông tư này áp dụng đối với các cơ quan có thẩm quyền thực hiện công tác dẫn độ, công tác chuyển giao người đang chấp hành án phạt tù, công tác tương trợ tư pháp về hình sự; cơ quan, tổ chức, cá nhân có liên quan đến việc lập dự toán, quản lý, sử dụng và quyết toán kinh phí ngân sách nhà nước bảo đảm cho công tác dẫn độ, công tác chuyển giao người đang chấp hành án phạt tù, công tác tương trợ tư pháp về hình sự theo quy định của Luật Dẫn độ số 100/2025/QH15, Luật Chuyển giao người đang chấp hành án phạt tù số 101/2025/QH15, Luật Tương trợ tư pháp về hình sự số 103/2025/QH15 và Nghị định số 172/2026/NĐ-CP ngày 15 tháng 5 năm 2026 của Chính phủ quy định chi tiết chi phí thực hiện và kinh phí bảo đảm công tác dẫn độ, công tác chuyển giao người đang chấp hành án phạt tù, công tác tương trợ tư pháp về hình sự (sau đây gọi tắt là Nghị định số 172/2026/NĐ-CP).",
+                    "diem": [
+                      {
+                        "kyHieu": "b",
+                        "text": "Thông tư này không áp dụng đối với việc lập dự toán, quản lý, sử dụng và quyết toán kinh phí bảo đảm cho công tác tương trợ tư pháp về dân sự được thực hiện theo quy định tại Luật Tương trợ tư pháp về dân sự số 102/2025/QH15 và các văn bản hướng dẫn Luật này."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "so": "2",
+                "tieuDe": "Nội dung chi và mức chi áp dụng chung đối với công tác dẫn độ, công tác chuyển giao người đang chấp hành án phạt tù, công tác tương trợ tư pháp về hình sự",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Nội dung chi thực hiện theo quy định tại Điều 5 Nghị định số 172/2026/NĐ-CP.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Mức chi:",
+                    "diem": [
+                      {
+                        "kyHieu": "a",
+                        "text": "Chi việc xử lý, lập, quản lý hồ sơ yêu cầu dẫn độ, chuyển giao người đang chấp hành án phạt tù, tương trợ tư pháp về hình sự áp dụng theo quy định tại khoản 11 Điều 2 Thông tư số 92/2026/TT-BTC ngày 01 tháng 7 năm 2026 của Bộ trưởng Bộ Tài chính quy định việc lập dự toán, quản lý, sử dụng và quyết toán kinh phí ngân sách nhà nước bảo đảm cho công tác tương trợ tư pháp về dân sự (sau đây gọi tắt là Thông tư số 92/2026/TT-BTC)."
+                      },
+                      {
+                        "kyHieu": "b",
+                        "text": "Chi lấy ý kiến chuyên gia tư vấn trong nước và chuyên gia tư vấn của nước ngoài trong trường hợp yêu cầu dẫn độ, chuyển giao người đang chấp hành án phạt tù, tương trợ tư pháp về hình sự liên quan đến vấn đề phức tạp áp dụng theo quy định tại khoản 12 Điều 2 Thông tư số 92/2026/TT-BTC."
+                      },
+                      {
+                        "kyHieu": "c",
+                        "text": "Chi tổ chức hội nghị, hội thảo, tọa đàm, tập huấn, họp, làm việc, nghiên cứu khoa học trong lĩnh vực dẫn độ, chuyển giao người đang chấp hành án phạt tù, tương trợ tư pháp về hình sự thực hiện theo quy định tại Thông tư số 40/2017/TT-BTC được sửa đổi, bổ sung bởi Thông tư số 12/2025/TT-BTC ngày 19 tháng 3 năm 2025 của Bộ trưởng Bộ Tài chính quy định chế độ công tác phí, chế độ chi hội nghị. Chi bồi dưỡng chuyên môn trong nước và ở nước ngoài trong lĩnh vực dẫn độ, chuyển giao người đang chấp hành án phạt tù, tương trợ tư pháp về hình sự thực hiện theo quy định tại Thông tư số 100/2025/TT-BTC ngày 28 tháng 10 năm 2025 của Bộ trưởng Bộ Tài chính hướng dẫn việc lập dự toán, quản lý, sử dụng và quyết toán kinh phí dành cho công tác đào tạo, bồi dưỡng công chức, viên chức."
+                      },
+                      {
+                        "kyHieu": "d",
+                        "text": "Chi tổ chức các đoàn khảo sát liên ngành, đoàn kiểm tra liên ngành hàng năm hoặc đột xuất theo yêu cầu của cấp có thẩm quyền đánh giá tình hình triển khai thực hiện công tác dẫn độ, công tác chuyển giao người đang chấp hành án phạt tù, công tác tương trợ tư pháp về hình sự trong nước; chi tổ chức các đoàn khảo sát, đánh giá kinh nghiệm và nhu cầu hợp tác của nước ngoài phục vụ hoạt động của các công tác này thực hiện theo quy định tại Thông tư số 40/2017/TT-BTC được sửa đổi, bổ sung bởi Thông tư số 12/2025/TT-BTC ngày 19 tháng 3 năm 2025 của Bộ trưởng Bộ Tài chính quy định chế độ công tác phí, chế độ chi hội nghị."
+                      },
+                      {
+                        "kyHieu": "đ",
+                        "text": "Chi mua sắm đồ dùng, phương tiện, công cụ hỗ trợ và các điều kiện khác phục vụ công tác dẫn độ, công tác chuyển giao người đang chấp hành án phạt tù, công tác tương trợ tư pháp về hình sự; quản lý người nước ngoài trong thời gian làm thủ tục liên quan đến công tác này thực hiện theo quy định của pháp luật về đấu thầu, pháp luật về quản lý, sử dụng tài sản công và pháp luật có liên quan."
+                      },
+                      {
+                        "kyHieu": "e",
+                        "text": "Chi xây dựng và quản lý cơ sở dữ liệu về dẫn độ, chuyển giao người đang chấp hành án phạt tù, tương trợ tư pháp về hình sự (bao gồm chi mua sắm phần cứng, phần mềm, nâng cấp, cải tạo cơ sở vật chất, dịch vụ khác); duy trì, bảo dưỡng và nâng cao hiệu suất của hệ thống thông tin; chi ứng dụng và phát triển công nghệ thông tin vào công việc chuyên môn (bao gồm số hóa cơ sở dữ liệu) thực hiện theo quy định của pháp luật về khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số, pháp luật về đấu thầu, pháp luật về quản lý, sử dụng tài sản công và pháp luật có liên quan."
+                      },
+                      {
+                        "kyHieu": "g",
+                        "text": "Chi tiếp đoàn công tác của nước ngoài khi bàn giao người bị dẫn độ, chuyển giao người đang chấp hành án phạt tù, thực hiện tương trợ tư pháp về hình sự trong từng vụ việc cụ thể, chi cho hoạt động dịch tài liệu có liên quan đến công tác dẫn độ, công tác chuyển giao người đang chấp hành án phạt tù, công tác tương trợ tư pháp về hình sự thực hiện theo quy định tại Thông tư số 35/2026/TT-BTC ngày 31 tháng 3 năm 2026 của Bộ trưởng Bộ Tài chính quy định chế độ tiếp khách nước ngoài vào làm việc tại Việt Nam, chế độ chi tổ chức hội nghị, hội thảo quốc tế tại Việt Nam và chế độ tiếp khách trong nước (sau đây gọi tắt là Thông tư số 35/2026/TT-BTC)."
+                      },
+                      {
+                        "kyHieu": "h",
+                        "text": "Chi hoạt động tuyên truyền, phổ biến, giáo dục pháp luật đối với công tác dẫn độ, công tác chuyển giao người đang chấp hành án phạt tù, công tác tương trợ tư pháp về hình sự thực hiện theo quy định tại Thông tư số 56/2023/TT-BTC ngày 18 tháng 8 năm 2023 của Bộ trưởng Bộ Tài chính quy định việc lập dự toán, quản lý, sử dụng và quyết toán kinh phí bảo đảm cho công tác phổ biến, giáo dục pháp luật, chuẩn tiếp cận pháp luật và hòa giải ở cơ sở."
+                      },
+                      {
+                        "kyHieu": "i",
+                        "text": "Chi làm đêm, làm thêm giờ, làm ngày nghỉ, ngày lễ; chi thông tin liên lạc; chi văn phòng phẩm; chi in ấn hồ sơ, tài liệu, phát hành biểu mẫu, giấy tờ thực hiện theo quy định của Bộ luật Lao động, Nghị định số 145/2020/NĐ-CP ngày 14 tháng 12 năm 2020 của Chính phủ quy định chi tiết và hướng dẫn thi hành một số điều của Bộ luật Lao động về điều kiện lao động và quan hệ lao động và quy định của pháp luật có liên quan."
+                      },
+                      {
+                        "kyHieu": "k",
+                        "text": "Đối với các nội dung chi khác quy định tại khoản 3, khoản 4, khoản 5, khoản 6 và khoản 7 Điều 5 Nghị định số 172/2026/NĐ-CP thực hiện theo quy định của pháp luật về đấu thầu, pháp luật về giá (nếu có), các pháp luật khác có liên quan; thanh toán theo hợp đồng, hóa đơn, chứng từ chi tiêu thực tế, hợp pháp và trong phạm vi dự toán được cấp có thẩm quyền phê duyệt."
+                      }
+                    ]
+                  },
+                  {
+                    "so": "3",
+                    "text": "Đối với các nội dung chi quy định tại các Điều 6, Điều 7, Điều 9 Nghị định số 172/2026/NĐ-CP mà chưa có mức chi theo quy định hiện hành thì thực hiện theo chứng từ chi tiêu thực tế, hợp pháp và được cấp có thẩm quyền phê duyệt dự toán trước khi thực hiện. Thủ trưởng cơ quan, đơn vị thực hiện công tác dẫn độ, công tác chuyển giao người đang chấp hành án phạt tù, công tác tương trợ tư pháp về hình sự xem xét, quyết định mức chi cụ thể trong từng trường hợp theo chương trình, kế hoạch đã được cấp có thẩm quyền phê duyệt.",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "3",
+                "tieuDe": "Nội dung chi và mức chi đối với công tác dẫn độ",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Nội dung chi thực hiện theo quy định tại Điều 6 Nghị định số 172/2026/NĐ-CP.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Mức chi:",
+                    "diem": [
+                      {
+                        "kyHieu": "a",
+                        "text": "Chi công tác phí quy định tại điểm a, điểm c khoản 1 và điểm b khoản 2 Điều 6 Nghị định số 172/2026/NĐ-CP thực hiện theo quy định tại Thông tư số 140/2025/TT-BTC ngày 30 tháng 12 năm 2025 của Bộ trưởng Bộ Tài chính quy định chế độ công tác phí đi công tác ngắn hạn ở nước ngoài do ngân sách nhà nước bảo đảm kinh phí (sau đây gọi tắt là Thông tư số 140/2025/TT- BTC)."
+                      },
+                      {
+                        "kyHieu": "b",
+                        "text": "Chi lấy ý kiến chuyên gia tư vấn về hồ sơ pháp lý của yêu cầu dẫn độ, trình tự thủ tục giải quyết yêu cầu dẫn độ áp dụng theo quy định tại khoản 12 Điều 2 Thông tư số 92/2026/TT-BTC."
+                      },
+                      {
+                        "kyHieu": "c",
+                        "text": "Thuê người tham gia phiên tòa để bảo vệ yêu cầu dẫn độ của Việt Nam; chi cho người làm chứng, giám định hoặc người có liên quan đến giải quyết vụ việc dẫn độ đến Tòa án theo từng trường hợp cụ thể thực hiện theo thỏa thuận với cơ quan tiến hành tố tụng tại Việt Nam."
+                      },
+                      {
+                        "kyHieu": "d",
+                        "text": "Đối với các nội dung chi còn lại thực hiện theo quy định tại khoản 3 Điều 2 Thông tư này."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "so": "4",
+                "tieuDe": "Nội dung chi và mức chi đối với công tác chuyển giao người đang chấp hành án phạt tù",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Nội dung chi thực hiện theo quy định tại Điều 7 Nghị định số 172/2026/NĐ-CP.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Mức chi:",
+                    "diem": [
+                      {
+                        "kyHieu": "a",
+                        "text": "Chi công tác phí quy định tại điểm a khoản 1 và điểm a khoản 2 Điều 7 Nghị định số 172/2026/NĐ-CP thực hiện theo quy định tại Thông tư số 140/2025/TT-BTC."
+                      },
+                      {
+                        "kyHieu": "b",
+                        "text": "Đối với các nội dung chi còn lại thực hiện theo quy định tại khoản 3 Điều 2 Thông tư này."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "so": "5",
+                "tieuDe": "Nội dung chi và mức chi đối với công tác tương trợ tư pháp về hình sự",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Nội dung chi thực hiện theo quy định tại Điều 9 Nghị định số 172/2026/NĐ-CP.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Mức chi:",
+                    "diem": [
+                      {
+                        "kyHieu": "a",
+                        "text": "Chi kinh phí cho đoàn công tác của Việt Nam đi nước ngoài trực tiếp thu thập tài liệu, chứng cứ trong từng vụ việc cụ thể thực hiện theo quy định tại Thông tư số 140/2025/TT-BTC."
+                      },
+                      {
+                        "kyHieu": "b",
+                        "text": "Đối với các nội dung chi còn lại thực hiện theo quy định tại khoản 3 Điều 2 Thông tư này."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "so": "6",
+                "tieuDe": "Lập dự toán, quản lý, sử dụng và quyết toán kinh phí bảo đảm cho công tác dẫn độ, công tác chuyển giao người đang chấp hành án phạt tù, công tác tương trợ tư pháp về hình sự",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Kinh phí cho công tác dẫn độ, công tác chuyển giao người đang chấp hành án phạt tù, công tác tương trợ tư pháp về hình sự do ngân sách nhà nước đảm bảo theo quy định của pháp luật về ngân sách nhà nước; được tổng hợp vào dự toán ngân sách nhà nước hằng năm của cơ quan có thẩm quyền thực hiện công tác dẫn độ, công tác chuyển giao người đang chấp hành án phạt tù, công tác tương trợ tư pháp về hình sự theo quy định tại Luật Dẫn độ số 100/2025/QH15, Luật Chuyển giao người đang chấp hành án phạt tù số 101/2025/QH15, Luật Tương trợ tư pháp về hình sự số 103/2025/QH15 và Nghị định số 172/2026/NĐ-CP.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Quản lý, sử dụng và quyết toán:",
+                    "diem": [
+                      {
+                        "kyHieu": "a",
+                        "text": "Việc quản lý, sử dụng và quyết toán kinh phí ngân sách nhà nước bảo đảm cho công tác dẫn độ, công tác chuyển giao người đang chấp hành án phạt tù, công tác tương trợ tư pháp về hình sự thực hiện theo quy định của pháp luật về ngân sách nhà nước, pháp luật về đầu tư công, pháp luật về khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số, pháp luật về kế toán."
+                      },
+                      {
+                        "kyHieu": "b",
+                        "text": "Đối với các khoản chi bằng ngoại tệ được tính theo tỷ giá mua vào tại thời điểm phát sinh của ngân hàng thương mại mà cơ quan, đơn vị giao dịch."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "so": "7",
+                "tieuDe": "Điều khoản thi hành",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Thông tư này có hiệu lực thi hành kể từ ngày 15 tháng 12 năm 2026.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Trong quá trình thực hiện, nếu các văn bản được dẫn chiếu để áp dụng trong Thông tư này được sửa đổi, bổ sung hoặc thay thế bằng các văn bản mới thì được dẫn chiếu áp dụng theo các văn bản mới đó.",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "8",
+                "tieuDe": "Điều khoản chuyển tiếp",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Đối với các nhiệm vụ đã được cấp có thẩm quyền phê duyệt và phân bổ kinh phí thực hiện trước ngày Thông tư này có hiệu lực thi hành thì tiếp tục thực hiện theo quy định tại Thông tư số 144/2012/TT-BTC ngày 04 tháng 9 năm 2012 của Bộ trưởng Bộ Tài chính quy định việc lập dự toán, quản lý, sử dụng và quyết toán kinh phí bảo đảm cho công tác tương trợ tư pháp và quyết định phê duyệt của cấp có thẩm quyền cho đến khi kết thúc nhiệm vụ.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Đối với năm 2026, các Bộ, cơ quan trung ương, các địa phương chủ động bố trí, sắp xếp trong phạm vi dự toán chi ngân sách nhà nước năm 2026 đã được cấp có thẩm quyền giao để thực hiện công tác dẫn độ, công tác chuyển giao người đang chấp hành án phạt tù, công tác tương trợ tư pháp về hình sự.",
+                    "diem": []
+                  },
+                  {
+                    "so": "3",
+                    "text": "Trong quá trình thực hiện, nếu có khó khăn, vướng mắc, đề nghị các cơ quan, tổ chức, đơn vị kịp thời phản ánh về Bộ Tài chính để nghiên cứu, hướng dẫn, giải quyết./. Nơi nhận: - Ban Bí thư Trung ương Đảng; - Thủ tướng, các Phó Thủ tướng Chính phủ; - Văn phòng Trung ương và các Ban của Đảng; - Văn phòng Tổng Bí thư; - Văn phòng Quốc hội; - Văn phòng Chủ tịch nước; - Văn phòng Chính phủ; - Viện Kiểm sát nhân dân tối cao; - Tòa án nhân dân tối cao; - Kiểm toán Nhà nước; - Các Bộ, cơ quan ngang Bộ; - HĐND, UBND các tỉnh, thành phố; - Ủy ban Trung ương Mặt trận Tổ quốc Việt Nam; - Sở Tài chính các tỉnh, thành phố; - KBNN các khu vực; - Cục Kiểm tra văn bản và Tổ chức thi hành pháp luật - Bộ Tư pháp; - Công báo, Cổng Thông tin điện tử của Chính phủ; - Cổng Thông tin điện tử của Bộ Tài chính; - Các đơn vị thuộc Bộ Tài chính; - Lưu: VT, VI (15 bản). KT. BỘ TRƯỞNG THỨ TRƯỞNG Trần Quốc Phương",
+                    "diem": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "noiDungDayDu": true,
+      "quanHeHieuLuc": [],
+      "linhVuc": [
+        "Thuế GTGT"
+      ]
     }
   ],
   "rebuiltAt": "2026-10-01T10:20:42",
   "lastBackfill": "2026-11-06T20:02:54",
   "publishCheck": "2026-10-03T10:33:22",
-  "lastDailyUpdate": "2026-11-05T08:45:01"
+  "lastDailyUpdate": "2026-11-07T16:51:42"
 }
