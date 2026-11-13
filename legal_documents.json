@@ -161691,10 +161691,335 @@
       "linhVuc": [
         "Thuế GTGT"
       ]
+    },
+    {
+      "soHieu": "166/2026/TT-BTC",
+      "loaiVanBan": "Thông tư",
+      "coQuanBanHanh": "Bộ Tài chính",
+      "nguoiKy": "Tạ Anh Tuấn",
+      "ngayBanHanh": "02/11/2026",
+      "ngayHieuLuc": "20/12/2026",
+      "tinhTrangHieuLuc": "chua_co_hieu_luc",
+      "tinhTrangGhiChu": "Chưa có hiệu lực",
+      "tenVanBan": "Thông tư 166/2026/TT-BTC bãi bỏ một số Thông tư liên tịch lĩnh vực Tài chính mới nhất",
+      "xacMinh": true,
+      "nguon": {
+        "trangNguon": "thuvienphapluat.vn",
+        "url": "https://thuvienphapluat.vn/van-ban/Tai-chinh-nha-nuoc/Thong-tu-166-2026-TT-BTC-bai-bo-mot-so-Thong-tu-lien-tich-linh-vuc-Tai-chinh-731689.aspx"
+      },
+      "noiDung": {
+        "chuong": [
+          {
+            "so": null,
+            "tieuDe": "",
+            "dieu": [
+              {
+                "so": "1",
+                "tieuDe": "Bãi bỏ toàn bộ các thông tư liên tịch",
+                "text": "Bãi bỏ toàn bộ 32 Thông tư liên tịch sau đây:",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Thông tư liên tịch số 17/2003/TTLT-BTC-BNNPTNT-BTS ngày 14 tháng 3 năm 2003 của Bộ trưởng Bộ Tài chính, Bộ trưởng Bộ Nông nghiệp và Phát triển nông thôn và Bộ trưởng Bộ Thủy sản hướng dẫn kiểm tra, giám sát hàng hoá xuất khẩu, nhập khẩu thuộc diện kiểm dịch động vật, kiểm dịch thực vật, kiểm dịch thuỷ sản.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Thông tư liên tịch số 13/2005/TTLT-BTC-BLĐTBXH ngày 07 tháng 02 năm 2005 của Bộ trưởng Bộ Tài chính và Bộ trưởng Bộ Lao động - Thương binh và Xã hội hướng dẫn tiêu chuẩn, điều kiện, thủ tục bổ nhiệm, bãi miễn và xếp lương kế toán trưởng, phụ trách kế toán trong các tổ chức hoạt động kinh doanh.",
+                    "diem": []
+                  },
+                  {
+                    "so": "3",
+                    "text": "Thông tư liên tịch số 70/2008/TTLT-BTC-BTNMT ngày 24 tháng 7 năm 2008 của Bộ trưởng Bộ Tài chính và Bộ trưởng Bộ Tài nguyên và Môi trường hướng dẫn kinh phí hoạt động của tổ chức, bộ phận chuyên môn, cán bộ phụ trách về bảo vệ môi trường và kinh phí thực hiện hợp đồng lao động theo Nghị định số 81/2007/NĐ-CP ngày 23 tháng 5 năm 2007 của Chính phủ quy định tổ chức, bộ phận chuyên môn về bảo vệ môi trường tại cơ quan nhà nước và doanh nghiệp nhà nước.",
+                    "diem": []
+                  },
+                  {
+                    "so": "4",
+                    "text": "Thông tư liên tịch số 94/2008/TTLT-BTC-BNNPTNT ngày 24 tháng 10 năm 2008 của Bộ trưởng Bộ Tài chính và Bộ trưởng Bộ Nông nghiệp và Phát triển nông thôn hướng dẫn chế độ quản lý, sử dụng kinh phí ngân sách nhà nước chi cho Chương trình trọng điểm phát triển và ứng dụng công nghệ sinh học trong lĩnh vực nông nghiệp và phát triển nông thôn đến năm 2020 và Đề án phát triển và ứng dụng công nghệ sinh học trong lĩnh vực thủy sản đến năm 2020.",
+                    "diem": []
+                  },
+                  {
+                    "so": "5",
+                    "text": "Thông tư liên tịch số 35/2009/TTLT-BTC-BCA ngày 25 tháng 02 năm 2009 của Bộ trưởng Bộ Tài chính và Bộ trưởng Bộ Công an hướng dẫn thực hiện một số điều của Nghị định số 103/2008/NĐ-CP ngày 16 tháng 9 năm 2008 của Chính phủ về bảo hiểm bắt buộc trách nhiệm dân sự của chủ xe cơ giới.",
+                    "diem": []
+                  },
+                  {
+                    "so": "6",
+                    "text": "Thông tư liên tịch số 111/2009/TTLT-BTC-BCT ngày 01 tháng 6 năm 2009 của Bộ trưởng Bộ Tài chính và Bộ trưởng Bộ Công Thương hướng dẫn thực hiện tiết kiệm điện trong các cơ quan nhà nước, đơn vị sự nghiệp công lập.",
+                    "diem": []
+                  },
+                  {
+                    "so": "7",
+                    "text": "Thông tư liên tịch số 147/2009/TTLT-BTC-BCT ngày 21 tháng 7 năm 2009 của Bộ trưởng Bộ Tài chính và Bộ trưởng Bộ Công Thương quy định chế độ quản lý, sử dụng kinh phí ngân sách nhà nước thực hiện Đề án phát triển nhiên liệu sinh học.",
+                    "diem": []
+                  },
+                  {
+                    "so": "8",
+                    "text": "Thông tư liên tịch số 220/2009/TTLT-BTC-BGDĐT ngày 20 tháng 11 năm 2009 của Bộ trưởng Bộ Tài chính và Bộ trưởng Bộ Giáo dục và Đào tạo hướng dẫn quản lý tài chính đối với kinh phí thực hiện Chương trình tiên tiến.",
+                    "diem": []
+                  },
+                  {
+                    "so": "9",
+                    "text": "Thông tư liên tịch số 239/2009/TTLT-BTC-VKSNDTC-TANDTC ngày 21 tháng 12 năm 2009 của Bộ trưởng Bộ Tài chính, Viện trưởng Viện kiểm sát nhân dân tối cao và Chánh án Tòa án nhân dân tối cao hướng dẫn việc thông báo, gửi, cung cấp thông tin, tài liệu liên quan đến người phạm tội, cá nhân và tổ chức vi phạm pháp luật.",
+                    "diem": []
+                  },
+                  {
+                    "so": "10",
+                    "text": "Thông tư liên tịch số 12/2010/TTLT-BKHĐT-BTC ngày 28 tháng 5 năm 2010 của Bộ trưởng Bộ Kế hoạch và Đầu tư và Bộ trưởng Bộ Tài chính quy định chi tiết và hướng dẫn thực hiện Quy chế chuyên gia nước ngoài thực hiện các chương trình, dự án ODA ban hành kèm theo Quyết định số 119/2009/QĐ-TTg ngày 01 tháng 10 năm 2009 của Thủ tướng Chính phủ.",
+                    "diem": []
+                  },
+                  {
+                    "so": "11",
+                    "text": "Thông tư liên tịch số 98/2010/TTLT-BTC-BNNPTNT-BYT ngày 08 tháng 7 năm 2010 của Bộ trưởng Bộ Tài chính, Bộ trưởng Bộ Nông nghiệp và Phát triển nông thôn và Bộ trưởng Bộ Y tế hướng dẫn thực hiện cung cấp, trao đổi thông tin liên quan đến người nộp thuế, quản lý nhà nước về hải quan, nông nghiệp và y tế.",
+                    "diem": []
+                  },
+                  {
+                    "so": "12",
+                    "text": "Thông tư liên tịch số 112/2011/TTLT-BTC-BKHCN ngày 02 tháng 8 năm 2011 của Bộ trưởng Bộ Tài chính và Bộ trưởng Bộ Khoa học và Công nghệ hướng dẫn quản lý tài chính đối với Chương trình hỗ trợ phát triển tài sản trí tuệ giai đoạn 2011-2015.",
+                    "diem": []
+                  },
+                  {
+                    "so": "13",
+                    "text": "Thông tư liên tịch số 19/2012/TTLT-BTC-BKHĐT-BTTTT ngày 15 tháng 02 năm 2012 của Bộ trưởng Bộ Tài chính, Bộ trưởng Bộ Kế hoạch và Đầu tư, Bộ trưởng Bộ Thông tin và Truyền thông hướng dẫn quản lý và sử dụng kinh phí thực hiện Chương trình quốc gia về ứng dụng công nghệ thông tin trong hoạt động của cơ quan nhà nước.",
+                    "diem": []
+                  },
+                  {
+                    "so": "14",
+                    "text": "Thông tư liên tịch số 50/2012/TTLT-BTC-BTNMT ngày 30 tháng 3 năm 2012 của Bộ trưởng Bộ Tài chính và Bộ trưởng Bộ Tài nguyên và Môi trường hướng dẫn cơ chế tài chính và mức kinh phí lập báo cáo đánh giá tác động môi trường chiến lược.",
+                    "diem": []
+                  },
+                  {
+                    "so": "15",
+                    "text": "Thông tư liên tịch số 59/2014/TTLT-BTC-BGTVT ngày 09 tháng 5 năm 2014 của Bộ trưởng Bộ Tài chính và Bộ trưởng Bộ Giao thông vận tải hướng dẫn về thu, nộp và sử dụng nguồn thu cho thuê khai thác kết cấu hạ tầng bến cảng, cầu cảng được đầu tư bằng vốn nhà nước.",
+                    "diem": []
+                  },
+                  {
+                    "so": "16",
+                    "text": "Thông tư liên tịch số 71/2014/TTLT-BTC-BNV ngày 30 tháng 5 năm 2014 của Bộ trưởng Bộ Tài chính và Bộ trưởng Bộ Nội vụ quy định về chế độ tự chủ, tự chịu trách nhiệm về sử dụng kinh phí quản lý hành chính đối với cơ quan nhà nước.",
+                    "diem": []
+                  },
+                  {
+                    "so": "17",
+                    "text": "Thông tư liên tịch số 86/2014/TTLT-BTC-NHNNVN ngày 02 tháng 7 năm 2014 của Bộ trưởng Bộ Tài chính và Thống đốc Ngân hàng Nhà nước Việt Nam hướng dẫn hoạt động đại lý bảo hiểm của tổ chức tín dụng, chi nhánh ngân hàng nước ngoài cho doanh nghiệp bảo hiểm nhân thọ.",
+                    "diem": []
+                  },
+                  {
+                    "so": "18",
+                    "text": "Thông tư liên tịch số 88/2014/TTLT-BTC-BNNPTNT ngày 04 tháng 7 năm 2014 của Bộ trưởng Bộ Tài chính và Bộ trưởng Bộ Nông nghiệp và Phát triển nông thôn hướng dẫn chế độ quản lý, sử dụng và quyết toán kinh phí sự nghiệp thực hiện các nhiệm vụ, dự án thuộc Chương trình bảo vệ và phát triển nguồn lợi thủy sản đến năm 2020.",
+                    "diem": []
+                  },
+                  {
+                    "so": "19",
+                    "text": "Thông tư liên tịch số 160/2014/TTLT-BTC-BTNMT ngày 29 tháng 10 năm 2014 của Bộ trưởng Bộ Tài chính và Bộ trưởng Bộ Tài nguyên và Môi trường hướng dẫn quản lý, sử dụng và quyết toán kinh phí chi thường xuyên từ ngân sách nhà nước thực hiện các nhiệm vụ, dự án theo Chiến lược quốc gia về đa dạng sinh học đến năm 2020, tầm nhìn đến năm 2030.",
+                    "diem": []
+                  },
+                  {
+                    "so": "20",
+                    "text": "Thông tư liên tịch số 04/2015/TTLT-BKHĐT-BTC-BNV ngày 28 tháng 5 năm 2015 của Bộ trưởng Bộ Kế hoạch và Đầu tư, Bộ trưởng Bộ Tài chính và Bộ trưởng Bộ Nội vụ ban hành Quy chế phối hợp mẫu giữa các cơ quan chức năng trên địa bàn tỉnh, thành phố trực thuộc Trung ương trong quản lý nhà nước đối với doanh nghiệp sau đăng ký thành lập.",
+                    "diem": []
+                  },
+                  {
+                    "so": "21",
+                    "text": "Thông tư liên tịch số 55/2015/TTLT-BTC-BKHCN ngày 22 tháng 4 năm 2015 của Bộ trưởng Bộ Tài chính và Bộ trưởng Bộ Khoa học và Công nghệ hướng dẫn định mức xây dựng, phân bổ dự toán và quyết toán kinh phí đối với nhiệm vụ khoa học và công nghệ có sử dụng ngân sách nhà nước.",
+                    "diem": []
+                  },
+                  {
+                    "so": "22",
+                    "text": "Thông tư liên tịch số 73/2015/TTLT-BTC-TTCP ngày 12 tháng 5 năm 2015 của Bộ trưởng Bộ Tài chính và Tổng Thanh tra Chính phủ quy định chế độ quản lý, cấp phát trang phục đối với thanh tra viên, cán bộ, công chức, viên chức làm việc tại các cơ quan thanh tra nhà nước.",
+                    "diem": []
+                  },
+                  {
+                    "so": "23",
+                    "text": "Thông tư liên tịch số 178/2015/TTLT-BTC-BNNPTNT-BTNMT-BYT ngày 12 tháng 11 năm 2015 của Bộ trưởng Bộ Tài chính, Bộ trưởng Bộ Nông nghiệp và Phát triển nông thôn, Bộ trưởng Bộ Tài nguyên và Môi trường và Bộ trưởng Bộ Y tế hướng dẫn thực hiện Cơ chế một cửa quốc gia.",
+                    "diem": []
+                  },
+                  {
+                    "so": "24",
+                    "text": "Thông tư liên tịch số 198/2015/TTLT-BTC-BTNMT ngày 07 tháng 12 năm 2015 của Bộ trưởng Bộ Tài chính và Bộ trưởng Bộ Tài nguyên và Môi trường quy định phương pháp tính, phương thức thu, chế độ quản lý và sử dụng tiền sử dụng khu vực biển.",
+                    "diem": []
+                  },
+                  {
+                    "so": "25",
+                    "text": "Thông tư liên tịch số 63/2016/TTLT-BTC-BGTVT ngày 20 tháng 4 năm 2016 của Bộ trưởng Bộ Tài chính và Bộ trưởng Bộ Giao thông vận tải hướng dẫn việc cung cấp thông tin, phối hợp xây dựng cơ sở hạ tầng; phối hợp kiểm tra, giám sát hàng hóa xuất khẩu, nhập khẩu, phương tiện vận tải xuất cảnh, nhập cảnh, quá cảnh, hành lý của hành khách xuất cảnh, nhập cảnh tại cửa khẩu cảng biển, cảng thủy nội địa, cửa khẩu ga đường sắt liên vận quốc tế, cảng hàng không.",
+                    "diem": []
+                  },
+                  {
+                    "so": "26",
+                    "text": "Thông tư liên tịch số 64/2016/TTLT-BTC-BVHTTDL ngày 25 tháng 4 năm 2016 của Bộ trưởng Bộ Tài chính và Bộ trưởng Bộ Văn hóa, Thể thao và Du lịch hướng dẫn thực hiện Cơ chế một cửa quốc gia đối với thủ tục thẩm định nội dung đồ chơi trẻ em nhập khẩu thuộc phạm vi quản lý chuyên ngành của Bộ Văn hóa, Thể thao và Du lịch.",
+                    "diem": []
+                  },
+                  {
+                    "so": "27",
+                    "text": "Thông tư liên tịch số 77/2016/TTLT-BTC-BKHCN ngày 03 tháng 6 năm 2016 của Bộ trưởng Bộ Tài chính và Bộ trưởng Bộ Khoa học và Công nghệ hướng dẫn thực hiện Cơ chế một cửa quốc gia đối với thủ tục kiểm tra nhà nước về chất lượng đối với hàng hóa nhập khẩu vào Việt Nam thuộc trách nhiệm quản lý của Bộ Khoa học và Công nghệ.",
+                    "diem": []
+                  },
+                  {
+                    "so": "28",
+                    "text": "Thông tư liên tịch số 80/2016/TTLT-BTC-BTTTT ngày 13 tháng 6 năm 2016 của Bộ trưởng Bộ Tài chính và Bộ trưởng Bộ Thông tin và Truyền thông hướng dẫn thực hiện Cơ chế một cửa quốc gia trong lĩnh vực thông tin và truyền thông.",
+                    "diem": []
+                  },
+                  {
+                    "so": "29",
+                    "text": "Thông tư liên tịch số 88/2016/TTLT-BTC-BTNMT ngày 22 tháng 6 năm 2016 của Bộ trưởng Bộ Tài chính và Bộ trưởng Bộ Tài nguyên và Môi trường quy định về hồ sơ và trình tự, thủ tục tiếp nhận, luân chuyển hồ sơ xác định nghĩa vụ tài chính về đất đai của người sử dụng đất.",
+                    "diem": []
+                  },
+                  {
+                    "so": "30",
+                    "text": "Thông tư liên tịch số 89/2016/TTLT-BTC-BCT ngày 23 tháng 6 năm 2016 của Bộ trưởng Bộ Tài chính và Bộ trưởng Bộ Công Thương hướng dẫn thực hiện Cơ chế một cửa quốc gia.",
+                    "diem": []
+                  },
+                  {
+                    "so": "31",
+                    "text": "Thông tư liên tịch số 93/2016/TTLT-BTC-BNNPTNT ngày 27 tháng 6 năm 2016 của Bộ trưởng Bộ Tài chính và Bộ trưởng Bộ Nông nghiệp và Phát triển nông thôn hướng dẫn chế độ quản lý, sử dụng kinh phí sự nghiệp thực hiện Nghị định số 75/2015/NĐ-CP ngày 09 tháng 9 năm 2015 của Chính phủ về cơ chế, chính sách bảo vệ và phát triển rừng, gắn với chính sách giảm nghèo nhanh, bền vững và hỗ trợ đồng bào dân tộc thiểu số giai đoạn 2015-2020.",
+                    "diem": []
+                  },
+                  {
+                    "so": "32",
+                    "text": "Thông tư liên tịch số 110/2016/TTLT-BTC-BKHCN ngày 30 tháng 6 năm 2016 của Bộ trưởng Bộ Tài chính và Bộ trưởng Bộ Khoa học và Công nghệ hướng dẫn phối hợp kiểm tra chất lượng và thông quan hàng hóa nhập khẩu.",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "2",
+                "tieuDe": "Điều khoản thi hành",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Thông tư này có hiệu lực thi hành kể từ ngày 20 tháng 12 năm 2026.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Thủ trưởng các đơn vị thuộc Bộ Tài chính và các cơ quan, tổ chức, cá nhân có liên quan chịu trách nhiệm thi hành Thông tư này./. Nơi nhận: - Thủ tướng, các Phó Thủ tướng Chính phủ; - Văn phòng Trung ương Đảng và các Ban của Đảng; - Văn phòng Tổng Bí thư; - Văn phòng Quốc hội; - Văn phòng Chính phủ; - Văn phòng Chủ tịch nước; - Hội đồng Dân tộc và các Ủy ban của Quốc hội; - Viện kiểm sát nhân dân tối cao; - Tòa án nhân dân tối cao; - Kiểm toán Nhà nước; - Ủy ban Trung ương Mặt trận Tổ quốc Việt Nam; - Các Bộ, cơ quan ngang Bộ; - HĐND, UBND các tỉnh, thành phố; - Liên đoàn Thương mại và Công nghiệp Việt Nam; - Các đơn vị thuộc Bộ Tài chính; - Sở Tài chính các tỉnh, thành phố; - Cục Kiểm tra văn bản và Tổ chức thi hành pháp luật, Bộ Tư pháp; - Cục Thông tin và Truyền thông Chính phủ - Văn phòng Chính phủ (để đăng tải); - Công báo; - Cổng pháp luật quốc gia; - Cổng Thông tin điện tử Bộ Tài chính; - Lưu: VT, PC (50 b). KT. BỘ TRƯỞNG THỨ TRƯỞNG Tạ Anh Tuấn",
+                    "diem": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "noiDungDayDu": true,
+      "quanHeHieuLuc": [],
+      "linhVuc": [
+        "Thuế GTGT"
+      ]
+    },
+    {
+      "soHieu": "167/2026/TT-BTC",
+      "loaiVanBan": "Thông tư",
+      "coQuanBanHanh": "Bộ Tài chính",
+      "nguoiKy": "Cao Anh Tuấn",
+      "ngayBanHanh": "10/11/2026",
+      "ngayHieuLuc": "10/11/2026",
+      "tinhTrangHieuLuc": "con_hieu_luc",
+      "tinhTrangGhiChu": "Còn hiệu lực",
+      "tenVanBan": "Thông tư 167/2026/TT-BTC miễn phí thăm quan vào Ngày Văn hóa Việt Nam mới nhất",
+      "xacMinh": true,
+      "nguon": {
+        "trangNguon": "thuvienphapluat.vn",
+        "url": "https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Thong-tu-167-2026-TT-BTC-mien-phi-tham-quan-vao-Ngay-Van-hoa-Viet-Nam-732800.aspx"
+      },
+      "noiDung": {
+        "chuong": [
+          {
+            "so": null,
+            "tieuDe": "",
+            "dieu": [
+              {
+                "so": "1",
+                "tieuDe": "Miễn phí thăm quan vào Ngày Văn hóa Việt Nam",
+                "text": "Miễn phí thăm quan vào Ngày Văn hóa Việt Nam (ngày 24 tháng 11) hằng năm cho các tổ chức, cá nhân thăm quan tại các địa điểm thăm quan quy định tại các Thông tư sau:",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Thông tư số 144/2016/TT-BTC quy định mức thu, chế độ thu, nộp, quản lý và sử dụng phí thăm quan Bảo tàng Hải Dương học.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Thông tư số 160/2016/TT-BTC quy định mức thu, chế độ thu, nộp, quản lý và sử dụng phí thăm quan Bảo tàng Dân tộc học Việt Nam.",
+                    "diem": []
+                  },
+                  {
+                    "so": "3",
+                    "text": "Thông tư số 161/2016/TT-BTC quy định mức thu, chế độ thu, nộp, quản lý và sử dụng phí thăm quan Bảo tàng Văn hoá các dân tộc Việt Nam.",
+                    "diem": []
+                  },
+                  {
+                    "so": "4",
+                    "text": "Thông tư số 163/2016/TT-BTC quy định mức thu, chế độ thu, nộp, quản lý và sử dụng phí thăm quan Bảo tàng Lịch sử quốc gia.",
+                    "diem": []
+                  },
+                  {
+                    "so": "5",
+                    "text": "Thông tư số 181/2016/TT-BTC quy định mức thu, chế độ thu, nộp, quản lý và sử dụng phí thăm quan Bảo tàng Mỹ Thuật Việt Nam.",
+                    "diem": []
+                  },
+                  {
+                    "so": "6",
+                    "text": "Thông tư số 182/2016/TT-BTC quy định mức thu, chế độ thu, nộp, quản lý và sử dụng phí thăm quan di tích lịch sử Dinh Độc Lập.",
+                    "diem": []
+                  },
+                  {
+                    "so": "7",
+                    "text": "Thông tư số 204/2016/TT-BTC quy định mức thu, chế độ thu, nộp, quản lý và sử dụng phí thăm quan Bảo tàng Yersin.",
+                    "diem": []
+                  },
+                  {
+                    "so": "8",
+                    "text": "Thông tư số 205/2016/TT-BTC quy định mức thu, chế độ thu, nộp, quản lý và sử dụng phí thăm quan Bảo tàng Phụ nữ Việt Nam, được sửa đổi, bổ sung bởi Thông tư số 06/2020/TT-BTC.",
+                    "diem": []
+                  },
+                  {
+                    "so": "9",
+                    "text": "Thông tư số 206/2016/TT-BTC quy định mức thu, chế độ thu, nộp, quản lý và sử dụng phí thăm quan các Vườn quốc gia Bạch Mã, Cúc Phương, Ba Vì, Tam Đảo, Yokdon, Cát Tiên; trừ phí thăm quan tại Vườn quốc gia Ba Vì, Vườn quốc gia Cát Tiên do địa phương quyết định theo quy định của Luật Phí và lệ phí.",
+                    "diem": []
+                  },
+                  {
+                    "so": "10",
+                    "text": "Thông tư số 90/2025/TT-BTC quy định mức thu, chế độ thu, nộp, quản lý và sử dụng phí thăm quan Bảo tàng Lịch sử Quân sự Việt Nam.",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "2",
+                "tieuDe": "Hiệu lực thi hành",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Thông tư này có hiệu lực thi hành từ ngày 10 tháng 11 năm 2026.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Trường hợp các văn bản quy phạm pháp luật viện dẫn tại Thông tư này được sửa đổi, bổ sung hoặc thay thế thì thực hiện theo văn bản sửa đổi, bổ sung hoặc thay thế đó.",
+                    "diem": []
+                  },
+                  {
+                    "so": "3",
+                    "text": "Trong quá trình thực hiện, trường hợp có vướng mắc, đề nghị các tổ chức, cá nhân phản ánh kịp thời về Bộ Tài chính để nghiên cứu, hướng dẫn bổ sung./. Nơi nhận: - Ban Bí thư Trung ương Đảng; - Thủ tướng, các Phó Thủ tướng Chính phủ; - Văn phòng Trung ương Đảng và các Ban của Đảng; - Văn phòng Tổng Bí thư; - Văn phòng Quốc hội; - Hội đồng Dân tộc; - Ủy ban Kinh tế và Tài chính; - Văn phòng Chủ tịch nước; - Viện kiểm sát nhân dân tối cao; - Toà án nhân dân tối cao; - Kiểm toán nhà nước; - Cơ quan trung ương của các đoàn thể; - Các bộ, cơ quan ngang bộ; - HĐND, UBND các tỉnh, thành phố trực thuộc trung ương; - Sở Tài chính các tỉnh, thành phố trực thuộc trung ương; - Thuế các tỉnh, thành phố trực thuộc trung ương; - Kho bạc Nhà nước các khu vực; - Cục Kiểm tra văn bản và Tổ chức thi hành pháp luật, Bộ Tư pháp; - Công báo; - Cổng Thông tin điện tử Chính phủ; - Cơ sở dữ liệu quốc gia về pháp luật; - Bộ trưởng Bộ Tài chính (để báo cáo); - Cổng Thông tin điện tử Bộ Tài chính; - Các đơn vị thuộc Bộ Tài chính; - Lưu: VT, CST (20b). KT. BỘ TRƯỞNG THỨ TRƯỞNG Cao Anh Tuấn",
+                    "diem": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "noiDungDayDu": true,
+      "quanHeHieuLuc": [],
+      "linhVuc": [
+        "Thuế GTGT"
+      ]
     }
   ],
   "rebuiltAt": "2026-10-01T10:20:42",
   "lastBackfill": "2026-11-06T20:02:54",
   "publishCheck": "2026-10-03T10:33:22",
-  "lastDailyUpdate": "2026-11-10T08:35:16"
+  "lastDailyUpdate": "2026-11-13T08:40:44"
 }
