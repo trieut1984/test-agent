@@ -162016,10 +162016,1422 @@
       "linhVuc": [
         "Thuế GTGT"
       ]
+    },
+    {
+      "tenVanBan": "Dự thảo Nghị định quản lý hải quan hàng hóa xuất khẩu nhập khẩu giao dịch qua thương mại điện tử",
+      "soHieu": "417/2026/NĐ-CP",
+      "loaiVanBan": "Nghị định",
+      "coQuanBanHanh": "Chính phủ",
+      "nguoiKy": "Nguyễn Văn Thắng",
+      "ngayBanHanh": "20/11/2026",
+      "ngayHieuLuc": "01/03/2027",
+      "tinhTrangHieuLuc": "chua_co_hieu_luc",
+      "tinhTrangGhiChu": "Chưa có hiệu lực",
+      "xacMinh": true,
+      "nguon": {
+        "trangNguon": "thuvienphapluat.vn",
+        "url": "https://thuvienphapluat.vn/van-ban/Thuong-mai/Nghi-dinh-417-2026-ND-CP-quan-ly-hai-quan-hang-hoa-xuat-khau-nhap-khau-qua-nen-tang-thuong-mai-dien-tu-642824.aspx"
+      },
+      "noiDung": {
+        "chuong": [
+          {
+            "so": "I",
+            "tieuDe": "QUY ĐỊNH CHUNG",
+            "dieu": [
+              {
+                "so": "1",
+                "tieuDe": "Phạm vi điều chỉnh",
+                "text": "Nghị định này quy định về:",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Hệ thống xử lý dữ liệu điện tử hải quan đối với hàng hóa xuất khẩu, nhập khẩu qua nền tảng thương mại điện tử (sau đây gọi tắt là Hệ thống xử lý dữ liệu hải quan về thương mại điện tử).",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Chính sách quản lý, kiểm tra chuyên ngành, chính sách thuế đối với hàng hóa xuất khẩu, nhập khẩu qua nền tảng thương mại điện tử.",
+                    "diem": []
+                  },
+                  {
+                    "so": "3",
+                    "text": "Thủ tục hải quan, giám sát hải quan đối với hàng hóa xuất khẩu, nhập khẩu qua nền tảng thương mại điện tử.",
+                    "diem": []
+                  },
+                  {
+                    "so": "4",
+                    "text": "Trách nhiệm của các cơ quan, tổ chức, cá nhân có liên quan đến hoạt động xuất khẩu, nhập khẩu hàng hóa qua nền tảng thương mại điện tử.",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "2",
+                "tieuDe": "Đối tượng áp dụng",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Chủ quản nền tảng thương mại điện tử.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Doanh nghiệp vận chuyển hàng hóa xuất khẩu, nhập khẩu qua nền tảng thương mại điện tử hoặc đại lý của doanh nghiệp vận chuyển hàng hóa tại Việt Nam.",
+                    "diem": []
+                  },
+                  {
+                    "so": "3",
+                    "text": "Đại lý làm thủ tục hải quan.",
+                    "diem": []
+                  },
+                  {
+                    "so": "4",
+                    "text": "Chủ hàng hóa xuất khẩu, nhập khẩu qua nền tảng thương mại điện tử.",
+                    "diem": []
+                  },
+                  {
+                    "so": "5",
+                    "text": "Doanh nghiệp kinh doanh kho ngoại quan.",
+                    "diem": []
+                  },
+                  {
+                    "so": "6",
+                    "text": "Doanh nghiệp kinh doanh dịch vụ bưu chính, doanh nghiệp kinh doanh dịch vụ chuyển phát nhanh quốc tế. Doanh nghiệp kinh doanh địa điểm tập kết, kiểm tra, giám sát tập trung đối với hàng bưu chính, chuyển phát nhanh.",
+                    "diem": []
+                  },
+                  {
+                    "so": "7",
+                    "text": "Tổ chức tín dụng, chi nhánh ngân hàng nước ngoài, tổ chức cung ứng dịch vụ trung gian thanh toán.",
+                    "diem": []
+                  },
+                  {
+                    "so": "8",
+                    "text": "Các tổ chức, cá nhân khác có quyền và nghĩa vụ liên quan đến hàng hóa xuất khẩu, nhập khẩu qua nền tảng thương mại điện tử.",
+                    "diem": []
+                  },
+                  {
+                    "so": "9",
+                    "text": "Cơ quan hải quan, công chức hải quan, các cơ quan quản lý nhà nước có liên quan.",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "3",
+                "tieuDe": "Giải thích từ ngữ",
+                "text": "Hệ thống xử lý dữ liệu hải quan về thương mại điện tử là Hệ thống cho phép thực hiện thủ tục hải quan, tiếp nhận, phản hồi, chia sẻ, xử lý và lưu trữ thông tin liên quan đến xuất khẩu, nhập khẩu hàng hóa qua nền tảng thương mại điện tử. Hệ thống xử lý dữ liệu hải quan về thương mại điện tử là một phần không tách rời của Hệ thống xử lý dữ liệu điện tử hải quan do Bộ Tài chính quản lý và vận hành.",
+                "khoan": []
+              },
+              {
+                "so": "4",
+                "tieuDe": "Người khai hải quan",
+                "text": "Người khai hải quan là chủ hàng hóa xuất khẩu, nhập khẩu qua nền tảng thương mại điện tử, người được chủ hàng hóa ủy quyền hoặc được chỉ định thực hiện thủ tục hải quan bao gồm:",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Chủ quản nền tảng thương mại điện tử. Trường hợp chủ quản nền tảng thương mại điện tử là thương nhân nước ngoài không hiện diện tại Việt Nam thì thực hiện thủ tục hải quan thông qua đại lý làm thủ tục hải quan hoặc ủy quyền cho doanh nghiệp kinh doanh dịch vụ bưu chính, doanh nghiệp kinh doanh dịch vụ chuyển phát nhanh quốc tế tại Việt Nam.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Đại lý làm thủ tục hải quan.",
+                    "diem": []
+                  },
+                  {
+                    "so": "3",
+                    "text": "Doanh nghiệp vận chuyển hàng hóa xuất khẩu, nhập khẩu qua nền tảng thương mại điện tử hoặc đại lý của doanh nghiệp vận chuyển hàng hóa tại Việt Nam; doanh nghiệp kinh doanh kho ngoại quan; doanh nghiệp kinh doanh dịch vụ bưu chính, doanh nghiệp kinh doanh dịch vụ chuyển phát nhanh quốc tế.",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "5",
+                "tieuDe": "Quản lý rủi ro đối với hoạt động xuất khẩu, nhập khẩu hàng hóa qua nền tảng thương mại điện tử",
+                "text": "Quản lý rủi ro trong hoạt động nghiệp vụ hải quan đối với hàng hóa xuất khẩu, nhập khẩu qua nền tảng thương mại điện tử thực hiện theo quy định tại Điều 17 Luật Hải quan và các văn bản hướng dẫn có liên quan.",
+                "khoan": []
+              },
+              {
+                "so": "6",
+                "tieuDe": "Nguyên tắc quản lý hải quan đối với hàng hóa xuất khẩu, nhập khẩu qua nền tảng thương mại điện tử",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Việc thực hiện thủ tục hải quan, quản lý hải quan, chia sẻ, kết nối dữ liệu điện tử khi tiến hành thủ tục hải quan, quản lý hải quan đối với hàng hóa xuất khẩu, nhập khẩu qua nền tảng thương mại điện tử phải phù hợp với quy định của pháp luật hải quan, quản lý ngoại thương, thương mại điện tử và bảo đảm an toàn thông tin, an ninh mạng theo quy định tại Nghị định này, quy định của pháp luật có liên quan.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Hàng hóa thuộc danh mục cấm xuất khẩu, cấm nhập khẩu theo quy định của pháp luật về quản lý ngoại thương và pháp luật có liên quan không được phép thực hiện giao dịch, mua bán, trao đổi qua nền tảng thương mại điện tử.",
+                    "diem": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "so": "II",
+            "tieuDe": "HỆ THỐNG XỬ LÝ DỮ LIỆU HẢI QUAN VỀ THƯƠNG MẠI ĐIỆN TỬ",
+            "dieu": [
+              {
+                "so": "7",
+                "tieuDe": "Chức năng và yêu cầu vận hành Hệ thống xử lý dữ liệu hải quan về thương mại điện tử",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Hệ thống xử lý dữ liệu hải quan về thương mại điện tử có các chức năng sau:",
+                    "diem": [
+                      {
+                        "kyHieu": "a",
+                        "text": "Thực hiện thủ tục hải quan đối với hàng hóa xuất khẩu, nhập khẩu qua nền tảng thương mại điện tử; tiếp nhận, xử lý, phản hồi, lưu trữ thông tin đơn hàng và các thông tin có liên quan;"
+                      },
+                      {
+                        "kyHieu": "b",
+                        "text": "Hệ thống xác thực người khai hải quan, người bán hàng (đối với hàng hóa xuất khẩu), người mua hàng (đối với hàng hóa nhập khẩu) bao gồm: thông tin định danh, thông tin chữ ký số và các thông tin có liên quan khác qua Cơ sở dữ liệu quốc gia về dân cư theo quy định hiện hành;"
+                      },
+                      {
+                        "kyHieu": "c",
+                        "text": "Kết nối, trao đổi thông tin hoạt động thương mại điện tử với: Hệ thống xử lý dữ liệu về thương mại điện tử của chủ quản nền tảng thương mại điện tử; đại lý làm thủ tục hải quan; doanh nghiệp vận chuyển hàng hóa xuất khẩu, nhập khẩu; doanh nghiệp kinh doanh kho ngoại quan; doanh nghiệp kinh doanh địa điểm tập kết hàng chuyển phát nhanh, bưu chính; các tổ chức tín dụng, chi nhánh ngân hàng nước ngoài thực hiện việc bảo lãnh số tiền thuế phải nộp cho người khai hải quan;"
+                      },
+                      {
+                        "kyHieu": "d",
+                        "text": "Kết nối với Cổng thông tin một cửa quốc gia, Cổng dịch vụ công quốc gia, các Cơ sở dữ liệu quốc gia về dân cư, về đăng ký kinh doanh, về thuế, Hệ thống thông tin giải quyết thủ tục hành chính, Cổng thông tin quản lý hoạt động thương mại điện tử của Bộ Công Thương, các hệ thống công nghệ thông tin của cơ quan nhà nước và các hệ thống của các bên liên quan khác để trao đổi, cập nhật, xử lý, cung cấp thông tin phục vụ thực hiện thủ tục hải quan, quản lý thuế và quản lý hàng hóa xuất khẩu, nhập khẩu qua nền tảng thương mại điện tử. Việc kết nối các hệ thống công nghệ thông tin thực hiện theo quy định hiện hành;"
+                      },
+                      {
+                        "kyHieu": "đ",
+                        "text": "Lưu trữ trạng thái của các giao dịch điện tử, thông tin, dữ liệu điện tử được gửi đến Hệ thống xử lý dữ liệu hải quan về thương mại điện tử. Thời hạn lưu trữ trạng thái các giao dịch điện tử và thông tin, dữ liệu điện tử thực hiện theo quy định của pháp luật về giao dịch điện tử;"
+                      },
+                      {
+                        "kyHieu": "e",
+                        "text": "Cung cấp thông tin bao gồm: thông tin giao dịch thương mại điện tử, thống kê số liệu theo yêu cầu từ các cơ quan nhà nước có thẩm quyền và người khai phù hợp chức năng, thẩm quyền của cơ quan, quyền, trách nhiệm của người khai;"
+                      },
+                      {
+                        "kyHieu": "g",
+                        "text": "Cập nhật các thông tin về các nền tảng thương mại điện tử gồm: thông tin bán hàng, chính sách bán hàng... và các cơ chế, chính sách quản lý về thương mại điện tử (chính sách thuế, mã HS, danh mục hàng hóa phải thực hiện kiểm tra chuyên ngành);"
+                      },
+                      {
+                        "kyHieu": "h",
+                        "text": "Theo dõi, thống kê việc xuất khẩu, nhập khẩu hàng hóa miễn thuế, miễn điều kiện, giấy phép, kiểm tra chuyên ngành qua nền tảng thương mại điện tử của các tổ chức, cá nhân;"
+                      },
+                      {
+                        "kyHieu": "i",
+                        "text": "Kết nối, chia sẻ dữ liệu của Hệ thống xử lý dữ liệu hải quan về thương mại điện tử với Cơ sở dữ liệu tổng hợp quốc gia phục vụ việc khai thác, sử dụng chung của cơ quan nhà nước. Danh mục dữ liệu chia sẻ theo quy định của Bộ trưởng Bộ Tài chính."
+                      }
+                    ]
+                  },
+                  {
+                    "so": "2",
+                    "text": "Hệ thống xử lý dữ liệu hải quan về thương mại điện tử phải đáp ứng các quy định tại Nghị định số 85/2016/NĐ-CP về đảm bảo an toàn hệ thống thông tin theo cấp độ, Nghị định số 53/2022/NĐ-CP quy định chi tiết một số điều của Luật An ninh mạng và các quy định của pháp luật về an ninh mạng, an toàn thông tin và giao dịch điện tử.",
+                    "diem": []
+                  },
+                  {
+                    "so": "3",
+                    "text": "Trường hợp Hệ thống xử lý dữ liệu hải quan về thương mại điện tử không thực hiện được thủ tục hải quan điện tử, cơ quan hải quan có trách nhiệm thông báo trên trang thông tin điện tử hải quan chậm nhất 01 giờ kể từ thời điểm không thực hiện được các giao dịch điện tử. Trường hợp hệ thống khai hải quan của người khai hải quan không thực hiện được thủ tục hải quan điện tử, người khai hải quan có văn bản thông báo cho đơn vị Hải quan nơi dự kiến làm thủ tục hải quan trong đó nêu rõ tên và nguyên nhân sự cố, thời hạn dự kiến khắc phục sự cố và phương thức thực hiện thủ tục khai hải quan trong thời gian hệ thống không thực hiện được thủ tục hải quan điện tử theo quy định tại Nghị định của Chính phủ quy định chi tiết và biện pháp thi hành Luật Hải quan về thủ tục hải quan, kiểm tra, giám sát, kiểm soát hải quan.",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "8",
+                "tieuDe": "Trách nhiệm của tổ chức tham gia sử dụng Hệ thống xử lý dữ liệu hải quan về thương mại điện tử",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Tổ chức thực hiện thủ tục hải quan và cung cấp, trao đổi thông tin liên quan đến hàng hóa xuất khẩu, nhập khẩu qua nền tảng thương mại điện tử trên Hệ thống xử lý dữ liệu hải quan về thương mại điện tử phải đáp ứng các điều kiện sau:",
+                    "diem": [
+                      {
+                        "kyHieu": "a",
+                        "text": "Đăng ký tham gia kết nối với Hệ thống xử lý dữ liệu hải quan về thương mại điện tử để được cấp tài khoản truy cập và các thông tin kết nối theo quy định tại Nghị định này. Khi có thay đổi, bổ sung hoặc hủy hiệu lực thông tin đăng ký, tổ chức phải kịp thời cập nhật thông tin thay đổi trên Hệ thống xử lý dữ liệu hải quan về thương mại điện tử;"
+                      },
+                      {
+                        "kyHieu": "b",
+                        "text": "Trang bị đầy đủ về hạ tầng kỹ thuật trong hoạt động giao dịch điện tử bảo đảm thực hiện việc khai báo, truyền, nhận, lưu trữ thông tin khi truy cập và trao đổi thông tin với Hệ thống xử lý dữ liệu hải quan về thương mại điện tử;"
+                      },
+                      {
+                        "kyHieu": "c",
+                        "text": "Tuân thủ các quy định về bảo đảm an toàn thông tin mạng: Hệ thống phải bảo đảm an toàn thông tin theo cấp độ được quy định của pháp luật; triển khai đầy đủ các phương án bảo đảm an toàn thông tin theo cấp độ được phê duyệt, chịu trách nhiệm trước pháp luật nếu để xảy ra mất an ninh, an toàn thông tin, lộ lọt thông tin cá nhân của khách hàng."
+                      }
+                    ]
+                  },
+                  {
+                    "so": "2",
+                    "text": "Tổ chức thực hiện thủ tục hải quan và cung cấp, trao đổi thông tin liên quan đến xuất khẩu, nhập khẩu hàng hóa qua nền tảng thương mại điện tử trên Hệ thống xử lý dữ liệu hải quan về thương mại điện tử thông qua việc:",
+                    "diem": [
+                      {
+                        "kyHieu": "a",
+                        "text": "Sử dụng trực tiếp các chức năng được cung cấp trên Hệ thống xử lý dữ liệu hải quan về thương mại điện tử; hoặc b) Kết nối, trao đổi thông tin chính thức giữa hệ thống tổ chức với Hệ thống xử lý dữ liệu điện tử hải quan về thương mại điện tử theo yêu cầu kỹ thuật và định dạng dữ liệu do Cục Hải quan công bố để được kết nối chính thức."
+                      }
+                    ]
+                  },
+                  {
+                    "so": "3",
+                    "text": "Chịu trách nhiệm trước pháp luật về sự chính xác của thông tin cung cấp.",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "9",
+                "tieuDe": "Đối tượng và mức độ truy cập Hệ thống xử lý dữ liệu hải quan về thương mại điện tử",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Người khai hải quan thực hiện thủ tục hải quan đối với hàng hóa xuất khẩu, nhập khẩu qua nền tảng thương mại điện tử kết nối hoặc truy cập Hệ thống xử lý dữ liệu hải quan về thương mại điện tử để gửi thông tin, nhận phản hồi trên Hệ thống xử lý dữ liệu hải quan về thương mại điện tử và tra cứu thông tin phục vụ khai hải quan.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Cơ quan hải quan xử lý thủ tục hải quan, thu thập thông tin đối với hàng hóa xuất khẩu, nhập khẩu qua nền tảng thương mại điện tử truy cập vào Hệ thống xử lý dữ liệu hải quan về thương mại điện tử để khai thác thông tin phục vụ cho việc giải quyết thủ tục hải quan; tổng hợp, phân tích, báo cáo thống kê phục vụ quản lý nhà nước về hải quan theo quy định của pháp luật hải quan và Nghị định này.",
+                    "diem": []
+                  },
+                  {
+                    "so": "3",
+                    "text": "Doanh nghiệp vận chuyển, doanh nghiệp cung ứng dịch bưu chính, doanh nghiệp kinh doanh dịch vụ chuyển phát nhanh, doanh nghiệp kinh doanh kho ngoại quan, chủ hàng hóa qua nền tảng thương mại điện tử gửi kho ngoại quan, đại lý làm thủ tục hải quan, chủ hàng hóa xuất khẩu, nhập khẩu qua nền tảng thương mại điện tử truy cập Hệ thống xử lý dữ liệu hải quan về thương mại điện tử hoặc kết nối với Hệ thống xử lý dữ liệu hải quan về thương mại điện tử để tra cứu và cung cấp thông tin phục vụ cho khai hải quan theo quy định của pháp luật hải quan và Nghị định này.",
+                    "diem": []
+                  },
+                  {
+                    "so": "4",
+                    "text": "Các cơ quan quản lý nhà nước về thương mại điện tử và các cơ quan quản lý nhà nước có liên quan đến cấp phép, quản lý chuyên ngành, quản lý thuế đối với hàng hóa xuất khẩu, nhập khẩu qua nền tảng thương mại điện tử được phép truy cập Hệ thống xử lý dữ liệu hải quan về thương mại điện tử và kết nối với Hệ thống xử lý dữ liệu hải quan về thương mại điện tử để khai thác thông tin phục vụ cho việc giải quyết thủ tục hành chính liên quan đến cấp phép, quản lý chuyên ngành, quản lý thuế theo quy định của pháp luật về quản lý chuyên ngành và Nghị định này.",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "10",
+                "tieuDe": "Quản lý tài khoản người sử dụng của Hệ thống xử lý dữ liệu hải quan về thương mại điện tử",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Đăng ký tài khoản truy cập và sử dụng Hệ thống xử lý dữ liệu hải quan về thương mại điện tử:",
+                    "diem": [
+                      {
+                        "kyHieu": "a",
+                        "text": "Việc đăng ký tài khoản truy cập và sử dụng được thực hiện thông qua Hệ thống xử lý dữ liệu hải quan về thương mại điện tử;"
+                      },
+                      {
+                        "kyHieu": "b",
+                        "text": "Người sử dụng đăng ký thông tin tài khoản truy cập và sử dụng hệ thống theo hướng dẫn của Bộ Tài chính;"
+                      },
+                      {
+                        "kyHieu": "c",
+                        "text": "Đơn vị quản lý Hệ thống xử lý dữ liệu hải quan về thương mại điện tử thực hiện kiểm tra, đối chiếu thông tin tài khoản truy cập và sử dụng do người sử dụng đăng ký với thông tin được cung cấp bởi Cơ sở dữ liệu quốc gia về dân cư trong thời hạn 01 ngày làm việc kể từ khi tiếp nhận thông tin. Trường hợp thông tin đầy đủ, hợp lệ thì chấp nhận và thông báo cho người sử dụng qua Hệ thống xử lý dữ liệu hải quan về thương mại điện tử. Trường hợp thông tin khai không đầy đủ, không chính xác thì yêu cầu sửa đổi, bổ sung hoặc không chấp nhận và thông báo qua Hệ thống xử lý dữ liệu hải quan về thương mại điện tử, nêu rõ lý do cho người sử dụng."
+                      }
+                    ]
+                  },
+                  {
+                    "so": "2",
+                    "text": "Sửa đổi, bổ sung thông tin đăng ký tài khoản truy cập và sử dụng Hệ thống xử lý dữ liệu hải quan về thương mại điện tử a) Trường hợp có thay đổi, bổ sung thông tin đã đăng ký theo quy định tại điểm a khoản 1 Điều 8 Nghị định này, người sử dụng thực hiện khai báo thông tin sửa đổi, bổ sung trên Hệ thống xử lý dữ liệu hải quan về thương mại điện tử theo hướng dẫn của Bộ Tài chính;",
+                    "diem": [
+                      {
+                        "kyHieu": "b",
+                        "text": "Đơn vị quản lý Hệ thống xử lý dữ liệu hải quan về thương mại điện tử thực hiện kiểm tra, đối chiếu thông tin sửa đổi, bổ sung với thông tin được cung cấp bởi Cơ sở dữ liệu quốc gia về dân cư (đối với các trường thông tin có liên quan) trong thời hạn 01 ngày làm việc kể từ khi tiếp nhận thông tin khai báo. Trường hợp thông tin đầy đủ, hợp lệ thì chấp nhận và cập nhật vào Hệ thống xử lý dữ liệu hải quan về thương mại điện tử, đồng thời thông báo cho người sử dụng qua Hệ thống xử lý dữ liệu hải quan về thương mại điện tử; trường hợp thông tin khai báo không đầy đủ, không chính xác thì yêu cầu sửa đổi, bổ sung hoặc không chấp nhận và thông báo qua Hệ thống xử lý dữ liệu điện tử hải quan, nêu rõ lý do cho người sử dụng."
+                      }
+                    ]
+                  },
+                  {
+                    "so": "3",
+                    "text": "Khóa tài khoản truy cập và sử dụng Hệ thống xử lý dữ liệu hải quan về thương mại điện tử a) Trong trường hợp cần khóa tài khoản truy cập và sử dụng Hệ thống xử lý dữ liệu hải quan về thương mại điện tử, người sử dụng thực hiện một trong các hình thức sau: truy cập Hệ thống xử lý dữ liệu hải quan về thương mại điện tử và sử dụng chức năng có sẵn trên hệ thống để khóa tài khoản; hoặc thực hiện khai thông tin cho đơn vị quản lý Hệ thống xử lý dữ liệu hải quan về thương mại điện tử theo hướng dẫn của Bộ Tài chính để đơn vị quản lý Hệ thống xử lý dữ liệu hải quan về thương mại điện tử kịp thời khóa tài khoản. Đơn vị quản lý Hệ thống xử lý dữ liệu hải quan về thương mại điện tử thực hiện khóa tài khoản và thông báo cho người sử dụng bằng một trong các hình thức: văn bản, email, điện thoại trong thời gian 05 giờ làm việc kể từ khi nhận được yêu cầu;",
+                    "diem": [
+                      {
+                        "kyHieu": "b",
+                        "text": "Trong trường hợp khẩn cấp ảnh hưởng đến an ninh, an toàn dữ liệu, đơn vị quản lý Hệ thống xử lý dữ liệu hải quan về thương mại điện tử thực hiện khóa tài khoản và thông báo cho người sử dụng bằng một trong các hình thức: văn bản, email, điện thoại trong thời gian 05 giờ làm việc kể từ khi thực hiện khóa tài khoản truy cập và sử dụng Hệ thống xử lý dữ liệu hải quan về thương mại điện tử."
+                      }
+                    ]
+                  },
+                  {
+                    "so": "4",
+                    "text": "Kích hoạt tài khoản truy cập và sử dụng Hệ thống xử lý dữ liệu hải quan về thương mại điện tử đã khóa a) Để tiếp tục sử dụng tài khoản truy cập và sử dụng Hệ thống xử lý dữ liệu hải quan về thương mại điện tử đã khóa, người sử dụng thực hiện khai thông tin theo hướng dẫn của Bộ Tài chính thông qua Hệ thống xử lý dữ liệu hải quan về thương mại điện tử;",
+                    "diem": [
+                      {
+                        "kyHieu": "b",
+                        "text": "Đơn vị quản lý Hệ thống xử lý dữ liệu hải quan về thương mại điện tử thực hiện kích hoạt lại tài khoản truy cập và sử dụng Hệ thống xử lý dữ liệu hải quan về thương mại điện tử đã khóa hoặc từ chối kích hoạt lại tài khoản truy cập và sử dụng Hệ thống xử lý dữ liệu hải quan về thương mại điện tử trong khoảng thời gian chậm nhất 01 ngày làm việc kể từ thời điểm nhận được thông tin đề nghị của người sử dụng trên Hệ thống xử lý dữ liệu hải quan về thương mại điện tử và thông báo cho người sử dụng bằng một trong các hình thức: văn bản, email, điện thoại."
+                      }
+                    ]
+                  },
+                  {
+                    "so": "5",
+                    "text": "Thu hồi tài khoản truy cập và sử dụng Hệ thống xử lý dữ liệu hải quan về thương mại điện tử a) Đơn vị quản lý Hệ thống xử lý dữ liệu hải quan về thương mại điện tử thực hiện thu hồi tài khoản truy cập và sử dụng Hệ thống xử lý dữ liệu hải quan về thương mại điện tử trong các trường hợp sau: người sử dụng đề nghị thu hồi tài khoản truy cập và sử dụng Hệ thống xử lý dữ liệu hải quan về thương mại điện tử; cơ quan, tổ chức có thẩm quyền có thông báo về thời điểm hiệu lực của việc giải thể, phá sản, dừng, tạm dừng hoạt động của tổ chức có tài khoản truy cập và sử dụng Hệ thống xử lý dữ liệu hải quan về thương mại điện tử; cơ quan, tổ chức có thẩm quyền thông báo về việc thu hồi tài khoản truy cập và sử dụng Hệ thống xử lý dữ liệu hải quan về thương mại điện tử của người sử dụng là cán bộ, công chức, viên chức được các cơ quan, tổ chức có thẩm quyền giao tài khoản truy cập và sử dụng Hệ thống xử lý dữ liệu hải quan về thương mại điện tử; trường hợp khác theo quy định của pháp luật;",
+                    "diem": [
+                      {
+                        "kyHieu": "b",
+                        "text": "Cơ quan, tổ chức quy định tại điểm a khoản này khi đề nghị hoặc thông báo thu hồi tài khoản truy cập và sử dụng Hệ thống thực hiện khai thông tin theo hướng dẫn của Bộ Tài chính và gửi đến Hệ thống xử lý dữ liệu hải quan về thương mại điện tử;"
+                      },
+                      {
+                        "kyHieu": "c",
+                        "text": "Chậm nhất trong 01 ngày làm việc, kể từ ngày nhận được đề nghị thu hồi, đơn vị quản lý Hệ thống xử lý dữ liệu hải quan về thương mại điện tử thực hiện thu hồi tài khoản truy cập và sử dụng Hệ thống xử lý dữ liệu hải quan về thương mại điện tử và gửi kết quả thực hiện tới cơ quan, tổ chức đề nghị."
+                      }
+                    ]
+                  },
+                  {
+                    "so": "6",
+                    "text": "Trách nhiệm của người sử dụng Hệ thống xử lý dữ liệu hải quan về thương mại điện tử Người sử dụng Hệ thống xử lý dữ liệu hải quan về thương mại điện tử có trách nhiệm đảm bảo an toàn, bí mật thông tin liên quan đến tài khoản truy cập và sử dụng Hệ thống xử lý dữ liệu hải quan về thương mại điện tử của mình đã được cấp để truy cập Hệ thống xử lý dữ liệu hải quan về thương mại điện tử; kịp thời thông báo cho đơn vị quản lý Hệ thống xử lý dữ liệu hải quan về thương mại điện tử trong trường hợp bị mất hoặc lộ thông tin tài khoản truy cập và sử dụng Hệ thống xử lý dữ liệu hải quan về thương mại điện tử có nguy cơ ảnh hưởng đến an ninh, an toàn dữ liệu.",
+                    "diem": []
+                  },
+                  {
+                    "so": "7",
+                    "text": "Người sử dụng được sử dụng tài khoản VNeID để truy cập và sử dụng Hệ thống xử lý dữ liệu hải quan về thương mại điện tử. Việc đăng ký tài khoản, sửa đổi, bổ sung thông tin tài khoản, khóa tài khoản, kích hoạt tài khoản, thu hồi tài khoản và quản lý tài khoản VNeID thực hiện theo quy định hiện hành.",
+                    "diem": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "so": "III",
+            "tieuDe": "CHÍNH SÁCH QUẢN LÝ, KIỂM TRA CHUYÊN NGÀNH, CHÍNH SÁCH THUẾ ĐỐI VỚI HÀNG HÓA XUẤT KHẨU, NHẬP KHẨU QUA NỀN TẢNG THƯƠNG MẠI ĐIỆN TỬ",
+            "dieu": [
+              {
+                "so": "11",
+                "tieuDe": "Quy định về giấy phép, điều kiện, kiểm tra chuyên ngành đối với hàng hóa xuất khẩu, nhập khẩu qua nền tảng thương mại điện tử",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Quy định về giấy phép, điều kiện, kiểm tra chuyên ngành đối với hàng hóa xuất khẩu, nhập khẩu qua nền tảng thương mại điện tử thực hiện theo pháp luật về quản lý, kiểm tra chuyên ngành.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Các trường hợp miễn giấy phép, điều kiện, kiểm tra chuyên ngành a) Hàng hóa xuất khẩu, nhập khẩu được miễn giấy phép, miễn điều kiện theo quy định của pháp luật về quản lý ngoại thương, miễn kiểm tra chuyên ngành theo quy định của pháp luật chuyên ngành;",
+                    "diem": [
+                      {
+                        "kyHieu": "b",
+                        "text": "Hàng hóa nhập khẩu qua nền tảng thương mại điện tử có trị giá hải quan được miễn thuế theo quy định tại khoản 1 Điều 12 Nghị định này được miễn điều kiện, kiểm tra chuyên ngành khi làm thủ tục hải quan trừ hàng hóa phải có giấy phép, kiểm dịch, mẫu vật loài động vật, thực vật thuộc Phụ lục CITES, hàng hóa thuộc danh mục quản lý của Bộ Văn hóa, Thể thao và Du lịch. Trường hợp định mức miễn thuế nhập khẩu theo quy định tại khoản 1 Điều 12 Nghị định này được sửa đổi, bổ sung theo quy định của pháp luật về thuế thì trị giá hải quan được miễn thuế thực hiện theo các quy định được sửa đổi, bổ sung."
+                      }
+                    ]
+                  },
+                  {
+                    "so": "3",
+                    "text": "Các trường hợp miễn giấy phép, điều kiện, kiểm tra chuyên ngành quy định tại khoản 2 Điều này không áp dụng trong trường hợp các bộ quản lý ngành, lĩnh vực có văn bản thông báo dừng áp dụng miễn giấy phép, điều kiện, kiểm tra chuyên ngành, hàng hóa đang bị cảnh báo, đình chỉ lưu thông, thu hồi hoặc có dấu hiệu giả mạo kết quả đánh giá sự phù hợp, hàng hóa có nguy cơ về an toàn thực phẩm, lây lan dịch bệnh, gây nguy hại cho sức khỏe, tính mạng con người, gây ô nhiễm môi trường, ảnh hưởng đến đạo đức xã hội, thuần phong mỹ tục, nguy hại cho kinh tế, an ninh quốc gia, trật tự an toàn xã hội. Việc thông báo dừng áp dụng chế độ miễn giấy phép, điều kiện, kiểm tra chuyên ngành được gửi đến Bộ Tài chính hoặc thông báo qua Cổng thông tin một cửa quốc gia.",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "12",
+                "tieuDe": "Chính sách thuế đối với hàng hóa xuất khẩu, nhập khẩu qua nền tảng thương mại điện tử",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Hàng hóa nhập khẩu qua nền tảng thương mại điện tử có trị giá hải quan theo từng đơn hàng từ 1.000.000 đồng Việt Nam trở xuống được miễn thuế nhập khẩu. Mỗi tổ chức, cá nhân mua hàng chỉ được hưởng tiêu chuẩn miễn thuế đối với hàng hóa nhập khẩu quy định tại khoản này không quá 48.000.000 đồng Việt Nam/năm.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Ngoài quy định về miễn thuế nhập khẩu quy định tại khoản 1 Điều này, chính sách thuế đối với hàng hóa xuất khẩu, nhập khẩu qua nền tảng thương mại điện tử thực hiện theo quy định của pháp luật về thuế.",
+                    "diem": []
+                  },
+                  {
+                    "so": "3",
+                    "text": "Chính sách thuế đối với hàng hóa nhập khẩu qua nền tảng thương mại điện tử được gửi qua dịch vụ bưu chính, chuyển phát nhanh thực hiện theo quy định tại Điều này, không thực hiện theo quy định tại Nghị định số 134/2016/NĐ-CP quy định chi tiết một số điều và biện pháp thi hành Luật Thuế xuất khẩu, thuế nhập khẩu được sửa đổi, bổ sung bởi Nghị định số 18/2021/NĐ-CP và Nghị định số 182/2025/NĐ-CP.",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "13",
+                "tieuDe": "Trị giá hải quan",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Trị giá hải quan đối với hàng hóa xuất khẩu qua nền tảng thương mại điện tử là giá thực tế của hàng hóa tính đến cửa khẩu xuất khẩu được ghi trên đơn hàng hoặc chứng từ thanh toán hoặc chứng từ, tài liệu khác có giá trị tương đương, không bao gồm phí vận tải quốc tế và phí bảo hiểm quốc tế.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Trị giá hải quan đối với hàng hóa nhập khẩu qua nền tảng thương mại điện tử là giá thực tế của hàng hóa tính đến cửa khẩu nhập khẩu đầu tiên được ghi trên đơn hàng hoặc chứng từ thanh toán hoặc chứng từ, tài liệu khác có giá trị tương đương, bao gồm phí vận tải quốc tế và phí bảo hiểm quốc tế (nếu có).",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "14",
+                "tieuDe": "Quy định về thu nộp thuế, phí, lệ phí",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Người nộp thuế thực hiện khai, nộp thuế, phí, lệ phí và cơ quan hải quan quản lý thu thuế, phí, lệ phí theo quy định của pháp luật về quản lý thuế, pháp luật thuế, pháp luật phí và lệ phí.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Trường hợp người khai hải quan thực hiện nộp thuế thay cho chủ hàng thì người khai hải quan chịu trách nhiệm nộp tiền thuế ấn định theo quyết định ấn định thuế của cơ quan hải quan.",
+                    "diem": []
+                  },
+                  {
+                    "so": "3",
+                    "text": "Trường hợp người khai hải quan thực hiện nộp thuế thay cho nhiều chủ hàng thì được nộp trước một khoản tiền tương đương số tiền thuế, phí, lệ phí dự kiến phát sinh trong một thời kỳ nhất định vào tài khoản tiền gửi của cơ quan hải quan nơi đăng ký tờ khai tại Kho bạc Nhà nước. Cơ quan hải quan căn cứ tiền thuế, phí, lệ phí phải nộp của từng tờ khai hải quan thực hiện trừ vào số tiền người khai hải quan đã nộp trước. Định kỳ hàng tuần, căn cứ Bảng kê tiền thuế, phí phát sinh nộp ngân sách nhà nước theo mẫu do Bộ Tài chính ban hành, cơ quan hải quan lập chứng từ nộp ngân sách nhà nước chuyển Kho bạc Nhà nước để cập nhật thu ngân sách nhà nước theo quy định.",
+                    "diem": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "so": "IV",
+            "tieuDe": "THỦ TỤC HẢI QUAN ĐỐI VỚI HÀNG HÓA XUẤT KHẨU, NHẬP KHẨU QUA NỀN TẢNG THƯƠNG MẠI ĐIỆN TỬ",
+            "dieu": [
+              {
+                "so": "15",
+                "tieuDe": "Địa điểm làm thủ tục hải quan",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Đối với hàng hóa xuất khẩu: người khai hải quan được lựa chọn đơn vị Hải quan để thực hiện thủ tục hải quan xuất khẩu.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Đối với hàng hóa nhập khẩu:",
+                    "diem": [
+                      {
+                        "kyHieu": "a",
+                        "text": "Đơn vị Hải quan quản lý địa điểm tập kết, kiểm tra, giám sát tập trung đối với hàng bưu chính, chuyển phát nhanh trong trường hợp hàng hóa nhập khẩu qua nền tảng thương mại điện tử gửi qua dịch vụ bưu chính, chuyển phát nhanh;"
+                      },
+                      {
+                        "kyHieu": "b",
+                        "text": "Đơn vị Hải quan cửa khẩu trong trường hợp hàng hóa nhập khẩu qua nền tảng thương mại điện tử không gửi qua dịch vụ bưu chính, chuyển phát nhanh;"
+                      },
+                      {
+                        "kyHieu": "c",
+                        "text": "Đơn vị Hải quan quản lý kho ngoại quan trong trường hợp hàng hóa qua nền tảng thương mại điện tử nhập khẩu từ kho ngoại quan."
+                      }
+                    ]
+                  },
+                  {
+                    "so": "3",
+                    "text": "Đơn vị Hải quan thực hiện thủ tục hải quan đối với hàng hóa xuất khẩu, nhập khẩu qua nền tảng thương mại điện tử phải đảm bảo cơ sở vật chất, kỹ thuật để thực hiện việc kiểm tra, kiểm soát hàng hóa xuất khẩu, nhập khẩu theo quy định tại Nghị định này.",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "16",
+                "tieuDe": "Nguyên tắc kiểm tra",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Việc kiểm tra hồ sơ, kiểm tra thực tế hàng hóa được thực hiện trên cơ sở áp dụng quản lý rủi ro do Hệ thống xử lý dữ liệu hải quan về thương mại điện tử thông báo. Căn cứ thông báo kết quả phân luồng tờ khai hải quan của Hệ thống xử lý dữ liệu hải quan về thương mại điện tử, quyết định của Trưởng đơn vị Hải quan nơi đăng ký tờ khai, thông tin khai hải quan, thông tin chỉ dẫn rủi ro trên Hệ thống, công chức hải quan thực hiện kiểm tra hồ sơ hải quan, kiểm tra thực tế hàng hóa và cập nhật kết quả kiểm tra vào Hệ thống xử lý dữ liệu hải quan về thương mại điện tử.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Trong quá trình kiểm tra hải quan, nếu phát hiện có dấu hiệu vi phạm pháp luật hải quan, pháp luật thuế và pháp luật khác có liên quan, công chức hải quan có trách nhiệm báo cáo, đề xuất Trưởng đơn vị Hải quan nơi đăng ký tờ khai quyết định thay đổi hình thức, mức độ kiểm tra phù hợp.",
+                    "diem": []
+                  },
+                  {
+                    "so": "3",
+                    "text": "Về kiểm tra tên hàng, mã số hàng hóa, mức thuế, trị giá hải quan; kiểm tra, xác định xuất xứ hàng hóa; kiểm tra nhãn hàng hóa; kiểm tra giấy phép, kết quả kiểm tra chuyên ngành, kiểm tra, giám sát hàng hóa có yêu cầu bảo hộ quyền sở hữu trí tuệ: thực hiện theo quy định của pháp luật hải quan, pháp luật về quản lý thuế, pháp luật quản lý ngoại thương, pháp luật sở hữu trí tuệ, pháp luật về ghi nhãn hàng hóa và các quy định pháp luật về kiểm tra chuyên ngành. Hàng hóa đưa về bảo quản trong khi chờ kết quả kiểm tra chuyên ngành thực hiện theo quy định của Chính phủ quy định chi tiết và biện pháp thi hành Luật Hải quan về thủ tục hải quan, kiểm tra, giám sát, kiểm soát hải quan và hướng dẫn của Bộ trưởng Bộ Tài chính.",
+                    "diem": []
+                  },
+                  {
+                    "so": "4",
+                    "text": "Trưởng đơn vị Hải quan căn cứ quy định của pháp luật về hải quan, yêu cầu quản lý tại từng khu vực kho, bãi, cảng, cửa khẩu và điều kiện thực tế về trang bị máy soi hoặc các phương tiện kỹ thuật khác để tổ chức triển khai việc kiểm tra hàng hóa nhập khẩu trong quá trình xếp, dỡ từ phương tiện vận tải nhập cảnh xuống kho, bãi, cảng, khu vực cửa khẩu nhập và hàng hóa xuất khẩu đã thông quan được tập kết tại các địa điểm trong khu vực cửa khẩu xuất phù hợp với quy định của pháp luật, cơ sở hạ tầng, máy móc, trang thiết bị và điều kiện thực tế tại từng khu vực kho, bãi, cảng, cửa khẩu.",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "17",
+                "tieuDe": "Chia nhóm hàng hóa xuất khẩu, nhập khẩu qua nền tảng thương mại điện tử",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Người khai hải quan căn cứ thông tin đơn hàng để thực hiện chia nhóm hàng hóa xuất khẩu, nhập khẩu như sau:",
+                    "diem": [
+                      {
+                        "kyHieu": "a",
+                        "text": "Hàng hóa không thuộc danh mục mặt hàng phải có giấy phép, điều kiện theo quy định của pháp luật về quản lý ngoại thương, không thuộc danh mục mặt hàng phải kiểm tra chuyên ngành theo quy định của pháp luật chuyên ngành, hàng hóa được miễn giấy phép, miễn điều kiện, miễn kiểm tra chuyên ngành theo quy định tại điểm b khoản 2 Điều 11 Nghị định này và hàng hóa không thuộc trường hợp áp dụng thuế chống bán phá giá, thuế chống trợ cấp, thuế tự vệ (sau đây gọi tắt là hàng hóa nhóm 1);"
+                      },
+                      {
+                        "kyHieu": "b",
+                        "text": "Hàng hóa không thuộc nhóm 1 nêu trên (sau đây gọi tắt là hàng hóa nhóm 2)."
+                      }
+                    ]
+                  },
+                  {
+                    "so": "2",
+                    "text": "Việc chia nhóm hàng hóa tại khoản 1 Điều này nhằm mục đích thực hiện thủ tục hải quan theo quy định tại Nghị định này, không thay thế việc phân loại và áp dụng biện pháp quản lý sản phẩm, hàng hóa theo pháp luật chuyên ngành. Mục 2. QUY ĐỊNH CỤ THỂ",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "18",
+                "tieuDe": "Cung cấp thông tin đơn hàng",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Tổ chức cung cấp thông tin đơn hàng là chủ quản nền tảng thương mại điện tử hoặc người được chủ quản nền tảng thương mại điện tử ủy quyền cung cấp thông tin đơn hàng.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Thời điểm cung cấp thông tin đơn hàng:",
+                    "diem": [
+                      {
+                        "kyHieu": "a",
+                        "text": "Đối với hàng hóa xuất khẩu: Tổ chức cung cấp thông tin đơn hàng thực hiện gửi thông tin đơn hàng theo quy định tại khoản 3 Điều này đến Hệ thống xử lý dữ liệu hải quan về thương mại điện tử trước khi đăng ký tờ khai hải quan;"
+                      },
+                      {
+                        "kyHieu": "b",
+                        "text": "Đối với hàng hóa nhập khẩu: Tổ chức cung cấp thông tin đơn hàng thực hiện gửi thông tin đơn hàng theo quy định tại khoản 3 Điều này đến Hệ thống xử lý dữ liệu hải quan về thương mại điện tử trước khi phương tiện vận tải nhập cảnh;"
+                      },
+                      {
+                        "kyHieu": "c",
+                        "text": "Đối với hàng hóa đang lưu giữ tại các kho ngoại quan trên lãnh thổ Việt Nam, tổ chức cung cấp thông tin đơn hàng thực hiện gửi thông tin về đơn hàng theo quy định tại khoản 3 Điều này đến Hệ thống xử lý dữ liệu hải quan về thương mại điện tử trước khi đăng ký tờ khai hải quan."
+                      }
+                    ]
+                  },
+                  {
+                    "so": "3",
+                    "text": "Thủ tục cung cấp thông tin đơn hàng:",
+                    "diem": [
+                      {
+                        "kyHieu": "a",
+                        "text": "Tổ chức cung cấp thông tin đơn hàng khai thông tin đơn hàng theo các chỉ tiêu thông tin do Bộ Tài chính ban hành và gửi đến Hệ thống xử lý dữ liệu hải quan về thương mại điện tử;"
+                      },
+                      {
+                        "kyHieu": "b",
+                        "text": "Trong thời hạn 30 phút kể từ khi tiếp nhận thông tin đơn hàng, Hệ thống xử lý dữ liệu hải quan về thương mại điện tử kiểm tra và xử lý như sau: Trường hợp khai đầy đủ các chỉ tiêu thông tin theo quy định, Hệ thống xử lý dữ liệu hải quan về thương mại điện tử tự động cấp số tiếp nhận thông tin đơn hàng và phản hồi cho tổ chức cung cấp thông tin đơn hàng; Trường hợp khai không đầy đủ các chỉ tiêu thông tin hoặc các chỉ tiêu thông tin không phù hợp theo quy định, Hệ thống xử lý dữ liệu hải quan về thương mại điện tử phản hồi cho tổ chức cung cấp thông tin đơn hàng để thực hiện khai bổ sung các chỉ tiêu thông tin còn thiếu hoặc chưa phù hợp; Hệ thống xử lý dữ liệu hải quan về thương mại điện tử từ chối cấp số tiếp nhận thông tin đơn hàng trong trường hợp thông tin đơn hàng đã được gửi đến Hệ thống xử lý dữ liệu hải quan về thương mại điện tử và được cấp số tiếp nhận."
+                      }
+                    ]
+                  },
+                  {
+                    "so": "4",
+                    "text": "Thủ tục khai sửa thông tin đơn hàng:",
+                    "diem": [
+                      {
+                        "kyHieu": "a",
+                        "text": "Sau khi thông tin đơn hàng đã được cấp số tiếp nhận, tổ chức cung cấp thông tin đơn hàng được khai sửa thông tin đơn hàng nếu phát hiện khai sai, thiếu thông tin đơn hàng hoặc đơn hàng có sự thay đổi;"
+                      },
+                      {
+                        "kyHieu": "b",
+                        "text": "Việc khai sửa thông tin đơn hàng chỉ được thực hiện trước khi đăng ký tờ khai hải quan;"
+                      },
+                      {
+                        "kyHieu": "c",
+                        "text": "Tổ chức cung cấp thông tin đơn hàng khai sửa thông tin đơn hàng theo các chỉ tiêu thông tin do Bộ Tài chính ban hành và gửi đến Hệ thống xử lý dữ liệu hải quan về thương mại điện tử;"
+                      },
+                      {
+                        "kyHieu": "d",
+                        "text": "Trong thời hạn 30 phút kể từ khi tiếp nhận thông tin đơn hàng sửa, Hệ thống xử lý dữ liệu hải quan về thương mại điện tử kiểm tra và xử lý như sau: Trường hợp khai đầy đủ các chỉ tiêu thông tin theo quy định, Hệ thống xử lý dữ liệu hải quan về thương mại điện tử tự động chấp nhận thông tin đơn hàng sửa và phản hồi cho tổ chức cung cấp thông tin đơn hàng; Trường hợp khai không đầy đủ các chỉ tiêu thông tin theo quy định, Hệ thống xử lý dữ liệu hải quan về thương mại điện tử phản hồi cho tổ chức cung cấp thông tin đơn hàng để thực hiện khai sửa các chỉ tiêu thông tin theo quy định."
+                      }
+                    ]
+                  },
+                  {
+                    "so": "5",
+                    "text": "Hệ thống xử lý dữ liệu hải quan về thương mại điện tử tự động hủy thông tin đơn hàng sau 03 tháng kể từ ngày gửi thông tin đơn hàng nhưng thực tế không có hàng hóa xuất khẩu, nhập khẩu.",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "19",
+                "tieuDe": "Cung cấp thông tin vận chuyển, thông tin xuất kho ngoại quan",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Tổ chức cung cấp thông tin vận chuyển, thông tin xuất kho ngoại quan a) Tổ chức cung cấp thông tin vận chuyển: doanh nghiệp vận chuyển hoặc đại lý của doanh nghiệp vận chuyển hàng hóa đến cửa khẩu;",
+                    "diem": [
+                      {
+                        "kyHieu": "b",
+                        "text": "Tổ chức cung cấp thông tin xuất kho ngoại quan: doanh nghiệp kinh doanh kho ngoại quan."
+                      }
+                    ]
+                  },
+                  {
+                    "so": "2",
+                    "text": "Thời điểm cung cấp thông tin vận chuyển, thông tin xuất kho ngoại quan a) Đối với hàng hóa xuất khẩu: Tổ chức cung cấp thông tin vận chuyển thực hiện gửi thông tin dự kiến vận chuyển theo quy định tại khoản 3 Điều này đến Hệ thống xử lý dữ liệu hải quan về thương mại điện tử trước khi hàng hóa đến cửa khẩu xuất;",
+                    "diem": [
+                      {
+                        "kyHieu": "b",
+                        "text": "Đối với hàng hóa nhập khẩu: Tổ chức cung cấp thông tin vận chuyển thực hiện gửi thông tin vận chuyển theo quy định tại khoản 3 Điều này đến Hệ thống xử lý dữ liệu hải quan về thương mại điện tử theo quy định tại Nghị định số 08/2015/NĐ-CP được sửa đổi, bổ sung bởi Nghị định số 167/2025/NĐ-CP. Đối với hàng hóa đang lưu giữ tại các kho ngoại quan trên lãnh thổ Việt Nam gửi thông tin xuất kho theo quy định tại khoản 3 Điều này đến Hệ thống xử lý dữ liệu hải quan về thương mại điện tử."
+                      }
+                    ]
+                  },
+                  {
+                    "so": "3",
+                    "text": "Thủ tục cung cấp thông tin vận chuyển, thông tin xuất kho ngoại quan a) Tổ chức cung cấp thông tin vận chuyển khai thông tin vận chuyển, tổ chức cung cấp thông tin xuất kho ngoại quan khai thông tin xuất kho ngoại quan của từng đơn hàng theo các chỉ tiêu thông tin do Bộ Tài chính ban hành và gửi đến Hệ thống xử lý dữ liệu hải quan về thương mại điện tử;",
+                    "diem": [
+                      {
+                        "kyHieu": "b",
+                        "text": "Trong thời hạn 30 phút kể từ khi tiếp nhận thông tin vận chuyển, thông tin xuất kho ngoại quan Hệ thống xử lý dữ liệu hải quan về thương mại điện tử kiểm tra và xử lý như sau: Trường hợp khai đầy đủ các chỉ tiêu thông tin theo quy định, Hệ thống xử lý dữ liệu hải quan về thương mại điện tử tiếp nhận thông tin vận chuyển, thông tin xuất kho ngoại quan và phản hồi cho tổ chức cung cấp thông tin vận chuyển, tổ chức cung cấp thông tin xuất kho ngoại quan; Trường hợp khai không đầy đủ các chỉ tiêu thông tin theo quy định, Hệ thống xử lý dữ liệu hải quan về thương mại điện tử phản hồi cho tổ chức cung cấp thông tin vận chuyển, tổ chức cung cấp thông tin xuất kho ngoại quan để thực hiện khai bổ sung các chỉ tiêu thông tin."
+                      }
+                    ]
+                  },
+                  {
+                    "so": "4",
+                    "text": "Thủ tục khai sửa thông tin vận chuyển, thông tin xuất kho ngoại quan sau khi đã được Hệ thống tiếp nhận a) Tổ chức cung cấp thông tin vận chuyển, tổ chức cung cấp thông tin xuất kho ngoại quan khai sửa thông tin vận chuyển, thông tin xuất kho ngoại quan theo các chỉ tiêu thông tin do Bộ Tài chính ban hành và gửi đến Hệ thống xử lý dữ liệu hải quan về thương mại điện tử trước khi tờ khai hải quan được thông quan;",
+                    "diem": [
+                      {
+                        "kyHieu": "b",
+                        "text": "Trong thời hạn 30 phút kể từ khi tiếp nhận thông tin sửa, Hệ thống xử lý dữ liệu hải quan về thương mại điện tử kiểm tra và xử lý như sau: Trường hợp khai đầy đủ các chỉ tiêu thông tin theo quy định, Hệ thống xử lý dữ liệu hải quan về thương mại điện tử tự động chấp nhận thông tin vận chuyển sửa, thông tin xuất kho ngoại quan sửa và phản hồi cho tổ chức cung cấp thông tin vận chuyển, tổ chức cung cấp thông tin xuất kho ngoại quan; Trường hợp khai không đầy đủ các chỉ tiêu thông tin theo quy định, Hệ thống xử lý dữ liệu hải quan về thương mại điện tử phản hồi cho tổ chức cung cấp thông tin vận chuyển, tổ chức cung cấp thông tin xuất kho ngoại quan để thực hiện khai bổ sung các chỉ tiêu thông tin theo quy định."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "so": "20",
+                "tieuDe": "Thủ tục hải quan đối với hàng hóa xuất khẩu, nhập khẩu nhóm 1",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Hồ sơ hải quan là tờ khai hải quan theo các chỉ tiêu thông tin do Bộ Tài chính ban hành.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Người khai hải quan thực hiện khai các chỉ tiêu thông tin quy định tại khoản 1 Điều này và gửi đến Hệ thống xử lý dữ liệu hải quan về thương mại điện tử:",
+                    "diem": [
+                      {
+                        "kyHieu": "a",
+                        "text": "Chậm nhất 02 giờ trước khi phương tiện vận tải xuất cảnh đối với hàng hóa xuất khẩu;"
+                      },
+                      {
+                        "kyHieu": "b",
+                        "text": "Trước khi hàng hóa đến cửa khẩu nhập hoặc trong thời hạn 30 ngày kể từ ngày hàng hóa đến cửa khẩu nhập đối với hàng hóa nhập khẩu."
+                      }
+                    ]
+                  },
+                  {
+                    "so": "3",
+                    "text": "Ngay sau khi tiếp nhận thông tin tờ khai, Hệ thống xử lý dữ liệu hải quan về thương mại điện tử kiểm tra thông tin trên tờ khai hải quan với Cơ sở dữ liệu quốc gia về dân cư, các cơ sở dữ liệu khác của ngành Hải quan và xử lý như sau:",
+                    "diem": [
+                      {
+                        "kyHieu": "a",
+                        "text": "Hệ thống xử lý dữ liệu hải quan về thương mại điện tử tự động cấp số đăng ký tờ khai và phản hồi cho người khai hải quan trong trường hợp kết quả kiểm tra phù hợp;"
+                      },
+                      {
+                        "kyHieu": "b",
+                        "text": "Hệ thống xử lý dữ liệu hải quan về thương mại điện tử phản hồi thông tin cho người khai hải quan để khai bổ sung thông tin trong trường hợp thông tin khai trên tờ khai hải quan không đầy đủ;"
+                      },
+                      {
+                        "kyHieu": "c",
+                        "text": "Hệ thống xử lý dữ liệu hải quan về thương mại điện tử từ chối đăng ký tờ khai hải quan trong trường hợp: thông tin về người bán hàng, người mua hàng là cá nhân không có, không phù hợp với Cơ sở dữ liệu quốc gia về dân cư (đối với trường hợp người bán hàng, người mua hàng có quốc tịch Việt Nam) hoặc thông tin người bán hàng, người mua hàng không có, không phù hợp với Cơ sở dữ liệu thông tin về doanh nghiệp; hàng hóa không thuộc nhóm 1 theo quy định tại điểm a khoản 1 Điều 17 Nghị định này."
+                      }
+                    ]
+                  },
+                  {
+                    "so": "4",
+                    "text": "Hệ thống xử lý dữ liệu hải quan về thương mại điện tử kiểm tra thông tin trên tờ khai hải quan với thông tin đơn hàng, thông tin vận chuyển:",
+                    "diem": [
+                      {
+                        "kyHieu": "a",
+                        "text": "Trường hợp kết quả kiểm tra phù hợp, Hệ thống xử lý dữ liệu hải quan về thương mại điện tử tự động phân luồng tờ khai và phản hồi cho người khai hải quan theo một trong những hình thức được quy định tại khoản 4 Điều 26 Nghị định số 08/2015/NĐ-CP được sửa đổi, bổ sung bởi khoản 13 Điều 1 Nghị định số 167/2025/NĐ-CP;"
+                      },
+                      {
+                        "kyHieu": "b",
+                        "text": "Trường hợp kết quả kiểm tra không phù hợp, Hệ thống xử lý dữ liệu hải quan về thương mại điện tử phản hồi cho người khai hải quan."
+                      }
+                    ]
+                  },
+                  {
+                    "so": "5",
+                    "text": "Việc kiểm tra hồ sơ hải quan được thực hiện thông qua Hệ thống xử lý dữ liệu hải quan về thương mại điện tử.",
+                    "diem": []
+                  },
+                  {
+                    "so": "6",
+                    "text": "Việc kiểm tra thực tế hàng hóa thực hiện như sau:",
+                    "diem": [
+                      {
+                        "kyHieu": "a",
+                        "text": "Người khai hải quan xuất trình hàng hóa và phối hợp với cơ quan hải quan trong quá trình kiểm tra thực tế hàng hóa;"
+                      },
+                      {
+                        "kyHieu": "b",
+                        "text": "Cơ quan hải quan kiểm tra thực tế hàng hóa qua máy soi, trừ trường hợp máy soi gặp sự cố hoặc hàng hóa không phù hợp với việc kiểm tra qua máy soi hoặc hàng hóa bắt buộc phải kiểm tra trực tiếp bởi công chức hải quan theo hướng dẫn của Cục Hải quan;"
+                      },
+                      {
+                        "kyHieu": "c",
+                        "text": "Căn cứ hình ảnh kiểm tra qua máy soi, thông tin trên tờ khai hải quan và các thông tin khác có được tại thời điểm kiểm tra để phân tích, đánh giá và kết luận về hình ảnh kiểm tra qua máy soi. Toàn bộ dữ liệu hình ảnh kiểm tra được lưu trữ trong Hệ thống máy soi theo quy định;"
+                      },
+                      {
+                        "kyHieu": "d",
+                        "text": "Trường hợp kết quả kiểm tra qua máy soi có dấu hiệu vi phạm, thực hiện kiểm tra trực tiếp theo quy định của pháp luật hải quan;"
+                      },
+                      {
+                        "kyHieu": "đ",
+                        "text": "Thời hạn hoàn thành việc kiểm tra thực tế hàng hóa thực hiện theo quy định tại điểm b khoản 2 Điều 23 Luật Hải quan."
+                      }
+                    ]
+                  },
+                  {
+                    "so": "7",
+                    "text": "Xử lý kết quả kiểm tra:",
+                    "diem": [
+                      {
+                        "kyHieu": "a",
+                        "text": "Trường hợp cơ quan hải quan kiểm tra xác định người khai hải quan khai sai so với thực tế về tên hàng, mã số, xuất xứ, số lượng, khối lượng, chủng loại, chất lượng, trị giá hải quan thì yêu cầu người khai hải quan thực hiện khai bổ sung (trừ trường hợp không được khai bổ sung), xử lý theo quy định pháp luật về thuế (nếu có), pháp luật về xử lý vi phạm hành chính (nếu có) hoặc quy định của pháp luật liên quan (nếu có). Trường hợp có dấu hiệu tội phạm thì tiến hành điều tra, xác minh và xử lý theo thẩm quyền;"
+                      },
+                      {
+                        "kyHieu": "b",
+                        "text": "Trường hợp người khai hải quan khai sai so với thực tế hàng hóa quy định tại điểm a khoản này không thực hiện khai bổ sung thì cơ quan hải quan thực hiện ấn định thuế và xử phạt vi phạm hành chính (nếu có) theo quy định của pháp luật. Nếu người khai hải quan không đồng ý với kết quả kiểm tra của cơ quan hải quan về tên hàng, mã số, xuất xứ, số lượng, khối lượng, chủng loại, chất lượng, trị giá hải quan thì thực hiện khiếu nại hoặc khởi kiện theo quy định của pháp luật."
+                      }
+                    ]
+                  },
+                  {
+                    "so": "8",
+                    "text": "Thông quan hàng hóa: cơ quan hải quan thực hiện thông quan hàng hóa theo Điều 37 Luật Hải quan.",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "21",
+                "tieuDe": "Khai bổ sung thông tin tờ khai hải quan đối với hàng hóa xuất khẩu, nhập khẩu nhóm 1",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Các trường hợp khai bổ sung Trừ các chỉ tiêu thông tin trên tờ khai hải quan không được khai bổ sung theo quy định của Bộ Tài chính, người khai hải quan được khai bổ sung các chỉ tiêu thông tin trên tờ khai hải quan trong các trường hợp sau:",
+                    "diem": [
+                      {
+                        "kyHieu": "a",
+                        "text": "Khai bổ sung sau khi đăng ký tờ khai hải quan đến trước thời điểm thông quan: Người khai hải quan được khai bổ sung thông tin trước thời điểm Hệ thống xử lý dữ liệu hải quan về thương mại điện tử thông báo kết quả phân luồng tờ khai hải quan cho người khai hải quan; người khai hải quan phát hiện sai sót trong việc khai hải quan sau thời điểm Hệ thống xử lý dữ liệu hải quan về thương mại điện tử thông báo kết quả phân luồng nhưng trước khi thông quan thì được khai bổ sung thông tin và bị xử phạt vi phạm hành chính (nếu có) theo quy định của pháp luật; người khai hải quan thực hiện khai bổ sung thông tin theo yêu cầu của cơ quan hải quan khi cơ quan hải quan phát hiện khai sai, thiếu, không phù hợp giữa thực tế hàng hóa, hồ sơ hải quan với thông tin khai báo trong quá trình kiểm tra thì bị xử phạt vi phạm hành chính (nếu có) theo quy định của pháp luật;"
+                      },
+                      {
+                        "kyHieu": "b",
+                        "text": "Khai bổ sung sau khi hàng hóa đã được thông quan: Người khai hải quan xác định có sai sót trong việc khai hải quan thì được khai bổ sung thông tin trong thời hạn 60 ngày kể từ ngày thông quan nhưng trước thời điểm cơ quan hải quan quyết định kiểm tra sau thông quan, thanh tra; quá thời hạn 60 ngày kể từ ngày thông quan hoặc sau khi cơ quan hải quan có quyết định kiểm tra sau thông quan, thanh tra, người khai hải quan mới phát hiện sai sót trong việc khai hải quan thì thực hiện khai bổ sung và bị xử phạt vi phạm hành chính (nếu có) theo quy định của pháp luật."
+                      }
+                    ]
+                  },
+                  {
+                    "so": "2",
+                    "text": "Hồ sơ khai bổ sung a) Tờ khai bổ sung theo các chỉ tiêu thông tin do Bộ Tài chính ban hành;",
+                    "diem": [
+                      {
+                        "kyHieu": "b",
+                        "text": "Các chứng từ liên quan đến việc khai bổ sung (nếu có): 01 bản chụp hoặc bản điện tử đính kèm trên Hệ thống."
+                      }
+                    ]
+                  },
+                  {
+                    "so": "3",
+                    "text": "Thủ tục khai bổ sung a) Người khai hải quan nộp hồ sơ khai bổ sung thông qua Hệ thống xử lý dữ liệu hải quan về thương mại điện tử;",
+                    "diem": [
+                      {
+                        "kyHieu": "b",
+                        "text": "Hệ thống xử lý dữ liệu hải quan về thương mại điện tử kiểm tra thông tin bổ sung với thông tin tờ khai hải quan ban đầu, cơ sở dữ liệu của Hệ thống xử lý dữ liệu hải quan về thương mại điện tử: Trường hợp đã khai đầy đủ các chỉ tiêu thông tin và nộp chứng từ liên quan đến việc khai bổ sung (nếu có), Hệ thống xử lý dữ liệu hải quan về thương mại điện tử tự động cấp số đăng ký tờ khai bổ sung và phản hồi cho người khai hải quan; trường hợp khai không đầy đủ các chỉ tiêu thông tin, Hệ thống xử lý dữ liệu hải quan về thương mại điện tử phản hồi cho người khai hải quan về việc không cấp số đăng ký tờ khai bổ sung và nêu rõ lý do;"
+                      },
+                      {
+                        "kyHieu": "c",
+                        "text": "Trong thời hạn 02 giờ làm việc kể từ khi cấp số đăng ký tờ khai bổ sung, cơ quan hải quan kiểm tra hồ sơ khai bổ sung và xử lý như sau: trường hợp kết quả kiểm tra phù hợp, phản hồi cho người khai hải quan về việc chấp nhận khai bổ sung hoặc kiểm tra thực tế hàng hóa; trường hợp kết quả kiểm tra không phù hợp, phản hồi cho người khai hải quan và nêu rõ lý do;"
+                      },
+                      {
+                        "kyHieu": "d",
+                        "text": "Hàng hóa được thông quan theo quy định tại Điều 37 Luật Hải quan."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "so": "22",
+                "tieuDe": "Thủ tục hủy tờ khai hải quan đối với hàng hóa xuất khẩu, nhập khẩu nhóm 1",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Các trường hợp hủy tờ khai hải quan xuất khẩu:",
+                    "diem": [
+                      {
+                        "kyHieu": "a",
+                        "text": "Hết thời hạn 15 ngày kể từ ngày đăng ký tờ khai hải quan xuất khẩu, hàng hóa được miễn kiểm tra thực tế nhưng chưa đưa hàng hóa vào khu vực giám sát hải quan tại cửa khẩu xuất;"
+                      },
+                      {
+                        "kyHieu": "b",
+                        "text": "Hết thời hạn 15 ngày kể từ ngày đăng ký tờ khai hải quan xuất khẩu, hàng hóa phải kiểm tra thực tế nhưng người khai hải quan chưa xuất trình hàng hóa để cơ quan hải quan kiểm tra;"
+                      },
+                      {
+                        "kyHieu": "c",
+                        "text": "Tờ khai hải quan xuất khẩu đã được đăng ký nhưng hàng hóa xuất khẩu không thuộc nhóm 1 theo quy định tại điểm a khoản 1 Điều 17 Nghị định này;"
+                      },
+                      {
+                        "kyHieu": "d",
+                        "text": "Tờ khai hải quan xuất khẩu đã thông quan nhưng thực tế không xuất khẩu hàng hóa;"
+                      },
+                      {
+                        "kyHieu": "đ",
+                        "text": "Tờ khai hải quan xuất khẩu đã được đăng ký nhưng người mua hoặc người bán hủy đơn hàng;"
+                      },
+                      {
+                        "kyHieu": "e",
+                        "text": "Tờ khai hải quan đã được đăng ký nhưng trùng thông tin với tờ khai hải quan khác;"
+                      },
+                      {
+                        "kyHieu": "g",
+                        "text": "Tờ khai hải quan đã đăng ký nhưng người khai hải quan khai sai các chỉ tiêu thông tin không được khai bổ sung theo quy định của Bộ Tài chính, trừ trường hợp hàng hóa đã qua khu vực giám sát hải quan hoặc tờ khai hải quan xuất khẩu đã thông quan hoặc giải phóng hàng và hàng hóa thực tế đã xuất khẩu."
+                      }
+                    ]
+                  },
+                  {
+                    "so": "2",
+                    "text": "Các trường hợp hủy tờ khai hải quan nhập khẩu a) Hết thời hạn 15 ngày kể từ ngày đăng ký tờ khai hải quan nhập khẩu mà không có hàng hóa đến cửa khẩu nhập;",
+                    "diem": [
+                      {
+                        "kyHieu": "b",
+                        "text": "Tờ khai hải quan nhập khẩu đã đăng ký nhưng hàng hóa nhập khẩu không thuộc nhóm 1 theo quy định tại điểm a khoản 1 Điều 17 Nghị định này;"
+                      },
+                      {
+                        "kyHieu": "c",
+                        "text": "Hàng hóa nhập khẩu đã khai tờ khai hải quan và hoàn thành thủ tục tiêu hủy tại Việt Nam theo quy định;"
+                      },
+                      {
+                        "kyHieu": "d",
+                        "text": "Tờ khai hải quan nhập khẩu đã được đăng ký, chưa thông quan nhưng người mua hoặc người bán hủy đơn hàng;"
+                      },
+                      {
+                        "kyHieu": "đ",
+                        "text": "Tờ khai hải quan đã đăng ký nhưng người khai hải quan khai sai các chỉ tiêu thông tin không được khai bổ sung do Bộ Tài chính ban hành, trừ trường hợp tờ khai hải quan nhập khẩu đã thông quan hoặc giải phóng hàng hoặc đưa hàng về bảo quản và hàng hóa đã qua khu vực giám sát hải quan;"
+                      },
+                      {
+                        "kyHieu": "e",
+                        "text": "Tờ khai hải quan đã được đăng ký nhưng trùng thông tin với tờ khai hải quan khác."
+                      }
+                    ]
+                  },
+                  {
+                    "so": "3",
+                    "text": "Thủ tục hủy tờ khai hải quan xuất khẩu:",
+                    "diem": [
+                      {
+                        "kyHieu": "a",
+                        "text": "Trường hợp hủy tờ khai hải quan quy định tại điểm a, điểm b, điểm c khoản 1 Điều này: chậm nhất 03 ngày làm việc kể từ ngày hết hạn tờ khai, hoặc phát hiện tờ khai thuộc trường hợp hủy quy định tại khoản 1 Điều này, cơ quan hải quan thực hiện hủy tờ khai hải quan trên Hệ thống xử lý dữ liệu hải quan về thương mại điện tử và thông báo thông tin hủy tờ khai hải quan cho người khai hải quan thông qua Hệ thống xử lý dữ liệu hải quan về thương mại điện tử;"
+                      },
+                      {
+                        "kyHieu": "b",
+                        "text": "Trường hợp hủy tờ khai hải quan quy định tại điểm d, điểm đ, điểm e, điểm g khoản 1 Điều này: Người khai hải quan khai thông tin đề nghị hủy tờ khai hải quan theo các chỉ tiêu thông tin do Bộ Tài chính ban hành và gửi kèm chứng từ (bản điện tử) chứng minh thực tế hàng hóa không xuất khẩu (đối với trường hợp quy định tại điểm c khoản 1 Điều này), người mua hoặc người bán hủy đơn hàng (đối với trường hợp quy định tại điểm d khoản 1 Điều này) đến Hệ thống xử lý dữ liệu hải quan về thương mại điện tử. Trong thời hạn 08 giờ làm việc kể từ khi nhận đề nghị hủy tờ khai hải quan của người khai hải quan, công chức hải quan kiểm tra lý do, điều kiện và thông tin tờ khai hải quan đề nghị hủy trên Hệ thống xử lý dữ liệu hải quan về thương mại điện tử, đề xuất Trưởng đơn vị Hải quan nơi đăng ký tờ khai phê duyệt, thực hiện việc hủy tờ khai hải quan và phản hồi kết quả cho người khai hải quan trên Hệ thống xử lý dữ liệu hải quan về thương mại điện tử, xử lý tiền thuế đã nộp (nếu có) theo quy định;"
+                      },
+                      {
+                        "kyHieu": "c",
+                        "text": "Trường hợp hủy tờ khai hải quan đối với hàng hóa xuất khẩu đã đưa vào khu vực giám sát hải quan nhưng thực tế không xuất khẩu, người khai hải quan phải cam kết trong văn bản đề nghị hủy tờ khai hải quan về việc chưa thực hiện việc hoàn thuế hoặc kê khai khấu trừ thuế cho hàng hóa thuộc tờ khai hải quan đề nghị hủy với cơ quan thuế nội địa hoặc với cơ quan hải quan và chịu trách nhiệm về nội dung đã khai báo. Trường hợp cơ quan hải quan hoặc cơ quan thuế kiểm tra phát hiện người khai hải quan đã hoàn thuế hoặc kê khai khấu trừ thuế thì xử lý theo quy định của pháp luật."
+                      }
+                    ]
+                  },
+                  {
+                    "so": "4",
+                    "text": "Thủ tục hủy tờ khai hải quan nhập khẩu:",
+                    "diem": [
+                      {
+                        "kyHieu": "a",
+                        "text": "Trường hợp hủy tờ khai hải quan quy định tại điểm a, điểm b, điểm c, điểm e khoản 2 Điều này: chậm nhất 03 ngày làm việc kể từ ngày hết hạn tờ khai hoặc phát hiện tờ khai thuộc trường hợp hủy quy định tại khoản 2 Điều này, cơ quan hải quan thực hiện hủy tờ khai hải quan trên Hệ thống xử lý dữ liệu hải quan về thương mại điện tử và thông báo thông tin hủy tờ khai hải quan cho người khai hải quan thông qua Hệ thống xử lý dữ liệu hải quan về thương mại điện tử;"
+                      },
+                      {
+                        "kyHieu": "b",
+                        "text": "Trường hợp hủy tờ khai hải quan quy định tại điểm d, điểm đ khoản 2 Điều này: Người khai hải quan khai thông tin đề nghị hủy tờ khai hải quan theo các chỉ tiêu thông tin do Bộ Tài chính ban hành và gửi kèm chứng từ (bản điện tử) chứng minh người mua hoặc người bán hủy đơn hàng (đối với trường hợp quy định tại điểm d khoản 2 Điều này) đến Hệ thống xử lý dữ liệu hải quan về thương mại điện tử. Trong thời hạn 08 giờ làm việc kể từ khi nhận đề nghị hủy tờ khai hải quan của người khai hải quan, công chức hải quan kiểm tra lý do, điều kiện và thông tin tờ khai hải quan đề nghị hủy trên Hệ thống xử lý dữ liệu hải quan về thương mại điện tử, đề xuất Trưởng đơn vị Hải quan nơi đăng ký tờ khai phê duyệt, thực hiện việc hủy tờ khai hải quan và phản hồi kết quả cho người khai hải quan trên Hệ thống xử lý dữ liệu hải quan về thương mại điện tử, xử lý tiền thuế đã nộp (nếu có) theo quy định."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "so": "23",
+                "tieuDe": "Thủ tục hải quan đối với hàng hóa xuất khẩu nhóm 1 phải tái nhập",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Hàng hóa tái nhập do không chuyển được đến người mua hàng, người nhận hàng ở nước ngoài.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Hồ sơ hải quan:",
+                    "diem": [
+                      {
+                        "kyHieu": "a",
+                        "text": "Tờ khai hải quan tái nhập theo các chỉ tiêu thông tin do Bộ Tài chính ban hành;"
+                      },
+                      {
+                        "kyHieu": "b",
+                        "text": "Văn bản của bên nước ngoài thông báo hàng bị trả lại hoặc văn bản của đơn vị vận chuyển thông báo không có người nhận hàng: bản điện tử đính kèm trên Hệ thống."
+                      }
+                    ]
+                  },
+                  {
+                    "so": "3",
+                    "text": "Thủ tục hải quan:",
+                    "diem": [
+                      {
+                        "kyHieu": "a",
+                        "text": "Người khai hải quan thực hiện khai các chỉ tiêu thông tin quy định tại khoản 2 Điều này và gửi đến Hệ thống xử lý dữ liệu hải quan về thương mại điện tử trước khi hàng hóa đến cửa khẩu nhập hoặc trong thời hạn 30 ngày kể từ ngày hàng hóa đến cửa khẩu nhập;"
+                      },
+                      {
+                        "kyHieu": "b",
+                        "text": "Ngay sau khi tiếp nhận thông tin tờ khai, Hệ thống xử lý dữ liệu hải quan về thương mại điện tử kiểm tra sự tồn tại của tờ khai hải quan xuất khẩu; Hệ thống xử lý dữ liệu hải quan về thương mại điện tử tự động cấp số đăng ký tờ khai và phản hồi cho người khai hải quan trong trường hợp có tồn tại tờ khai hải quan xuất khẩu hoặc từ chối đăng ký tờ khai hải quan trong trường hợp không có tờ khai hải quan xuất khẩu;"
+                      },
+                      {
+                        "kyHieu": "c",
+                        "text": "Hệ thống xử lý dữ liệu hải quan về thương mại điện tử kiểm tra thông tin trên tờ khai hải quan với thông tin vận chuyển: trường hợp kết quả kiểm tra phù hợp, Hệ thống xử lý dữ liệu hải quan về thương mại điện tử tự động phân luồng tờ khai và phản hồi cho người khai hải quan; trường hợp kết quả kiểm tra không phù hợp, Hệ thống xử lý dữ liệu hải quan về thương mại điện tử phản hồi cho người khai hải quan;"
+                      },
+                      {
+                        "kyHieu": "d",
+                        "text": "Việc kiểm tra hồ sơ hải quan và kiểm tra thực tế hàng hóa thực hiện theo quy định tại khoản 5, khoản 6 Điều 20 Nghị định này."
+                      }
+                    ]
+                  },
+                  {
+                    "so": "4",
+                    "text": "Chính sách thuế đối với hàng hóa đã xuất khẩu phải tái nhập thực hiện theo quy định của pháp luật về thuế.",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "24",
+                "tieuDe": "Thủ tục hải quan, giám sát hải quan đối với hàng hóa nhập khẩu nhóm 1 phải tái xuất",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Hàng hóa tái xuất gồm:",
+                    "diem": [
+                      {
+                        "kyHieu": "a",
+                        "text": "Hàng hóa đã hoàn thành thủ tục nhập khẩu nhưng người mua hàng từ chối nhận hàng hoặc không phát được hàng hóa cho người nhận;"
+                      },
+                      {
+                        "kyHieu": "b",
+                        "text": "Hàng hóa không đủ điều kiện nhập khẩu."
+                      }
+                    ]
+                  },
+                  {
+                    "so": "2",
+                    "text": "Hồ sơ hải quan:",
+                    "diem": [
+                      {
+                        "kyHieu": "a",
+                        "text": "Tờ khai hải quan tái xuất theo các chỉ tiêu thông tin do Bộ Tài chính ban hành;"
+                      },
+                      {
+                        "kyHieu": "b",
+                        "text": "Giấy tờ chứng minh chủ hàng từ chối nhận hàng hoặc không phát được hàng hóa cho người nhận: bản điện tử đính kèm trên Hệ thống."
+                      }
+                    ]
+                  },
+                  {
+                    "so": "3",
+                    "text": "Thủ tục hải quan:",
+                    "diem": [
+                      {
+                        "kyHieu": "a",
+                        "text": "Người khai hải quan thực hiện khai các chỉ tiêu thông tin quy định tại khoản 2 Điều này và gửi đến Hệ thống xử lý dữ liệu hải quan về thương mại điện tử chậm nhất 02 giờ trước khi phương tiện vận tải xuất cảnh;"
+                      },
+                      {
+                        "kyHieu": "b",
+                        "text": "Ngay sau khi tiếp nhận thông tin tờ khai, Hệ thống xử lý dữ liệu hải quan về thương mại điện tử kiểm tra sự tồn tại của tờ khai hải quan nhập khẩu; Hệ thống xử lý dữ liệu hải quan về thương mại điện tử tự động cấp số đăng ký tờ khai và phản hồi cho người khai hải quan trong trường hợp có tồn tại tờ khai hải quan nhập khẩu hoặc từ chối đăng ký tờ khai hải quan trong trường hợp không có tờ khai hải quan nhập khẩu;"
+                      },
+                      {
+                        "kyHieu": "c",
+                        "text": "Hệ thống xử lý dữ liệu hải quan về thương mại điện tử kiểm tra thông tin trên tờ khai hải quan với thông tin vận chuyển: trường hợp kết quả kiểm tra phù hợp, Hệ thống xử lý dữ liệu hải quan về thương mại điện tử tự động phân luồng tờ khai và phản hồi cho người khai hải quan; trường hợp kết quả kiểm tra không phù hợp, Hệ thống xử lý dữ liệu hải quan về thương mại điện tử phản hồi cho người khai hải quan;"
+                      },
+                      {
+                        "kyHieu": "d",
+                        "text": "Việc kiểm tra hồ sơ hải quan và kiểm tra thực tế hàng hóa thực hiện theo quy định tại khoản 5, khoản 6 Điều 20 Nghị định này."
+                      }
+                    ]
+                  },
+                  {
+                    "so": "4",
+                    "text": "Trường hợp hàng hóa đang chịu sự giám sát hải quan trừ hàng cấm nhập khẩu, tạm ngừng nhập khẩu, nhưng do gửi nhầm lẫn, thất lạc, không có người nhận hoặc bị từ chối nhận hàng do hàng hóa không phù hợp với đơn hàng, nếu người vận tải hoặc chủ hàng có văn bản đề nghị được tái xuất, trong đó nêu rõ lý do nhầm lẫn, thất lạc hoặc từ chối nhận hoặc hàng hóa buộc tái xuất theo quyết định của cơ quan có thẩm quyền thì phải đưa ra khỏi lãnh thổ Việt Nam qua cửa khẩu nhập:",
+                    "diem": [
+                      {
+                        "kyHieu": "a",
+                        "text": "Chủ hàng hoặc người vận chuyển hoặc đại lý làm thủ tục hải quan có văn bản đề nghị được tái xuất cho người gửi hàng gửi đơn vị Hải quan quản lý nơi lưu giữ hàng hóa, nêu lý do nhầm lẫn, thất lạc hoặc lý do từ chối nhận hàng, trong văn bản nêu rõ số vận đơn, dự kiến thời gian xuất, cửa khẩu xuất;"
+                      },
+                      {
+                        "kyHieu": "b",
+                        "text": "Đơn vị Hải quan quản lý nơi lưu giữ hàng hóa căn cứ văn bản đề nghị quy định tại điểm a khoản này hoặc Quyết định buộc tái xuất của cơ quan có thẩm quyền thực hiện kiểm tra hồ sơ lô hàng: Trường hợp không có dấu hiệu vi phạm pháp luật thì thực hiện cập nhật thông tin lô hàng đủ điều kiện qua khu vực giám sát hải quan thông qua Hệ thống xử lý dữ liệu hải quan về thương mại điện tử để tái xuất; Trường hợp có dấu hiệu vi phạm pháp luật thì kiểm tra thực tế toàn bộ lô hàng, nếu kết quả kiểm tra thực tế phù hợp với nội dung trên vận đơn và không phát hiện vi phạm pháp luật thì thực hiện cập nhật thông tin lô hàng đủ điều kiện qua khu vực giám sát hải quan thông qua Hệ thống xử lý dữ liệu hải quan về thương mại điện tử để tái xuất. Nếu kết quả kiểm tra không đúng với nội dung trên vận đơn hoặc có thông tin khẳng định lô hàng có vi phạm thì xử lý theo quy định."
+                      }
+                    ]
+                  },
+                  {
+                    "so": "5",
+                    "text": "Chính sách thuế đối với hàng hóa nhập khẩu phải tái xuất thực hiện theo quy định của pháp luật về thuế.",
+                    "diem": []
+                  }
+                ]
+              },
+              {
+                "so": "25",
+                "tieuDe": "Thủ tục hải quan đối với hàng hóa xuất khẩu, nhập khẩu nhóm 2",
+                "text": "Thủ tục hải quan xuất khẩu, nhập khẩu, tái xuất, tái nhập đối với hàng hóa xuất khẩu, nhập khẩu nhóm 2 thực hiện trên Hệ thống xử lý dữ liệu điện tử hải quan theo quy định tại Nghị định số 08/2015/NĐ-CP được sửa đổi, bổ sung bởi Nghị định số 167/2025/NĐ-CP.",
+                "khoan": []
+              }
+            ]
+          },
+          {
+            "so": "V",
+            "tieuDe": "GIÁM SÁT HẢI QUAN ĐỐI VỚI HÀNG HÓA XUẤT KHẨU, NHẬP KHẨU QUA NỀN TẢNG THƯƠNG MẠI ĐIỆN TỬ",
+            "dieu": [
+              {
+                "so": "26",
+                "tieuDe": "Giám sát hàng hóa xuất khẩu",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Trách nhiệm của doanh nghiệp quản lý kho, địa điểm lưu giữ hàng hóa xuất khẩu chịu sự giám sát hải quan:",
+                    "diem": [
+                      {
+                        "kyHieu": "a",
+                        "text": "Cập nhật thông tin theo các chỉ tiêu do Bộ Tài chính ban hành trên Hệ thống xử lý dữ liệu hải quan về thương mại điện tử khi hàng hóa đưa vào, đưa ra kho, địa điểm. Nếu có sự thay đổi thông tin về hàng hóa tại kho, địa điểm thì phải cập nhật sự thay đổi thông tin trên Hệ thống xử lý dữ liệu hải quan về thương mại điện tử;"
+                      },
+                      {
+                        "kyHieu": "b",
+                        "text": "Đưa hàng hóa đã hoàn thành thủ tục xuất khẩu vào khu vực giám sát hải quan để đưa lên phương tiện xuất cảnh chậm nhất 01 giờ trước khi phương tiện xuất cảnh;"
+                      },
+                      {
+                        "kyHieu": "c",
+                        "text": "Chỉ cho phép đưa hàng hóa ra khỏi kho, địa điểm khi đủ điều kiện qua khu vực giám sát hải quan. Không được phép đưa hàng hóa ra khỏi kho, địa điểm khi hàng hóa chưa đủ điều kiện qua khu vực giám sát hải quan hoặc nhận được thông tin về tạm dừng đưa hàng qua khu vực giám sát hải quan;"
+                      },
+                      {
+                        "kyHieu": "d",
+                        "text": "Phối hợp với cơ quan hải quan trong việc kiểm tra thực tế hàng hóa;"
+                      },
+                      {
+                        "kyHieu": "đ",
+                        "text": "Hàng hóa xuất khẩu chờ làm thủ tục hải quan và hàng hóa xuất khẩu đã được thông quan phải được lưu giữ tại các khu vực riêng biệt;"
+                      },
+                      {
+                        "kyHieu": "e",
+                        "text": "Lưu giữ hàng hóa đảm bảo việc xác định được vị trí các lô hàng cần kiểm tra theo yêu cầu của cơ quan hải quan."
+                      }
+                    ]
+                  },
+                  {
+                    "so": "2",
+                    "text": "Trách nhiệm của cơ quan hải quan:",
+                    "diem": [
+                      {
+                        "kyHieu": "a",
+                        "text": "Thực hiện giám sát hàng hóa xuất khẩu đưa vào, đưa ra kho, địa điểm;"
+                      },
+                      {
+                        "kyHieu": "b",
+                        "text": "Cập nhật thông tin hàng hóa đủ điều kiện qua khu vực giám sát hải quan và thông tin thay đổi trạng thái tờ khai hải quan: tạm dừng, bỏ tạm dừng; hủy trên Hệ thống xử lý dữ liệu hải quan về thương mại điện tử;"
+                      },
+                      {
+                        "kyHieu": "c",
+                        "text": "Hướng dẫn người khai hải quan hoàn thành thủ tục đối với hàng hóa có thông báo tạm dừng hoặc chưa đủ điều kiện qua khu vực giám sát hải quan;"
+                      },
+                      {
+                        "kyHieu": "d",
+                        "text": "Thực hiện kiểm tra hàng hóa bằng máy soi hoặc các phương tiện kỹ thuật khác nếu có dấu hiệu vi phạm. Trường hợp kiểm tra phát hiện vi phạm thì thông báo người khai hải quan mở hàng hóa để kiểm tra trực tiếp và xử lý theo quy định của pháp luật liên quan (nếu có)."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "so": "27",
+                "tieuDe": "Giám sát hàng hóa nhập khẩu",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Trách nhiệm của doanh nghiệp quản lý kho, địa điểm lưu giữ hàng hóa nhập khẩu chịu sự giám sát hải quan:",
+                    "diem": [
+                      {
+                        "kyHieu": "a",
+                        "text": "Cập nhật thông tin theo các chỉ tiêu do Bộ Tài chính ban hành trên Hệ thống xử lý dữ liệu hải quan về thương mại điện tử khi hàng hóa đưa vào, đưa ra kho, địa điểm. Nếu có sự thay đổi thông tin về hàng hóa tại kho, địa điểm thì phải cập nhật sự thay đổi thông tin trên Hệ thống xử lý dữ liệu hải quan về thương mại điện tử;"
+                      },
+                      {
+                        "kyHieu": "b",
+                        "text": "Chỉ cho phép đưa hàng hóa ra khỏi kho, địa điểm khi đủ điều kiện qua khu vực giám sát hải quan. Không được phép đưa hàng hóa ra khỏi kho, địa điểm khi hàng hóa chưa đủ điều kiện qua khu vực giám sát hải quan hoặc nhận được thông tin về tạm dừng đưa hàng qua khu vực giám sát hải quan;"
+                      },
+                      {
+                        "kyHieu": "c",
+                        "text": "Phối hợp với cơ quan hải quan trong việc kiểm tra thực tế hàng hóa;"
+                      },
+                      {
+                        "kyHieu": "d",
+                        "text": "Lưu giữ hàng hóa đảm bảo việc xác định được vị trí các lô hàng cần kiểm tra theo yêu cầu của cơ quan hải quan."
+                      }
+                    ]
+                  },
+                  {
+                    "so": "2",
+                    "text": "Trách nhiệm của cơ quan hải quan a) Thực hiện giám sát hàng hóa nhập khẩu đưa vào, đưa ra kho, địa điểm;",
+                    "diem": [
+                      {
+                        "kyHieu": "b",
+                        "text": "Cập nhật thông tin trên Hệ thống xử lý dữ liệu hải quan về thương mại điện tử hàng hóa đủ điều kiện qua khu vực giám sát hải quan và thông tin thay đổi trạng thái tờ khai hải quan: tạm dừng, bỏ tạm dừng, hủy;"
+                      },
+                      {
+                        "kyHieu": "c",
+                        "text": "Hướng dẫn người khai hải quan hoàn thành thủ tục đối với hàng hóa có thông báo tạm dừng hoặc chưa đủ điều kiện qua khu vực giám sát hải quan;"
+                      },
+                      {
+                        "kyHieu": "d",
+                        "text": "Thực hiện kiểm tra hàng hóa bằng máy soi hoặc các phương tiện kỹ thuật khác. Việc lựa chọn hàng hóa kiểm tra tại cửa khẩu nhập do Hệ thống xử lý dữ liệu hải quan về thương mại điện tử xác định trên cơ sở dữ liệu của Hệ thống xử lý dữ liệu hải quan về thương mại điện tử. Trường hợp phát hiện hàng hóa có dấu hiệu vi phạm thì kiểm tra trực tiếp hàng hóa và xử lý theo quy định. Trường hợp kiểm tra không phát hiện dấu hiệu vi phạm thì cập nhật thông tin kết quả kiểm tra thông qua Hệ thống xử lý dữ liệu hải quan về thương mại điện tử."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "so": "VI",
+            "tieuDe": "TRÁCH NHIỆM CỦA CÁC CƠ QUAN, TỔ CHỨC, CÁ NHÂN CÓ LIÊN QUAN",
+            "dieu": [
+              {
+                "so": "28",
+                "tieuDe": "Trách nhiệm của các cơ quan quản lý nhà nước",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Bộ Tài chính:",
+                    "diem": [
+                      {
+                        "kyHieu": "a",
+                        "text": "Xây dựng, quản lý, vận hành, khai thác và đảm bảo an toàn, an ninh Hệ thống xử lý dữ liệu hải quan về thương mại điện tử;"
+                      },
+                      {
+                        "kyHieu": "b",
+                        "text": "Ban hành yêu cầu kỹ thuật và định dạng thông điệp dữ liệu trao đổi giữa cơ quan hải quan và các tổ chức có trách nhiệm cung cấp, trao đổi thông tin thông qua Hệ thống xử lý dữ liệu hải quan về thương mại điện tử;"
+                      },
+                      {
+                        "kyHieu": "c",
+                        "text": "Tổ chức thực hiện thủ tục, kiểm tra, giám sát hải quan đối với hàng hóa xuất khẩu, nhập khẩu qua nền tảng thương mại điện tử; không thực hiện thủ tục hải quan đối với hàng hóa qua nền tảng thương mại điện tử khi nhận được thông tin của cơ quan quản lý nhà nước về việc không tuân thủ quy định pháp luật hiện hành về thương mại điện tử;"
+                      },
+                      {
+                        "kyHieu": "d",
+                        "text": "Cung cấp thông tin về tổng trị giá miễn thuế của tổ chức, cá nhân đã sử dụng cho các nền tảng thương mại điện tử;"
+                      },
+                      {
+                        "kyHieu": "đ",
+                        "text": "Cung cấp, chia sẻ dữ liệu liên quan đến hàng hóa xuất khẩu, nhập khẩu qua nền tảng thương mại điện tử theo quy định."
+                      }
+                    ]
+                  },
+                  {
+                    "so": "2",
+                    "text": "Trách nhiệm của Bộ Công Thương:",
+                    "diem": [
+                      {
+                        "kyHieu": "a",
+                        "text": "Công bố công khai danh sách các nền tảng thương mại điện tử có hoạt động thương mại điện tử của thương nhân, tổ chức nước ngoài ngay sau khi được Bộ Công Thương xét duyệt thông báo hoặc đăng ký; thông tin các nền tảng thương mại điện tử có vi phạm về thương mại điện tử;"
+                      },
+                      {
+                        "kyHieu": "b",
+                        "text": "Phối hợp với Bộ Tài chính trong việc xử lý các nền tảng thương mại điện tử có hành vi vi phạm trong hoạt động xuất khẩu, nhập khẩu qua nền tảng thương mại điện tử;"
+                      },
+                      {
+                        "kyHieu": "c",
+                        "text": "Phối hợp với Bộ Tài chính và các cơ quan có liên quan trong việc xử lý hàng hóa xuất khẩu, nhập khẩu qua nền tảng thương mại điện tử vi phạm pháp luật về sở hữu trí tuệ, chất lượng hàng hóa, bảo vệ quyền lợi người tiêu dùng, thuế và các quy định khác có liên quan."
+                      }
+                    ]
+                  },
+                  {
+                    "so": "3",
+                    "text": "Trách nhiệm của Bộ Công an: phối hợp với Bộ Tài chính trong việc kiểm tra, giám sát hoạt động xuất khẩu, nhập khẩu hàng hóa qua nền tảng thương mại điện tử; khai thác, chia sẻ, cung cấp thông tin dữ liệu liên quan đến hoạt động xuất khẩu, nhập khẩu hàng hóa qua nền tảng thương mại điện tử theo quy định của pháp luật.",
+                    "diem": []
+                  },
+                  {
+                    "so": "4",
+                    "text": "Trách nhiệm của các bộ quản lý ngành, lĩnh vực:",
+                    "diem": [
+                      {
+                        "kyHieu": "a",
+                        "text": "Các bộ, cơ quan ngang bộ trong phạm vi nhiệm vụ, quyền hạn của mình có trách nhiệm quản lý nhà nước đối với hoạt động xuất khẩu, nhập khẩu hàng hóa qua nền tảng thương mại điện tử;"
+                      },
+                      {
+                        "kyHieu": "b",
+                        "text": "Xây dựng, cập nhật và công bố danh sách hàng hóa không được miễn giấy phép, điều kiện, kiểm tra chuyên ngành theo quy định tại khoản 2 Điều 11 Nghị định này. Văn bản thông báo dừng áp dụng xác định rõ tên hàng hóa, mã số HS, căn cứ pháp lý, biện pháp quản lý, cơ quan kiểm tra và phương thức thực hiện;"
+                      },
+                      {
+                        "kyHieu": "c",
+                        "text": "Chia sẻ, kết nối thông tin cảnh báo, dữ liệu quản lý chuyên ngành với Hệ thống xử lý dữ liệu hải quan về thương mại điện tử để phục vụ phân tích, đánh giá rủi ro;"
+                      },
+                      {
+                        "kyHieu": "d",
+                        "text": "Phối hợp với Bộ Tài chính trong việc áp dụng các biện pháp kiểm tra, giám sát phù hợp đối với hàng hóa xuất khẩu, nhập khẩu qua nền tảng thương mại điện tử."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "so": "29",
+                "tieuDe": "Trách nhiệm của tổ chức, cá nhân tham gia các hoạt động liên quan đến hàng hóa xuất khẩu, nhập khẩu qua nền tảng thương mại điện tử",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Trách nhiệm của chủ quản nền tảng thương mại điện tử:",
+                    "diem": [
+                      {
+                        "kyHieu": "a",
+                        "text": "Thực hiện theo quy định của pháp luật về thương mại điện tử;"
+                      },
+                      {
+                        "kyHieu": "b",
+                        "text": "Thực hiện ký hợp đồng gửi kho ngoại quan và các thủ tục xuất khẩu, nhập khẩu hàng hóa gửi kho ngoại quan theo ủy quyền của chủ hàng hóa;"
+                      },
+                      {
+                        "kyHieu": "c",
+                        "text": "Phối hợp với cơ quan quản lý nhà nước trong việc ngăn chặn các giao dịch hàng hóa vi phạm pháp luật Việt Nam;"
+                      },
+                      {
+                        "kyHieu": "d",
+                        "text": "Phối hợp với các chủ thể quyền sở hữu trí tuệ rà soát, ngăn chặn, phát hiện và gỡ bỏ các sản phẩm xâm phạm quyền sở hữu trí tuệ theo quy định;"
+                      },
+                      {
+                        "kyHieu": "đ",
+                        "text": "Thực hiện các nghĩa vụ về bảo vệ quyền lợi người tiêu dùng, chất lượng sản phẩm, hàng hoá, thuế và các nghĩa vụ khác theo quy định của pháp luật Việt Nam;"
+                      },
+                      {
+                        "kyHieu": "e",
+                        "text": "Thông báo cho người bán hàng về việc hàng hóa bán trên nền tảng thương mại điện tử phải đảm bảo chất lượng sản phẩm, hàng hóa, tuân thủ tiêu chuẩn công bố áp dụng, quy chuẩn kĩ thuật và các yêu cầu quản lý, kiểm tra chuyên ngành theo quy định của pháp luật Việt Nam. Trường hợp phát hiện hàng hóa không đảm bảo chất lượng sản phẩm, hàng hóa, tuân thủ tiêu chuẩn công bố áp dụng, quy chuẩn kĩ thuật và các yêu cầu quản lý, kiểm tra chuyên ngành theo quy định của pháp luật Việt Nam hoặc đang bị cảnh báo, đình chỉ lưu thông, thu hồi hoặc có dấu hiệu giả mạo kết quả đánh giá sự phù hợp thì thực hiện gỡ bỏ hàng hóa trên nền tảng thương mại điện tử."
+                      }
+                    ]
+                  },
+                  {
+                    "so": "2",
+                    "text": "Trách nhiệm của doanh nghiệp vận chuyển hàng hóa xuất khẩu, nhập khẩu qua nền tảng thương mại điện tử:",
+                    "diem": [
+                      {
+                        "kyHieu": "a",
+                        "text": "Thực hiện cung cấp thông tin theo quy định tại Nghị định này và chịu trách nhiệm trước pháp luật về độ chính xác của thông tin vận chuyển gửi đến Hệ thống xử lý dữ liệu hải quan về thương mại điện tử; trường hợp doanh nghiệp vận chuyển hàng hóa xuất khẩu, nhập khẩu qua nền tảng thương mại điện tử không có hiện diện tại Việt Nam thì phải ủy quyền cho đại lý ở Việt Nam thực hiện cung cấp thông tin theo quy định;"
+                      },
+                      {
+                        "kyHieu": "b",
+                        "text": "Phối hợp với cơ quan quản lý nhà nước trong việc ngăn chặn hàng hóa vi phạm pháp luật Việt Nam được vận chuyển về Việt Nam. Không hợp tác với nền tảng thương mại điện tử vi phạm pháp luật Việt Nam."
+                      }
+                    ]
+                  },
+                  {
+                    "so": "3",
+                    "text": "Trách nhiệm của người khai hải quan:",
+                    "diem": [
+                      {
+                        "kyHieu": "a",
+                        "text": "Thực hiện theo quy định tại khoản 2, khoản 3 Điều 18 Luật Hải quan và các quy định tại Nghị định này;"
+                      },
+                      {
+                        "kyHieu": "b",
+                        "text": "Thông báo cho người mua hàng đối với hàng nhập khẩu, người bán hàng đối với hàng xuất khẩu phối hợp với cơ quan hải quan trong việc định danh, xác thực điện tử của cá nhân, tổ chức."
+                      }
+                    ]
+                  },
+                  {
+                    "so": "4",
+                    "text": "Trách nhiệm của cá nhân, tổ chức tại Việt Nam khi thực hiện mua hàng:",
+                    "diem": [
+                      {
+                        "kyHieu": "a",
+                        "text": "Cung cấp đầy đủ, chính xác các thông tin cá nhân, tổ chức cho các nền tảng thương mại điện tử;"
+                      },
+                      {
+                        "kyHieu": "b",
+                        "text": "Chịu trách nhiệm trước pháp luật về sự chính xác của thông tin cung cấp;"
+                      },
+                      {
+                        "kyHieu": "c",
+                        "text": "Không được mua hàng hóa thuộc danh mục hàng hóa cấm nhập khẩu, tạm ngừng nhập khẩu theo quy định của pháp luật trong trường hợp địa chỉ nhận hàng tại Việt Nam;"
+                      },
+                      {
+                        "kyHieu": "d",
+                        "text": "Thực hiện định danh, xác thực điện tử khi nhận được yêu cầu của cơ quan hải quan."
+                      }
+                    ]
+                  },
+                  {
+                    "so": "5",
+                    "text": "Trách nhiệm của người bán hàng tại Việt Nam thực hiện bán hàng trên các nền tảng thương mại điện tử cho người nhận hàng có địa chỉ ở nước ngoài:",
+                    "diem": [
+                      {
+                        "kyHieu": "a",
+                        "text": "Cung cấp đầy đủ, chính xác các thông tin theo quy định cho doanh nghiệp vận chuyển, chủ quản nền tảng thương mại điện tử;"
+                      },
+                      {
+                        "kyHieu": "b",
+                        "text": "Chịu trách nhiệm trước pháp luật về sự chính xác của thông tin cung cấp;"
+                      },
+                      {
+                        "kyHieu": "c",
+                        "text": "Không được bán hàng hóa thuộc danh mục hàng hóa cấm xuất khẩu, tạm ngừng xuất khẩu theo quy định của pháp luật;"
+                      },
+                      {
+                        "kyHieu": "d",
+                        "text": "Thực hiện định danh, xác thực điện tử khi nhận được yêu cầu của cơ quan hải quan;"
+                      },
+                      {
+                        "kyHieu": "đ",
+                        "text": "Tuân thủ các quy định của pháp luật Việt Nam có liên quan trong quá trình giao dịch thương mại điện tử."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "so": "VII",
+            "tieuDe": "ĐIỀU KHOẢN THI HÀNH",
+            "dieu": [
+              {
+                "so": "30",
+                "tieuDe": "Hiệu lực thi hành",
+                "text": "Nghị định này có hiệu lực thi hành từ ngày 01 tháng 03 năm 2027.",
+                "khoan": []
+              },
+              {
+                "so": "31",
+                "tieuDe": "Trách nhiệm thi hành",
+                "text": "",
+                "khoan": [
+                  {
+                    "so": "1",
+                    "text": "Các Bộ trưởng, Thủ trưởng cơ quan ngang bộ, Chủ tịch Ủy ban nhân dân các tỉnh, thành phố và các tổ chức, cá nhân có liên quan chịu trách nhiệm thi hành Nghị định này.",
+                    "diem": []
+                  },
+                  {
+                    "so": "2",
+                    "text": "Trường hợp chức năng, nhiệm vụ, tên gọi của các cơ quan, tổ chức được giao tại Nghị định này thay đổi thì thực hiện theo chức năng, nhiệm vụ, tên gọi mới của các cơ quan, tổ chức đó.",
+                    "diem": []
+                  },
+                  {
+                    "so": "3",
+                    "text": "Trường hợp các văn bản pháp luật viện dẫn tại Nghị định này được sửa đổi, bổ sung hoặc thay thế thì thực hiện theo quy định tại văn bản sửa đổi, bổ sung hoặc thay thế đó./. Nơi nhận: - Ban Bí thư Trung ương Đảng; - Thủ tướng, các Phó Thủ tướng Chính phủ; - Các bộ, cơ quan ngang bộ; - HĐND, UBND các tỉnh, thành phố; - Văn phòng Trung ương và các Ban của Đảng; - Văn phòng Tổng Bí thư; - Văn phòng Chủ tịch nước; - Hội đồng Dân tộc và các Ủy ban của Quốc hội; - Văn phòng Quốc hội; - Toà án nhân dân tối cao; - Viện kiểm sát nhân dân tối cao; - Kiểm toán nhà nước; - Ủy ban Trung ương Mặt trận Tổ quốc Việt Nam; - Cơ quan trung ương của các tổ chức chính trị - xã hội; - VPCP: BTCN, các PCN, Trợ lý TTg, các Vụ, Cục, Công báo; - Lưu: VT, KTTH (2b). TM. CHÍNH PHỦ KT. THỦ TƯỚNG PHÓ THỦ TƯỚNG Nguyễn Văn Thắng",
+                    "diem": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "noiDungDayDu": true,
+      "quanHeHieuLuc": [],
+      "linhVuc": [
+        "Thuế GTGT"
+      ]
     }
   ],
   "rebuiltAt": "2026-10-01T10:20:42",
   "lastBackfill": "2026-11-06T20:02:54",
   "publishCheck": "2026-10-03T10:33:22",
-  "lastDailyUpdate": "2026-11-13T08:40:44"
+  "lastDailyUpdate": "2026-11-26T08:43:00"
 }
