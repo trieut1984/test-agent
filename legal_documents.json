@@ -163428,10 +163428,35 @@
       "linhVuc": [
         "Thuế GTGT"
       ]
+    },
+    {
+      "soHieu": "421/2026/NĐ-CP",
+      "loaiVanBan": "Nghị định",
+      "coQuanBanHanh": "Chính phủ",
+      "nguoiKy": "Nguyễn Văn Thắng",
+      "ngayBanHanh": "26/11/2026",
+      "ngayHieuLuc": "26/11/2026",
+      "tinhTrangHieuLuc": "con_hieu_luc",
+      "tinhTrangGhiChu": "Còn hiệu lực",
+      "tenVanBan": "Nghị định 421/2026/NĐ-CP thay thế Phụ lục II kèm theo Nghị định 181/2025/NĐ-CP mới nhất",
+      "xacMinh": true,
+      "nguon": {
+        "trangNguon": "thuvienphapluat.vn",
+        "url": "https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Nghi-dinh-421-2026-ND-CP-thay-the-Phu-luc-II-kem-theo-Nghi-dinh-181-2025-ND-CP-735612.aspx"
+      },
+      "noiDung": {
+        "chuong": [],
+        "raw": "Nghị định 421/2026/NĐ-CP ngày 26/11/2026 thay thế Phụ lục II kèm theo Nghị định 181/2025/NĐ-CP hướng dẫn Luật Thuế giá trị gia tăng được sửa đổi bởi Nghị định 359/2025/NĐ-CP và Nghị định 144/2026/NĐ-CP Văn bản này đang cập nhật Nội dung => Bạn vui lòng \"Tải về\" để xem."
+      },
+      "noiDungDayDu": true,
+      "quanHeHieuLuc": [],
+      "linhVuc": [
+        "Thuế GTGT"
+      ]
     }
   ],
   "rebuiltAt": "2026-10-01T10:20:42",
   "lastBackfill": "2026-11-06T20:02:54",
   "publishCheck": "2026-10-03T10:33:22",
-  "lastDailyUpdate": "2026-11-26T08:43:00"
+  "lastDailyUpdate": "2026-11-28T08:00:13"
 }
